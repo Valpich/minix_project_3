@@ -1,0 +1,1593 @@
+arp.o arp.ln: /usr/src/servers/inet/generic/arp.c /usr/src/servers/inet/inet.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/errno.h /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/sys/ioc_file.h \
+  /usr/include/minix/ioctl.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/minix/com.h \
+  /usr/include/minix/syslib.h /usr/include/minix/ipc.h \
+  /usr/include/minix/ipcconst.h /usr/include/machine/ipcconst.h \
+  /usr/include/minix/u64.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/minix/devio.h \
+  /usr/include/minix/safecopies.h /usr/include/minix/vm.h \
+  /usr/include/minix/endpoint.h /usr/include/minix/sef.h \
+  /usr/include/stdio.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/minix/sysutil.h /usr/include/net/hton.h \
+  /usr/include/net/gen/ether.h /usr/include/net/gen/eth_hdr.h \
+  /usr/include/net/gen/eth_io.h /usr/include/net/gen/in.h \
+  /usr/include/net/gen/ip_hdr.h /usr/include/net/gen/ip_io.h \
+  /usr/include/net/gen/icmp.h /usr/include/net/gen/icmp_hdr.h \
+  /usr/include/net/gen/oneCsum.h /usr/include/net/gen/psip_hdr.h \
+  /usr/include/net/gen/psip_io.h /usr/include/net/gen/route.h \
+  /usr/include/net/gen/tcp.h /usr/include/net/gen/tcp_hdr.h \
+  /usr/include/net/gen/tcp_io.h /usr/include/net/gen/udp.h \
+  /usr/include/net/gen/udp_hdr.h /usr/include/net/gen/udp_io_hdr.h \
+  /usr/include/net/gen/udp_io.h /usr/include/net/gen/arp_io.h \
+  /usr/include/sys/ioc_net.h /usr/include/sys/un.h \
+  /usr/src/servers/inet/const.h /usr/src/servers/inet/inet_config.h \
+  /usr/src/servers/inet/generic/type.h \
+  /usr/src/servers/inet/generic/arp.h \
+  /usr/src/servers/inet/generic/assert.h \
+  /usr/src/servers/inet/generic/buf.h \
+  /usr/src/servers/inet/generic/clock.h \
+  /usr/src/servers/inet/generic/event.h \
+  /usr/src/servers/inet/generic/eth.h /usr/src/servers/inet/generic/io.h
+buf.o buf.ln: buf.c /usr/src/servers/inet/inet.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/errno.h \
+  /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/sys/ioc_file.h \
+  /usr/include/minix/ioctl.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/minix/com.h \
+  /usr/include/minix/syslib.h /usr/include/minix/ipc.h \
+  /usr/include/minix/ipcconst.h /usr/include/machine/ipcconst.h \
+  /usr/include/minix/u64.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/minix/devio.h \
+  /usr/include/minix/safecopies.h /usr/include/minix/vm.h \
+  /usr/include/minix/endpoint.h /usr/include/minix/sef.h \
+  /usr/include/stdio.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/minix/sysutil.h /usr/include/net/hton.h \
+  /usr/include/net/gen/ether.h /usr/include/net/gen/eth_hdr.h \
+  /usr/include/net/gen/eth_io.h /usr/include/net/gen/in.h \
+  /usr/include/net/gen/ip_hdr.h /usr/include/net/gen/ip_io.h \
+  /usr/include/net/gen/icmp.h /usr/include/net/gen/icmp_hdr.h \
+  /usr/include/net/gen/oneCsum.h /usr/include/net/gen/psip_hdr.h \
+  /usr/include/net/gen/psip_io.h /usr/include/net/gen/route.h \
+  /usr/include/net/gen/tcp.h /usr/include/net/gen/tcp_hdr.h \
+  /usr/include/net/gen/tcp_io.h /usr/include/net/gen/udp.h \
+  /usr/include/net/gen/udp_hdr.h /usr/include/net/gen/udp_io_hdr.h \
+  /usr/include/net/gen/udp_io.h /usr/include/net/gen/arp_io.h \
+  /usr/include/sys/ioc_net.h /usr/include/sys/un.h \
+  /usr/src/servers/inet/const.h /usr/src/servers/inet/inet_config.h \
+  /usr/src/servers/inet/generic/assert.h \
+  /usr/src/servers/inet/generic/buf.h
+clock.o clock.ln: clock.c /usr/src/servers/inet/inet.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/errno.h \
+  /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/sys/ioc_file.h \
+  /usr/include/minix/ioctl.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/minix/com.h \
+  /usr/include/minix/syslib.h /usr/include/minix/ipc.h \
+  /usr/include/minix/ipcconst.h /usr/include/machine/ipcconst.h \
+  /usr/include/minix/u64.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/minix/devio.h \
+  /usr/include/minix/safecopies.h /usr/include/minix/vm.h \
+  /usr/include/minix/endpoint.h /usr/include/minix/sef.h \
+  /usr/include/stdio.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/minix/sysutil.h /usr/include/net/hton.h \
+  /usr/include/net/gen/ether.h /usr/include/net/gen/eth_hdr.h \
+  /usr/include/net/gen/eth_io.h /usr/include/net/gen/in.h \
+  /usr/include/net/gen/ip_hdr.h /usr/include/net/gen/ip_io.h \
+  /usr/include/net/gen/icmp.h /usr/include/net/gen/icmp_hdr.h \
+  /usr/include/net/gen/oneCsum.h /usr/include/net/gen/psip_hdr.h \
+  /usr/include/net/gen/psip_io.h /usr/include/net/gen/route.h \
+  /usr/include/net/gen/tcp.h /usr/include/net/gen/tcp_hdr.h \
+  /usr/include/net/gen/tcp_io.h /usr/include/net/gen/udp.h \
+  /usr/include/net/gen/udp_hdr.h /usr/include/net/gen/udp_io_hdr.h \
+  /usr/include/net/gen/udp_io.h /usr/include/net/gen/arp_io.h \
+  /usr/include/sys/ioc_net.h /usr/include/sys/un.h \
+  /usr/src/servers/inet/const.h /usr/src/servers/inet/inet_config.h \
+  /usr/src/servers/inet/proto.h /usr/src/servers/inet/generic/assert.h \
+  /usr/src/servers/inet/generic/buf.h \
+  /usr/src/servers/inet/generic/clock.h
+eth.o eth.ln: /usr/src/servers/inet/generic/eth.c /usr/src/servers/inet/inet.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/errno.h /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/sys/ioc_file.h \
+  /usr/include/minix/ioctl.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/minix/com.h \
+  /usr/include/minix/syslib.h /usr/include/minix/ipc.h \
+  /usr/include/minix/ipcconst.h /usr/include/machine/ipcconst.h \
+  /usr/include/minix/u64.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/minix/devio.h \
+  /usr/include/minix/safecopies.h /usr/include/minix/vm.h \
+  /usr/include/minix/endpoint.h /usr/include/minix/sef.h \
+  /usr/include/stdio.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/minix/sysutil.h /usr/include/net/hton.h \
+  /usr/include/net/gen/ether.h /usr/include/net/gen/eth_hdr.h \
+  /usr/include/net/gen/eth_io.h /usr/include/net/gen/in.h \
+  /usr/include/net/gen/ip_hdr.h /usr/include/net/gen/ip_io.h \
+  /usr/include/net/gen/icmp.h /usr/include/net/gen/icmp_hdr.h \
+  /usr/include/net/gen/oneCsum.h /usr/include/net/gen/psip_hdr.h \
+  /usr/include/net/gen/psip_io.h /usr/include/net/gen/route.h \
+  /usr/include/net/gen/tcp.h /usr/include/net/gen/tcp_hdr.h \
+  /usr/include/net/gen/tcp_io.h /usr/include/net/gen/udp.h \
+  /usr/include/net/gen/udp_hdr.h /usr/include/net/gen/udp_io_hdr.h \
+  /usr/include/net/gen/udp_io.h /usr/include/net/gen/arp_io.h \
+  /usr/include/sys/ioc_net.h /usr/include/sys/un.h \
+  /usr/src/servers/inet/const.h /usr/src/servers/inet/inet_config.h \
+  /usr/src/servers/inet/generic/buf.h \
+  /usr/src/servers/inet/generic/clock.h \
+  /usr/src/servers/inet/generic/event.h \
+  /usr/src/servers/inet/osdep_eth.h /usr/src/servers/inet/generic/type.h \
+  /usr/src/servers/inet/generic/assert.h \
+  /usr/src/servers/inet/generic/eth.h \
+  /usr/src/servers/inet/generic/eth_int.h \
+  /usr/src/servers/inet/generic/sr.h
+event.o event.ln: /usr/src/servers/inet/generic/event.c \
+  /usr/src/servers/inet/inet.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/errno.h \
+  /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/sys/ioc_file.h \
+  /usr/include/minix/ioctl.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/minix/com.h \
+  /usr/include/minix/syslib.h /usr/include/minix/ipc.h \
+  /usr/include/minix/ipcconst.h /usr/include/machine/ipcconst.h \
+  /usr/include/minix/u64.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/minix/devio.h \
+  /usr/include/minix/safecopies.h /usr/include/minix/vm.h \
+  /usr/include/minix/endpoint.h /usr/include/minix/sef.h \
+  /usr/include/stdio.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/minix/sysutil.h /usr/include/net/hton.h \
+  /usr/include/net/gen/ether.h /usr/include/net/gen/eth_hdr.h \
+  /usr/include/net/gen/eth_io.h /usr/include/net/gen/in.h \
+  /usr/include/net/gen/ip_hdr.h /usr/include/net/gen/ip_io.h \
+  /usr/include/net/gen/icmp.h /usr/include/net/gen/icmp_hdr.h \
+  /usr/include/net/gen/oneCsum.h /usr/include/net/gen/psip_hdr.h \
+  /usr/include/net/gen/psip_io.h /usr/include/net/gen/route.h \
+  /usr/include/net/gen/tcp.h /usr/include/net/gen/tcp_hdr.h \
+  /usr/include/net/gen/tcp_io.h /usr/include/net/gen/udp.h \
+  /usr/include/net/gen/udp_hdr.h /usr/include/net/gen/udp_io_hdr.h \
+  /usr/include/net/gen/udp_io.h /usr/include/net/gen/arp_io.h \
+  /usr/include/sys/ioc_net.h /usr/include/sys/un.h \
+  /usr/src/servers/inet/const.h /usr/src/servers/inet/inet_config.h \
+  /usr/src/servers/inet/generic/assert.h \
+  /usr/src/servers/inet/generic/event.h
+icmp.o icmp.ln: /usr/src/servers/inet/generic/icmp.c /usr/src/servers/inet/inet.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/errno.h /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/sys/ioc_file.h \
+  /usr/include/minix/ioctl.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/minix/com.h \
+  /usr/include/minix/syslib.h /usr/include/minix/ipc.h \
+  /usr/include/minix/ipcconst.h /usr/include/machine/ipcconst.h \
+  /usr/include/minix/u64.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/minix/devio.h \
+  /usr/include/minix/safecopies.h /usr/include/minix/vm.h \
+  /usr/include/minix/endpoint.h /usr/include/minix/sef.h \
+  /usr/include/stdio.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/minix/sysutil.h /usr/include/net/hton.h \
+  /usr/include/net/gen/ether.h /usr/include/net/gen/eth_hdr.h \
+  /usr/include/net/gen/eth_io.h /usr/include/net/gen/in.h \
+  /usr/include/net/gen/ip_hdr.h /usr/include/net/gen/ip_io.h \
+  /usr/include/net/gen/icmp.h /usr/include/net/gen/icmp_hdr.h \
+  /usr/include/net/gen/oneCsum.h /usr/include/net/gen/psip_hdr.h \
+  /usr/include/net/gen/psip_io.h /usr/include/net/gen/route.h \
+  /usr/include/net/gen/tcp.h /usr/include/net/gen/tcp_hdr.h \
+  /usr/include/net/gen/tcp_io.h /usr/include/net/gen/udp.h \
+  /usr/include/net/gen/udp_hdr.h /usr/include/net/gen/udp_io_hdr.h \
+  /usr/include/net/gen/udp_io.h /usr/include/net/gen/arp_io.h \
+  /usr/include/sys/ioc_net.h /usr/include/sys/un.h \
+  /usr/src/servers/inet/const.h /usr/src/servers/inet/inet_config.h \
+  /usr/src/servers/inet/generic/buf.h \
+  /usr/src/servers/inet/generic/event.h \
+  /usr/src/servers/inet/generic/type.h \
+  /usr/src/servers/inet/generic/assert.h \
+  /usr/src/servers/inet/generic/clock.h \
+  /usr/src/servers/inet/generic/icmp.h \
+  /usr/src/servers/inet/generic/icmp_lib.h \
+  /usr/src/servers/inet/generic/io.h /usr/src/servers/inet/generic/ip.h \
+  /usr/src/servers/inet/generic/ip_int.h \
+  /usr/src/servers/inet/generic/ipr.h
+inet.o inet.ln: inet.c /usr/src/servers/inet/inet.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/errno.h \
+  /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/sys/ioc_file.h \
+  /usr/include/minix/ioctl.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/minix/com.h \
+  /usr/include/minix/syslib.h /usr/include/minix/ipc.h \
+  /usr/include/minix/ipcconst.h /usr/include/machine/ipcconst.h \
+  /usr/include/minix/u64.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/minix/devio.h \
+  /usr/include/minix/safecopies.h /usr/include/minix/vm.h \
+  /usr/include/minix/endpoint.h /usr/include/minix/sef.h \
+  /usr/include/stdio.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/minix/sysutil.h /usr/include/net/hton.h \
+  /usr/include/net/gen/ether.h /usr/include/net/gen/eth_hdr.h \
+  /usr/include/net/gen/eth_io.h /usr/include/net/gen/in.h \
+  /usr/include/net/gen/ip_hdr.h /usr/include/net/gen/ip_io.h \
+  /usr/include/net/gen/icmp.h /usr/include/net/gen/icmp_hdr.h \
+  /usr/include/net/gen/oneCsum.h /usr/include/net/gen/psip_hdr.h \
+  /usr/include/net/gen/psip_io.h /usr/include/net/gen/route.h \
+  /usr/include/net/gen/tcp.h /usr/include/net/gen/tcp_hdr.h \
+  /usr/include/net/gen/tcp_io.h /usr/include/net/gen/udp.h \
+  /usr/include/net/gen/udp_hdr.h /usr/include/net/gen/udp_io_hdr.h \
+  /usr/include/net/gen/udp_io.h /usr/include/net/gen/arp_io.h \
+  /usr/include/sys/ioc_net.h /usr/include/sys/un.h \
+  /usr/src/servers/inet/const.h /usr/src/servers/inet/inet_config.h \
+  /usr/include/fcntl.h /usr/include/sys/stat.h \
+  /usr/include/machine/vmparam.h /usr/include/sys/svrctl.h \
+  /usr/include/minix/ds.h /usr/include/minix/chardriver.h \
+  /usr/include/minix/driver.h /usr/include/minix/callnr.h \
+  /usr/include/sys/param.h /usr/include/sys/inttypes.h \
+  /usr/include/machine/int_fmtio.h /usr/include/sys/signal.h \
+  /usr/include/sys/siginfo.h /usr/include/machine/signal.h \
+  /usr/include/sys/ucontext.h /usr/include/machine/param.h \
+  /usr/include/minix/partition.h /usr/include/minix/rs.h \
+  /usr/include/minix/bitmap.h /usr/include/pwd.h \
+  /usr/src/servers/inet/mq.h /usr/src/servers/inet/qp.h \
+  /usr/src/servers/inet/proto.h /usr/src/servers/inet/generic/type.h \
+  /usr/src/servers/inet/generic/arp.h \
+  /usr/src/servers/inet/generic/assert.h \
+  /usr/src/servers/inet/generic/buf.h \
+  /usr/src/servers/inet/generic/clock.h \
+  /usr/src/servers/inet/generic/eth.h \
+  /usr/src/servers/inet/generic/event.h \
+  /usr/src/servers/inet/generic/ip.h \
+  /usr/src/servers/inet/generic/psip.h \
+  /usr/src/servers/inet/generic/rand256.h \
+  /usr/src/servers/inet/generic/sr.h /usr/src/servers/inet/generic/tcp.h \
+  /usr/src/servers/inet/generic/udp.h
+inet_config.o inet_config.ln: inet_config.c /usr/include/stdlib.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/sys/featuretest.h \
+  /usr/include/sys/types.h /usr/include/machine/types.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/sys/null.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/minix/type.h \
+  /usr/include/machine/multiboot.h /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/fcntl.h /usr/include/sys/stat.h \
+  /usr/include/sys/time.h /usr/include/sys/select.h \
+  /usr/include/sys/sigtypes.h /usr/include/time.h \
+  /usr/include/machine/vmparam.h /usr/include/string.h \
+  /usr/include/strings.h /usr/include/errno.h /usr/include/sys/errno.h \
+  /usr/include/minix/sysutil.h /usr/include/minix/ipc.h \
+  /usr/include/minix/ipcconst.h /usr/include/machine/ipcconst.h \
+  /usr/include/minix/const.h /usr/include/machine/archconst.h \
+  /usr/include/minix/syslib.h /usr/include/minix/u64.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/minix/devio.h \
+  /usr/include/minix/safecopies.h /usr/include/minix/vm.h \
+  /usr/include/minix/endpoint.h /usr/include/minix/com.h \
+  /usr/include/minix/sef.h /usr/include/stdio.h \
+  /usr/include/machine/mcontext.h /usr/include/machine/fpu.h \
+  /usr/include/machine/stackframe.h /usr/src/servers/inet/inet_config.h \
+  /usr/src/servers/inet/inet.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/include/sys/ioc_file.h /usr/include/minix/ioctl.h \
+  /usr/include/net/hton.h /usr/include/net/gen/ether.h \
+  /usr/include/net/gen/eth_hdr.h /usr/include/net/gen/eth_io.h \
+  /usr/include/net/gen/in.h /usr/include/net/gen/ip_hdr.h \
+  /usr/include/net/gen/ip_io.h /usr/include/net/gen/icmp.h \
+  /usr/include/net/gen/icmp_hdr.h /usr/include/net/gen/oneCsum.h \
+  /usr/include/net/gen/psip_hdr.h /usr/include/net/gen/psip_io.h \
+  /usr/include/net/gen/route.h /usr/include/net/gen/tcp.h \
+  /usr/include/net/gen/tcp_hdr.h /usr/include/net/gen/tcp_io.h \
+  /usr/include/net/gen/udp.h /usr/include/net/gen/udp_hdr.h \
+  /usr/include/net/gen/udp_io_hdr.h /usr/include/net/gen/udp_io.h \
+  /usr/include/net/gen/arp_io.h /usr/include/sys/ioc_net.h \
+  /usr/include/sys/un.h /usr/src/servers/inet/const.h
+io.o io.ln: /usr/src/servers/inet/generic/io.c /usr/include/stdlib.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/sys/featuretest.h \
+  /usr/include/sys/types.h /usr/include/machine/types.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/sys/null.h /usr/src/servers/inet/inet.h \
+  /usr/include/errno.h /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/string.h \
+  /usr/include/strings.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/sys/ioc_file.h \
+  /usr/include/minix/ioctl.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/minix/com.h \
+  /usr/include/minix/syslib.h /usr/include/minix/ipc.h \
+  /usr/include/minix/ipcconst.h /usr/include/machine/ipcconst.h \
+  /usr/include/minix/u64.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/minix/devio.h \
+  /usr/include/minix/safecopies.h /usr/include/minix/vm.h \
+  /usr/include/minix/endpoint.h /usr/include/minix/sef.h \
+  /usr/include/stdio.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/minix/sysutil.h /usr/include/net/hton.h \
+  /usr/include/net/gen/ether.h /usr/include/net/gen/eth_hdr.h \
+  /usr/include/net/gen/eth_io.h /usr/include/net/gen/in.h \
+  /usr/include/net/gen/ip_hdr.h /usr/include/net/gen/ip_io.h \
+  /usr/include/net/gen/icmp.h /usr/include/net/gen/icmp_hdr.h \
+  /usr/include/net/gen/oneCsum.h /usr/include/net/gen/psip_hdr.h \
+  /usr/include/net/gen/psip_io.h /usr/include/net/gen/route.h \
+  /usr/include/net/gen/tcp.h /usr/include/net/gen/tcp_hdr.h \
+  /usr/include/net/gen/tcp_io.h /usr/include/net/gen/udp.h \
+  /usr/include/net/gen/udp_hdr.h /usr/include/net/gen/udp_io_hdr.h \
+  /usr/include/net/gen/udp_io.h /usr/include/net/gen/arp_io.h \
+  /usr/include/sys/ioc_net.h /usr/include/sys/un.h \
+  /usr/src/servers/inet/const.h /usr/src/servers/inet/inet_config.h \
+  /usr/src/servers/inet/generic/io.h
+ip.o ip.ln: /usr/src/servers/inet/generic/ip.c /usr/src/servers/inet/inet.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/errno.h /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/sys/ioc_file.h \
+  /usr/include/minix/ioctl.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/minix/com.h \
+  /usr/include/minix/syslib.h /usr/include/minix/ipc.h \
+  /usr/include/minix/ipcconst.h /usr/include/machine/ipcconst.h \
+  /usr/include/minix/u64.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/minix/devio.h \
+  /usr/include/minix/safecopies.h /usr/include/minix/vm.h \
+  /usr/include/minix/endpoint.h /usr/include/minix/sef.h \
+  /usr/include/stdio.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/minix/sysutil.h /usr/include/net/hton.h \
+  /usr/include/net/gen/ether.h /usr/include/net/gen/eth_hdr.h \
+  /usr/include/net/gen/eth_io.h /usr/include/net/gen/in.h \
+  /usr/include/net/gen/ip_hdr.h /usr/include/net/gen/ip_io.h \
+  /usr/include/net/gen/icmp.h /usr/include/net/gen/icmp_hdr.h \
+  /usr/include/net/gen/oneCsum.h /usr/include/net/gen/psip_hdr.h \
+  /usr/include/net/gen/psip_io.h /usr/include/net/gen/route.h \
+  /usr/include/net/gen/tcp.h /usr/include/net/gen/tcp_hdr.h \
+  /usr/include/net/gen/tcp_io.h /usr/include/net/gen/udp.h \
+  /usr/include/net/gen/udp_hdr.h /usr/include/net/gen/udp_io_hdr.h \
+  /usr/include/net/gen/udp_io.h /usr/include/net/gen/arp_io.h \
+  /usr/include/sys/ioc_net.h /usr/include/sys/un.h \
+  /usr/src/servers/inet/const.h /usr/src/servers/inet/inet_config.h \
+  /usr/src/servers/inet/generic/buf.h \
+  /usr/src/servers/inet/generic/event.h \
+  /usr/src/servers/inet/generic/type.h \
+  /usr/src/servers/inet/generic/arp.h \
+  /usr/src/servers/inet/generic/assert.h \
+  /usr/src/servers/inet/generic/clock.h \
+  /usr/src/servers/inet/generic/eth.h \
+  /usr/src/servers/inet/generic/icmp.h \
+  /usr/src/servers/inet/generic/icmp_lib.h \
+  /usr/src/servers/inet/generic/io.h /usr/src/servers/inet/generic/ip.h \
+  /usr/src/servers/inet/generic/ip_int.h \
+  /usr/src/servers/inet/generic/ipr.h /usr/src/servers/inet/generic/sr.h
+ip_eth.o ip_eth.ln: /usr/src/servers/inet/generic/ip_eth.c \
+  /usr/src/servers/inet/inet.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/errno.h \
+  /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/sys/ioc_file.h \
+  /usr/include/minix/ioctl.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/minix/com.h \
+  /usr/include/minix/syslib.h /usr/include/minix/ipc.h \
+  /usr/include/minix/ipcconst.h /usr/include/machine/ipcconst.h \
+  /usr/include/minix/u64.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/minix/devio.h \
+  /usr/include/minix/safecopies.h /usr/include/minix/vm.h \
+  /usr/include/minix/endpoint.h /usr/include/minix/sef.h \
+  /usr/include/stdio.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/minix/sysutil.h /usr/include/net/hton.h \
+  /usr/include/net/gen/ether.h /usr/include/net/gen/eth_hdr.h \
+  /usr/include/net/gen/eth_io.h /usr/include/net/gen/in.h \
+  /usr/include/net/gen/ip_hdr.h /usr/include/net/gen/ip_io.h \
+  /usr/include/net/gen/icmp.h /usr/include/net/gen/icmp_hdr.h \
+  /usr/include/net/gen/oneCsum.h /usr/include/net/gen/psip_hdr.h \
+  /usr/include/net/gen/psip_io.h /usr/include/net/gen/route.h \
+  /usr/include/net/gen/tcp.h /usr/include/net/gen/tcp_hdr.h \
+  /usr/include/net/gen/tcp_io.h /usr/include/net/gen/udp.h \
+  /usr/include/net/gen/udp_hdr.h /usr/include/net/gen/udp_io_hdr.h \
+  /usr/include/net/gen/udp_io.h /usr/include/net/gen/arp_io.h \
+  /usr/include/sys/ioc_net.h /usr/include/sys/un.h \
+  /usr/src/servers/inet/const.h /usr/src/servers/inet/inet_config.h \
+  /usr/src/servers/inet/generic/type.h \
+  /usr/src/servers/inet/generic/arp.h \
+  /usr/src/servers/inet/generic/assert.h \
+  /usr/src/servers/inet/generic/buf.h \
+  /usr/src/servers/inet/generic/clock.h \
+  /usr/src/servers/inet/generic/eth.h \
+  /usr/src/servers/inet/generic/event.h \
+  /usr/src/servers/inet/generic/icmp_lib.h \
+  /usr/src/servers/inet/generic/io.h /usr/src/servers/inet/generic/ip.h \
+  /usr/src/servers/inet/generic/ip_int.h
+ip_ioctl.o ip_ioctl.ln: /usr/src/servers/inet/generic/ip_ioctl.c \
+  /usr/src/servers/inet/inet.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/errno.h \
+  /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/sys/ioc_file.h \
+  /usr/include/minix/ioctl.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/minix/com.h \
+  /usr/include/minix/syslib.h /usr/include/minix/ipc.h \
+  /usr/include/minix/ipcconst.h /usr/include/machine/ipcconst.h \
+  /usr/include/minix/u64.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/minix/devio.h \
+  /usr/include/minix/safecopies.h /usr/include/minix/vm.h \
+  /usr/include/minix/endpoint.h /usr/include/minix/sef.h \
+  /usr/include/stdio.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/minix/sysutil.h /usr/include/net/hton.h \
+  /usr/include/net/gen/ether.h /usr/include/net/gen/eth_hdr.h \
+  /usr/include/net/gen/eth_io.h /usr/include/net/gen/in.h \
+  /usr/include/net/gen/ip_hdr.h /usr/include/net/gen/ip_io.h \
+  /usr/include/net/gen/icmp.h /usr/include/net/gen/icmp_hdr.h \
+  /usr/include/net/gen/oneCsum.h /usr/include/net/gen/psip_hdr.h \
+  /usr/include/net/gen/psip_io.h /usr/include/net/gen/route.h \
+  /usr/include/net/gen/tcp.h /usr/include/net/gen/tcp_hdr.h \
+  /usr/include/net/gen/tcp_io.h /usr/include/net/gen/udp.h \
+  /usr/include/net/gen/udp_hdr.h /usr/include/net/gen/udp_io_hdr.h \
+  /usr/include/net/gen/udp_io.h /usr/include/net/gen/arp_io.h \
+  /usr/include/sys/ioc_net.h /usr/include/sys/un.h \
+  /usr/src/servers/inet/const.h /usr/src/servers/inet/inet_config.h \
+  /usr/src/servers/inet/generic/buf.h \
+  /usr/src/servers/inet/generic/event.h \
+  /usr/src/servers/inet/generic/type.h \
+  /usr/src/servers/inet/generic/arp.h \
+  /usr/src/servers/inet/generic/assert.h \
+  /usr/src/servers/inet/generic/clock.h \
+  /usr/src/servers/inet/generic/icmp_lib.h \
+  /usr/src/servers/inet/generic/ip.h \
+  /usr/src/servers/inet/generic/ip_int.h \
+  /usr/src/servers/inet/generic/ipr.h
+ip_lib.o ip_lib.ln: /usr/src/servers/inet/generic/ip_lib.c \
+  /usr/src/servers/inet/inet.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/errno.h \
+  /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/sys/ioc_file.h \
+  /usr/include/minix/ioctl.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/minix/com.h \
+  /usr/include/minix/syslib.h /usr/include/minix/ipc.h \
+  /usr/include/minix/ipcconst.h /usr/include/machine/ipcconst.h \
+  /usr/include/minix/u64.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/minix/devio.h \
+  /usr/include/minix/safecopies.h /usr/include/minix/vm.h \
+  /usr/include/minix/endpoint.h /usr/include/minix/sef.h \
+  /usr/include/stdio.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/minix/sysutil.h /usr/include/net/hton.h \
+  /usr/include/net/gen/ether.h /usr/include/net/gen/eth_hdr.h \
+  /usr/include/net/gen/eth_io.h /usr/include/net/gen/in.h \
+  /usr/include/net/gen/ip_hdr.h /usr/include/net/gen/ip_io.h \
+  /usr/include/net/gen/icmp.h /usr/include/net/gen/icmp_hdr.h \
+  /usr/include/net/gen/oneCsum.h /usr/include/net/gen/psip_hdr.h \
+  /usr/include/net/gen/psip_io.h /usr/include/net/gen/route.h \
+  /usr/include/net/gen/tcp.h /usr/include/net/gen/tcp_hdr.h \
+  /usr/include/net/gen/tcp_io.h /usr/include/net/gen/udp.h \
+  /usr/include/net/gen/udp_hdr.h /usr/include/net/gen/udp_io_hdr.h \
+  /usr/include/net/gen/udp_io.h /usr/include/net/gen/arp_io.h \
+  /usr/include/sys/ioc_net.h /usr/include/sys/un.h \
+  /usr/src/servers/inet/const.h /usr/src/servers/inet/inet_config.h \
+  /usr/src/servers/inet/generic/buf.h \
+  /usr/src/servers/inet/generic/event.h \
+  /usr/src/servers/inet/generic/type.h \
+  /usr/src/servers/inet/generic/assert.h \
+  /usr/src/servers/inet/generic/io.h \
+  /usr/src/servers/inet/generic/ip_int.h
+ip_ps.o ip_ps.ln: /usr/src/servers/inet/generic/ip_ps.c \
+  /usr/src/servers/inet/inet.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/errno.h \
+  /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/sys/ioc_file.h \
+  /usr/include/minix/ioctl.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/minix/com.h \
+  /usr/include/minix/syslib.h /usr/include/minix/ipc.h \
+  /usr/include/minix/ipcconst.h /usr/include/machine/ipcconst.h \
+  /usr/include/minix/u64.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/minix/devio.h \
+  /usr/include/minix/safecopies.h /usr/include/minix/vm.h \
+  /usr/include/minix/endpoint.h /usr/include/minix/sef.h \
+  /usr/include/stdio.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/minix/sysutil.h /usr/include/net/hton.h \
+  /usr/include/net/gen/ether.h /usr/include/net/gen/eth_hdr.h \
+  /usr/include/net/gen/eth_io.h /usr/include/net/gen/in.h \
+  /usr/include/net/gen/ip_hdr.h /usr/include/net/gen/ip_io.h \
+  /usr/include/net/gen/icmp.h /usr/include/net/gen/icmp_hdr.h \
+  /usr/include/net/gen/oneCsum.h /usr/include/net/gen/psip_hdr.h \
+  /usr/include/net/gen/psip_io.h /usr/include/net/gen/route.h \
+  /usr/include/net/gen/tcp.h /usr/include/net/gen/tcp_hdr.h \
+  /usr/include/net/gen/tcp_io.h /usr/include/net/gen/udp.h \
+  /usr/include/net/gen/udp_hdr.h /usr/include/net/gen/udp_io_hdr.h \
+  /usr/include/net/gen/udp_io.h /usr/include/net/gen/arp_io.h \
+  /usr/include/sys/ioc_net.h /usr/include/sys/un.h \
+  /usr/src/servers/inet/const.h /usr/src/servers/inet/inet_config.h \
+  /usr/src/servers/inet/generic/assert.h \
+  /usr/src/servers/inet/generic/type.h \
+  /usr/src/servers/inet/generic/buf.h \
+  /usr/src/servers/inet/generic/event.h \
+  /usr/src/servers/inet/generic/ip.h \
+  /usr/src/servers/inet/generic/ip_int.h \
+  /usr/src/servers/inet/generic/psip.h
+ip_read.o ip_read.ln: /usr/src/servers/inet/generic/ip_read.c \
+  /usr/src/servers/inet/inet.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/errno.h \
+  /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/sys/ioc_file.h \
+  /usr/include/minix/ioctl.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/minix/com.h \
+  /usr/include/minix/syslib.h /usr/include/minix/ipc.h \
+  /usr/include/minix/ipcconst.h /usr/include/machine/ipcconst.h \
+  /usr/include/minix/u64.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/minix/devio.h \
+  /usr/include/minix/safecopies.h /usr/include/minix/vm.h \
+  /usr/include/minix/endpoint.h /usr/include/minix/sef.h \
+  /usr/include/stdio.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/minix/sysutil.h /usr/include/net/hton.h \
+  /usr/include/net/gen/ether.h /usr/include/net/gen/eth_hdr.h \
+  /usr/include/net/gen/eth_io.h /usr/include/net/gen/in.h \
+  /usr/include/net/gen/ip_hdr.h /usr/include/net/gen/ip_io.h \
+  /usr/include/net/gen/icmp.h /usr/include/net/gen/icmp_hdr.h \
+  /usr/include/net/gen/oneCsum.h /usr/include/net/gen/psip_hdr.h \
+  /usr/include/net/gen/psip_io.h /usr/include/net/gen/route.h \
+  /usr/include/net/gen/tcp.h /usr/include/net/gen/tcp_hdr.h \
+  /usr/include/net/gen/tcp_io.h /usr/include/net/gen/udp.h \
+  /usr/include/net/gen/udp_hdr.h /usr/include/net/gen/udp_io_hdr.h \
+  /usr/include/net/gen/udp_io.h /usr/include/net/gen/arp_io.h \
+  /usr/include/sys/ioc_net.h /usr/include/sys/un.h \
+  /usr/src/servers/inet/const.h /usr/src/servers/inet/inet_config.h \
+  /usr/src/servers/inet/generic/buf.h \
+  /usr/src/servers/inet/generic/clock.h \
+  /usr/src/servers/inet/generic/event.h \
+  /usr/src/servers/inet/generic/type.h \
+  /usr/src/servers/inet/generic/assert.h \
+  /usr/src/servers/inet/generic/icmp_lib.h \
+  /usr/src/servers/inet/generic/io.h /usr/src/servers/inet/generic/ip.h \
+  /usr/src/servers/inet/generic/ip_int.h \
+  /usr/src/servers/inet/generic/ipr.h /usr/src/servers/inet/generic/sr.h
+ip_write.o ip_write.ln: /usr/src/servers/inet/generic/ip_write.c \
+  /usr/src/servers/inet/inet.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/errno.h \
+  /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/sys/ioc_file.h \
+  /usr/include/minix/ioctl.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/minix/com.h \
+  /usr/include/minix/syslib.h /usr/include/minix/ipc.h \
+  /usr/include/minix/ipcconst.h /usr/include/machine/ipcconst.h \
+  /usr/include/minix/u64.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/minix/devio.h \
+  /usr/include/minix/safecopies.h /usr/include/minix/vm.h \
+  /usr/include/minix/endpoint.h /usr/include/minix/sef.h \
+  /usr/include/stdio.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/minix/sysutil.h /usr/include/net/hton.h \
+  /usr/include/net/gen/ether.h /usr/include/net/gen/eth_hdr.h \
+  /usr/include/net/gen/eth_io.h /usr/include/net/gen/in.h \
+  /usr/include/net/gen/ip_hdr.h /usr/include/net/gen/ip_io.h \
+  /usr/include/net/gen/icmp.h /usr/include/net/gen/icmp_hdr.h \
+  /usr/include/net/gen/oneCsum.h /usr/include/net/gen/psip_hdr.h \
+  /usr/include/net/gen/psip_io.h /usr/include/net/gen/route.h \
+  /usr/include/net/gen/tcp.h /usr/include/net/gen/tcp_hdr.h \
+  /usr/include/net/gen/tcp_io.h /usr/include/net/gen/udp.h \
+  /usr/include/net/gen/udp_hdr.h /usr/include/net/gen/udp_io_hdr.h \
+  /usr/include/net/gen/udp_io.h /usr/include/net/gen/arp_io.h \
+  /usr/include/sys/ioc_net.h /usr/include/sys/un.h \
+  /usr/src/servers/inet/const.h /usr/src/servers/inet/inet_config.h \
+  /usr/src/servers/inet/generic/buf.h \
+  /usr/src/servers/inet/generic/event.h \
+  /usr/src/servers/inet/generic/type.h \
+  /usr/src/servers/inet/generic/arp.h \
+  /usr/src/servers/inet/generic/assert.h \
+  /usr/src/servers/inet/generic/clock.h \
+  /usr/src/servers/inet/generic/eth.h \
+  /usr/src/servers/inet/generic/icmp_lib.h \
+  /usr/src/servers/inet/generic/io.h /usr/src/servers/inet/generic/ip.h \
+  /usr/src/servers/inet/generic/ip_int.h \
+  /usr/src/servers/inet/generic/ipr.h
+ipr.o ipr.ln: /usr/src/servers/inet/generic/ipr.c /usr/src/servers/inet/inet.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/errno.h /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/sys/ioc_file.h \
+  /usr/include/minix/ioctl.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/minix/com.h \
+  /usr/include/minix/syslib.h /usr/include/minix/ipc.h \
+  /usr/include/minix/ipcconst.h /usr/include/machine/ipcconst.h \
+  /usr/include/minix/u64.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/minix/devio.h \
+  /usr/include/minix/safecopies.h /usr/include/minix/vm.h \
+  /usr/include/minix/endpoint.h /usr/include/minix/sef.h \
+  /usr/include/stdio.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/minix/sysutil.h /usr/include/net/hton.h \
+  /usr/include/net/gen/ether.h /usr/include/net/gen/eth_hdr.h \
+  /usr/include/net/gen/eth_io.h /usr/include/net/gen/in.h \
+  /usr/include/net/gen/ip_hdr.h /usr/include/net/gen/ip_io.h \
+  /usr/include/net/gen/icmp.h /usr/include/net/gen/icmp_hdr.h \
+  /usr/include/net/gen/oneCsum.h /usr/include/net/gen/psip_hdr.h \
+  /usr/include/net/gen/psip_io.h /usr/include/net/gen/route.h \
+  /usr/include/net/gen/tcp.h /usr/include/net/gen/tcp_hdr.h \
+  /usr/include/net/gen/tcp_io.h /usr/include/net/gen/udp.h \
+  /usr/include/net/gen/udp_hdr.h /usr/include/net/gen/udp_io_hdr.h \
+  /usr/include/net/gen/udp_io.h /usr/include/net/gen/arp_io.h \
+  /usr/include/sys/ioc_net.h /usr/include/sys/un.h \
+  /usr/src/servers/inet/const.h /usr/src/servers/inet/inet_config.h \
+  /usr/src/servers/inet/generic/clock.h \
+  /usr/src/servers/inet/generic/type.h \
+  /usr/src/servers/inet/generic/assert.h \
+  /usr/src/servers/inet/generic/buf.h \
+  /usr/src/servers/inet/generic/event.h \
+  /usr/src/servers/inet/generic/io.h \
+  /usr/src/servers/inet/generic/ip_int.h \
+  /usr/src/servers/inet/generic/ipr.h
+mnx_eth.o mnx_eth.ln: mnx_eth.c /usr/src/servers/inet/inet.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/errno.h /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/sys/ioc_file.h \
+  /usr/include/minix/ioctl.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/minix/com.h \
+  /usr/include/minix/syslib.h /usr/include/minix/ipc.h \
+  /usr/include/minix/ipcconst.h /usr/include/machine/ipcconst.h \
+  /usr/include/minix/u64.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/minix/devio.h \
+  /usr/include/minix/safecopies.h /usr/include/minix/vm.h \
+  /usr/include/minix/endpoint.h /usr/include/minix/sef.h \
+  /usr/include/stdio.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/minix/sysutil.h /usr/include/net/hton.h \
+  /usr/include/net/gen/ether.h /usr/include/net/gen/eth_hdr.h \
+  /usr/include/net/gen/eth_io.h /usr/include/net/gen/in.h \
+  /usr/include/net/gen/ip_hdr.h /usr/include/net/gen/ip_io.h \
+  /usr/include/net/gen/icmp.h /usr/include/net/gen/icmp_hdr.h \
+  /usr/include/net/gen/oneCsum.h /usr/include/net/gen/psip_hdr.h \
+  /usr/include/net/gen/psip_io.h /usr/include/net/gen/route.h \
+  /usr/include/net/gen/tcp.h /usr/include/net/gen/tcp_hdr.h \
+  /usr/include/net/gen/tcp_io.h /usr/include/net/gen/udp.h \
+  /usr/include/net/gen/udp_hdr.h /usr/include/net/gen/udp_io_hdr.h \
+  /usr/include/net/gen/udp_io.h /usr/include/net/gen/arp_io.h \
+  /usr/include/sys/ioc_net.h /usr/include/sys/un.h \
+  /usr/src/servers/inet/const.h /usr/src/servers/inet/inet_config.h \
+  /usr/src/servers/inet/proto.h /usr/src/servers/inet/osdep_eth.h \
+  /usr/src/servers/inet/generic/event.h \
+  /usr/src/servers/inet/generic/type.h \
+  /usr/src/servers/inet/generic/assert.h \
+  /usr/src/servers/inet/generic/buf.h \
+  /usr/src/servers/inet/generic/clock.h \
+  /usr/src/servers/inet/generic/eth.h \
+  /usr/src/servers/inet/generic/eth_int.h \
+  /usr/src/servers/inet/generic/sr.h
+mq.o mq.ln: mq.c /usr/src/servers/inet/inet.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/errno.h \
+  /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/sys/ioc_file.h \
+  /usr/include/minix/ioctl.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/minix/com.h \
+  /usr/include/minix/syslib.h /usr/include/minix/ipc.h \
+  /usr/include/minix/ipcconst.h /usr/include/machine/ipcconst.h \
+  /usr/include/minix/u64.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/minix/devio.h \
+  /usr/include/minix/safecopies.h /usr/include/minix/vm.h \
+  /usr/include/minix/endpoint.h /usr/include/minix/sef.h \
+  /usr/include/stdio.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/minix/sysutil.h /usr/include/net/hton.h \
+  /usr/include/net/gen/ether.h /usr/include/net/gen/eth_hdr.h \
+  /usr/include/net/gen/eth_io.h /usr/include/net/gen/in.h \
+  /usr/include/net/gen/ip_hdr.h /usr/include/net/gen/ip_io.h \
+  /usr/include/net/gen/icmp.h /usr/include/net/gen/icmp_hdr.h \
+  /usr/include/net/gen/oneCsum.h /usr/include/net/gen/psip_hdr.h \
+  /usr/include/net/gen/psip_io.h /usr/include/net/gen/route.h \
+  /usr/include/net/gen/tcp.h /usr/include/net/gen/tcp_hdr.h \
+  /usr/include/net/gen/tcp_io.h /usr/include/net/gen/udp.h \
+  /usr/include/net/gen/udp_hdr.h /usr/include/net/gen/udp_io_hdr.h \
+  /usr/include/net/gen/udp_io.h /usr/include/net/gen/arp_io.h \
+  /usr/include/sys/ioc_net.h /usr/include/sys/un.h \
+  /usr/src/servers/inet/const.h /usr/src/servers/inet/inet_config.h \
+  /usr/src/servers/inet/mq.h /usr/src/servers/inet/generic/assert.h
+psip.o psip.ln: /usr/src/servers/inet/generic/psip.c /usr/src/servers/inet/inet.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/errno.h /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/sys/ioc_file.h \
+  /usr/include/minix/ioctl.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/minix/com.h \
+  /usr/include/minix/syslib.h /usr/include/minix/ipc.h \
+  /usr/include/minix/ipcconst.h /usr/include/machine/ipcconst.h \
+  /usr/include/minix/u64.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/minix/devio.h \
+  /usr/include/minix/safecopies.h /usr/include/minix/vm.h \
+  /usr/include/minix/endpoint.h /usr/include/minix/sef.h \
+  /usr/include/stdio.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/minix/sysutil.h /usr/include/net/hton.h \
+  /usr/include/net/gen/ether.h /usr/include/net/gen/eth_hdr.h \
+  /usr/include/net/gen/eth_io.h /usr/include/net/gen/in.h \
+  /usr/include/net/gen/ip_hdr.h /usr/include/net/gen/ip_io.h \
+  /usr/include/net/gen/icmp.h /usr/include/net/gen/icmp_hdr.h \
+  /usr/include/net/gen/oneCsum.h /usr/include/net/gen/psip_hdr.h \
+  /usr/include/net/gen/psip_io.h /usr/include/net/gen/route.h \
+  /usr/include/net/gen/tcp.h /usr/include/net/gen/tcp_hdr.h \
+  /usr/include/net/gen/tcp_io.h /usr/include/net/gen/udp.h \
+  /usr/include/net/gen/udp_hdr.h /usr/include/net/gen/udp_io_hdr.h \
+  /usr/include/net/gen/udp_io.h /usr/include/net/gen/arp_io.h \
+  /usr/include/sys/ioc_net.h /usr/include/sys/un.h \
+  /usr/src/servers/inet/const.h /usr/src/servers/inet/inet_config.h \
+  /usr/src/servers/inet/generic/assert.h \
+  /usr/src/servers/inet/generic/buf.h \
+  /usr/src/servers/inet/generic/event.h \
+  /usr/src/servers/inet/generic/type.h \
+  /usr/src/servers/inet/generic/ip_int.h \
+  /usr/src/servers/inet/generic/psip.h \
+  /usr/src/servers/inet/generic/sr.h
+qp.o qp.ln: qp.c /usr/src/servers/inet/inet.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/errno.h \
+  /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/sys/ioc_file.h \
+  /usr/include/minix/ioctl.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/minix/com.h \
+  /usr/include/minix/syslib.h /usr/include/minix/ipc.h \
+  /usr/include/minix/ipcconst.h /usr/include/machine/ipcconst.h \
+  /usr/include/minix/u64.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/minix/devio.h \
+  /usr/include/minix/safecopies.h /usr/include/minix/vm.h \
+  /usr/include/minix/endpoint.h /usr/include/minix/sef.h \
+  /usr/include/stdio.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/minix/sysutil.h /usr/include/net/hton.h \
+  /usr/include/net/gen/ether.h /usr/include/net/gen/eth_hdr.h \
+  /usr/include/net/gen/eth_io.h /usr/include/net/gen/in.h \
+  /usr/include/net/gen/ip_hdr.h /usr/include/net/gen/ip_io.h \
+  /usr/include/net/gen/icmp.h /usr/include/net/gen/icmp_hdr.h \
+  /usr/include/net/gen/oneCsum.h /usr/include/net/gen/psip_hdr.h \
+  /usr/include/net/gen/psip_io.h /usr/include/net/gen/route.h \
+  /usr/include/net/gen/tcp.h /usr/include/net/gen/tcp_hdr.h \
+  /usr/include/net/gen/tcp_io.h /usr/include/net/gen/udp.h \
+  /usr/include/net/gen/udp_hdr.h /usr/include/net/gen/udp_io_hdr.h \
+  /usr/include/net/gen/udp_io.h /usr/include/net/gen/arp_io.h \
+  /usr/include/sys/ioc_net.h /usr/include/sys/un.h \
+  /usr/src/servers/inet/const.h /usr/src/servers/inet/inet_config.h \
+  /usr/src/servers/inet/generic/assert.h /usr/include/sys/svrctl.h \
+  /usr/src/servers/inet/queryparam.h /usr/src/servers/inet/generic/buf.h \
+  /usr/src/servers/inet/generic/clock.h \
+  /usr/src/servers/inet/generic/event.h \
+  /usr/src/servers/inet/generic/type.h \
+  /usr/src/servers/inet/generic/sr.h \
+  /usr/src/servers/inet/generic/tcp_int.h \
+  /usr/src/servers/inet/generic/udp_int.h /usr/src/servers/inet/mq.h \
+  /usr/src/servers/inet/qp.h /usr/src/servers/inet/sr_int.h
+queryparam.o queryparam.ln: queryparam.c /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/include/stdlib.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/null.h \
+  /usr/include/string.h /usr/include/strings.h \
+  /usr/src/servers/inet/queryparam.h
+rand256.o rand256.ln: /usr/src/servers/inet/generic/rand256.c \
+  /usr/include/sys/sha2.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/src/servers/inet/inet.h \
+  /usr/include/errno.h /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/sys/ioc_file.h \
+  /usr/include/minix/ioctl.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/minix/com.h \
+  /usr/include/minix/syslib.h /usr/include/minix/ipc.h \
+  /usr/include/minix/ipcconst.h /usr/include/machine/ipcconst.h \
+  /usr/include/minix/u64.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/minix/devio.h \
+  /usr/include/minix/safecopies.h /usr/include/minix/vm.h \
+  /usr/include/minix/endpoint.h /usr/include/minix/sef.h \
+  /usr/include/stdio.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/minix/sysutil.h /usr/include/net/hton.h \
+  /usr/include/net/gen/ether.h /usr/include/net/gen/eth_hdr.h \
+  /usr/include/net/gen/eth_io.h /usr/include/net/gen/in.h \
+  /usr/include/net/gen/ip_hdr.h /usr/include/net/gen/ip_io.h \
+  /usr/include/net/gen/icmp.h /usr/include/net/gen/icmp_hdr.h \
+  /usr/include/net/gen/oneCsum.h /usr/include/net/gen/psip_hdr.h \
+  /usr/include/net/gen/psip_io.h /usr/include/net/gen/route.h \
+  /usr/include/net/gen/tcp.h /usr/include/net/gen/tcp_hdr.h \
+  /usr/include/net/gen/tcp_io.h /usr/include/net/gen/udp.h \
+  /usr/include/net/gen/udp_hdr.h /usr/include/net/gen/udp_io_hdr.h \
+  /usr/include/net/gen/udp_io.h /usr/include/net/gen/arp_io.h \
+  /usr/include/sys/ioc_net.h /usr/include/sys/un.h \
+  /usr/src/servers/inet/const.h /usr/src/servers/inet/inet_config.h \
+  /usr/src/servers/inet/generic/rand256.h
+sr.o sr.ln: sr.c /usr/src/servers/inet/inet.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/errno.h \
+  /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/sys/ioc_file.h \
+  /usr/include/minix/ioctl.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/minix/com.h \
+  /usr/include/minix/syslib.h /usr/include/minix/ipc.h \
+  /usr/include/minix/ipcconst.h /usr/include/machine/ipcconst.h \
+  /usr/include/minix/u64.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/minix/devio.h \
+  /usr/include/minix/safecopies.h /usr/include/minix/vm.h \
+  /usr/include/minix/endpoint.h /usr/include/minix/sef.h \
+  /usr/include/stdio.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/minix/sysutil.h /usr/include/net/hton.h \
+  /usr/include/net/gen/ether.h /usr/include/net/gen/eth_hdr.h \
+  /usr/include/net/gen/eth_io.h /usr/include/net/gen/in.h \
+  /usr/include/net/gen/ip_hdr.h /usr/include/net/gen/ip_io.h \
+  /usr/include/net/gen/icmp.h /usr/include/net/gen/icmp_hdr.h \
+  /usr/include/net/gen/oneCsum.h /usr/include/net/gen/psip_hdr.h \
+  /usr/include/net/gen/psip_io.h /usr/include/net/gen/route.h \
+  /usr/include/net/gen/tcp.h /usr/include/net/gen/tcp_hdr.h \
+  /usr/include/net/gen/tcp_io.h /usr/include/net/gen/udp.h \
+  /usr/include/net/gen/udp_hdr.h /usr/include/net/gen/udp_io_hdr.h \
+  /usr/include/net/gen/udp_io.h /usr/include/net/gen/arp_io.h \
+  /usr/include/sys/ioc_net.h /usr/include/sys/un.h \
+  /usr/src/servers/inet/const.h /usr/src/servers/inet/inet_config.h \
+  /usr/include/sys/svrctl.h /usr/include/minix/callnr.h \
+  /usr/src/servers/inet/mq.h /usr/src/servers/inet/qp.h \
+  /usr/src/servers/inet/proto.h /usr/src/servers/inet/generic/type.h \
+  /usr/src/servers/inet/generic/assert.h \
+  /usr/src/servers/inet/generic/buf.h \
+  /usr/src/servers/inet/generic/event.h \
+  /usr/src/servers/inet/generic/sr.h /usr/src/servers/inet/sr_int.h
+tcp.o tcp.ln: /usr/src/servers/inet/generic/tcp.c /usr/src/servers/inet/inet.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/errno.h /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/sys/ioc_file.h \
+  /usr/include/minix/ioctl.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/minix/com.h \
+  /usr/include/minix/syslib.h /usr/include/minix/ipc.h \
+  /usr/include/minix/ipcconst.h /usr/include/machine/ipcconst.h \
+  /usr/include/minix/u64.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/minix/devio.h \
+  /usr/include/minix/safecopies.h /usr/include/minix/vm.h \
+  /usr/include/minix/endpoint.h /usr/include/minix/sef.h \
+  /usr/include/stdio.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/minix/sysutil.h /usr/include/net/hton.h \
+  /usr/include/net/gen/ether.h /usr/include/net/gen/eth_hdr.h \
+  /usr/include/net/gen/eth_io.h /usr/include/net/gen/in.h \
+  /usr/include/net/gen/ip_hdr.h /usr/include/net/gen/ip_io.h \
+  /usr/include/net/gen/icmp.h /usr/include/net/gen/icmp_hdr.h \
+  /usr/include/net/gen/oneCsum.h /usr/include/net/gen/psip_hdr.h \
+  /usr/include/net/gen/psip_io.h /usr/include/net/gen/route.h \
+  /usr/include/net/gen/tcp.h /usr/include/net/gen/tcp_hdr.h \
+  /usr/include/net/gen/tcp_io.h /usr/include/net/gen/udp.h \
+  /usr/include/net/gen/udp_hdr.h /usr/include/net/gen/udp_io_hdr.h \
+  /usr/include/net/gen/udp_io.h /usr/include/net/gen/arp_io.h \
+  /usr/include/sys/ioc_net.h /usr/include/sys/un.h \
+  /usr/src/servers/inet/const.h /usr/src/servers/inet/inet_config.h \
+  /usr/src/servers/inet/generic/buf.h \
+  /usr/src/servers/inet/generic/clock.h \
+  /usr/src/servers/inet/generic/event.h \
+  /usr/src/servers/inet/generic/type.h \
+  /usr/src/servers/inet/generic/io.h /usr/src/servers/inet/generic/ip.h \
+  /usr/src/servers/inet/generic/sr.h \
+  /usr/src/servers/inet/generic/assert.h \
+  /usr/src/servers/inet/generic/rand256.h \
+  /usr/src/servers/inet/generic/tcp.h \
+  /usr/src/servers/inet/generic/tcp_int.h
+tcp_lib.o tcp_lib.ln: /usr/src/servers/inet/generic/tcp_lib.c \
+  /usr/src/servers/inet/inet.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/errno.h \
+  /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/sys/ioc_file.h \
+  /usr/include/minix/ioctl.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/minix/com.h \
+  /usr/include/minix/syslib.h /usr/include/minix/ipc.h \
+  /usr/include/minix/ipcconst.h /usr/include/machine/ipcconst.h \
+  /usr/include/minix/u64.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/minix/devio.h \
+  /usr/include/minix/safecopies.h /usr/include/minix/vm.h \
+  /usr/include/minix/endpoint.h /usr/include/minix/sef.h \
+  /usr/include/stdio.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/minix/sysutil.h /usr/include/net/hton.h \
+  /usr/include/net/gen/ether.h /usr/include/net/gen/eth_hdr.h \
+  /usr/include/net/gen/eth_io.h /usr/include/net/gen/in.h \
+  /usr/include/net/gen/ip_hdr.h /usr/include/net/gen/ip_io.h \
+  /usr/include/net/gen/icmp.h /usr/include/net/gen/icmp_hdr.h \
+  /usr/include/net/gen/oneCsum.h /usr/include/net/gen/psip_hdr.h \
+  /usr/include/net/gen/psip_io.h /usr/include/net/gen/route.h \
+  /usr/include/net/gen/tcp.h /usr/include/net/gen/tcp_hdr.h \
+  /usr/include/net/gen/tcp_io.h /usr/include/net/gen/udp.h \
+  /usr/include/net/gen/udp_hdr.h /usr/include/net/gen/udp_io_hdr.h \
+  /usr/include/net/gen/udp_io.h /usr/include/net/gen/arp_io.h \
+  /usr/include/sys/ioc_net.h /usr/include/sys/un.h \
+  /usr/src/servers/inet/const.h /usr/src/servers/inet/inet_config.h \
+  /usr/src/servers/inet/generic/buf.h \
+  /usr/src/servers/inet/generic/clock.h \
+  /usr/src/servers/inet/generic/event.h \
+  /usr/src/servers/inet/generic/io.h \
+  /usr/src/servers/inet/generic/type.h \
+  /usr/src/servers/inet/generic/assert.h \
+  /usr/src/servers/inet/generic/tcp_int.h
+tcp_recv.o tcp_recv.ln: /usr/src/servers/inet/generic/tcp_recv.c \
+  /usr/src/servers/inet/inet.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/errno.h \
+  /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/sys/ioc_file.h \
+  /usr/include/minix/ioctl.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/minix/com.h \
+  /usr/include/minix/syslib.h /usr/include/minix/ipc.h \
+  /usr/include/minix/ipcconst.h /usr/include/machine/ipcconst.h \
+  /usr/include/minix/u64.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/minix/devio.h \
+  /usr/include/minix/safecopies.h /usr/include/minix/vm.h \
+  /usr/include/minix/endpoint.h /usr/include/minix/sef.h \
+  /usr/include/stdio.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/minix/sysutil.h /usr/include/net/hton.h \
+  /usr/include/net/gen/ether.h /usr/include/net/gen/eth_hdr.h \
+  /usr/include/net/gen/eth_io.h /usr/include/net/gen/in.h \
+  /usr/include/net/gen/ip_hdr.h /usr/include/net/gen/ip_io.h \
+  /usr/include/net/gen/icmp.h /usr/include/net/gen/icmp_hdr.h \
+  /usr/include/net/gen/oneCsum.h /usr/include/net/gen/psip_hdr.h \
+  /usr/include/net/gen/psip_io.h /usr/include/net/gen/route.h \
+  /usr/include/net/gen/tcp.h /usr/include/net/gen/tcp_hdr.h \
+  /usr/include/net/gen/tcp_io.h /usr/include/net/gen/udp.h \
+  /usr/include/net/gen/udp_hdr.h /usr/include/net/gen/udp_io_hdr.h \
+  /usr/include/net/gen/udp_io.h /usr/include/net/gen/arp_io.h \
+  /usr/include/sys/ioc_net.h /usr/include/sys/un.h \
+  /usr/src/servers/inet/const.h /usr/src/servers/inet/inet_config.h \
+  /usr/src/servers/inet/generic/buf.h \
+  /usr/src/servers/inet/generic/clock.h \
+  /usr/src/servers/inet/generic/event.h \
+  /usr/src/servers/inet/generic/type.h \
+  /usr/src/servers/inet/generic/sr.h /usr/src/servers/inet/generic/io.h \
+  /usr/src/servers/inet/generic/tcp_int.h \
+  /usr/src/servers/inet/generic/tcp.h \
+  /usr/src/servers/inet/generic/assert.h
+tcp_send.o tcp_send.ln: /usr/src/servers/inet/generic/tcp_send.c \
+  /usr/src/servers/inet/inet.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/errno.h \
+  /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/sys/ioc_file.h \
+  /usr/include/minix/ioctl.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/minix/com.h \
+  /usr/include/minix/syslib.h /usr/include/minix/ipc.h \
+  /usr/include/minix/ipcconst.h /usr/include/machine/ipcconst.h \
+  /usr/include/minix/u64.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/minix/devio.h \
+  /usr/include/minix/safecopies.h /usr/include/minix/vm.h \
+  /usr/include/minix/endpoint.h /usr/include/minix/sef.h \
+  /usr/include/stdio.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/minix/sysutil.h /usr/include/net/hton.h \
+  /usr/include/net/gen/ether.h /usr/include/net/gen/eth_hdr.h \
+  /usr/include/net/gen/eth_io.h /usr/include/net/gen/in.h \
+  /usr/include/net/gen/ip_hdr.h /usr/include/net/gen/ip_io.h \
+  /usr/include/net/gen/icmp.h /usr/include/net/gen/icmp_hdr.h \
+  /usr/include/net/gen/oneCsum.h /usr/include/net/gen/psip_hdr.h \
+  /usr/include/net/gen/psip_io.h /usr/include/net/gen/route.h \
+  /usr/include/net/gen/tcp.h /usr/include/net/gen/tcp_hdr.h \
+  /usr/include/net/gen/tcp_io.h /usr/include/net/gen/udp.h \
+  /usr/include/net/gen/udp_hdr.h /usr/include/net/gen/udp_io_hdr.h \
+  /usr/include/net/gen/udp_io.h /usr/include/net/gen/arp_io.h \
+  /usr/include/sys/ioc_net.h /usr/include/sys/un.h \
+  /usr/src/servers/inet/const.h /usr/src/servers/inet/inet_config.h \
+  /usr/src/servers/inet/generic/buf.h \
+  /usr/src/servers/inet/generic/clock.h \
+  /usr/src/servers/inet/generic/event.h \
+  /usr/src/servers/inet/generic/type.h \
+  /usr/src/servers/inet/generic/sr.h \
+  /usr/src/servers/inet/generic/assert.h \
+  /usr/src/servers/inet/generic/io.h /usr/src/servers/inet/generic/ip.h \
+  /usr/src/servers/inet/generic/tcp.h \
+  /usr/src/servers/inet/generic/tcp_int.h
+udp.o udp.ln: /usr/src/servers/inet/generic/udp.c /usr/src/servers/inet/inet.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/errno.h /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/sys/ioc_file.h \
+  /usr/include/minix/ioctl.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/minix/com.h \
+  /usr/include/minix/syslib.h /usr/include/minix/ipc.h \
+  /usr/include/minix/ipcconst.h /usr/include/machine/ipcconst.h \
+  /usr/include/minix/u64.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/minix/devio.h \
+  /usr/include/minix/safecopies.h /usr/include/minix/vm.h \
+  /usr/include/minix/endpoint.h /usr/include/minix/sef.h \
+  /usr/include/stdio.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/minix/sysutil.h /usr/include/net/hton.h \
+  /usr/include/net/gen/ether.h /usr/include/net/gen/eth_hdr.h \
+  /usr/include/net/gen/eth_io.h /usr/include/net/gen/in.h \
+  /usr/include/net/gen/ip_hdr.h /usr/include/net/gen/ip_io.h \
+  /usr/include/net/gen/icmp.h /usr/include/net/gen/icmp_hdr.h \
+  /usr/include/net/gen/oneCsum.h /usr/include/net/gen/psip_hdr.h \
+  /usr/include/net/gen/psip_io.h /usr/include/net/gen/route.h \
+  /usr/include/net/gen/tcp.h /usr/include/net/gen/tcp_hdr.h \
+  /usr/include/net/gen/tcp_io.h /usr/include/net/gen/udp.h \
+  /usr/include/net/gen/udp_hdr.h /usr/include/net/gen/udp_io_hdr.h \
+  /usr/include/net/gen/udp_io.h /usr/include/net/gen/arp_io.h \
+  /usr/include/sys/ioc_net.h /usr/include/sys/un.h \
+  /usr/src/servers/inet/const.h /usr/src/servers/inet/inet_config.h \
+  /usr/src/servers/inet/generic/type.h \
+  /usr/src/servers/inet/generic/assert.h \
+  /usr/src/servers/inet/generic/buf.h \
+  /usr/src/servers/inet/generic/clock.h \
+  /usr/src/servers/inet/generic/icmp_lib.h \
+  /usr/src/servers/inet/generic/io.h /usr/src/servers/inet/generic/ip.h \
+  /usr/src/servers/inet/generic/sr.h /usr/src/servers/inet/generic/udp.h \
+  /usr/src/servers/inet/generic/udp_int.h
+version.o version.ln: version.c /usr/src/servers/inet/inet.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/errno.h /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/sys/ioc_file.h \
+  /usr/include/minix/ioctl.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/minix/com.h \
+  /usr/include/minix/syslib.h /usr/include/minix/ipc.h \
+  /usr/include/minix/ipcconst.h /usr/include/machine/ipcconst.h \
+  /usr/include/minix/u64.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/minix/devio.h \
+  /usr/include/minix/safecopies.h /usr/include/minix/vm.h \
+  /usr/include/minix/endpoint.h /usr/include/minix/sef.h \
+  /usr/include/stdio.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/minix/sysutil.h /usr/include/net/hton.h \
+  /usr/include/net/gen/ether.h /usr/include/net/gen/eth_hdr.h \
+  /usr/include/net/gen/eth_io.h /usr/include/net/gen/in.h \
+  /usr/include/net/gen/ip_hdr.h /usr/include/net/gen/ip_io.h \
+  /usr/include/net/gen/icmp.h /usr/include/net/gen/icmp_hdr.h \
+  /usr/include/net/gen/oneCsum.h /usr/include/net/gen/psip_hdr.h \
+  /usr/include/net/gen/psip_io.h /usr/include/net/gen/route.h \
+  /usr/include/net/gen/tcp.h /usr/include/net/gen/tcp_hdr.h \
+  /usr/include/net/gen/tcp_io.h /usr/include/net/gen/udp.h \
+  /usr/include/net/gen/udp_hdr.h /usr/include/net/gen/udp_io_hdr.h \
+  /usr/include/net/gen/udp_io.h /usr/include/net/gen/arp_io.h \
+  /usr/include/sys/ioc_net.h /usr/include/sys/un.h \
+  /usr/src/servers/inet/const.h /usr/src/servers/inet/inet_config.h

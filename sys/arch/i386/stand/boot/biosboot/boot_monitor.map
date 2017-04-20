@@ -1,0 +1,2331 @@
+Archive member included because of file (symbol)
+
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+                              conf.o (biosdisk_close)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+                              boot2.o (command_vesa)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(rasops.o)
+                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o) (rasops_cmap)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootmenu.o)
+                              boot2.o (bootconf)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(multiboot.o)
+                              exec.o (multiboot)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(startprog.o)
+                              exec.o (startprog)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo_memmap.o)
+                              exec.o (bi_getmemmap)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo_biosgeom.o)
+                              exec.o (bi_getbiosgeom)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo.o)
+                              devopen.o (bi_add)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(menuutils.o)
+                              boot2.o (bootmenu)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pread.o)
+                              exec.o (pread)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(getextmemx.o)
+                              boot2.o (getextmemx)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(gatea20.o)
+                              boot2.o (gateA20)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+                              boot2.o (awaitkey)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk_ll.o)
+                              devopen.o (get_harddrives)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pvcopy.o)
+                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pread.o) (vpbcopy)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(parseutils.o)
+                              boot2.o (gettrailer)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(comio_direct.o)
+                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o) (comgetc_d)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(diskbuf.o)
+                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk_ll.o) (alloc_diskbuf)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(cpufunc.o)
+                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(gatea20.o) (x86_read_psl)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(dump_eax.o)
+                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/realprot.o (dump_eax)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(message.o)
+                              biosboot.o (message)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(xlat_mbr_fstype.o)
+                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o) (xlat_mbr_fstype)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o)
+                              conf.o (minixfs3_close)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ext2fs.o)
+                              conf.o (ext2fs_close)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(dosfs.o)
+                              conf.o (dosfs_close)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ustarfs.o)
+                              conf.o (ustarfs_close)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cd9660.o)
+                              conf.o (cd9660_close)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv2.o)
+                              conf.o (lfsv2_close)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv1.o)
+                              conf.o (lfsv1_close)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv2.o)
+                              conf.o (ffsv2_close)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv1.o)
+                              conf.o (ffsv1_close)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile.o)
+                              exec.o (loadfile)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ls.o)
+                              boot2.o (ls)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(checkpasswd.o)
+                              boot2.o (check_password)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(sprintf.o)
+                              boot2.o (sprintf)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(globals.o)
+                              exec.o (fsmod)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(files.o)
+                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ls.o) (files)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(md5c.o)
+                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o) (MD5Final)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(fnmatch.o)
+                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o) (fnmatch)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf64.o)
+                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile.o) (loadfile_elf64)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf32.o)
+                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile.o) (loadfile_elf32)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(fstat.o)
+                              exec.o (fstat)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(dkcksum.o)
+                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o) (dkcksum)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(strerror.o)
+                              boot2.o (strerror)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(snprintf.o)
+                              exec.o (snprintf)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o)
+                              exec.o (close)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(read.o)
+                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o) (oread)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(open.o)
+                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o) (oopen)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lseek.o)
+                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o) (olseek)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(close.o)
+                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o) (oclose)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(twiddle.o)
+                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o) (twiddle)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(alloc.o)
+                              exec.o (alloc)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(panic.o)
+                              boot2.o (panic)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(closeall.o)
+                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(panic.o) (closeall)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(printf.o)
+                              boot2.o (printf)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(subr_prf.o)
+                              exec.o (vprintf)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o)
+                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o) (inflate)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inftrees.o)
+                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o) (inflate_table)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inffast.o)
+                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o) (inflate_fast)
+/usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(adler32.o)
+                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o) (adler32)
+/usr/lib/libminc.a(strtoul.o)
+                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o) (strtoul)
+/usr/lib/libminc.a(umoddi3.o)
+                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(subr_prf.o) (__umoddi3)
+/usr/lib/libminc.a(udivdi3.o)
+                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(subr_prf.o) (__udivdi3)
+/usr/lib/libminc.a(memmove.o)
+                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o) (memmove)
+/usr/lib/libminc.a(memcmp.o)  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o) (memcmp)
+/usr/lib/libminc.a(memchr.o)  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o) (memchr)
+/usr/lib/libminc.a(ctype_.o)  /usr/lib/libminc.a(strtoul.o) (_ctype_)
+/usr/lib/libminc.a(qdivrem.o)
+                              /usr/lib/libminc.a(umoddi3.o) (__qdivrem)
+/usr/lib/libminc.a(strrchr.o)
+                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ls.o) (strrchr)
+/usr/lib/libminc.a(strncpy.o)
+                              boot2.o (strncpy)
+/usr/lib/libminc.a(strlcpy.o)
+                              exec.o (strlcpy)
+/usr/lib/libminc.a(strcmp.o)  boot2.o (strcmp)
+/usr/lib/libminc.a(strchr.o)  boot2.o (strchr)
+/usr/lib/libminc.a(strcat.o)  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o) (strcat)
+/usr/lib/libminc.a(strncmp.o)
+                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o) (strncmp)
+/usr/lib/libminc.a(memcpy.o)  exec.o (memcpy)
+/usr/lib/libminc.a(strlen.o)  exec.o (strlen)
+/usr/lib/libminc.a(strcpy.o)  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o) (strcpy)
+/usr/lib/libminc.a(memset.o)  exec.o (memset)
+/usr/lib/libminc.a(_errno.o)  /usr/lib/libminc.a(strtoul.o) (__errno)
+
+Allocating common symbols
+Common symbol       size              file
+
+btinfo_console      0x20              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+netbsd_version      0x4               /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile.o)
+errno               0x4               boot2.o
+rootip              0x4               /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(globals.o)
+boot_biossector     0x8               boot2.o
+myip                0x4               /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(globals.o)
+hostname            0x80              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(globals.o)
+rootpath            0x80              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(globals.o)
+diskbufp            0x4               /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(diskbuf.o)
+twiddle_toggle      0x1               /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(twiddle.o)
+netbsd_elf_class    0x4               /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile.o)
+boot_modules        0x4               exec.o
+bootfile            0x80              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(globals.o)
+gateip              0x4               /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(globals.o)
+bootinfo            0x4               /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo.o)
+files               0x60              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(files.o)
+kernel_loaded       0x1               exec.o
+boot_biosdev        0x4               boot2.o
+diskbuf_user        0x4               /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(diskbuf.o)
+fsmod2              0x4               /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(globals.o)
+bootconf            0xe8              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootmenu.o)
+freelist            0x4               /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(alloc.o)
+bibp                0x58              devopen.o
+
+Discarded input sections
+
+ .note.GNU-stack
+                0x00000000        0x0 boot2.o
+ .note.GNU-stack
+                0x00000000        0x0 conf.o
+ .note.GNU-stack
+                0x00000000        0x0 devopen.o
+ .note.GNU-stack
+                0x00000000        0x0 exec.o
+ .note.GNU-stack
+                0x00000000        0x0 vers.o
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(rasops.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootmenu.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo_memmap.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo_biosgeom.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(menuutils.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pread.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(getextmemx.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(gatea20.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk_ll.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(parseutils.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(comio_direct.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(diskbuf.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(xlat_mbr_fstype.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ext2fs.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(dosfs.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ustarfs.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cd9660.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv2.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv1.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv2.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv1.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ls.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(checkpasswd.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(sprintf.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(globals.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(files.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(md5c.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(fnmatch.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf64.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf32.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(fstat.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(dkcksum.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(strerror.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(snprintf.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(read.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(open.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lseek.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(close.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(twiddle.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(alloc.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(panic.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(closeall.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(printf.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(subr_prf.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inftrees.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inffast.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(adler32.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/libminc.a(strtoul.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/libminc.a(umoddi3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/libminc.a(udivdi3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/libminc.a(ctype_.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/libminc.a(qdivrem.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/libminc.a(strncpy.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/libminc.a(strlcpy.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/libminc.a(_errno.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .text set to 0x0
+LOAD biosboot.o
+LOAD boot2.o
+LOAD conf.o
+LOAD devopen.o
+LOAD exec.o
+LOAD vers.o
+LOAD /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/realprot.o
+LOAD /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/bios_disk.o
+LOAD /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/conio.o
+LOAD /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmemx.o
+LOAD /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosgetsystime.o
+LOAD /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosvbe.o
+LOAD /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmca.o
+LOAD /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmemps2.o
+LOAD /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosvideomode.o
+LOAD /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosdelay.o
+LOAD /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosreboot.o
+LOAD /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmem.o
+LOAD /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a
+LOAD /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a
+LOAD /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a
+LOAD /usr/lib/libminc.a
+LOAD /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a
+LOAD /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a
+                0x08048000                PROVIDE (__executable_start, 0x8048000)
+                0x08048094                . = (0x8048000 + SIZEOF_HEADERS)
+
+.interp
+ *(.interp)
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text       0x08048094        0x0
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ .rel.text      0x00000000        0x0 biosboot.o
+
+.rela.text
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata     0x08048094        0x0
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ .rel.rodata    0x00000000        0x0 biosboot.o
+
+.rela.rodata
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro* .rel.gnu.linkonce.d.rel.ro.*)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro* .rela.gnu.linkonce.d.rel.ro.*)
+
+.rel.data       0x08048094        0x0
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ .rel.data      0x00000000        0x0 biosboot.o
+
+.rela.data
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+
+.rel.tdata
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+
+.rela.tdata
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+
+.rel.tbss
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+
+.rela.tbss
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+
+.rela.bss
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.text           0x00000000    0x13896
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x00000000      0x122 biosboot.o
+                0x00000008                boot_params
+                0x00000000                boot_start
+                0x00000110                _rtt
+                0x00000004                boot_magic
+ *fill*         0x00000122        0x2 90909090
+ .text          0x00000124      0x7fa boot2.o
+                0x000002ee                command_consdev
+                0x0000058a                sprint_bootsel
+                0x00000171                command_quit
+                0x00000342                command_modules
+                0x0000022e                command_dev
+                0x000001a0                command_boot
+                0x000003c0                command_load_mods
+                0x00000746                boot2
+                0x000006d5                print_banner
+                0x00000124                command_help
+                0x00000608                bootit
+                0x000003f6                command_multiboot
+                0x00000452                parsebootfile
+                0x0000013b                command_ls
+ *fill*         0x0000091e        0x2 90909090
+ .text          0x00000920        0x0 conf.o
+ .text          0x00000920      0x160 devopen.o
+                0x00000989                devopen
+                0x00000920                bios2dev
+ .text          0x00000a80      0xc23 exec.o
+                0x00000a80                framebuffer_configure
+                0x00000c17                exec_netbsd
+                0x00001447                x86_progress
+                0x00000b66                rnd_add
+                0x00000b74                userconf_add
+                0x000012b9                exec_multiboot
+                0x00000ab9                module_add
+                0x00000b58                splash_add
+ *fill*         0x000016a3        0x1 90909090
+ .text          0x000016a4        0x0 vers.o
+ *fill*         0x000016a4        0xc 90909090
+ .text          0x000016b0      0x170 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/realprot.o
+                0x00001750                real_to_prot
+                0x00001700                gdt_fixup
+                0x0000177c                prot_to_real
+                0x00001810                vtophys
+                0x000017fa                dump_eax_buff
+ .text          0x00001820      0x13e /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/bios_disk.o
+                0x0000192c                biosdisk_getextinfo
+                0x000018c8                biosdisk_int13ext
+                0x00001840                biosdisk_read
+                0x000018f8                biosdisk_extread
+                0x0000188c                biosdisk_getinfo
+                0x00001820                biosdisk_reset
+ *fill*         0x0000195e        0x2 90909090
+ .text          0x00001960       0xb5 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/conio.o
+                0x000019bc                congetc
+                0x00001960                conclr
+                0x000019f8                coniskey
+                0x00001984                conputc
+                0x000019d8                conisshift
+ *fill*         0x00001a15        0x3 90909090
+ .text          0x00001a18       0xc0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmemx.o
+                0x00001a18                getextmem2
+                0x00001ab0                biosA20
+                0x00001a60                getmementry
+ .text          0x00001ad8       0x1e /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosgetsystime.o
+                0x00001ad8                biosgetsystime
+ *fill*         0x00001af6        0x2 90909090
+ .text          0x00001af8      0x199 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosvbe.o
+                0x00001b6c                biosvbe_set_mode
+                0x00001af8                biosvbe_info
+                0x00001c50                biosvbe_ddc_read_edid
+                0x00001c08                biosvbe_ddc_caps
+                0x00001b9c                biosvbe_palette_format
+                0x00001bc4                biosvbe_palette_data
+                0x00001b30                biosvbe_get_mode_info
+ *fill*         0x00001c91        0x3 90909090
+ .text          0x00001c94       0x3d /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmca.o
+                0x00001c94                biosmca
+ *fill*         0x00001cd1        0x3 90909090
+ .text          0x00001cd4       0x45 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmemps2.o
+                0x00001cd4                getextmemps2
+ *fill*         0x00001d19        0x3 90909090
+ .text          0x00001d1c       0x26 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosvideomode.o
+                0x00001d1c                biosvideomode
+ *fill*         0x00001d42        0x2 90909090
+ .text          0x00001d44       0x2b /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosdelay.o
+                0x00001d44                delay
+ *fill*         0x00001d6f        0x1 90909090
+ .text          0x00001d70       0x14 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosreboot.o
+                0x00001d70                reboot
+ .text          0x00001d84       0x32 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmem.o
+                0x00001d84                getbasemem
+                0x00001d9c                getextmem1
+ *fill*         0x00001db6        0x2 90909090
+ .text          0x00001db8      0xfbe /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+                0x00002bc8                biosdisk_ioctl
+                0x00002b8c                biosdisk_close
+                0x00001db8                biosdisk_strategy
+                0x00002a00                biosdisk_open
+                0x0000292e                biosdisk_findpartition
+                0x00001f10                biosdisk_probe
+ *fill*         0x00002d76        0x2 90909090
+ .text          0x00002d78      0x8ef /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+                0x00002df3                vbe_set_palette
+                0x0000331f                command_vesa
+                0x0000302a                vbe_modelist
+                0x00002fdb                vbe_commit
+                0x00002d78                vbe_init
+                0x00002deb                vbe_available
+                0x00002e5e                vbe_set_mode
+ *fill*         0x00003667        0x1 90909090
+ .text          0x00003668        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(rasops.o)
+ .text          0x00003668      0x8b0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootmenu.o)
+                0x00003b34                doboottypemenu
+                0x00003668                atoi
+                0x000036af                parsebootconf
+ .text          0x00003f18       0x32 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(multiboot.o)
+                0x00003f18                multiboot
+ *fill*         0x00003f4a        0x2 90909090
+ .text          0x00003f4c       0x3c /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(startprog.o)
+                0x00003f4c                startprog
+ .text          0x00003f88       0xb0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo_memmap.o)
+                0x00003f88                bi_getmemmap
+ .text          0x00004038      0x199 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo_biosgeom.o)
+                0x00004038                bi_getbiosgeom
+ *fill*         0x000041d1        0x3 90909090
+ .text          0x000041d4       0x3e /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo.o)
+                0x000041d4                bi_add
+ *fill*         0x00004212        0x2 90909090
+ .text          0x00004214      0x436 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(menuutils.o)
+                0x00004214                docommand
+                0x00004633                bootmenu
+                0x00004272                prompt
+                0x000042ea                editline
+ *fill*         0x0000464a        0x2 90909090
+ .text          0x0000464c       0x97 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pread.o)
+                0x0000464c                pread
+ *fill*         0x000046e3        0x1 90909090
+ .text          0x000046e4       0xb4 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(getextmemx.o)
+                0x000046e4                getextmemx
+ .text          0x00004798      0x114 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(gatea20.o)
+                0x00004798                gateA20
+ .text          0x000048ac      0x4b1 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+                0x00004ad9                putchar
+                0x00004bbd                iskey
+                0x000048be                initio
+                0x00004c09                awaitkey
+                0x00004d53                wait_sec
+                0x00004b4e                getchar_ex
+                0x00004bb0                getchar
+                0x000048ac                clear_pc_screen
+ *fill*         0x00004d5d        0x3 90909090
+ .text          0x00004d60      0x425 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk_ll.o)
+                0x00004ee2                get_harddrives
+                0x00004f12                readsects
+                0x00004d60                set_geometry
+ *fill*         0x00005185        0x3 90909090
+ .text          0x00005188       0x56 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pvcopy.o)
+                0x000051a0                vpbcopy
+                0x000051c0                pvbcopy
+                0x00005188                pbzero
+ *fill*         0x000051de        0x2 90909090
+ .text          0x000051e0      0x23f /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(parseutils.o)
+                0x000051e0                gettrailer
+                0x00005361                parseboot
+                0x00005221                parseopts
+ *fill*         0x0000541f        0x1 90909090
+ .text          0x00005420      0x344 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(comio_direct.o)
+                0x000055e9                cominit_d
+                0x00005420                comgetc_d
+                0x000054a3                computc_d
+                0x0000555e                comstatus_d
+ .text          0x00005764       0x58 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(diskbuf.o)
+                0x00005764                alloc_diskbuf
+ .text          0x000057bc       0xca /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(cpufunc.o)
+                0x000057d0                inb
+                0x000057d8                insb
+                0x00005834                outsb
+                0x00005814                insl
+                0x000057ec                inw
+                0x00005854                outsw
+                0x0000580c                inl
+                0x00005828                outb
+                0x00005874                outsl
+                0x000057bc                x86_read_psl
+                0x000057cc                x86_enable_intr
+                0x00005848                outw
+                0x00005868                outl
+                0x000057f8                insw
+                0x000057c8                x86_disable_intr
+                0x000057c0                x86_write_psl
+ *fill*         0x00005886        0x2 90909090
+ .text          0x00005888       0x24 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(dump_eax.o)
+                0x00005888                dump_eax
+ .text          0x000058ac       0x10 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(message.o)
+                0x000058ad                message_1
+                0x000058ac                message
+ .text          0x000058bc       0x25 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(xlat_mbr_fstype.o)
+                0x000058bc                xlat_mbr_fstype
+ *fill*         0x000058e1        0x3 90909090
+ .text          0x000058e4      0xd15 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o)
+                0x00006324                minixfs3_seek
+                0x0000634e                minixfs3_stat
+                0x000058e4                minixfs3_open
+                0x0000631e                minixfs3_write
+                0x0000617c                minixfs3_read
+                0x00006132                minixfs3_close
+                0x0000639e                minixfs3_ls
+ *fill*         0x000065f9        0x3 90909090
+ .text          0x000065fc      0xdec /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ext2fs.o)
+                0x000071a8                ext2fs_seek
+                0x00006f86                ext2fs_close
+                0x00007222                ext2fs_ls
+                0x000071a2                ext2fs_write
+                0x000071d2                ext2fs_stat
+                0x000065fc                ext2fs_open
+                0x00006fed                ext2fs_read
+ .text          0x000073e8      0xe61 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(dosfs.o)
+                0x0000808a                dosfs_write
+                0x000080fe                dosfs_stat
+                0x00008090                dosfs_seek
+                0x000080d2                dosfs_close
+                0x00007cf1                dosfs_read
+                0x000073e8                dosfs_open
+                0x00008163                dosfs_ls
+ *fill*         0x00008249        0x3 90909090
+ .text          0x0000824c      0x8b0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ustarfs.o)
+                0x00008919                ustarfs_close
+                0x00008857                ustarfs_stat
+                0x00008902                ustarfs_ls
+                0x00008774                ustarfs_read
+                0x00008735                ustarfs_write
+                0x0000873b                ustarfs_seek
+                0x0000824c                ustarfs_open
+ .text          0x00008afc      0x753 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cd9660.o)
+                0x000091e1                cd9660_write
+                0x00008fee                cd9660_read
+                0x00009211                cd9660_stat
+                0x00008afc                cd9660_open
+                0x000091e7                cd9660_seek
+                0x00008fd1                cd9660_close
+                0x00009238                cd9660_ls
+ *fill*         0x0000924f        0x1 90909090
+ .text          0x00009250      0xc12 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv2.o)
+                0x00009c62                lfsv2_stat
+                0x00009c32                lfsv2_write
+                0x00009a23                lfsv2_read
+                0x00009c38                lfsv2_seek
+                0x00009250                lfsv2_open
+                0x000099da                lfsv2_close
+                0x00009caf                lfsv2_ls
+ *fill*         0x00009e62        0x2 90909090
+ .text          0x00009e64      0xbe8 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv1.o)
+                0x0000a822                lfsv1_seek
+                0x0000a84c                lfsv1_stat
+                0x0000a81c                lfsv1_write
+                0x0000a5d1                lfsv1_close
+                0x00009e64                lfsv1_open
+                0x0000a61d                lfsv1_read
+                0x0000a899                lfsv1_ls
+ .text          0x0000aa4c      0xd72 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv2.o)
+                0x0000b60b                ffsv2_ls
+                0x0000b343                ffsv2_read
+                0x0000b5be                ffsv2_stat
+                0x0000aa4c                ffsv2_open
+                0x0000b594                ffsv2_seek
+                0x0000b58e                ffsv2_write
+                0x0000b2fa                ffsv2_close
+ *fill*         0x0000b7be        0x2 90909090
+ .text          0x0000b7c0      0xbf4 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv1.o)
+                0x0000bf7e                ffsv1_read
+                0x0000c184                ffsv1_write
+                0x0000b7c0                ffsv1_open
+                0x0000bf35                ffsv1_close
+                0x0000c18a                ffsv1_seek
+                0x0000c201                ffsv1_ls
+                0x0000c1b4                ffsv1_stat
+ .text          0x0000c3b4      0x1fe /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile.o)
+                0x0000c3b4                loadfile
+                0x0000c450                fdloadfile
+ *fill*         0x0000c5b2        0x2 90909090
+ .text          0x0000c5b4      0x1f1 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ls.o)
+                0x0000c5b4                ls
+ *fill*         0x0000c7a5        0x3 90909090
+ .text          0x0000c7a8      0x1ba /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(checkpasswd.o)
+                0x0000c8ab                checkpasswd
+                0x0000c7a8                getpass
+                0x0000c8c2                check_password
+ *fill*         0x0000c962        0x2 90909090
+ .text          0x0000c964       0x2f /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(sprintf.o)
+                0x0000c964                sprintf
+ *fill*         0x0000c993        0x1 90909090
+ .text          0x0000c994        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(globals.o)
+ .text          0x0000c994        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(files.o)
+ .text          0x0000c994      0x90b /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(md5c.o)
+                0x0000d1df                MD5Final
+                0x0000c994                MD5Init
+                0x0000c9c2                MD5Update
+ *fill*         0x0000d29f        0x1 90909090
+ .text          0x0000d2a0       0x83 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(fnmatch.o)
+                0x0000d2a0                fnmatch
+ *fill*         0x0000d323        0x1 90909090
+ .text          0x0000d324      0xb44 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf64.o)
+                0x0000d324                loadfile_elf64
+ .text          0x0000de68      0x96e /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf32.o)
+                0x0000de68                loadfile_elf32
+ *fill*         0x0000e7d6        0x2 90909090
+ .text          0x0000e7d8       0x56 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(fstat.o)
+                0x0000e7d8                fstat
+ *fill*         0x0000e82e        0x2 90909090
+ .text          0x0000e830       0x2c /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(dkcksum.o)
+                0x0000e830                dkcksum
+ .text          0x0000e85c       0x48 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(strerror.o)
+                0x0000e85c                strerror
+ .text          0x0000e8a4       0x2e /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(snprintf.o)
+                0x0000e8a4                snprintf
+ *fill*         0x0000e8d2        0x2 90909090
+ .text          0x0000e8d4      0x71e /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o)
+                0x0000edba                lseek
+                0x0000e92a                zcfree
+                0x0000e935                zmemcpy
+                0x0000e8d4                crc32
+                0x0000eb76                read
+                0x0000e91c                zcalloc
+                0x0000e93a                open
+                0x0000eb16                close
+ *fill*         0x0000eff2        0x2 90909090
+ .text          0x0000eff4       0xd7 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(read.o)
+                0x0000eff4                oread
+ *fill*         0x0000f0cb        0x1 90909090
+ .text          0x0000f0cc      0x107 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(open.o)
+                0x0000f0cc                oopen
+ *fill*         0x0000f1d3        0x1 90909090
+ .text          0x0000f1d4       0x6c /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lseek.o)
+                0x0000f1d4                olseek
+ .text          0x0000f240       0x90 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(close.o)
+                0x0000f240                oclose
+ .text          0x0000f2d0       0x40 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(twiddle.o)
+                0x0000f2d0                twiddle
+ .text          0x0000f310       0xa3 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(alloc.o)
+                0x0000f310                alloc
+                0x0000f3a2                dealloc
+ *fill*         0x0000f3b3        0x1 90909090
+ .text          0x0000f3b4       0x41 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(panic.o)
+                0x0000f3b4                panic
+ *fill*         0x0000f3f5        0x3 90909090
+ .text          0x0000f3f8       0x2c /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(closeall.o)
+                0x0000f3f8                closeall
+ .text          0x0000f424       0x20 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(printf.o)
+                0x0000f424                printf
+ .text          0x0000f444      0x671 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(subr_prf.o)
+                0x0000f71d                vsnprintf
+                0x0000f444                vprintf
+ *fill*         0x0000fab5        0x3 90909090
+ .text          0x0000fab8     0x21d0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o)
+                0x00011ab7                inflateCopy
+                0x00011c1c                inflateUndermine
+                0x0000fb67                inflateReset2
+                0x0000fd59                inflate
+                0x00011a8c                inflateSyncPoint
+                0x00011914                inflateGetHeader
+                0x0000fcc1                inflateInit_
+                0x00011c45                inflateMark
+                0x0000fced                inflatePrime
+                0x0000fab8                inflateReset
+                0x00011949                inflateSync
+                0x00011815                inflateSetDictionary
+                0x000117b6                inflateEnd
+                0x0000fbea                inflateInit2_
+ .text          0x00011c88      0x50a /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inftrees.o)
+                0x00011c88                inflate_table
+ *fill*         0x00012192        0x2 90909090
+ .text          0x00012194      0x632 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inffast.o)
+                0x00012194                inflate_fast
+ *fill*         0x000127c6        0x2 90909090
+ .text          0x000127c8      0x339 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(adler32.o)
+                0x000127c8                adler32
+                0x00012a34                adler32_combine
+                0x00012ae5                adler32_combine64
+ *fill*         0x00012b01        0xf 90909090
+ .text          0x00012b10      0x154 /usr/lib/libminc.a(strtoul.o)
+                0x00012b10                strtoul
+ *fill*         0x00012c64        0xc 90909090
+ .text          0x00012c70       0x38 /usr/lib/libminc.a(umoddi3.o)
+                0x00012c70                __umoddi3
+ *fill*         0x00012ca8        0x8 90909090
+ .text          0x00012cb0       0x33 /usr/lib/libminc.a(udivdi3.o)
+                0x00012cb0                __udivdi3
+ *fill*         0x00012ce3        0xd 90909090
+ .text          0x00012cf0       0x7d /usr/lib/libminc.a(memmove.o)
+                0x00012cf0                memmove
+ *fill*         0x00012d6d        0x3 90909090
+ .text          0x00012d70       0x3f /usr/lib/libminc.a(memcmp.o)
+                0x00012d70                memcmp
+ *fill*         0x00012daf        0x1 90909090
+ .text          0x00012db0       0x97 /usr/lib/libminc.a(memchr.o)
+                0x00012db0                memchr
+ *fill*         0x00012e47        0x1 90909090
+ .text          0x00012e48        0x0 /usr/lib/libminc.a(ctype_.o)
+ *fill*         0x00012e48        0x8 90909090
+ .text          0x00012e50      0x527 /usr/lib/libminc.a(qdivrem.o)
+                0x00012e50                __qdivrem
+ *fill*         0x00013377        0x9 90909090
+ .text          0x00013380       0x83 /usr/lib/libminc.a(strrchr.o)
+                0x00013380                strrchr
+                0x00013380                rindex
+ *fill*         0x00013403        0xd 90909090
+ .text          0x00013410       0x4b /usr/lib/libminc.a(strncpy.o)
+                0x00013410                strncpy
+ *fill*         0x0001345b        0x5 90909090
+ .text          0x00013460       0x60 /usr/lib/libminc.a(strlcpy.o)
+                0x00013460                _strlcpy
+                0x00013460                strlcpy
+ .text          0x000134c0       0x79 /usr/lib/libminc.a(strcmp.o)
+                0x000134c0                strcmp
+ *fill*         0x00013539        0x7 90909090
+ .text          0x00013540       0x8a /usr/lib/libminc.a(strchr.o)
+                0x00013540                index
+                0x00013540                strchr
+ *fill*         0x000135ca        0x6 90909090
+ .text          0x000135d0       0xad /usr/lib/libminc.a(strcat.o)
+                0x000135d0                strcat
+ *fill*         0x0001367d        0x3 90909090
+ .text          0x00013680       0xb4 /usr/lib/libminc.a(strncmp.o)
+                0x00013680                strncmp
+ *fill*         0x00013734        0xc 90909090
+ .text          0x00013740       0x3e /usr/lib/libminc.a(memcpy.o)
+                0x00013740                memcpy
+ *fill*         0x0001377e        0x2 90909090
+ .text          0x00013780       0x4b /usr/lib/libminc.a(strlen.o)
+                0x00013780                strlen
+ *fill*         0x000137cb        0x5 90909090
+ .text          0x000137d0       0x6d /usr/lib/libminc.a(strcpy.o)
+                0x000137d0                strcpy
+ *fill*         0x0001383d        0x3 90909090
+ .text          0x00013840       0x47 /usr/lib/libminc.a(memset.o)
+                0x00013840                memset
+ *fill*         0x00013887        0x9 90909090
+ .text          0x00013890        0x6 /usr/lib/libminc.a(_errno.o)
+                0x00013890                __errno
+ *(.text.*personality*)
+ *(.gnu.warning)
+
+.fini
+ *(.fini)
+                0x00013896                PROVIDE (__etext, .)
+                0x00013896                PROVIDE (_etext, .)
+                0x00013896                PROVIDE (etext, .)
+
+.rodata         0x00013898     0x24d4
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.str1.1
+                0x00013898      0x3f2 boot2.o
+                                0x42e (size before relaxing)
+ *fill*         0x00013c8a        0x2 00
+ .rodata        0x00013c8c       0xf0 boot2.o
+                0x00013c8c                commands
+ .rodata.str1.1
+                0x00013d7c        0x5 conf.o
+ .rodata.str1.1
+                0x00013d81        0x6 devopen.o
+                                  0x9 (size before relaxing)
+ .rodata.str1.1
+                0x00013d87      0x174 exec.o
+                                0x17f (size before relaxing)
+ .rodata        0x00013efb       0x1f vers.o
+                0x00013efb                bootprog_rev
+                0x00013f14                bootprog_kernrev
+                0x00013eff                bootprog_name
+ *fill*         0x00013f1a        0x2 00
+ .rodata        0x00013f1c       0xcc /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+                0x00013f3c                GET_nbsd_lfs
+                0x00013f4c                GET_nbsd_swap
+                0x00013f1c                GET_nbsd_raid
+                0x00013f2c                GET_nbsd_ffs
+ .rodata.str1.1
+                0x00013fe8      0x11b /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+                                0x12c (size before relaxing)
+ .rodata.str1.1
+                0x00014103      0x161 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+                                0x17b (size before relaxing)
+ .rodata        0x00014264        0x8 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+ .rodata        0x0001426c      0x300 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(rasops.o)
+                0x0001426c                rasops_cmap
+ .rodata.str1.1
+                0x0001456c      0x16b /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootmenu.o)
+                                0x196 (size before relaxing)
+ *fill*         0x000146d7        0x1 00
+ .rodata        0x000146d8       0x60 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(menuutils.o)
+ .rodata.str1.1
+                0x00014738       0x11 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(menuutils.o)
+                                 0x19 (size before relaxing)
+ .rodata.str1.1
+                0x00014749       0x22 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+                                 0x28 (size before relaxing)
+ *fill*         0x0001476b        0x1 00
+ .rodata        0x0001476c       0x58 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(parseutils.o)
+ .rodata.str1.1
+                0x000147c4       0x26 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(parseutils.o)
+                                 0x27 (size before relaxing)
+ .rodata.str1.1
+                0x000147ea       0x2a /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(diskbuf.o)
+ .rodata        0x00014814       0x1c /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(xlat_mbr_fstype.o)
+ .rodata.str1.1
+                0x00014830       0x13 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o)
+ .rodata.str1.1
+                0x00014843       0x45 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ext2fs.o)
+                                 0x58 (size before relaxing)
+ .rodata        0x00014888       0x20 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ext2fs.o)
+ .rodata.str1.1
+                0x000148a8       0x34 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(dosfs.o)
+                                 0x39 (size before relaxing)
+ .rodata        0x000148dc       0x60 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(dosfs.o)
+ .rodata.str1.1
+                0x0001493c       0xea /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ustarfs.o)
+                                 0xec (size before relaxing)
+ .rodata        0x00014a26       0x17 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ustarfs.o)
+ .rodata.str1.1
+                0x00014a3d       0x3c /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cd9660.o)
+ .rodata.str1.1
+                0x00014a79        0x8 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv2.o)
+                                 0x59 (size before relaxing)
+ *fill*         0x00014a81        0x3 00
+ .rodata        0x00014a84       0x3c /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv2.o)
+ .rodata.str1.1
+                0x00000000       0x59 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv1.o)
+ .rodata        0x00014ac0       0x3c /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv1.o)
+ .rodata.str1.1
+                0x00000000       0x55 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv2.o)
+ .rodata        0x00014afc       0x3c /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv2.o)
+ .rodata.str1.1
+                0x00000000       0x55 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv1.o)
+ .rodata        0x00014b38       0x3c /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv1.o)
+ .rodata.str1.1
+                0x00014b74       0x3c /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile.o)
+                                 0x4c (size before relaxing)
+ .rodata.str1.1
+                0x00014bb0       0x36 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ls.o)
+                                 0x3f (size before relaxing)
+ .rodata.str1.1
+                0x00014be6        0xb /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(checkpasswd.o)
+                                  0xe (size before relaxing)
+ .rodata        0x00014bf1       0x40 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(md5c.o)
+ *fill*         0x00014c31        0x3 00
+ .rodata        0x00014c34       0x25 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf64.o)
+ .rodata.str1.1
+                0x00014c59       0xc0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf64.o)
+                                 0xcb (size before relaxing)
+ *fill*         0x00014d19        0x3 00
+ .rodata        0x00014d1c       0x25 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf32.o)
+ .rodata.str1.1
+                0x00000000       0xcb /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf32.o)
+ *fill*         0x00014d41        0x3 00
+ .rodata        0x00014d44       0x90 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(strerror.o)
+ .rodata.str1.1
+                0x00014dd4      0x16b /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(strerror.o)
+ .rodata.str1.1
+                0x00014f3f        0x6 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o)
+ *fill*         0x00014f45        0x3 00
+ .rodata.cst8   0x00014f48        0x8 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o)
+ .rodata.str1.1
+                0x00014f50        0x5 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(twiddle.o)
+ .rodata.str1.1
+                0x00014f55       0x13 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(alloc.o)
+ .rodata.str1.1
+                0x00000000        0x2 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(panic.o)
+ .rodata        0x00014f68       0xd0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(subr_prf.o)
+                0x00015028                hexdigits
+ .rodata        0x00015038      0x932 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o)
+ .rodata.str1.1
+                0x0001596a      0x1cd /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o)
+ *fill*         0x00015b37        0x1 00
+ .rodata        0x00015b38      0x12c /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inftrees.o)
+                0x00015b38                inflate_copyright
+ .rodata.str1.1
+                0x00000000       0x50 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inffast.o)
+ .rodata        0x00015c64      0x101 /usr/lib/libminc.a(ctype_.o)
+                0x00015c64                _C_ctype_
+ *fill*         0x00015d65        0x3 00
+ .rodata        0x00015d68        0x4 /usr/lib/libminc.a(qdivrem.o)
+
+.rodata1
+ *(.rodata1)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+                0x00015d6c                . = .
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array  0x00015d6c        0x0
+                0x00015d6c                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array)
+                0x00015d6c                PROVIDE (__preinit_array_end, .)
+
+.init_array     0x00015d6c        0x0
+                0x00015d6c                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array)
+                0x00015d6c                PROVIDE (__init_array_end, .)
+
+.fini_array     0x00015d6c        0x0
+                0x00015d6c                PROVIDE (__fini_array_start, .)
+ *(.fini_array)
+ *(SORT(.fini_array.*))
+                0x00015d6c                PROVIDE (__fini_array_end, .)
+
+.ctors
+ *crtbegin*.o(.ctors)
+ *(EXCLUDE_FILE(*crtend*.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin*.o(.dtors)
+ *(EXCLUDE_FILE(*crtend*.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+
+.jcr
+ *(.jcr)
+
+.data.rel.ro
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ *(.data.rel.ro* .gnu.linkonce.d.rel.ro.*)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got)
+
+.got.plt
+ *(.got.plt)
+
+.data           0x00015d6c      0x19c
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x00015d6c        0x0 biosboot.o
+ .data          0x00015d6c        0x0 boot2.o
+ .data          0x00015d6c      0x118 conf.o
+                0x00015d80                ndevs
+                0x00015e80                nfsys
+                0x00015d84                file_system
+                0x00015d6c                devsw
+ .data          0x00015e84        0x0 devopen.o
+ .data          0x00015e84       0x41 exec.o
+                0x00015e84                boot_modules_enabled
+ *fill*         0x00015ec5        0x3 00
+ .data          0x00015ec8        0x0 vers.o
+ .data          0x00015ec8        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/realprot.o
+ .data          0x00015ec8        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/bios_disk.o
+ .data          0x00015ec8        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/conio.o
+ .data          0x00015ec8        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmemx.o
+ .data          0x00015ec8        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosgetsystime.o
+ .data          0x00015ec8        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosvbe.o
+ .data          0x00015ec8        0x4 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmca.o
+                0x00015ec8                biosmca_ps2model
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmemps2.o
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosvideomode.o
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosdelay.o
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosreboot.o
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmem.o
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(rasops.o)
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootmenu.o)
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(multiboot.o)
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(startprog.o)
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo_memmap.o)
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo_biosgeom.o)
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo.o)
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(menuutils.o)
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pread.o)
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(getextmemx.o)
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(gatea20.o)
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk_ll.o)
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pvcopy.o)
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(parseutils.o)
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(comio_direct.o)
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(diskbuf.o)
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(cpufunc.o)
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(dump_eax.o)
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(message.o)
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(xlat_mbr_fstype.o)
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o)
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ext2fs.o)
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(dosfs.o)
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ustarfs.o)
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cd9660.o)
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv2.o)
+ .data          0x00015ecc        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv1.o)
+ .data          0x00015ecc       0x28 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv2.o)
+                0x00015ecc                sblock_try
+ .data          0x00015ef4        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv1.o)
+ .data          0x00015ef4        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile.o)
+ .data          0x00015ef4        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ls.o)
+ .data          0x00015ef4        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(checkpasswd.o)
+ .data          0x00015ef4        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(sprintf.o)
+ .data          0x00015ef4        0xc /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(globals.o)
+                0x00015efc                netmask
+                0x00015ef4                bcea
+ .data          0x00015f00        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(files.o)
+ .data          0x00015f00        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(md5c.o)
+ .data          0x00015f00        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(fnmatch.o)
+ .data          0x00015f00        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf64.o)
+ .data          0x00015f00        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf32.o)
+ .data          0x00015f00        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(fstat.o)
+ .data          0x00015f00        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(dkcksum.o)
+ .data          0x00015f00        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(strerror.o)
+ .data          0x00015f00        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(snprintf.o)
+ .data          0x00015f00        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o)
+ .data          0x00015f00        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(read.o)
+ .data          0x00015f00        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(open.o)
+ .data          0x00015f00        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lseek.o)
+ .data          0x00015f00        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(close.o)
+ .data          0x00015f00        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(twiddle.o)
+ .data          0x00015f00        0x4 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(alloc.o)
+ .data          0x00015f04        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(panic.o)
+ .data          0x00015f04        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(closeall.o)
+ .data          0x00015f04        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(printf.o)
+ .data          0x00015f04        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(subr_prf.o)
+ .data          0x00015f04        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o)
+ .data          0x00015f04        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inftrees.o)
+ .data          0x00015f04        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inffast.o)
+ .data          0x00015f04        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(adler32.o)
+ .data          0x00015f04        0x0 /usr/lib/libminc.a(strtoul.o)
+ .data          0x00015f04        0x0 /usr/lib/libminc.a(umoddi3.o)
+ .data          0x00015f04        0x0 /usr/lib/libminc.a(udivdi3.o)
+ .data          0x00015f04        0x0 /usr/lib/libminc.a(memmove.o)
+ .data          0x00015f04        0x0 /usr/lib/libminc.a(memcmp.o)
+ .data          0x00015f04        0x0 /usr/lib/libminc.a(memchr.o)
+ .data          0x00015f04        0x4 /usr/lib/libminc.a(ctype_.o)
+                0x00015f04                _ctype_
+ .data          0x00015f08        0x0 /usr/lib/libminc.a(qdivrem.o)
+ .data          0x00015f08        0x0 /usr/lib/libminc.a(strrchr.o)
+ .data          0x00015f08        0x0 /usr/lib/libminc.a(strncpy.o)
+ .data          0x00015f08        0x0 /usr/lib/libminc.a(strlcpy.o)
+ .data          0x00015f08        0x0 /usr/lib/libminc.a(strcmp.o)
+ .data          0x00015f08        0x0 /usr/lib/libminc.a(strchr.o)
+ .data          0x00015f08        0x0 /usr/lib/libminc.a(strcat.o)
+ .data          0x00015f08        0x0 /usr/lib/libminc.a(strncmp.o)
+ .data          0x00015f08        0x0 /usr/lib/libminc.a(memcpy.o)
+ .data          0x00015f08        0x0 /usr/lib/libminc.a(strlen.o)
+ .data          0x00015f08        0x0 /usr/lib/libminc.a(strcpy.o)
+ .data          0x00015f08        0x0 /usr/lib/libminc.a(memset.o)
+ .data          0x00015f08        0x0 /usr/lib/libminc.a(_errno.o)
+ *(.gnu.linkonce.d.*personality*)
+
+.data1
+ *(.data1)
+                0x00015f08                _edata = .
+                0x00015f08                PROVIDE (edata, .)
+                0x00015f08                __bss_start = .
+
+.bss            0x00015f08      0xef0
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x00015f08        0x0 biosboot.o
+ .bss           0x00015f08       0x82 boot2.o
+ *fill*         0x00015f8a        0x2 00
+ .bss           0x00015f8c        0x0 conf.o
+ .bss           0x00015f8c        0x0 devopen.o
+ .bss           0x00015f8c      0x154 exec.o
+                0x00015f8c                userconf_commands
+ .bss           0x000160e0        0x0 vers.o
+ .bss           0x000160e0        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/realprot.o
+ .bss           0x000160e0        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/bios_disk.o
+ .bss           0x000160e0        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/conio.o
+ .bss           0x000160e0        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmemx.o
+ .bss           0x000160e0        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosgetsystime.o
+ .bss           0x000160e0        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosvbe.o
+ .bss           0x000160e0        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmca.o
+ .bss           0x000160e0        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmemps2.o
+ .bss           0x000160e0        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosvideomode.o
+ .bss           0x000160e0        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosdelay.o
+ .bss           0x000160e0        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosreboot.o
+ .bss           0x000160e0        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmem.o
+ .bss           0x000160e0       0x65 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+ *fill*         0x00016145        0x3 00
+ .bss           0x00016148        0xd /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+ *fill*         0x00016155        0x3 00
+ .bss           0x00016158        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(rasops.o)
+ .bss           0x00016158        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootmenu.o)
+ .bss           0x00016158        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(multiboot.o)
+ .bss           0x00016158        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(startprog.o)
+ .bss           0x00016158        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo_memmap.o)
+ .bss           0x00016158        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo_biosgeom.o)
+ .bss           0x00016158        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo.o)
+ .bss           0x00016158        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(menuutils.o)
+ .bss           0x00016158        0x4 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pread.o)
+ .bss           0x0001615c        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(getextmemx.o)
+ .bss           0x0001615c        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(gatea20.o)
+ .bss           0x0001615c        0x4 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+ .bss           0x00016160       0x18 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk_ll.o)
+ .bss           0x00016178        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pvcopy.o)
+ .bss           0x00016178        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(parseutils.o)
+ .bss           0x00016178       0x19 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(comio_direct.o)
+ *fill*         0x00016191        0x3 00
+ .bss           0x00016194        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(diskbuf.o)
+ .bss           0x00016194        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(cpufunc.o)
+ .bss           0x00016194        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(dump_eax.o)
+ .bss           0x00016194        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(message.o)
+ .bss           0x00016194        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(xlat_mbr_fstype.o)
+ .bss           0x00016194      0x400 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o)
+ .bss           0x00016594      0x400 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ext2fs.o)
+ .bss           0x00016994        0x4 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(dosfs.o)
+ .bss           0x00016998        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ustarfs.o)
+ .bss           0x00016998        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cd9660.o)
+ .bss           0x00016998        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv2.o)
+ .bss           0x00016998        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv1.o)
+ .bss           0x00016998        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv2.o)
+ .bss           0x00016998        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv1.o)
+ .bss           0x00016998        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile.o)
+ .bss           0x00016998        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ls.o)
+ .bss           0x00016998       0x90 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(checkpasswd.o)
+                0x00016998                bootpasswd
+ .bss           0x00016a28        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(sprintf.o)
+ .bss           0x00016a28        0x4 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(globals.o)
+                0x00016a28                fsmod
+ .bss           0x00016a2c        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(files.o)
+ .bss           0x00016a2c        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(md5c.o)
+ .bss           0x00016a2c        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(fnmatch.o)
+ .bss           0x00016a2c        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf64.o)
+ .bss           0x00016a2c        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf32.o)
+ .bss           0x00016a2c        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(fstat.o)
+ .bss           0x00016a2c        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(dkcksum.o)
+ .bss           0x00016a2c       0x24 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(strerror.o)
+ .bss           0x00016a50        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(snprintf.o)
+ .bss           0x00016a50       0x10 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o)
+ .bss           0x00016a60        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(read.o)
+ .bss           0x00016a60        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(open.o)
+ .bss           0x00016a60        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lseek.o)
+ .bss           0x00016a60        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(close.o)
+ .bss           0x00016a60        0x4 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(twiddle.o)
+ .bss           0x00016a64        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(alloc.o)
+ .bss           0x00016a64        0x1 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(panic.o)
+ *fill*         0x00016a65        0x3 00
+ .bss           0x00016a68        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(closeall.o)
+ .bss           0x00016a68        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(printf.o)
+ .bss           0x00016a68        0x8 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(subr_prf.o)
+ .bss           0x00016a70        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o)
+ .bss           0x00016a70        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inftrees.o)
+ .bss           0x00016a70        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inffast.o)
+ .bss           0x00016a70        0x0 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(adler32.o)
+ .bss           0x00016a70        0x0 /usr/lib/libminc.a(strtoul.o)
+ .bss           0x00016a70        0x0 /usr/lib/libminc.a(umoddi3.o)
+ .bss           0x00016a70        0x0 /usr/lib/libminc.a(udivdi3.o)
+ .bss           0x00016a70        0x0 /usr/lib/libminc.a(memmove.o)
+ .bss           0x00016a70        0x0 /usr/lib/libminc.a(memcmp.o)
+ .bss           0x00016a70        0x0 /usr/lib/libminc.a(memchr.o)
+ .bss           0x00016a70        0x0 /usr/lib/libminc.a(ctype_.o)
+ .bss           0x00016a70        0x0 /usr/lib/libminc.a(qdivrem.o)
+ .bss           0x00016a70        0x0 /usr/lib/libminc.a(strrchr.o)
+ .bss           0x00016a70        0x0 /usr/lib/libminc.a(strncpy.o)
+ .bss           0x00016a70        0x0 /usr/lib/libminc.a(strlcpy.o)
+ .bss           0x00016a70        0x0 /usr/lib/libminc.a(strcmp.o)
+ .bss           0x00016a70        0x0 /usr/lib/libminc.a(strchr.o)
+ .bss           0x00016a70        0x0 /usr/lib/libminc.a(strcat.o)
+ .bss           0x00016a70        0x0 /usr/lib/libminc.a(strncmp.o)
+ .bss           0x00016a70        0x0 /usr/lib/libminc.a(memcpy.o)
+ .bss           0x00016a70        0x0 /usr/lib/libminc.a(strlen.o)
+ .bss           0x00016a70        0x0 /usr/lib/libminc.a(strcpy.o)
+ .bss           0x00016a70        0x0 /usr/lib/libminc.a(memset.o)
+ .bss           0x00016a70        0x0 /usr/lib/libminc.a(_errno.o)
+ *(COMMON)
+ COMMON         0x00016a70       0x14 boot2.o
+                0x00016a70                errno
+                0x00016a78                boot_biossector
+                0x00016a80                boot_biosdev
+ COMMON         0x00016a84       0x58 devopen.o
+                0x00016a84                bibp
+ COMMON         0x00016adc        0x5 exec.o
+                0x00016adc                boot_modules
+                0x00016ae0                kernel_loaded
+ *fill*         0x00016ae1        0x3 00
+ COMMON         0x00016ae4       0xe8 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootmenu.o)
+                0x00016ae4                bootconf
+ COMMON         0x00016bcc        0x4 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo.o)
+                0x00016bcc                bootinfo
+ COMMON         0x00016bd0       0x20 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+                0x00016bd0                btinfo_console
+ COMMON         0x00016bf0        0x8 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(diskbuf.o)
+                0x00016bf0                diskbufp
+                0x00016bf4                diskbuf_user
+ COMMON         0x00016bf8        0x8 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile.o)
+                0x00016bf8                netbsd_version
+                0x00016bfc                netbsd_elf_class
+ COMMON         0x00016c00      0x190 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(globals.o)
+                0x00016c00                rootip
+                0x00016c04                myip
+                0x00016c08                hostname
+                0x00016c88                rootpath
+                0x00016d08                bootfile
+                0x00016d88                gateip
+                0x00016d8c                fsmod2
+ COMMON         0x00016d90       0x60 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(files.o)
+                0x00016d90                files
+ COMMON         0x00016df0        0x1 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(twiddle.o)
+                0x00016df0                twiddle_toggle
+ *fill*         0x00016df1        0x3 00
+ COMMON         0x00016df4        0x4 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(alloc.o)
+                0x00016df4                freelist
+                0x00016df8                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x00016df8                . = ALIGN (0x4)
+                0x00016df8                . = ALIGN (0x4)
+                0x00016df8                _end = .
+                0x00016df8                PROVIDE (end, .)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+/DISCARD/
+ *(.note.GNU-stack)
+OUTPUT(boot_monitor.syms elf32-i386-minix)
+
+.ident          0x00000000       0x7d
+ .ident         0x00000000       0x44 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(xlat_mbr_fstype.o)
+ .ident         0x00000044       0x39 /usr/lib/libminc.a(strtoul.o)
+
+Cross Reference Table
+
+Symbol                                            File
+GET_nbsd_ffs                                      /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+GET_nbsd_lfs                                      /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+GET_nbsd_raid                                     /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+GET_nbsd_swap                                     /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+MD5Final                                          /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(md5c.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(checkpasswd.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+MD5Init                                           /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(md5c.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(checkpasswd.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+MD5Update                                         /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(md5c.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(checkpasswd.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+_C_ctype_                                         /usr/lib/libminc.a(ctype_.o)
+__bss_start                                       biosboot.o
+__errno                                           /usr/lib/libminc.a(_errno.o)
+                                                  /usr/lib/libminc.a(strtoul.o)
+__qdivrem                                         /usr/lib/libminc.a(qdivrem.o)
+                                                  /usr/lib/libminc.a(udivdi3.o)
+                                                  /usr/lib/libminc.a(umoddi3.o)
+__udivdi3                                         /usr/lib/libminc.a(udivdi3.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(subr_prf.o)
+__umoddi3                                         /usr/lib/libminc.a(umoddi3.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(subr_prf.o)
+_ctype_                                           /usr/lib/libminc.a(ctype_.o)
+                                                  /usr/lib/libminc.a(strtoul.o)
+_end                                              biosboot.o
+_rtt                                              biosboot.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(panic.o)
+_strlcpy                                          /usr/lib/libminc.a(strlcpy.o)
+adler32                                           /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(adler32.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o)
+adler32_combine                                   /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(adler32.o)
+adler32_combine64                                 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(adler32.o)
+alloc                                             /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(alloc.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf32.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf64.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ls.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv1.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv2.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv1.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv2.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cd9660.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ustarfs.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(dosfs.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ext2fs.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(diskbuf.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pread.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo_biosgeom.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo_memmap.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootmenu.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+                                                  exec.o
+alloc_diskbuf                                     /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(diskbuf.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk_ll.o)
+atoi                                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootmenu.o)
+awaitkey                                          /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootmenu.o)
+                                                  boot2.o
+bcea                                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(globals.o)
+bi_add                                            /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo_biosgeom.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo_memmap.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+                                                  exec.o
+                                                  devopen.o
+bi_getbiosgeom                                    /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo_biosgeom.o)
+                                                  exec.o
+bi_getmemmap                                      /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo_memmap.o)
+                                                  exec.o
+bibp                                              devopen.o
+bios2dev                                          devopen.o
+                                                  boot2.o
+biosA20                                           /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmemx.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(gatea20.o)
+biosdisk_close                                    /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+                                                  conf.o
+biosdisk_extread                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/bios_disk.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk_ll.o)
+biosdisk_findpartition                            /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+                                                  devopen.o
+biosdisk_getextinfo                               /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/bios_disk.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk_ll.o)
+biosdisk_getinfo                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/bios_disk.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk_ll.o)
+biosdisk_int13ext                                 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/bios_disk.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk_ll.o)
+biosdisk_ioctl                                    /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+                                                  conf.o
+biosdisk_open                                     /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+                                                  devopen.o
+                                                  conf.o
+biosdisk_probe                                    /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+                                                  boot2.o
+biosdisk_read                                     /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/bios_disk.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk_ll.o)
+biosdisk_reset                                    /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/bios_disk.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk_ll.o)
+biosdisk_strategy                                 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+                                                  conf.o
+biosgetsystime                                    /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosgetsystime.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+biosmca                                           /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmca.o
+                                                  boot2.o
+biosmca_ps2model                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmca.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(gatea20.o)
+biosvbe_ddc_caps                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosvbe.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+biosvbe_ddc_read_edid                             /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosvbe.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+biosvbe_get_mode_info                             /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosvbe.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+biosvbe_info                                      /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosvbe.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+biosvbe_palette_data                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosvbe.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+biosvbe_palette_format                            /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosvbe.o
+biosvbe_set_mode                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosvbe.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+biosvideomode                                     /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosvideomode.o
+                                                  boot2.o
+boot2                                             boot2.o
+                                                  biosboot.o
+boot_biosdev                                      devopen.o
+                                                  boot2.o
+boot_biossector                                   boot2.o
+boot_magic                                        biosboot.o
+boot_modules                                      exec.o
+boot_modules_enabled                              exec.o
+                                                  boot2.o
+boot_params                                       biosboot.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootmenu.o)
+                                                  boot2.o
+boot_start                                        biosboot.o
+bootconf                                          /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootmenu.o)
+                                                  boot2.o
+bootfile                                          /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(globals.o)
+bootinfo                                          /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+                                                  exec.o
+bootit                                            boot2.o
+bootmenu                                          /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(menuutils.o)
+                                                  boot2.o
+bootpasswd                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(checkpasswd.o)
+bootprog_kernrev                                  vers.o
+bootprog_name                                     vers.o
+bootprog_rev                                      vers.o
+btinfo_console                                    /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+                                                  exec.o
+cd9660_close                                      /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cd9660.o)
+                                                  conf.o
+cd9660_ls                                         /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cd9660.o)
+                                                  conf.o
+cd9660_open                                       /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cd9660.o)
+                                                  conf.o
+cd9660_read                                       /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cd9660.o)
+                                                  conf.o
+cd9660_seek                                       /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cd9660.o)
+                                                  conf.o
+cd9660_stat                                       /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cd9660.o)
+                                                  conf.o
+cd9660_write                                      /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cd9660.o)
+                                                  conf.o
+check_password                                    /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(checkpasswd.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootmenu.o)
+                                                  boot2.o
+checkpasswd                                       /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(checkpasswd.o)
+clear_pc_screen                                   /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+                                                  boot2.o
+close                                             /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(closeall.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ls.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootmenu.o)
+                                                  exec.o
+closeall                                          /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(closeall.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(panic.o)
+comgetc_d                                         /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(comio_direct.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+cominit_d                                         /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(comio_direct.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+command_boot                                      boot2.o
+command_consdev                                   boot2.o
+command_dev                                       boot2.o
+command_help                                      boot2.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(parseutils.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(menuutils.o)
+command_load_mods                                 boot2.o
+command_ls                                        boot2.o
+command_modules                                   boot2.o
+command_multiboot                                 boot2.o
+command_quit                                      boot2.o
+command_vesa                                      /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+                                                  boot2.o
+commands                                          boot2.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(menuutils.o)
+computc_d                                         /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(comio_direct.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+comstatus_d                                       /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(comio_direct.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+conclr                                            /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/conio.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+congetc                                           /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/conio.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+coniskey                                          /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/conio.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+conisshift                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/conio.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+conputc                                           /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/conio.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+crc32                                             /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+dealloc                                           /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(alloc.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf32.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf64.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ls.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv1.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv2.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv1.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv2.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cd9660.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ustarfs.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(dosfs.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ext2fs.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+                                                  exec.o
+delay                                             /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosdelay.o
+                                                  boot2.o
+devopen                                           devopen.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(open.o)
+devsw                                             conf.o
+                                                  devopen.o
+diskbuf_user                                      /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(diskbuf.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk_ll.o)
+diskbufp                                          /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(diskbuf.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk_ll.o)
+dkcksum                                           /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(dkcksum.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+doboottypemenu                                    /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootmenu.o)
+                                                  boot2.o
+docommand                                         /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(menuutils.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootmenu.o)
+dosfs_close                                       /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(dosfs.o)
+                                                  conf.o
+dosfs_ls                                          /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(dosfs.o)
+                                                  conf.o
+dosfs_open                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(dosfs.o)
+                                                  conf.o
+dosfs_read                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(dosfs.o)
+                                                  conf.o
+dosfs_seek                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(dosfs.o)
+                                                  conf.o
+dosfs_stat                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(dosfs.o)
+                                                  conf.o
+dosfs_write                                       /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(dosfs.o)
+                                                  conf.o
+dump_eax                                          /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(dump_eax.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/realprot.o
+dump_eax_buff                                     /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/realprot.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(dump_eax.o)
+editline                                          /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(menuutils.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootmenu.o)
+errno                                             /usr/lib/libminc.a(_errno.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(close.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lseek.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(open.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(read.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(fstat.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf32.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf64.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ls.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(dosfs.o)
+                                                  boot2.o
+exec_multiboot                                    exec.o
+                                                  boot2.o
+exec_netbsd                                       exec.o
+                                                  boot2.o
+ext2fs_close                                      /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ext2fs.o)
+                                                  conf.o
+ext2fs_ls                                         /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ext2fs.o)
+                                                  conf.o
+ext2fs_open                                       /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ext2fs.o)
+                                                  conf.o
+ext2fs_read                                       /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ext2fs.o)
+                                                  conf.o
+ext2fs_seek                                       /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ext2fs.o)
+                                                  conf.o
+ext2fs_stat                                       /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ext2fs.o)
+                                                  conf.o
+ext2fs_write                                      /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ext2fs.o)
+                                                  conf.o
+fdloadfile                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile.o)
+ffsv1_close                                       /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv1.o)
+                                                  conf.o
+ffsv1_ls                                          /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv1.o)
+                                                  conf.o
+ffsv1_open                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv1.o)
+                                                  conf.o
+ffsv1_read                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv1.o)
+                                                  conf.o
+ffsv1_seek                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv1.o)
+                                                  conf.o
+ffsv1_stat                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv1.o)
+                                                  conf.o
+ffsv1_write                                       /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv1.o)
+                                                  conf.o
+ffsv2_close                                       /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv2.o)
+                                                  conf.o
+ffsv2_ls                                          /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv2.o)
+                                                  conf.o
+ffsv2_open                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv2.o)
+                                                  conf.o
+ffsv2_read                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv2.o)
+                                                  conf.o
+ffsv2_seek                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv2.o)
+                                                  conf.o
+ffsv2_stat                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv2.o)
+                                                  conf.o
+ffsv2_write                                       /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv2.o)
+                                                  conf.o
+file_system                                       conf.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(open.o)
+files                                             /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(closeall.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(close.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lseek.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(open.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(read.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(fstat.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(files.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ls.o)
+flatcodeseg                                       /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/realprot.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(startprog.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(multiboot.o)
+flatdataseg                                       /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/realprot.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pvcopy.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(startprog.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(multiboot.o)
+fnmatch                                           /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(fnmatch.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv1.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv2.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv1.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv2.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ext2fs.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o)
+framebuffer_configure                             exec.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+freelist                                          /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(alloc.o)
+fsmod                                             /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(globals.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv1.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv2.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv1.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv2.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cd9660.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(dosfs.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ext2fs.o)
+                                                  exec.o
+fsmod2                                            /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(globals.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv1.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv2.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ext2fs.o)
+                                                  exec.o
+fstat                                             /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(fstat.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ls.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootmenu.o)
+                                                  exec.o
+gateA20                                           /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(gatea20.o)
+                                                  boot2.o
+gateip                                            /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(globals.o)
+gdt_fixup                                         /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/realprot.o
+                                                  biosboot.o
+get_harddrives                                    /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk_ll.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo_biosgeom.o)
+                                                  devopen.o
+getbasemem                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmem.o
+                                                  exec.o
+                                                  boot2.o
+getchar                                           /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(checkpasswd.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ustarfs.o)
+getchar_ex                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(menuutils.o)
+getextmem1                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmem.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(getextmemx.o)
+getextmem2                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmemx.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(getextmemx.o)
+getextmemps2                                      /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmemps2.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(getextmemx.o)
+getextmemx                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(getextmemx.o)
+                                                  exec.o
+                                                  boot2.o
+getmementry                                       /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmemx.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(getextmemx.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo_memmap.o)
+getpass                                           /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(checkpasswd.o)
+gettrailer                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(parseutils.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(menuutils.o)
+                                                  boot2.o
+hexdigits                                         /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(subr_prf.o)
+hostname                                          /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(globals.o)
+inb                                               /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(cpufunc.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(comio_direct.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(gatea20.o)
+index                                             /usr/lib/libminc.a(strchr.o)
+inflate                                           /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o)
+inflateCopy                                       /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o)
+inflateEnd                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o)
+inflateGetHeader                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o)
+inflateInit2_                                     /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o)
+inflateInit_                                      /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o)
+inflateMark                                       /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o)
+inflatePrime                                      /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o)
+inflateReset                                      /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o)
+inflateReset2                                     /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o)
+inflateSetDictionary                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o)
+inflateSync                                       /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o)
+inflateSyncPoint                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o)
+inflateUndermine                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o)
+inflate_copyright                                 /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inftrees.o)
+inflate_fast                                      /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inffast.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o)
+inflate_table                                     /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inftrees.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o)
+initio                                            /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+                                                  boot2.o
+inl                                               /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(cpufunc.o)
+insb                                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(cpufunc.o)
+insl                                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(cpufunc.o)
+insw                                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(cpufunc.o)
+inw                                               /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(cpufunc.o)
+iskey                                             /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+kernel_loaded                                     exec.o
+                                                  devopen.o
+lfsv1_close                                       /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv1.o)
+                                                  conf.o
+lfsv1_ls                                          /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv1.o)
+                                                  conf.o
+lfsv1_open                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv1.o)
+                                                  conf.o
+lfsv1_read                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv1.o)
+                                                  conf.o
+lfsv1_seek                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv1.o)
+                                                  conf.o
+lfsv1_stat                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv1.o)
+                                                  conf.o
+lfsv1_write                                       /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv1.o)
+                                                  conf.o
+lfsv2_close                                       /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv2.o)
+                                                  conf.o
+lfsv2_ls                                          /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv2.o)
+                                                  conf.o
+lfsv2_open                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv2.o)
+                                                  conf.o
+lfsv2_read                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv2.o)
+                                                  conf.o
+lfsv2_seek                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv2.o)
+                                                  conf.o
+lfsv2_stat                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv2.o)
+                                                  conf.o
+lfsv2_write                                       /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv2.o)
+                                                  conf.o
+loadfile                                          /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile.o)
+                                                  exec.o
+loadfile_elf32                                    /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf32.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile.o)
+loadfile_elf64                                    /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf64.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile.o)
+ls                                                /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ls.o)
+                                                  boot2.o
+lseek                                             /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf32.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf64.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile.o)
+memchr                                            /usr/lib/libminc.a(memchr.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o)
+memcmp                                            /usr/lib/libminc.a(memcmp.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf32.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf64.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(checkpasswd.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv1.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv2.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv1.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv2.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cd9660.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ext2fs.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+memcpy                                            /usr/lib/libminc.a(memcpy.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf32.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf64.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(md5c.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ls.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv1.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv2.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv1.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv2.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cd9660.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ustarfs.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(dosfs.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ext2fs.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk_ll.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo_biosgeom.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo_memmap.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+                                                  exec.o
+memmove                                           /usr/lib/libminc.a(memmove.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv1.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv2.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv1.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv2.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ext2fs.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o)
+memset                                            /usr/lib/libminc.a(memset.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(md5c.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv1.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv2.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv1.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv2.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cd9660.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ustarfs.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(dosfs.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ext2fs.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo_biosgeom.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootmenu.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+                                                  exec.o
+message                                           /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(message.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/realprot.o
+                                                  biosboot.o
+message_1                                         /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(message.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(dump_eax.o)
+minixfs3_close                                    /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o)
+                                                  conf.o
+minixfs3_ls                                       /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o)
+                                                  conf.o
+minixfs3_open                                     /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o)
+                                                  conf.o
+minixfs3_read                                     /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o)
+                                                  conf.o
+minixfs3_seek                                     /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o)
+                                                  conf.o
+minixfs3_stat                                     /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o)
+                                                  conf.o
+minixfs3_write                                    /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o)
+                                                  conf.o
+module_add                                        exec.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootmenu.o)
+                                                  boot2.o
+multiboot                                         /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(multiboot.o)
+                                                  exec.o
+myip                                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(globals.o)
+ndevs                                             conf.o
+netbsd_elf_class                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile.o)
+                                                  exec.o
+netbsd_version                                    /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf32.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf64.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile.o)
+                                                  exec.o
+netmask                                           /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(globals.o)
+nfsys                                             conf.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(open.o)
+oclose                                            /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(close.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o)
+olseek                                            /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lseek.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o)
+oopen                                             /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(open.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o)
+open                                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ls.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootmenu.o)
+                                                  exec.o
+oread                                             /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(read.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o)
+outb                                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(cpufunc.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(comio_direct.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(gatea20.o)
+outl                                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(cpufunc.o)
+outsb                                             /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(cpufunc.o)
+outsl                                             /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(cpufunc.o)
+outsw                                             /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(cpufunc.o)
+outw                                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(cpufunc.o)
+panic                                             /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(panic.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(alloc.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ustarfs.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(diskbuf.o)
+                                                  exec.o
+                                                  boot2.o
+parseboot                                         /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(parseutils.o)
+                                                  boot2.o
+parsebootconf                                     /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootmenu.o)
+                                                  boot2.o
+parsebootfile                                     boot2.o
+                                                  devopen.o
+parseopts                                         /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(parseutils.o)
+pbzero                                            /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pvcopy.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf32.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf64.o)
+pread                                             /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pread.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf32.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf64.o)
+                                                  exec.o
+print_banner                                      boot2.o
+printf                                            /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(printf.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(panic.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf32.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf64.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(checkpasswd.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ls.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv1.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv2.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv1.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv2.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cd9660.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ustarfs.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(dosfs.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ext2fs.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(diskbuf.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(parseutils.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(menuutils.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootmenu.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+                                                  exec.o
+                                                  boot2.o
+prompt                                            /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(menuutils.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootmenu.o)
+prot_to_real                                      /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/realprot.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmem.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosreboot.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosdelay.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosvideomode.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmemps2.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmca.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosvbe.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosgetsystime.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmemx.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/conio.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/bios_disk.o
+                                                  biosboot.o
+putchar                                           /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(subr_prf.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(twiddle.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(checkpasswd.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(menuutils.o)
+pvbcopy                                           /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pvcopy.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk_ll.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+rasops_cmap                                       /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(rasops.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+read                                              /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf32.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf64.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pread.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootmenu.o)
+readsects                                         /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk_ll.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo_biosgeom.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+real_to_prot                                      /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/realprot.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmem.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosreboot.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosdelay.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosvideomode.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmemps2.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmca.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosvbe.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosgetsystime.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosmemx.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/conio.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/bios_disk.o
+                                                  biosboot.o
+reboot                                            /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/biosreboot.o
+                                                  boot2.o
+rindex                                            /usr/lib/libminc.a(strrchr.o)
+rnd_add                                           exec.o
+                                                  boot2.o
+rootip                                            /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(globals.o)
+rootpath                                          /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(globals.o)
+sblock_try                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv2.o)
+set_geometry                                      /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk_ll.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo_biosgeom.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+snprintf                                          /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(snprintf.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(strerror.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+                                                  exec.o
+splash_add                                        exec.o
+                                                  boot2.o
+sprint_bootsel                                    boot2.o
+sprintf                                           /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(sprintf.o)
+                                                  boot2.o
+startprog                                         /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(startprog.o)
+                                                  exec.o
+strcat                                            /usr/lib/libminc.a(strcat.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o)
+strchr                                            /usr/lib/libminc.a(strchr.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(fnmatch.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(dosfs.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+                                                  exec.o
+                                                  boot2.o
+strcmp                                            /usr/lib/libminc.a(strcmp.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv1.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv2.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv1.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv2.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ext2fs.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(menuutils.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootmenu.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+                                                  exec.o
+                                                  devopen.o
+                                                  boot2.o
+strcpy                                            /usr/lib/libminc.a(strcpy.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv1.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv2.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv1.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv2.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ext2fs.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o)
+strerror                                          /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(strerror.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf32.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf64.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ls.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile.o)
+                                                  boot2.o
+strlcpy                                           /usr/lib/libminc.a(strlcpy.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+                                                  exec.o
+strlen                                            /usr/lib/libminc.a(strlen.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(checkpasswd.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv1.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv2.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv1.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv2.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ustarfs.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ext2fs.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o)
+                                                  exec.o
+strncmp                                           /usr/lib/libminc.a(strncmp.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf32.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf64.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ustarfs.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootmenu.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+strncpy                                           /usr/lib/libminc.a(strncpy.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+                                                  exec.o
+                                                  devopen.o
+                                                  boot2.o
+strrchr                                           /usr/lib/libminc.a(strrchr.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ls.o)
+strtoul                                           /usr/lib/libminc.a(strtoul.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+twiddle                                           /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(twiddle.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(read.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv1.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ffsv2.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv1.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(lfsv2.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cd9660.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ustarfs.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(dosfs.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ext2fs.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(minixfs3.o)
+twiddle_toggle                                    /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(twiddle.o)
+                                                  boot2.o
+userconf_add                                      exec.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootmenu.o)
+                                                  boot2.o
+userconf_commands                                 exec.o
+ustarfs_close                                     /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ustarfs.o)
+                                                  conf.o
+ustarfs_ls                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ustarfs.o)
+                                                  conf.o
+ustarfs_open                                      /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ustarfs.o)
+                                                  conf.o
+ustarfs_read                                      /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ustarfs.o)
+                                                  conf.o
+ustarfs_seek                                      /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ustarfs.o)
+                                                  conf.o
+ustarfs_stat                                      /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ustarfs.o)
+                                                  conf.o
+ustarfs_write                                     /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(ustarfs.o)
+                                                  conf.o
+vbe_available                                     /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+vbe_commit                                        /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+                                                  exec.o
+vbe_init                                          /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+                                                  boot2.o
+vbe_modelist                                      /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+vbe_set_mode                                      /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+vbe_set_palette                                   /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+vpbcopy                                           /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pvcopy.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf32.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf64.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pread.o)
+vprintf                                           /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(subr_prf.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(printf.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(panic.o)
+                                                  exec.o
+vsnprintf                                         /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(subr_prf.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(snprintf.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(sprintf.o)
+vtophys                                           /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/realprot.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk_ll.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(bootinfo.o)
+                                                  exec.o
+wait_sec                                          /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(pcio.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(vbe.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+                                                  exec.o
+x86_disable_intr                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(cpufunc.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(gatea20.o)
+x86_enable_intr                                   /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(cpufunc.o)
+x86_progress                                      exec.o
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf32.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile_elf64.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(loadfile.o)
+x86_read_psl                                      /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(cpufunc.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(gatea20.o)
+x86_write_psl                                     /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(cpufunc.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(gatea20.o)
+xlat_mbr_fstype                                   /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(xlat_mbr_fstype.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/i386/libi386.a(biosdisk.o)
+zcalloc                                           /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o)
+zcfree                                            /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o)
+                                                  /usr/src/sys/arch/i386/stand/boot/biosboot/lib/z/libz.a(inflate.o)
+zmemcpy                                           /usr/src/sys/arch/i386/stand/boot/biosboot/lib/sa/libsa.a(cread.o)

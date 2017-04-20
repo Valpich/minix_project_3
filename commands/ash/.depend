@@ -1,0 +1,810 @@
+alias.o alias.ln: alias.c /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/stdlib.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/null.h shell.h input.h \
+  output.h /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h error.h \
+  /usr/include/setjmp.h /usr/include/machine/setjmp.h \
+  /usr/include/signal.h /usr/include/sys/signal.h \
+  /usr/include/sys/sigtypes.h /usr/include/sys/siginfo.h \
+  /usr/include/machine/signal.h /usr/include/machine/stackframe.h \
+  /usr/include/machine/fpu.h /usr/include/sys/ucontext.h \
+  /usr/include/machine/mcontext.h memalloc.h mystring.h \
+  /usr/include/string.h /usr/include/strings.h alias.h options.h
+arith.o arith.ln: arith.c /usr/include/stdlib.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/null.h \
+  /usr/include/string.h /usr/include/strings.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/stdio.h shell.h expand.h \
+  var.h error.h /usr/include/setjmp.h /usr/include/machine/setjmp.h \
+  /usr/include/signal.h /usr/include/sys/signal.h \
+  /usr/include/sys/sigtypes.h /usr/include/sys/siginfo.h \
+  /usr/include/machine/signal.h /usr/include/machine/stackframe.h \
+  /usr/include/machine/fpu.h /usr/include/sys/ucontext.h \
+  /usr/include/machine/mcontext.h output.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h memalloc.h
+arith_lex.o arith_lex.ln: arith_lex.c /usr/include/stdio.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/ansi.h \
+  /usr/include/machine/ansi.h /usr/include/machine/int_types.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/errno.h /usr/include/sys/errno.h /usr/include/stdlib.h \
+  /usr/include/sys/types.h /usr/include/machine/types.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/machine/int_fmtio.h shell.h arith.h error.h \
+  /usr/include/setjmp.h /usr/include/machine/setjmp.h \
+  /usr/include/signal.h /usr/include/sys/signal.h \
+  /usr/include/sys/sigtypes.h /usr/include/sys/siginfo.h \
+  /usr/include/machine/signal.h /usr/include/machine/stackframe.h \
+  /usr/include/machine/fpu.h /usr/include/sys/ucontext.h \
+  /usr/include/machine/mcontext.h memalloc.h var.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/minix/type.h \
+  /usr/include/machine/multiboot.h /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h
+builtins.o builtins.ln: builtins.c /usr/include/stdlib.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/null.h shell.h builtins.h
+cd.o cd.ln: cd.c /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/sys/null.h \
+  /usr/include/machine/vmparam.h /usr/include/stdlib.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/minix/type.h \
+  /usr/include/machine/multiboot.h /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/errno.h \
+  /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h shell.h var.h nodes.h jobs.h \
+  /usr/include/signal.h /usr/include/sys/signal.h \
+  /usr/include/sys/siginfo.h /usr/include/machine/signal.h \
+  /usr/include/machine/stackframe.h /usr/include/machine/fpu.h \
+  /usr/include/sys/ucontext.h /usr/include/machine/mcontext.h options.h \
+  output.h /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h memalloc.h \
+  error.h /usr/include/setjmp.h /usr/include/machine/setjmp.h exec.h \
+  redir.h mystring.h builtins.h show.h cd.h
+complete.o complete.ln: complete.c /usr/include/ctype.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/ctype_inline.h \
+  /usr/include/sys/ctype_bits.h /usr/include/dirent.h \
+  /usr/include/sys/types.h /usr/include/machine/types.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/sys/dirent.h /usr/include/minix/dirent.h \
+  /usr/include/sys/null.h /usr/include/errno.h /usr/include/sys/errno.h \
+  /usr/include/stdlib.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h myhistedit.h \
+  /usr/include/histedit.h /usr/include/stdio.h /usr/include/wchar.h \
+  /usr/include/machine/wchar_limits.h /usr/include/wctype.h shell.h \
+  complete.h error.h /usr/include/setjmp.h /usr/include/machine/setjmp.h \
+  /usr/include/signal.h /usr/include/sys/signal.h \
+  /usr/include/sys/siginfo.h /usr/include/machine/signal.h \
+  /usr/include/machine/stackframe.h /usr/include/machine/fpu.h \
+  /usr/include/sys/ucontext.h /usr/include/machine/mcontext.h expand.h \
+  nodes.h memalloc.h
+echo.o echo.ln: /usr/src/commands/ash/bltin/echo.c \
+  /usr/src/commands/ash/bltin/bltin.h \
+  /usr/src/commands/ash/bltin/../shell.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/src/commands/ash/bltin/../mystring.h \
+  /usr/include/string.h /usr/include/sys/null.h /usr/include/strings.h \
+  builtins.h /usr/src/commands/ash/bltin/../output.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h
+error.o error.ln: error.c shell.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h main.h options.h output.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h error.h \
+  /usr/include/setjmp.h /usr/include/machine/setjmp.h \
+  /usr/include/signal.h /usr/include/sys/signal.h \
+  /usr/include/sys/sigtypes.h /usr/include/sys/siginfo.h \
+  /usr/include/machine/signal.h /usr/include/machine/stackframe.h \
+  /usr/include/machine/fpu.h /usr/include/sys/ucontext.h \
+  /usr/include/machine/mcontext.h trap.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/minix/type.h \
+  /usr/include/machine/multiboot.h /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h
+eval.o eval.ln: eval.c /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/paths.h \
+  /usr/include/minix/paths.h /usr/include/signal.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/signal.h \
+  /usr/include/sys/sigtypes.h /usr/include/sys/siginfo.h \
+  /usr/include/machine/signal.h /usr/include/machine/stackframe.h \
+  /usr/include/machine/fpu.h /usr/include/sys/ucontext.h \
+  /usr/include/machine/mcontext.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/minix/type.h \
+  /usr/include/machine/multiboot.h /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/sys/wait.h /usr/include/errno.h \
+  /usr/include/sys/errno.h shell.h nodes.h syntax.h /usr/include/ctype.h \
+  /usr/include/sys/ctype_inline.h /usr/include/sys/ctype_bits.h expand.h \
+  parser.h jobs.h eval.h builtins.h options.h exec.h redir.h input.h \
+  output.h /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h trap.h var.h \
+  memalloc.h error.h /usr/include/setjmp.h /usr/include/machine/setjmp.h \
+  show.h mystring.h /usr/include/string.h /usr/include/strings.h \
+  myhistedit.h /usr/include/histedit.h /usr/include/stdio.h \
+  /usr/include/wchar.h /usr/include/wctype.h
+exec.o exec.ln: exec.c /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/sys/null.h \
+  /usr/include/machine/vmparam.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/minix/type.h \
+  /usr/include/machine/multiboot.h /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/fcntl.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/stdlib.h shell.h main.h nodes.h \
+  parser.h redir.h eval.h exec.h builtins.h var.h options.h input.h \
+  output.h /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h syntax.h \
+  /usr/include/ctype.h /usr/include/sys/ctype_inline.h \
+  /usr/include/sys/ctype_bits.h memalloc.h error.h /usr/include/setjmp.h \
+  /usr/include/machine/setjmp.h /usr/include/signal.h \
+  /usr/include/sys/signal.h /usr/include/sys/siginfo.h \
+  /usr/include/machine/signal.h /usr/include/machine/stackframe.h \
+  /usr/include/machine/fpu.h /usr/include/sys/ucontext.h \
+  /usr/include/machine/mcontext.h init.h mystring.h \
+  /usr/include/string.h /usr/include/strings.h show.h jobs.h alias.h
+expand.o expand.ln: expand.c /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/sys/null.h \
+  /usr/include/machine/vmparam.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/dirent.h \
+  /usr/include/sys/dirent.h /usr/include/minix/dirent.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/pwd.h /usr/include/stdlib.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/stdio.h \
+  /usr/include/string.h /usr/include/strings.h shell.h main.h nodes.h \
+  eval.h expand.h syntax.h /usr/include/ctype.h \
+  /usr/include/sys/ctype_inline.h /usr/include/sys/ctype_bits.h parser.h \
+  jobs.h /usr/include/signal.h /usr/include/sys/signal.h \
+  /usr/include/sys/siginfo.h /usr/include/machine/signal.h \
+  /usr/include/machine/stackframe.h /usr/include/machine/fpu.h \
+  /usr/include/sys/ucontext.h /usr/include/machine/mcontext.h options.h \
+  var.h input.h output.h /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h \
+  memalloc.h error.h /usr/include/setjmp.h /usr/include/machine/setjmp.h \
+  mystring.h arith.h show.h
+expr.o expr.ln: /usr/src/commands/ash/bltin/expr.c \
+  /usr/src/commands/ash/bltin/bltin.h \
+  /usr/src/commands/ash/bltin/../shell.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/src/commands/ash/bltin/../mystring.h \
+  /usr/include/string.h /usr/include/sys/null.h /usr/include/strings.h \
+  builtins.h /usr/src/commands/ash/bltin/../output.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h operators.h \
+  /usr/include/regex.h /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/stdlib.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h
+histedit.o histedit.ln: histedit.c /usr/pkg/bin/../lib/clang/3.1/include/limits.h \
+  /usr/include/limits.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/limits.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/paths.h \
+  /usr/include/minix/paths.h /usr/include/stdio.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/sys/ansi.h \
+  /usr/include/machine/ansi.h /usr/include/machine/int_types.h \
+  /usr/include/sys/null.h /usr/include/stdlib.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h shell.h parser.h var.h options.h main.h \
+  output.h /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h mystring.h \
+  /usr/include/string.h /usr/include/strings.h builtins.h myhistedit.h \
+  /usr/include/histedit.h /usr/include/wchar.h /usr/include/wctype.h \
+  complete.h error.h /usr/include/setjmp.h /usr/include/machine/setjmp.h \
+  /usr/include/signal.h /usr/include/sys/signal.h \
+  /usr/include/sys/sigtypes.h /usr/include/sys/siginfo.h \
+  /usr/include/machine/signal.h /usr/include/machine/stackframe.h \
+  /usr/include/machine/fpu.h /usr/include/sys/ucontext.h \
+  /usr/include/machine/mcontext.h eval.h memalloc.h
+init.o init.ln: init.c shell.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h mystring.h /usr/include/string.h \
+  /usr/include/sys/null.h /usr/include/strings.h alias.h eval.h exec.h \
+  input.h error.h /usr/include/setjmp.h /usr/include/machine/setjmp.h \
+  /usr/include/signal.h /usr/include/sys/signal.h \
+  /usr/include/sys/sigtypes.h /usr/include/sys/siginfo.h \
+  /usr/include/machine/signal.h /usr/include/machine/stackframe.h \
+  /usr/include/machine/fpu.h /usr/include/sys/ucontext.h \
+  /usr/include/machine/mcontext.h /usr/include/stdlib.h options.h \
+  redir.h trap.h var.h
+input.o input.ln: input.c /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/stdio.h /usr/include/sys/null.h /usr/include/fcntl.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/errno.h /usr/include/sys/errno.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/minix/type.h \
+  /usr/include/machine/multiboot.h /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/stdlib.h /usr/include/string.h \
+  /usr/include/strings.h shell.h redir.h syntax.h /usr/include/ctype.h \
+  /usr/include/sys/ctype_inline.h /usr/include/sys/ctype_bits.h input.h \
+  output.h /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h options.h \
+  memalloc.h error.h /usr/include/setjmp.h /usr/include/machine/setjmp.h \
+  /usr/include/signal.h /usr/include/sys/signal.h \
+  /usr/include/sys/siginfo.h /usr/include/machine/signal.h \
+  /usr/include/machine/stackframe.h /usr/include/machine/fpu.h \
+  /usr/include/sys/ucontext.h /usr/include/machine/mcontext.h alias.h \
+  parser.h myhistedit.h /usr/include/histedit.h /usr/include/wchar.h \
+  /usr/include/wctype.h trap.h
+jobs.o jobs.ln: jobs.c /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h shell.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/fcntl.h /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/sys/null.h \
+  /usr/include/machine/vmparam.h /usr/include/signal.h \
+  /usr/include/sys/signal.h /usr/include/sys/siginfo.h \
+  /usr/include/machine/signal.h /usr/include/machine/stackframe.h \
+  /usr/include/machine/fpu.h /usr/include/sys/ucontext.h \
+  /usr/include/machine/mcontext.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/paths.h \
+  /usr/include/minix/paths.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/minix/type.h \
+  /usr/include/machine/multiboot.h /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/stdlib.h \
+  /usr/include/sys/wait.h /usr/include/sys/ioctl.h \
+  /usr/include/sys/ioc_tty.h /usr/include/minix/ioctl.h \
+  /usr/include/sys/ioc_net.h /usr/include/sys/un.h /usr/include/string.h \
+  /usr/include/strings.h /usr/include/sys/ioc_disk.h \
+  /usr/include/sys/ioc_file.h /usr/include/sys/ioc_memory.h \
+  /usr/include/sys/ioc_tape.h /usr/include/sys/ioc_sound.h redir.h \
+  show.h main.h parser.h nodes.h jobs.h options.h trap.h syntax.h \
+  /usr/include/ctype.h /usr/include/sys/ctype_inline.h \
+  /usr/include/sys/ctype_bits.h input.h output.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h memalloc.h error.h \
+  /usr/include/setjmp.h /usr/include/machine/setjmp.h mystring.h \
+  builtins.h
+mail.o mail.ln: mail.c shell.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h exec.h var.h output.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h memalloc.h error.h \
+  /usr/include/setjmp.h /usr/include/machine/setjmp.h \
+  /usr/include/signal.h /usr/include/sys/signal.h \
+  /usr/include/sys/sigtypes.h /usr/include/sys/siginfo.h \
+  /usr/include/machine/signal.h /usr/include/machine/stackframe.h \
+  /usr/include/machine/fpu.h /usr/include/sys/ucontext.h \
+  /usr/include/machine/mcontext.h mail.h /usr/include/sys/stat.h \
+  /usr/include/sys/time.h /usr/include/sys/select.h /usr/include/time.h \
+  /usr/include/sys/null.h /usr/include/machine/vmparam.h \
+  /usr/include/stdlib.h
+main.o main.ln: main.c /usr/include/stdio.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/ansi.h \
+  /usr/include/machine/ansi.h /usr/include/machine/int_types.h \
+  /usr/include/sys/null.h /usr/include/signal.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/sys/signal.h /usr/include/sys/sigtypes.h \
+  /usr/include/sys/siginfo.h /usr/include/machine/signal.h \
+  /usr/include/machine/stackframe.h /usr/include/machine/fpu.h \
+  /usr/include/sys/ucontext.h /usr/include/machine/mcontext.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/time.h \
+  /usr/include/machine/vmparam.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/minix/type.h \
+  /usr/include/machine/multiboot.h /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/fcntl.h /usr/include/locale.h \
+  /usr/include/errno.h /usr/include/sys/errno.h shell.h main.h mail.h \
+  options.h output.h /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h \
+  parser.h nodes.h expand.h eval.h jobs.h input.h trap.h var.h show.h \
+  memalloc.h error.h /usr/include/setjmp.h /usr/include/machine/setjmp.h \
+  init.h mystring.h /usr/include/string.h /usr/include/strings.h exec.h \
+  cd.h builtins.h
+memalloc.o memalloc.ln: memalloc.c shell.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h output.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h machdep.h memalloc.h \
+  error.h /usr/include/setjmp.h /usr/include/machine/setjmp.h \
+  /usr/include/signal.h /usr/include/sys/signal.h \
+  /usr/include/sys/sigtypes.h /usr/include/sys/siginfo.h \
+  /usr/include/machine/signal.h /usr/include/machine/stackframe.h \
+  /usr/include/machine/fpu.h /usr/include/sys/ucontext.h \
+  /usr/include/machine/mcontext.h mystring.h /usr/include/string.h \
+  /usr/include/sys/null.h /usr/include/strings.h expand.h \
+  /usr/include/stdlib.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h
+miscbltin.o miscbltin.ln: miscbltin.c /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/stat.h \
+  /usr/include/sys/time.h /usr/include/sys/select.h \
+  /usr/include/sys/sigtypes.h /usr/include/time.h \
+  /usr/include/sys/null.h /usr/include/machine/vmparam.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/ctype.h \
+  /usr/include/sys/ctype_inline.h /usr/include/sys/ctype_bits.h \
+  /usr/include/errno.h /usr/include/sys/errno.h /usr/include/stdio.h \
+  /usr/include/stdlib.h /usr/include/termios.h \
+  /usr/include/minix/termios.h /usr/include/sys/ttydefaults.h shell.h \
+  options.h var.h output.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h memalloc.h error.h \
+  /usr/include/setjmp.h /usr/include/machine/setjmp.h \
+  /usr/include/signal.h /usr/include/sys/signal.h \
+  /usr/include/sys/siginfo.h /usr/include/machine/signal.h \
+  /usr/include/machine/stackframe.h /usr/include/machine/fpu.h \
+  /usr/include/sys/ucontext.h /usr/include/machine/mcontext.h mystring.h \
+  /usr/include/string.h /usr/include/strings.h builtins.h
+mystring.o mystring.ln: mystring.c /usr/include/stdlib.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/null.h shell.h syntax.h \
+  /usr/include/ctype.h /usr/include/sys/ctype_inline.h \
+  /usr/include/sys/ctype_bits.h error.h /usr/include/setjmp.h \
+  /usr/include/machine/setjmp.h /usr/include/signal.h \
+  /usr/include/sys/signal.h /usr/include/sys/sigtypes.h \
+  /usr/include/sys/siginfo.h /usr/include/machine/signal.h \
+  /usr/include/machine/stackframe.h /usr/include/machine/fpu.h \
+  /usr/include/sys/ucontext.h /usr/include/machine/mcontext.h mystring.h \
+  /usr/include/string.h /usr/include/strings.h
+nodes.o nodes.ln: nodes.c /usr/include/stdlib.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/null.h shell.h nodes.h \
+  memalloc.h mystring.h /usr/include/string.h /usr/include/strings.h \
+  machdep.h
+operators.o operators.ln: operators.c /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  shell.h /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h operators.h
+options.o options.ln: options.c /usr/include/signal.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/signal.h \
+  /usr/include/sys/sigtypes.h /usr/include/sys/siginfo.h \
+  /usr/include/machine/signal.h /usr/include/machine/stackframe.h \
+  /usr/include/machine/fpu.h /usr/include/sys/ucontext.h \
+  /usr/include/machine/mcontext.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/sys/null.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/stdlib.h shell.h options.h \
+  nodes.h eval.h jobs.h input.h output.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h trap.h var.h memalloc.h \
+  error.h /usr/include/setjmp.h /usr/include/machine/setjmp.h mystring.h \
+  /usr/include/string.h /usr/include/strings.h builtins.h myhistedit.h \
+  /usr/include/histedit.h /usr/include/stdio.h /usr/include/wchar.h \
+  /usr/include/wctype.h
+output.o output.ln: output.c /usr/include/stdio.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/ansi.h \
+  /usr/include/machine/ansi.h /usr/include/machine/int_types.h \
+  /usr/include/sys/null.h shell.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h syntax.h \
+  /usr/include/ctype.h /usr/include/sys/ctype_inline.h \
+  /usr/include/sys/ctype_bits.h output.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h memalloc.h error.h \
+  /usr/include/setjmp.h /usr/include/machine/setjmp.h \
+  /usr/include/signal.h /usr/include/sys/signal.h \
+  /usr/include/sys/sigtypes.h /usr/include/sys/siginfo.h \
+  /usr/include/machine/signal.h /usr/include/machine/stackframe.h \
+  /usr/include/machine/fpu.h /usr/include/sys/ucontext.h \
+  /usr/include/machine/mcontext.h var.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/stdlib.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h
+parser.o parser.ln: parser.c /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/stdlib.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/null.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h shell.h parser.h nodes.h expand.h syntax.h \
+  /usr/include/ctype.h /usr/include/sys/ctype_inline.h \
+  /usr/include/sys/ctype_bits.h options.h input.h output.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h var.h error.h \
+  /usr/include/setjmp.h /usr/include/machine/setjmp.h \
+  /usr/include/signal.h /usr/include/sys/signal.h \
+  /usr/include/sys/sigtypes.h /usr/include/sys/siginfo.h \
+  /usr/include/machine/signal.h /usr/include/machine/stackframe.h \
+  /usr/include/machine/fpu.h /usr/include/sys/ucontext.h \
+  /usr/include/machine/mcontext.h memalloc.h mystring.h \
+  /usr/include/string.h /usr/include/strings.h alias.h show.h eval.h \
+  myhistedit.h /usr/include/histedit.h /usr/include/stdio.h \
+  /usr/include/wchar.h /usr/include/wctype.h token.h
+redir.o redir.ln: redir.c /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/sys/null.h \
+  /usr/include/machine/vmparam.h /usr/include/signal.h \
+  /usr/include/sys/signal.h /usr/include/sys/siginfo.h \
+  /usr/include/machine/signal.h /usr/include/machine/stackframe.h \
+  /usr/include/machine/fpu.h /usr/include/sys/ucontext.h \
+  /usr/include/machine/mcontext.h /usr/include/string.h \
+  /usr/include/strings.h /usr/include/fcntl.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/minix/type.h \
+  /usr/include/machine/multiboot.h /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/stdlib.h shell.h nodes.h jobs.h \
+  expand.h redir.h output.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h memalloc.h error.h \
+  /usr/include/setjmp.h /usr/include/machine/setjmp.h options.h
+regexp.o regexp.ln: /usr/src/commands/ash/bltin/regexp.c \
+  /usr/src/commands/ash/bltin/bltin.h \
+  /usr/src/commands/ash/bltin/../shell.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/src/commands/ash/bltin/../mystring.h \
+  /usr/include/string.h /usr/include/sys/null.h /usr/include/strings.h \
+  builtins.h /usr/src/commands/ash/bltin/../output.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h \
+  /usr/src/commands/ash/bltin/myregexp.h /usr/include/stdlib.h
+setmode.o setmode.ln: setmode.c /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/stat.h \
+  /usr/include/sys/time.h /usr/include/sys/select.h \
+  /usr/include/sys/sigtypes.h /usr/include/time.h \
+  /usr/include/sys/null.h /usr/include/machine/vmparam.h \
+  /usr/include/ctype.h /usr/include/sys/ctype_inline.h \
+  /usr/include/sys/ctype_bits.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/signal.h \
+  /usr/include/sys/signal.h /usr/include/sys/siginfo.h \
+  /usr/include/machine/signal.h /usr/include/machine/stackframe.h \
+  /usr/include/machine/fpu.h /usr/include/sys/ucontext.h \
+  /usr/include/machine/mcontext.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  shell.h
+show.o show.ln: show.c /usr/include/fcntl.h /usr/include/sys/featuretest.h \
+  /usr/include/sys/types.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/stat.h \
+  /usr/include/sys/time.h /usr/include/sys/select.h \
+  /usr/include/sys/sigtypes.h /usr/include/time.h \
+  /usr/include/sys/null.h /usr/include/machine/vmparam.h \
+  /usr/include/stdio.h /usr/include/stdlib.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/errno.h \
+  /usr/include/sys/errno.h shell.h parser.h nodes.h mystring.h \
+  /usr/include/string.h /usr/include/strings.h show.h
+signames.o signames.ln: signames.c shell.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h
+syntax.o syntax.ln: syntax.c shell.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h syntax.h /usr/include/ctype.h \
+  /usr/include/sys/ctype_inline.h /usr/include/sys/ctype_bits.h
+trap.o trap.ln: trap.c /usr/include/signal.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/signal.h \
+  /usr/include/sys/sigtypes.h /usr/include/sys/siginfo.h \
+  /usr/include/machine/signal.h /usr/include/machine/stackframe.h \
+  /usr/include/machine/fpu.h /usr/include/sys/ucontext.h \
+  /usr/include/machine/mcontext.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/sys/null.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/stdlib.h shell.h main.h nodes.h \
+  eval.h jobs.h show.h options.h syntax.h /usr/include/ctype.h \
+  /usr/include/sys/ctype_inline.h /usr/include/sys/ctype_bits.h output.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h memalloc.h error.h \
+  /usr/include/setjmp.h /usr/include/machine/setjmp.h trap.h mystring.h \
+  /usr/include/string.h /usr/include/strings.h myhistedit.h \
+  /usr/include/histedit.h /usr/include/stdio.h /usr/include/wchar.h \
+  /usr/include/wctype.h builtins.h signames.h
+var.o var.ln: var.c /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/unistd.h \
+  /usr/include/machine/ansi.h /usr/include/machine/int_types.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/unistd.h \
+  /usr/include/sys/null.h /usr/include/minix/type.h \
+  /usr/include/machine/multiboot.h /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/reboot.h /usr/include/stdlib.h /usr/include/paths.h \
+  /usr/include/minix/paths.h /usr/include/locale.h shell.h output.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h expand.h nodes.h eval.h \
+  exec.h syntax.h /usr/include/ctype.h /usr/include/sys/ctype_inline.h \
+  /usr/include/sys/ctype_bits.h options.h mail.h var.h memalloc.h \
+  error.h /usr/include/setjmp.h /usr/include/machine/setjmp.h \
+  /usr/include/signal.h /usr/include/sys/signal.h \
+  /usr/include/sys/sigtypes.h /usr/include/sys/siginfo.h \
+  /usr/include/machine/signal.h /usr/include/machine/stackframe.h \
+  /usr/include/machine/fpu.h /usr/include/sys/ucontext.h \
+  /usr/include/machine/mcontext.h mystring.h /usr/include/string.h \
+  /usr/include/strings.h parser.h myhistedit.h /usr/include/histedit.h \
+  /usr/include/stdio.h /usr/include/wchar.h /usr/include/wctype.h \
+  builtins.h

@@ -1,0 +1,1 @@
+copyrightstr.o: copyrightstr.c

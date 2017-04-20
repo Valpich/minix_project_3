@@ -1,0 +1,2 @@
+libmain.o libmain.po libmain.pico libmain.go libmain.ln: /usr/src/external/bsd/flex/dist/libmain.c
+libyywrap.o libyywrap.po libyywrap.pico libyywrap.go libyywrap.ln: /usr/src/external/bsd/flex/dist/libyywrap.c

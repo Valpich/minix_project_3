@@ -1,0 +1,96 @@
+roff.o roff.po roff.pico roff.go roff.ln: /usr/src/external/bsd/mdocml/lib/libroff/../../dist/roff.c \
+  /usr/include/assert.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/null.h \
+  /usr/include/errno.h /usr/include/sys/errno.h /usr/include/ctype.h \
+  /usr/include/sys/ctype_inline.h /usr/include/sys/ctype_bits.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/stdlib.h \
+  /usr/include/sys/types.h /usr/include/machine/types.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/stdio.h \
+  /usr/src/external/bsd/mdocml/lib/libroff/../../dist/mandoc.h \
+  /usr/src/external/bsd/mdocml/lib/libroff/../../dist/roff.h \
+  /usr/src/external/bsd/mdocml/lib/libroff/../../dist/libroff.h \
+  /usr/src/external/bsd/mdocml/lib/libroff/../../dist/libmandoc.h
+tbl.o tbl.po tbl.pico tbl.go tbl.ln: /usr/src/external/bsd/mdocml/lib/libroff/../../dist/tbl.c \
+  /usr/include/assert.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/null.h \
+  /usr/include/stdio.h /usr/include/sys/ansi.h \
+  /usr/include/machine/ansi.h /usr/include/machine/int_types.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/time.h \
+  /usr/include/sys/time.h /usr/include/sys/select.h \
+  /usr/include/sys/sigtypes.h \
+  /usr/src/external/bsd/mdocml/lib/libroff/../../dist/mandoc.h \
+  /usr/src/external/bsd/mdocml/lib/libroff/../../dist/roff.h \
+  /usr/src/external/bsd/mdocml/lib/libroff/../../dist/libmandoc.h \
+  /usr/src/external/bsd/mdocml/lib/libroff/../../dist/libroff.h
+tbl_data.o tbl_data.po tbl_data.pico tbl_data.go tbl_data.ln: \
+  /usr/src/external/bsd/mdocml/lib/libroff/../../dist/tbl_data.c \
+  /usr/include/assert.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/null.h \
+  /usr/include/ctype.h /usr/include/sys/ctype_inline.h \
+  /usr/include/sys/ctype_bits.h /usr/include/stdlib.h \
+  /usr/include/sys/types.h /usr/include/machine/types.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/time.h \
+  /usr/include/sys/time.h /usr/include/sys/select.h \
+  /usr/include/sys/sigtypes.h \
+  /usr/src/external/bsd/mdocml/lib/libroff/../../dist/mandoc.h \
+  /usr/src/external/bsd/mdocml/lib/libroff/../../dist/libmandoc.h \
+  /usr/src/external/bsd/mdocml/lib/libroff/../../dist/libroff.h
+tbl_layout.o tbl_layout.po tbl_layout.pico tbl_layout.go tbl_layout.ln: \
+  /usr/src/external/bsd/mdocml/lib/libroff/../../dist/tbl_layout.c \
+  /usr/include/assert.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/null.h \
+  /usr/include/ctype.h /usr/include/sys/ctype_inline.h \
+  /usr/include/sys/ctype_bits.h /usr/include/stdlib.h \
+  /usr/include/sys/types.h /usr/include/machine/types.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/time.h \
+  /usr/include/sys/time.h /usr/include/sys/select.h \
+  /usr/include/sys/sigtypes.h \
+  /usr/src/external/bsd/mdocml/lib/libroff/../../dist/mandoc.h \
+  /usr/src/external/bsd/mdocml/lib/libroff/../../dist/libmandoc.h \
+  /usr/src/external/bsd/mdocml/lib/libroff/../../dist/libroff.h
+tbl_opts.o tbl_opts.po tbl_opts.pico tbl_opts.go tbl_opts.ln: \
+  /usr/src/external/bsd/mdocml/lib/libroff/../../dist/tbl_opts.c \
+  /usr/include/ctype.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/ctype_inline.h \
+  /usr/include/sys/ctype_bits.h /usr/include/stdio.h \
+  /usr/include/sys/ansi.h /usr/include/machine/ansi.h \
+  /usr/include/machine/int_types.h /usr/include/sys/null.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/string.h /usr/include/strings.h \
+  /usr/src/external/bsd/mdocml/lib/libroff/../../dist/mandoc.h \
+  /usr/src/external/bsd/mdocml/lib/libroff/../../dist/libroff.h

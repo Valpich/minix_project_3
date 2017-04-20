@@ -1,0 +1,1 @@
+empty.o: empty.S

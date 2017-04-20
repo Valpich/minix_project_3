@@ -1,0 +1,2020 @@
+archive_check_magic.o archive_check_magic.po archive_check_magic.pico archive_check_magic.go archive_check_magic.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_check_magic.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/stdio.h \
+  /usr/include/sys/null.h /usr/include/stdlib.h /usr/include/string.h \
+  /usr/include/strings.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h
+archive_entry.o archive_entry.po archive_entry.pico archive_entry.go archive_entry.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/sys/stat.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/sys/null.h \
+  /usr/include/machine/vmparam.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdio.h \
+  /usr/include/stdlib.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry_private.h
+archive_entry_copy_stat.o archive_entry_copy_stat.po archive_entry_copy_stat.pico archive_entry_copy_stat.go archive_entry_copy_stat.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry_copy_stat.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/sys/stat.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/sys/null.h \
+  /usr/include/machine/vmparam.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/sys/reboot.h
+archive_entry_link_resolver.o archive_entry_link_resolver.po archive_entry_link_resolver.pico archive_entry_link_resolver.go archive_entry_link_resolver.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry_link_resolver.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/sys/stat.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/sys/null.h \
+  /usr/include/machine/vmparam.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/stdio.h /usr/include/stdlib.h \
+  /usr/include/string.h /usr/include/strings.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h
+archive_entry_stat.o archive_entry_stat.po archive_entry_stat.pico archive_entry_stat.go archive_entry_stat.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry_stat.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/sys/stat.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/sys/null.h \
+  /usr/include/machine/vmparam.h /usr/include/stdlib.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/string.h \
+  /usr/include/strings.h /usr/include/wchar.h /usr/include/stdio.h
+archive_entry_strmode.o archive_entry_strmode.po archive_entry_strmode.pico archive_entry_strmode.go archive_entry_strmode.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry_strmode.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/sys/stat.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/sys/null.h \
+  /usr/include/machine/vmparam.h /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/stdlib.h \
+  /usr/include/wchar.h /usr/include/stdio.h
+archive_entry_xattr.o archive_entry_xattr.po archive_entry_xattr.pico archive_entry_xattr.go archive_entry_xattr.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry_xattr.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/sys/stat.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/sys/null.h \
+  /usr/include/machine/vmparam.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdio.h \
+  /usr/include/stdlib.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry_private.h
+archive_read.o archive_read.po archive_read.pico archive_read.go archive_read.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/sys/featuretest.h \
+  /usr/include/stdio.h /usr/include/sys/ansi.h /usr/include/sys/null.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_private.h
+archive_read_data_into_fd.o archive_read_data_into_fd.po archive_read_data_into_fd.pico archive_read_data_into_fd.go archive_read_data_into_fd.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_data_into_fd.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/sys/null.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/stdio.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/stdlib.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/wchar.h
+archive_read_disk.o archive_read_disk.po archive_read_disk.pico archive_read_disk.go archive_read_disk.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_disk.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/featuretest.h \
+  /usr/include/sys/types.h /usr/include/machine/types.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/sys/time.h /usr/include/sys/select.h \
+  /usr/include/sys/sigtypes.h /usr/include/time.h \
+  /usr/include/sys/null.h /usr/include/machine/vmparam.h \
+  /usr/include/stdio.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/stdlib.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_disk_private.h
+archive_read_disk_entry_from_file.o archive_read_disk_entry_from_file.po archive_read_disk_entry_from_file.pico archive_read_disk_entry_from_file.go archive_read_disk_entry_from_file.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_disk_entry_from_file.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/extattr.h \
+  /usr/include/sys/param.h /usr/include/sys/null.h \
+  /usr/include/sys/signal.h /usr/include/sys/sigtypes.h \
+  /usr/include/sys/siginfo.h /usr/include/machine/signal.h \
+  /usr/include/machine/stackframe.h /usr/include/machine/fpu.h \
+  /usr/include/sys/ucontext.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/param.h /usr/include/machine/vmparam.h \
+  /usr/include/machine/limits.h /usr/include/sys/stat.h \
+  /usr/include/sys/time.h /usr/include/sys/select.h /usr/include/time.h \
+  /usr/include/errno.h /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/stdio.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/stdlib.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_disk_private.h
+archive_read_disk_set_standard_lookup.o archive_read_disk_set_standard_lookup.po archive_read_disk_set_standard_lookup.pico archive_read_disk_set_standard_lookup.go archive_read_disk_set_standard_lookup.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_disk_set_standard_lookup.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/grp.h /usr/include/pwd.h \
+  /usr/include/stdlib.h /usr/include/sys/null.h /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/stdio.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h
+archive_read_extract.o archive_read_extract.po archive_read_extract.pico archive_read_extract.go archive_read_extract.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_extract.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/stdlib.h /usr/include/sys/null.h \
+  /usr/include/string.h /usr/include/strings.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/stdio.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_disk_private.h
+archive_read_open_fd.o archive_read_open_fd.po archive_read_open_fd.pico archive_read_open_fd.go archive_read_open_fd.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_open_fd.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/sys/stat.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/sys/null.h \
+  /usr/include/machine/vmparam.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/fcntl.h /usr/include/stdlib.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/stdio.h
+archive_read_open_file.o archive_read_open_file.po archive_read_open_file.pico archive_read_open_file.go archive_read_open_file.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_open_file.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/sys/stat.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/sys/null.h \
+  /usr/include/machine/vmparam.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/fcntl.h /usr/include/stdlib.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/stdio.h
+archive_read_open_filename.o archive_read_open_filename.po archive_read_open_filename.pico archive_read_open_filename.go archive_read_open_filename.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_open_filename.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/sys/stat.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/sys/null.h \
+  /usr/include/machine/vmparam.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/fcntl.h /usr/include/stdlib.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/stdio.h
+archive_read_open_memory.o archive_read_open_memory.po archive_read_open_memory.pico archive_read_open_memory.go archive_read_open_memory.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_open_memory.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/sys/featuretest.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/null.h \
+  /usr/include/string.h /usr/include/strings.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/stdio.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h
+archive_read_support_compression_all.o archive_read_support_compression_all.po archive_read_support_compression_all.pico archive_read_support_compression_all.go archive_read_support_compression_all.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_support_compression_all.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/featuretest.h \
+  /usr/include/sys/types.h /usr/include/machine/types.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/sys/time.h /usr/include/sys/select.h \
+  /usr/include/sys/sigtypes.h /usr/include/time.h \
+  /usr/include/sys/null.h /usr/include/machine/vmparam.h \
+  /usr/include/stdio.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h
+archive_read_support_compression_bzip2.o archive_read_support_compression_bzip2.po archive_read_support_compression_bzip2.pico archive_read_support_compression_bzip2.go archive_read_support_compression_bzip2.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_support_compression_bzip2.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/sys/featuretest.h \
+  /usr/include/stdio.h /usr/include/sys/ansi.h /usr/include/sys/null.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/sys/reboot.h \
+  /usr/include/bzlib.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_private.h
+archive_read_support_compression_compress.o archive_read_support_compression_compress.po archive_read_support_compression_compress.pico archive_read_support_compression_compress.go archive_read_support_compression_compress.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_support_compression_compress.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/sys/featuretest.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/null.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/stdio.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_private.h
+archive_read_support_compression_gzip.o archive_read_support_compression_gzip.po archive_read_support_compression_gzip.pico archive_read_support_compression_gzip.go archive_read_support_compression_gzip.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_support_compression_gzip.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/sys/featuretest.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/null.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/sys/reboot.h \
+  /usr/include/zlib.h /usr/include/zconf.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/stdio.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_private.h
+archive_read_support_compression_none.o archive_read_support_compression_none.po archive_read_support_compression_none.pico archive_read_support_compression_none.go archive_read_support_compression_none.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_support_compression_none.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/featuretest.h \
+  /usr/include/sys/types.h /usr/include/machine/types.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/sys/time.h /usr/include/sys/select.h \
+  /usr/include/sys/sigtypes.h /usr/include/time.h \
+  /usr/include/sys/null.h /usr/include/machine/vmparam.h \
+  /usr/include/stdio.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h
+archive_read_support_compression_program.o archive_read_support_compression_program.po archive_read_support_compression_program.pico archive_read_support_compression_program.go archive_read_support_compression_program.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_support_compression_program.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/sys/wait.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/fcntl.h /usr/include/sys/stat.h \
+  /usr/include/sys/time.h /usr/include/sys/select.h \
+  /usr/include/sys/sigtypes.h /usr/include/time.h \
+  /usr/include/sys/null.h /usr/include/machine/vmparam.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/signal.h \
+  /usr/include/sys/signal.h /usr/include/sys/siginfo.h \
+  /usr/include/machine/signal.h /usr/include/machine/stackframe.h \
+  /usr/include/machine/fpu.h /usr/include/sys/ucontext.h \
+  /usr/include/machine/mcontext.h /usr/include/stdlib.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/stdio.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/filter_fork.h
+archive_read_support_compression_rpm.o archive_read_support_compression_rpm.po archive_read_support_compression_rpm.pico archive_read_support_compression_rpm.go archive_read_support_compression_rpm.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_support_compression_rpm.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/sys/featuretest.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/null.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/stdio.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_endian.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/string.h \
+  /usr/include/strings.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_private.h
+archive_read_support_compression_uu.o archive_read_support_compression_uu.po archive_read_support_compression_uu.pico archive_read_support_compression_uu.go archive_read_support_compression_uu.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_support_compression_uu.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/sys/featuretest.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/null.h \
+  /usr/include/string.h /usr/include/strings.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/stdio.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_private.h
+archive_read_support_compression_xz.o archive_read_support_compression_xz.po archive_read_support_compression_xz.pico archive_read_support_compression_xz.go archive_read_support_compression_xz.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_support_compression_xz.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/sys/featuretest.h \
+  /usr/include/stdio.h /usr/include/sys/ansi.h /usr/include/sys/null.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/sys/reboot.h \
+  /usr/include/lzma.h /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/include/lzma/version.h /usr/include/lzma/base.h \
+  /usr/include/lzma/vli.h /usr/include/lzma/check.h \
+  /usr/include/lzma/filter.h /usr/include/lzma/bcj.h \
+  /usr/include/lzma/delta.h /usr/include/lzma/lzma.h \
+  /usr/include/lzma/container.h /usr/include/lzma/stream_flags.h \
+  /usr/include/lzma/block.h /usr/include/lzma/index.h \
+  /usr/include/lzma/index_hash.h /usr/include/lzma/hardware.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_endian.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_private.h
+archive_read_support_format_all.o archive_read_support_format_all.po archive_read_support_format_all.pico archive_read_support_format_all.go archive_read_support_format_all.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_support_format_all.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/featuretest.h \
+  /usr/include/sys/types.h /usr/include/machine/types.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/sys/time.h /usr/include/sys/select.h \
+  /usr/include/sys/sigtypes.h /usr/include/time.h \
+  /usr/include/sys/null.h /usr/include/machine/vmparam.h \
+  /usr/include/stdio.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h
+archive_read_support_format_ar.o archive_read_support_format_ar.po archive_read_support_format_ar.pico archive_read_support_format_ar.go archive_read_support_format_ar.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_support_format_ar.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/sys/stat.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/sys/null.h \
+  /usr/include/machine/vmparam.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/stdlib.h /usr/include/string.h \
+  /usr/include/strings.h /usr/pkg/bin/../lib/clang/3.1/include/limits.h \
+  /usr/include/limits.h /usr/include/machine/limits.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/stdio.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_private.h
+archive_read_support_format_cpio.o archive_read_support_format_cpio.po archive_read_support_format_cpio.pico archive_read_support_format_cpio.go archive_read_support_format_cpio.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_support_format_cpio.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/sys/featuretest.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/null.h \
+  /usr/include/string.h /usr/include/strings.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/stdio.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_private.h
+archive_read_support_format_empty.o archive_read_support_format_empty.po archive_read_support_format_empty.pico archive_read_support_format_empty.go archive_read_support_format_empty.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_support_format_empty.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/featuretest.h \
+  /usr/include/sys/types.h /usr/include/machine/types.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/sys/time.h /usr/include/sys/select.h \
+  /usr/include/sys/sigtypes.h /usr/include/time.h \
+  /usr/include/sys/null.h /usr/include/machine/vmparam.h \
+  /usr/include/stdio.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/stdlib.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_private.h
+archive_read_support_format_iso9660.o archive_read_support_format_iso9660.po archive_read_support_format_iso9660.pico archive_read_support_format_iso9660.go archive_read_support_format_iso9660.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_support_format_iso9660.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/sys/featuretest.h \
+  /usr/include/stdio.h /usr/include/sys/ansi.h /usr/include/sys/null.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/time.h \
+  /usr/include/sys/time.h /usr/include/sys/select.h \
+  /usr/include/sys/sigtypes.h /usr/include/zlib.h /usr/include/zconf.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/machine/vmparam.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_endian.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_private.h
+archive_read_support_format_mtree.o archive_read_support_format_mtree.po archive_read_support_format_mtree.pico archive_read_support_format_mtree.go archive_read_support_format_mtree.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_support_format_mtree.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/sys/stat.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/sys/null.h \
+  /usr/include/machine/vmparam.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/fcntl.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  /usr/include/string.h /usr/include/strings.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/stdio.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_private.h
+archive_read_support_format_raw.o archive_read_support_format_raw.po archive_read_support_format_raw.pico archive_read_support_format_raw.go archive_read_support_format_raw.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_support_format_raw.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/sys/featuretest.h \
+  /usr/include/stdio.h /usr/include/sys/ansi.h /usr/include/sys/null.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/string.h \
+  /usr/include/strings.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_private.h
+archive_read_support_format_tar.o archive_read_support_format_tar.po archive_read_support_format_tar.pico archive_read_support_format_tar.go archive_read_support_format_tar.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_support_format_tar.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/sys/featuretest.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/stdlib.h \
+  /usr/include/sys/types.h /usr/include/machine/types.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/wchar.h /usr/include/stdio.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_private.h
+archive_read_support_format_xar.o archive_read_support_format_xar.po archive_read_support_format_xar.pico archive_read_support_format_xar.go archive_read_support_format_xar.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_support_format_xar.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/sys/featuretest.h \
+  /usr/include/stdio.h /usr/include/sys/ansi.h /usr/include/sys/null.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/bzlib.h /usr/include/lzma.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/include/lzma/version.h /usr/include/lzma/base.h \
+  /usr/include/lzma/vli.h /usr/include/lzma/check.h \
+  /usr/include/lzma/filter.h /usr/include/lzma/bcj.h \
+  /usr/include/lzma/delta.h /usr/include/lzma/lzma.h \
+  /usr/include/lzma/container.h /usr/include/lzma/stream_flags.h \
+  /usr/include/lzma/block.h /usr/include/lzma/index.h \
+  /usr/include/lzma/index_hash.h /usr/include/lzma/hardware.h \
+  /usr/include/zlib.h /usr/include/zconf.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_endian.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_hash.h \
+  /usr/include/md5.h /usr/include/rmd160.h /usr/include/sha1.h \
+  /usr/include/sha2.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/string.h \
+  /usr/include/strings.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_private.h
+archive_read_support_format_zip.o archive_read_support_format_zip.po archive_read_support_format_zip.pico archive_read_support_format_zip.go archive_read_support_format_zip.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_support_format_zip.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/sys/featuretest.h \
+  /usr/include/stdio.h /usr/include/sys/ansi.h /usr/include/sys/null.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/time.h /usr/include/sys/time.h /usr/include/sys/select.h \
+  /usr/include/sys/sigtypes.h /usr/include/zlib.h /usr/include/zconf.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/machine/vmparam.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/string.h \
+  /usr/include/strings.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_endian.h
+archive_string.o archive_string.po archive_string.pico archive_string.go archive_string.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdlib.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/null.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/wchar.h \
+  /usr/include/stdio.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h
+archive_string_sprintf.o archive_string_sprintf.po archive_string_sprintf.pico archive_string_sprintf.go archive_string_sprintf.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string_sprintf.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdio.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/ansi.h \
+  /usr/include/sys/null.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/stdlib.h \
+  /usr/include/sys/types.h /usr/include/machine/types.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/string.h \
+  /usr/include/strings.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h
+archive_util.o archive_util.po archive_util.pico archive_util.go archive_util.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_util.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/stdlib.h \
+  /usr/include/sys/null.h /usr/include/string.h /usr/include/strings.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/stdio.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h
+archive_virtual.o archive_virtual.po archive_virtual.pico archive_virtual.go archive_virtual.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_virtual.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/featuretest.h \
+  /usr/include/sys/types.h /usr/include/machine/types.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/sys/time.h /usr/include/sys/select.h \
+  /usr/include/sys/sigtypes.h /usr/include/time.h \
+  /usr/include/sys/null.h /usr/include/machine/vmparam.h \
+  /usr/include/stdio.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/stdlib.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/wchar.h
+archive_write.o archive_write.po archive_write.pico archive_write.go archive_write.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/sys/wait.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/stdio.h \
+  /usr/include/sys/null.h /usr/include/stdlib.h /usr/include/string.h \
+  /usr/include/strings.h /usr/include/time.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/machine/vmparam.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_private.h
+archive_write_disk.o archive_write_disk.po archive_write_disk.pico archive_write_disk.go archive_write_disk.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_disk.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/extattr.h \
+  /usr/include/sys/ioctl.h /usr/include/sys/ioc_tty.h \
+  /usr/include/minix/ioctl.h /usr/include/sys/ioc_net.h \
+  /usr/include/sys/un.h /usr/include/string.h /usr/include/sys/null.h \
+  /usr/include/strings.h /usr/include/sys/ioc_disk.h \
+  /usr/include/sys/ioc_file.h /usr/include/sys/ioc_memory.h \
+  /usr/include/sys/ioc_tape.h /usr/include/sys/ioc_sound.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/errno.h /usr/include/sys/errno.h /usr/include/fcntl.h \
+  /usr/include/grp.h /usr/pkg/bin/../lib/clang/3.1/include/limits.h \
+  /usr/include/limits.h /usr/include/machine/limits.h /usr/include/pwd.h \
+  /usr/include/stdio.h /usr/include/stdlib.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/sys/reboot.h \
+  /usr/include/utime.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h
+archive_write_disk_set_standard_lookup.o archive_write_disk_set_standard_lookup.po archive_write_disk_set_standard_lookup.pico archive_write_disk_set_standard_lookup.go archive_write_disk_set_standard_lookup.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_disk_set_standard_lookup.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/grp.h /usr/include/pwd.h \
+  /usr/include/stdlib.h /usr/include/sys/null.h /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/stdio.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_read_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_disk_private.h
+archive_write_open_fd.o archive_write_open_fd.po archive_write_open_fd.pico archive_write_open_fd.go archive_write_open_fd.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_open_fd.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/sys/stat.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/sys/null.h \
+  /usr/include/machine/vmparam.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/fcntl.h /usr/include/stdlib.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/stdio.h
+archive_write_open_file.o archive_write_open_file.po archive_write_open_file.pico archive_write_open_file.go archive_write_open_file.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_open_file.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/sys/stat.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/sys/null.h \
+  /usr/include/machine/vmparam.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/fcntl.h /usr/include/stdlib.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/stdio.h
+archive_write_open_filename.o archive_write_open_filename.po archive_write_open_filename.pico archive_write_open_filename.go archive_write_open_filename.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_open_filename.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/sys/stat.h \
+  /usr/include/sys/featuretest.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/sys/null.h \
+  /usr/include/machine/vmparam.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/fcntl.h /usr/include/stdlib.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/stdio.h
+archive_write_open_memory.o archive_write_open_memory.po archive_write_open_memory.pico archive_write_open_memory.go archive_write_open_memory.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_open_memory.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/sys/featuretest.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/null.h \
+  /usr/include/string.h /usr/include/strings.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/stdio.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h
+archive_write_set_compression_bzip2.o archive_write_set_compression_bzip2.po archive_write_set_compression_bzip2.pico archive_write_set_compression_bzip2.go archive_write_set_compression_bzip2.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_set_compression_bzip2.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/sys/featuretest.h \
+  /usr/include/stdio.h /usr/include/sys/ansi.h /usr/include/sys/null.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/bzlib.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_private.h
+archive_write_set_compression_compress.o archive_write_set_compression_compress.po archive_write_set_compression_compress.pico archive_write_set_compression_compress.go archive_write_set_compression_compress.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_set_compression_compress.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/sys/featuretest.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/null.h \
+  /usr/include/string.h /usr/include/strings.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/stdio.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_private.h
+archive_write_set_compression_gzip.o archive_write_set_compression_gzip.po archive_write_set_compression_gzip.pico archive_write_set_compression_gzip.go archive_write_set_compression_gzip.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_set_compression_gzip.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/sys/featuretest.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/null.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/time.h \
+  /usr/include/sys/time.h /usr/include/sys/select.h \
+  /usr/include/sys/sigtypes.h /usr/include/zlib.h /usr/include/zconf.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/machine/vmparam.h \
+  /usr/include/stdio.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_private.h
+archive_write_set_compression_none.o archive_write_set_compression_none.po archive_write_set_compression_none.pico archive_write_set_compression_none.go archive_write_set_compression_none.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_set_compression_none.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/sys/featuretest.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/null.h \
+  /usr/include/string.h /usr/include/strings.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/stdio.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_private.h
+archive_write_set_compression_program.o archive_write_set_compression_program.po archive_write_set_compression_program.pico archive_write_set_compression_program.go archive_write_set_compression_program.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_set_compression_program.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/sys/wait.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/fcntl.h /usr/include/sys/stat.h \
+  /usr/include/sys/time.h /usr/include/sys/select.h \
+  /usr/include/sys/sigtypes.h /usr/include/time.h \
+  /usr/include/sys/null.h /usr/include/machine/vmparam.h \
+  /usr/include/stdlib.h /usr/include/string.h /usr/include/strings.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/stdio.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/filter_fork.h
+archive_write_set_compression_xz.o archive_write_set_compression_xz.po archive_write_set_compression_xz.pico archive_write_set_compression_xz.go archive_write_set_compression_xz.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_set_compression_xz.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/sys/featuretest.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/null.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/time.h \
+  /usr/include/sys/time.h /usr/include/sys/select.h \
+  /usr/include/sys/sigtypes.h /usr/include/lzma.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/include/lzma/version.h /usr/include/lzma/base.h \
+  /usr/include/lzma/vli.h /usr/include/lzma/check.h \
+  /usr/include/lzma/filter.h /usr/include/lzma/bcj.h \
+  /usr/include/lzma/delta.h /usr/include/lzma/lzma.h \
+  /usr/include/lzma/container.h /usr/include/lzma/stream_flags.h \
+  /usr/include/lzma/block.h /usr/include/lzma/index.h \
+  /usr/include/lzma/index_hash.h /usr/include/lzma/hardware.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/machine/vmparam.h \
+  /usr/include/stdio.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_private.h
+archive_write_set_format.o archive_write_set_format.po archive_write_set_format.pico archive_write_set_format.go archive_write_set_format.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_set_format.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/errno.h \
+  /usr/include/sys/errno.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/sys/null.h \
+  /usr/include/machine/vmparam.h /usr/include/stdio.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/stdlib.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/wchar.h
+archive_write_set_format_ar.o archive_write_set_format_ar.po archive_write_set_format_ar.pico archive_write_set_format_ar.go archive_write_set_format_ar.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_set_format_ar.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/sys/featuretest.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/null.h \
+  /usr/include/string.h /usr/include/strings.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/stdio.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_private.h
+archive_write_set_format_by_name.o archive_write_set_format_by_name.po archive_write_set_format_by_name.pico archive_write_set_format_by_name.go archive_write_set_format_by_name.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_set_format_by_name.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/string.h /usr/include/sys/null.h \
+  /usr/include/strings.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/stdio.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/stdlib.h \
+  /usr/include/wchar.h
+archive_write_set_format_cpio.o archive_write_set_format_cpio.po archive_write_set_format_cpio.pico archive_write_set_format_cpio.go archive_write_set_format_cpio.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_set_format_cpio.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/sys/featuretest.h \
+  /usr/include/stdio.h /usr/include/sys/ansi.h /usr/include/sys/null.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/string.h /usr/include/strings.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_private.h
+archive_write_set_format_cpio_newc.o archive_write_set_format_cpio_newc.po archive_write_set_format_cpio_newc.pico archive_write_set_format_cpio_newc.go archive_write_set_format_cpio_newc.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_set_format_cpio_newc.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/sys/featuretest.h \
+  /usr/include/stdio.h /usr/include/sys/ansi.h /usr/include/sys/null.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/string.h /usr/include/strings.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_private.h
+archive_write_set_format_mtree.o archive_write_set_format_mtree.po archive_write_set_format_mtree.pico archive_write_set_format_mtree.go archive_write_set_format_mtree.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_set_format_mtree.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/stdlib.h /usr/include/sys/null.h \
+  /usr/include/string.h /usr/include/strings.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/stdio.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_hash.h \
+  /usr/include/md5.h /usr/include/rmd160.h /usr/include/sha1.h \
+  /usr/include/sha2.h
+archive_write_set_format_pax.o archive_write_set_format_pax.po archive_write_set_format_pax.pico archive_write_set_format_pax.go archive_write_set_format_pax.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_set_format_pax.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/sys/featuretest.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/sys/null.h \
+  /usr/include/string.h /usr/include/strings.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/stdio.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_private.h
+archive_write_set_format_shar.o archive_write_set_format_shar.po archive_write_set_format_shar.pico archive_write_set_format_shar.go archive_write_set_format_shar.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_set_format_shar.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/sys/featuretest.h \
+  /usr/include/stdio.h /usr/include/sys/ansi.h /usr/include/sys/null.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/string.h /usr/include/strings.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_private.h
+archive_write_set_format_ustar.o archive_write_set_format_ustar.po archive_write_set_format_ustar.pico archive_write_set_format_ustar.go archive_write_set_format_ustar.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_set_format_ustar.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/sys/featuretest.h \
+  /usr/include/stdio.h /usr/include/sys/ansi.h /usr/include/sys/null.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/string.h /usr/include/strings.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_private.h
+archive_write_set_format_zip.o archive_write_set_format_zip.po archive_write_set_format_zip.pico archive_write_set_format_zip.go archive_write_set_format_zip.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_set_format_zip.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/sys/featuretest.h \
+  /usr/include/stdio.h /usr/include/sys/ansi.h /usr/include/sys/null.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h \
+  /usr/include/machine/types.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/zlib.h \
+  /usr/include/zconf.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_endian.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_entry.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_private.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_string.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdarg.h /usr/include/wchar.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_write_private.h
+filter_fork.o filter_fork.po filter_fork.pico filter_fork.go filter_fork.ln: \
+  /usr/src/external/bsd/libarchive/dist/libarchive/filter_fork.c \
+  /usr/src/external/bsd/libarchive/dist/libarchive/archive_platform.h \
+  /usr/src/external/bsd/libarchive/include/config_netbsd.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_types.h /usr/include/machine/int_mwgwtypes.h \
+  /usr/include/machine/int_limits.h /usr/include/machine/int_const.h \
+  /usr/include/machine/wchar_limits.h /usr/include/machine/int_fmtio.h \
+  /usr/include/machine/ansi.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/poll.h \
+  /usr/include/fcntl.h /usr/include/sys/featuretest.h \
+  /usr/include/sys/types.h /usr/include/machine/types.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/sys/null.h \
+  /usr/include/machine/vmparam.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/sys/reboot.h \
+  /usr/src/external/bsd/libarchive/dist/libarchive/filter_fork.h

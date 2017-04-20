@@ -1,0 +1,218 @@
+allocate.o allocate.po allocate.pico allocate.go allocate.ln: allocate.c /usr/include/errno.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/sys/errno.h /usr/include/sys/featuretest.h \
+  /usr/include/minix/mthread.h /usr/include/minix/config.h \
+  /usr/include/minix/sys_config.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/sys/null.h \
+  /usr/include/sys/types.h /usr/include/machine/types.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/stdio.h /usr/include/ucontext.h \
+  /usr/include/sys/ucontext.h /usr/include/sys/sigtypes.h \
+  /usr/include/machine/mcontext.h /usr/include/machine/fpu.h \
+  /usr/include/machine/stackframe.h /usr/include/stdlib.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/string.h \
+  /usr/include/strings.h /usr/include/machine/param.h \
+  /usr/include/machine/vmparam.h /usr/include/sys/mman.h \
+  /usr/include/minix/type.h /usr/include/machine/multiboot.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/machine/interrupt.h global.h /usr/include/assert.h \
+  /usr/include/sys/signal.h /usr/include/sys/siginfo.h \
+  /usr/include/machine/signal.h proto.h
+attribute.o attribute.po attribute.pico attribute.go attribute.ln: attribute.c /usr/include/minix/mthread.h \
+  /usr/include/minix/config.h /usr/include/minix/sys_config.h \
+  /usr/include/minix/const.h /usr/include/machine/archconst.h \
+  /usr/include/sys/null.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/stdio.h \
+  /usr/include/ucontext.h /usr/include/sys/ucontext.h \
+  /usr/include/sys/sigtypes.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/errno.h /usr/include/sys/errno.h /usr/include/stdlib.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h global.h /usr/include/assert.h \
+  /usr/include/sys/signal.h /usr/include/sys/siginfo.h \
+  /usr/include/machine/signal.h proto.h
+condition.o condition.po condition.pico condition.go condition.ln: condition.c /usr/include/minix/mthread.h \
+  /usr/include/minix/config.h /usr/include/minix/sys_config.h \
+  /usr/include/minix/const.h /usr/include/machine/archconst.h \
+  /usr/include/sys/null.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/stdio.h \
+  /usr/include/ucontext.h /usr/include/sys/ucontext.h \
+  /usr/include/sys/sigtypes.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/errno.h /usr/include/sys/errno.h /usr/include/stdlib.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h global.h /usr/include/assert.h \
+  /usr/include/sys/signal.h /usr/include/sys/siginfo.h \
+  /usr/include/machine/signal.h proto.h
+event.o event.po event.pico event.go event.ln: event.c /usr/include/minix/mthread.h /usr/include/minix/config.h \
+  /usr/include/minix/sys_config.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/sys/null.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/stdio.h /usr/include/ucontext.h \
+  /usr/include/sys/ucontext.h /usr/include/sys/sigtypes.h \
+  /usr/include/machine/mcontext.h /usr/include/machine/fpu.h \
+  /usr/include/machine/stackframe.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/stdlib.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h global.h /usr/include/assert.h \
+  /usr/include/sys/signal.h /usr/include/sys/siginfo.h \
+  /usr/include/machine/signal.h
+key.o key.po key.pico key.go key.ln: key.c /usr/include/minix/mthread.h /usr/include/minix/config.h \
+  /usr/include/minix/sys_config.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/sys/null.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/stdio.h /usr/include/ucontext.h \
+  /usr/include/sys/ucontext.h /usr/include/sys/sigtypes.h \
+  /usr/include/machine/mcontext.h /usr/include/machine/fpu.h \
+  /usr/include/machine/stackframe.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/stdlib.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/string.h \
+  /usr/include/strings.h global.h /usr/include/assert.h \
+  /usr/include/sys/signal.h /usr/include/sys/siginfo.h \
+  /usr/include/machine/signal.h proto.h
+misc.o misc.po misc.pico misc.go misc.ln: misc.c /usr/include/minix/mthread.h /usr/include/minix/config.h \
+  /usr/include/minix/sys_config.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/sys/null.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/stdio.h /usr/include/ucontext.h \
+  /usr/include/sys/ucontext.h /usr/include/sys/sigtypes.h \
+  /usr/include/machine/mcontext.h /usr/include/machine/fpu.h \
+  /usr/include/machine/stackframe.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/stdlib.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h global.h /usr/include/assert.h \
+  /usr/include/sys/signal.h /usr/include/sys/siginfo.h \
+  /usr/include/machine/signal.h proto.h
+mutex.o mutex.po mutex.pico mutex.go mutex.ln: mutex.c /usr/include/minix/mthread.h /usr/include/minix/config.h \
+  /usr/include/minix/sys_config.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/sys/null.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/stdio.h /usr/include/ucontext.h \
+  /usr/include/sys/ucontext.h /usr/include/sys/sigtypes.h \
+  /usr/include/machine/mcontext.h /usr/include/machine/fpu.h \
+  /usr/include/machine/stackframe.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/stdlib.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h global.h /usr/include/assert.h \
+  /usr/include/sys/signal.h /usr/include/sys/siginfo.h \
+  /usr/include/machine/signal.h proto.h
+queue.o queue.po queue.pico queue.go queue.ln: queue.c /usr/include/minix/mthread.h /usr/include/minix/config.h \
+  /usr/include/minix/sys_config.h /usr/include/minix/const.h \
+  /usr/include/machine/archconst.h /usr/include/sys/null.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/include/stdio.h /usr/include/ucontext.h \
+  /usr/include/sys/ucontext.h /usr/include/sys/sigtypes.h \
+  /usr/include/machine/mcontext.h /usr/include/machine/fpu.h \
+  /usr/include/machine/stackframe.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/stdlib.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h global.h /usr/include/assert.h \
+  /usr/include/sys/signal.h /usr/include/sys/siginfo.h \
+  /usr/include/machine/signal.h proto.h
+rwlock.o rwlock.po rwlock.pico rwlock.go rwlock.ln: rwlock.c /usr/include/minix/mthread.h \
+  /usr/include/minix/config.h /usr/include/minix/sys_config.h \
+  /usr/include/minix/const.h /usr/include/machine/archconst.h \
+  /usr/include/sys/null.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/stdio.h \
+  /usr/include/ucontext.h /usr/include/sys/ucontext.h \
+  /usr/include/sys/sigtypes.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/errno.h /usr/include/sys/errno.h /usr/include/stdlib.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h global.h /usr/include/assert.h \
+  /usr/include/sys/signal.h /usr/include/sys/siginfo.h \
+  /usr/include/machine/signal.h
+scheduler.o scheduler.po scheduler.pico scheduler.go scheduler.ln: scheduler.c /usr/include/minix/mthread.h \
+  /usr/include/minix/config.h /usr/include/minix/sys_config.h \
+  /usr/include/minix/const.h /usr/include/machine/archconst.h \
+  /usr/include/sys/null.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h /usr/include/stdio.h \
+  /usr/include/ucontext.h /usr/include/sys/ucontext.h \
+  /usr/include/sys/sigtypes.h /usr/include/machine/mcontext.h \
+  /usr/include/machine/fpu.h /usr/include/machine/stackframe.h \
+  /usr/include/errno.h /usr/include/sys/errno.h /usr/include/stdlib.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h global.h /usr/include/assert.h \
+  /usr/include/sys/signal.h /usr/include/sys/siginfo.h \
+  /usr/include/machine/signal.h proto.h

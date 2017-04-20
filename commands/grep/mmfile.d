@@ -1,0 +1,1 @@
+mmfile.o: mmfile.c

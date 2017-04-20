@@ -1,0 +1,17 @@
+#define proc_SIZEOF 464
+#define DIREG 8
+#define SIREG 12
+#define BPREG 16
+#define STREG 20
+#define BXREG 24
+#define DXREG 28
+#define CXREG 32
+#define AXREG 36
+#define RETADR 40
+#define PCREG 44
+#define CSREG 48
+#define PSWREG 52
+#define SPREG 56
+#define P_CR3 64
+#define P_KERN_TRAP_STYLE 76
+#define P_MAGIC 436

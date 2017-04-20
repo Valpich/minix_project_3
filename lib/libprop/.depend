@@ -1,0 +1,267 @@
+prop_array.o prop_array.po prop_array.pico prop_array.go prop_array.ln: /usr/src/common/lib/libprop/prop_array.c \
+  /usr/src/common/lib/libprop/prop_object_impl.h /usr/include/inttypes.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/sys/inttypes.h \
+  /usr/include/sys/stdint.h /usr/include/machine/int_types.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/machine/int_fmtio.h /usr/include/machine/ansi.h \
+  /usr/src/common/lib/libprop/prop_stack.h /usr/include/sys/queue.h \
+  /usr/include/sys/null.h /usr/include/prop/prop_object.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdbool.h /usr/include/assert.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/stdio.h \
+  /usr/include/stdlib.h /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/include/prop/prop_array.h /usr/include/errno.h \
+  /usr/include/sys/errno.h
+prop_array_util.o prop_array_util.po prop_array_util.pico prop_array_util.go prop_array_util.ln: /usr/src/common/lib/libprop/prop_array_util.c \
+  /usr/src/common/lib/libprop/prop_object_impl.h /usr/include/inttypes.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/sys/inttypes.h \
+  /usr/include/sys/stdint.h /usr/include/machine/int_types.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/machine/int_fmtio.h /usr/include/machine/ansi.h \
+  /usr/src/common/lib/libprop/prop_stack.h /usr/include/sys/queue.h \
+  /usr/include/sys/null.h /usr/include/prop/prop_object.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdbool.h /usr/include/assert.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/stdio.h \
+  /usr/include/stdlib.h /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/include/prop/proplib.h /usr/include/prop/prop_array.h \
+  /usr/include/prop/prop_bool.h /usr/include/prop/prop_data.h \
+  /usr/include/prop/prop_dictionary.h /usr/include/prop/prop_number.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h \
+  /usr/include/prop/prop_string.h /usr/include/prop/prop_ingest.h \
+  /usr/include/prop/plistref.h
+prop_bool.o prop_bool.po prop_bool.pico prop_bool.go prop_bool.ln: /usr/src/common/lib/libprop/prop_bool.c \
+  /usr/include/prop/prop_bool.h /usr/include/prop/prop_object.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdbool.h \
+  /usr/src/common/lib/libprop/prop_object_impl.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/machine/int_fmtio.h \
+  /usr/src/common/lib/libprop/prop_stack.h /usr/include/sys/queue.h \
+  /usr/include/sys/null.h /usr/include/assert.h /usr/include/string.h \
+  /usr/include/strings.h /usr/include/stdio.h /usr/include/stdlib.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h
+prop_data.o prop_data.po prop_data.pico prop_data.go prop_data.ln: /usr/src/common/lib/libprop/prop_data.c \
+  /usr/include/prop/prop_data.h /usr/include/prop/prop_object.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdbool.h \
+  /usr/src/common/lib/libprop/prop_object_impl.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/machine/int_fmtio.h \
+  /usr/src/common/lib/libprop/prop_stack.h /usr/include/sys/queue.h \
+  /usr/include/sys/null.h /usr/include/assert.h /usr/include/string.h \
+  /usr/include/strings.h /usr/include/stdio.h /usr/include/stdlib.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h /usr/include/errno.h \
+  /usr/include/sys/errno.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h
+prop_dictionary.o prop_dictionary.po prop_dictionary.pico prop_dictionary.go prop_dictionary.ln: /usr/src/common/lib/libprop/prop_dictionary.c \
+  /usr/src/common/lib/libprop/prop_object_impl.h /usr/include/inttypes.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/sys/inttypes.h \
+  /usr/include/sys/stdint.h /usr/include/machine/int_types.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/machine/int_fmtio.h /usr/include/machine/ansi.h \
+  /usr/src/common/lib/libprop/prop_stack.h /usr/include/sys/queue.h \
+  /usr/include/sys/null.h /usr/include/prop/prop_object.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdbool.h /usr/include/assert.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/stdio.h \
+  /usr/include/stdlib.h /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/include/prop/prop_array.h /usr/include/prop/prop_dictionary.h \
+  /usr/include/prop/prop_string.h \
+  /usr/src/common/lib/libprop/prop_rb_impl.h /usr/include/sys/rbtree.h \
+  /usr/include/errno.h /usr/include/sys/errno.h
+prop_dictionary_util.o prop_dictionary_util.po prop_dictionary_util.pico prop_dictionary_util.go prop_dictionary_util.ln: \
+  /usr/src/common/lib/libprop/prop_dictionary_util.c \
+  /usr/src/common/lib/libprop/prop_object_impl.h /usr/include/inttypes.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/sys/inttypes.h \
+  /usr/include/sys/stdint.h /usr/include/machine/int_types.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/machine/int_fmtio.h /usr/include/machine/ansi.h \
+  /usr/src/common/lib/libprop/prop_stack.h /usr/include/sys/queue.h \
+  /usr/include/sys/null.h /usr/include/prop/prop_object.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdbool.h /usr/include/assert.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/stdio.h \
+  /usr/include/stdlib.h /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/include/prop/proplib.h /usr/include/prop/prop_array.h \
+  /usr/include/prop/prop_bool.h /usr/include/prop/prop_data.h \
+  /usr/include/prop/prop_dictionary.h /usr/include/prop/prop_number.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h \
+  /usr/include/prop/prop_string.h /usr/include/prop/prop_ingest.h \
+  /usr/include/prop/plistref.h
+prop_ingest.o prop_ingest.po prop_ingest.pico prop_ingest.go prop_ingest.ln: /usr/src/common/lib/libprop/prop_ingest.c \
+  /usr/src/common/lib/libprop/prop_object_impl.h /usr/include/inttypes.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/sys/inttypes.h \
+  /usr/include/sys/stdint.h /usr/include/machine/int_types.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/machine/int_fmtio.h /usr/include/machine/ansi.h \
+  /usr/src/common/lib/libprop/prop_stack.h /usr/include/sys/queue.h \
+  /usr/include/sys/null.h /usr/include/prop/prop_object.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdbool.h /usr/include/assert.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/stdio.h \
+  /usr/include/stdlib.h /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/include/prop/proplib.h /usr/include/prop/prop_array.h \
+  /usr/include/prop/prop_bool.h /usr/include/prop/prop_data.h \
+  /usr/include/prop/prop_dictionary.h /usr/include/prop/prop_number.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h \
+  /usr/include/prop/prop_string.h /usr/include/prop/prop_ingest.h \
+  /usr/include/prop/plistref.h
+prop_kern.o prop_kern.po prop_kern.pico prop_kern.go prop_kern.ln: /usr/src/common/lib/libprop/prop_kern.c
+prop_number.o prop_number.po prop_number.pico prop_number.go prop_number.ln: /usr/src/common/lib/libprop/prop_number.c \
+  /usr/include/prop/prop_number.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h /usr/include/stdint.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/machine/int_types.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/prop/prop_object.h /usr/include/sys/types.h \
+  /usr/include/sys/featuretest.h /usr/include/machine/types.h \
+  /usr/include/machine/ansi.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdbool.h \
+  /usr/src/common/lib/libprop/prop_object_impl.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/machine/int_fmtio.h \
+  /usr/src/common/lib/libprop/prop_stack.h /usr/include/sys/queue.h \
+  /usr/include/sys/null.h /usr/include/assert.h /usr/include/string.h \
+  /usr/include/strings.h /usr/include/stdio.h /usr/include/stdlib.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/src/common/lib/libprop/prop_rb_impl.h /usr/include/sys/rbtree.h \
+  /usr/include/errno.h /usr/include/sys/errno.h
+prop_object.o prop_object.po prop_object.pico prop_object.go prop_object.ln: /usr/src/common/lib/libprop/prop_object.c \
+  /usr/src/common/lib/libprop/prop_object_impl.h /usr/include/inttypes.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/cdefs_elf.h /usr/include/sys/inttypes.h \
+  /usr/include/sys/stdint.h /usr/include/machine/int_types.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/machine/int_fmtio.h /usr/include/machine/ansi.h \
+  /usr/src/common/lib/libprop/prop_stack.h /usr/include/sys/queue.h \
+  /usr/include/sys/null.h /usr/include/prop/prop_object.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/ansi.h \
+  /usr/include/machine/endian.h /usr/include/sys/endian.h \
+  /usr/include/machine/endian_machdep.h /usr/include/machine/bswap.h \
+  /usr/include/machine/byte_swap.h /usr/include/sys/bswap.h \
+  /usr/include/sys/fd_set.h /usr/include/sys/syslimits.h \
+  /usr/include/minix/limits.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdbool.h /usr/include/assert.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/stdio.h \
+  /usr/include/stdlib.h /usr/pkg/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/include/sys/mman.h /usr/include/minix/type.h \
+  /usr/include/machine/multiboot.h /usr/include/minix/sys_config.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdint.h \
+  /usr/include/minix/config.h /usr/include/machine/interrupt.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/sys/sigtypes.h \
+  /usr/include/time.h /usr/include/machine/vmparam.h \
+  /usr/include/errno.h /usr/include/sys/errno.h /usr/include/fcntl.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/limits.h /usr/include/limits.h \
+  /usr/include/machine/limits.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/sys/reboot.h
+prop_stack.o prop_stack.po prop_stack.pico prop_stack.go prop_stack.ln: /usr/src/common/lib/libprop/prop_stack.c \
+  /usr/src/common/lib/libprop/prop_stack.h /usr/include/sys/queue.h \
+  /usr/include/sys/null.h /usr/include/prop/prop_object.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdbool.h \
+  /usr/src/common/lib/libprop/prop_object_impl.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/machine/int_fmtio.h /usr/include/assert.h \
+  /usr/include/string.h /usr/include/strings.h /usr/include/stdio.h \
+  /usr/include/stdlib.h /usr/pkg/bin/../lib/clang/3.1/include/stddef.h
+prop_string.o prop_string.po prop_string.pico prop_string.go prop_string.ln: /usr/src/common/lib/libprop/prop_string.c \
+  /usr/include/prop/prop_string.h /usr/include/prop/prop_object.h \
+  /usr/include/sys/types.h /usr/include/sys/featuretest.h \
+  /usr/include/machine/types.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/cdefs_elf.h \
+  /usr/include/machine/int_types.h /usr/include/machine/ansi.h \
+  /usr/include/sys/ansi.h /usr/include/machine/endian.h \
+  /usr/include/sys/endian.h /usr/include/machine/endian_machdep.h \
+  /usr/include/machine/bswap.h /usr/include/machine/byte_swap.h \
+  /usr/include/sys/bswap.h /usr/include/sys/fd_set.h \
+  /usr/include/sys/syslimits.h /usr/include/minix/limits.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stdbool.h \
+  /usr/src/common/lib/libprop/prop_object_impl.h /usr/include/inttypes.h \
+  /usr/include/sys/inttypes.h /usr/include/sys/stdint.h \
+  /usr/include/machine/int_mwgwtypes.h /usr/include/machine/int_limits.h \
+  /usr/include/machine/int_const.h /usr/include/machine/wchar_limits.h \
+  /usr/include/machine/int_fmtio.h \
+  /usr/src/common/lib/libprop/prop_stack.h /usr/include/sys/queue.h \
+  /usr/include/sys/null.h /usr/include/assert.h /usr/include/string.h \
+  /usr/include/strings.h /usr/include/stdio.h /usr/include/stdlib.h \
+  /usr/pkg/bin/../lib/clang/3.1/include/stddef.h
