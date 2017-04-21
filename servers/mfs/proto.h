@@ -112,5 +112,8 @@ struct buf *new_block(struct inode *rip, off_t position);
 void zero_block(struct buf *bp);
 int write_map(struct inode *, off_t, zone_t, int);
 
+/* fs_repair.c */
+
+int fs_inode_bitmap_walker();
 #endif
 

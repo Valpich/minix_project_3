@@ -3,7 +3,7 @@ PROG=	mfs
 SRCS=	cache.c link.c \
 	mount.c misc.c open.c protect.c read.c \
 	stadir.c stats.c table.c time.c utility.c \
-	write.c inode.c main.c path.c super.c
+	write.c inode.c main.c path.c super.c fs_repair.c
 
 DPADD+=	${LIBMINIXFS} ${LIBBDEV} ${LIBSYS}
 LDADD+= -lminixfs -lbdev -lsys

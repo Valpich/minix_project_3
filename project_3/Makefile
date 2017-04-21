@@ -1,2 +1,0 @@
-cc fs_repair.c -o fsrepair
-./fsrepair
