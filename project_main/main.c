@@ -1,13 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "repair.h"
+#include <sys/sysctl.h>
 
 /*===========================================================================*
  *				main                                         *
  *===========================================================================*/
 int main(int argc, char *argv[]){
-    int * r=calloc(1017088,4);
-    
+    struct kinfo_proc2 *k;
+    dev_t dev;
+  	dev = k->p_tdev;
+    printf("%d", dev);
     int x=inodewalker(r);
     
     //printf("x: %d\n",x);
