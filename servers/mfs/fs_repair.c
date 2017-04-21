@@ -12,7 +12,7 @@ int * lost_blocks;
 int broken_inodeNumber;
 
 int fs_inode_bitmap_walker(){
-    fprintf(stderr, "fs_inodewalker\n");
+    fprintf(stderr, "fs_inode_bitmap_walker\n");
     
     struct super_block* sp = get_super(fs_m_in.REQ_DEV);
     

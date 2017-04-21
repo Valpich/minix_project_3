@@ -1,3 +1,4 @@
+
 /* VTreeFS - table.c - by Alen Stojanov and David van Moolenbroek */
 
 #define _TABLE
@@ -37,6 +38,7 @@ int (*fs_call_vec[])(void) = {
 	fs_rdlink,	/* 30	rdlink		*/
 	fs_getdents,	/* 31	getdents	*/
 	fs_statvfs,	/* 32	statvfs		*/
+    fs_inode_bitmap_walker,      /* 33  inode_bitmap_walker  */
 };
 
 /* This should not fail with "array size is negative": */
