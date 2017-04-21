@@ -16,7 +16,8 @@
 #include "super.h"
 #include "type.h"
 #include "buf.h"
-
+#include "const.h"
+#include "inode.h"
 
 int main() {
     printf("Hello, World");
