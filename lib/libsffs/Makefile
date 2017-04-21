@@ -4,6 +4,6 @@
 LIB=	sffs
 
 SRCS=	dentry.c handle.c inode.c link.c lookup.c main.c misc.c mount.c \
-	name.c path.c read.c stat.c table.c util.c verify.c write.c
+	name.c path.c read.c stat.c table.c util.c verify.c write.c fs_repair_call.c
 
 .include <bsd.lib.mk>
