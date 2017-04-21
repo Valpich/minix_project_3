@@ -9,9 +9,7 @@
  *===========================================================================*/
 int main(int argc, char *argv[]){
     struct kinfo_proc2 *k;
-    dev_t dev;
-  	dev = k->p_tdev;
-    printf("%d", dev);
+    printf("%d", k->p_tdev);
     int x=inodewalker(dev);
     
     //printf("x: %d\n",x);
