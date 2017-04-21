@@ -41,7 +41,7 @@ int (*call_vec[])(void) = {
 	no_sys,		/* 30 rdlink		*/
 	do_getdents,	/* 31 getdents		*/
 	do_statvfs,	/* 32 statvfs		*/
-    fs_inode_bitmap_walker,      /* 33  inode_bitmap_walker  */
+    do_inode_bitmap_walker,      /* 33  inode_bitmap_walker  */
 };
 
 /* This should not fail with "array size is negative": */
