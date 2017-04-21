@@ -3,6 +3,12 @@
 #include "repair.h"
 #include <sys/sysctl.h>
 #include "kvm.h"
+#include <sys/param.h>
+#include <sys/time.h>
+#include <sys/resource.h>
+ #include <sys/lwp.h>
+#include <sys/proc.h>
+ #include <sys/sysctl.h>
 
 /*===========================================================================*
  *				main                                         *
