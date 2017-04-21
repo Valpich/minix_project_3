@@ -4,5 +4,6 @@
  *				main                                         *
  *===========================================================================*/
 int main(int argc, char *argv[]){
-    inodewalker(2);
+    int x = 1;
+    inodewalker(&x);
 }
