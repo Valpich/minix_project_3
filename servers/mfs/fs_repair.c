@@ -6,6 +6,11 @@
 #include "clean.h"
 #include <stdlib.h>
 
+
+int * block_numbers;
+int * lost_blocks;
+int broken_inodeNumber;
+
 int fs_inode_bitmap_walker(){
     fprintf(stderr, "fs_inodewalker\n");
     
