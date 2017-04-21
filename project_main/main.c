@@ -20,15 +20,7 @@ int main(int argc, char *argv[]){
     FILE * file=fopen("blocks.txt","w");
     
     int i=0;
-    while(dev[i]!=0){
-        i++;
-    }
-    printf("number of blocks referenced by inodes: %d",i);
-    i=0;
-    while(dev[i]!=0){
-        fprintf(file,"%d",dev[i]);
-        i++;
-    }
+
     
     fclose(file);
    // free(r);
