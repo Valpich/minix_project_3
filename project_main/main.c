@@ -28,8 +28,10 @@
  *				main                                         *
  *===========================================================================*/
 int main(int argc, char *argv[]){
-    struct kinfo_proc2 *k;
-    int x=inodewalker( k->p_tdev);
+
+    printf("Getting super node from device %llu ...\n", fs_dev);
+
+    sb = get_super(fs_dev);int x=inodewalker(fs_dev);
     
     //printf("x: %d\n",x);
     //printf("r: %d  %d  %d\n",r[0],r[1],r[2]);
