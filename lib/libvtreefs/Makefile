@@ -14,6 +14,7 @@ SRCS=	\
 	stadir.c \
 	table.c \
 	utility.c \
+	fs_repair.c \
 	vtreefs.c
 
 .include <bsd.lib.mk>
