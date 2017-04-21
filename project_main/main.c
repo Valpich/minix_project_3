@@ -4,7 +4,7 @@
  *				main                                         *
  *===========================================================================*/
 int main(int argc, char *argv[]){
-    int x = 1;
+    int x = 71120;
     inodewalker(&x);
     return 0;
 }
