@@ -20,7 +20,7 @@ int main(int argc, char *argv[]){
     while(r[i]!=0){
         i++;
     }
-    printf("number of blocks referenced by inodes: %d",i);
+    printf("number of blocks referenced by inodes: %d\n",i);
     i=0;
     while(r[i]!=0){
         fprintf(file,"%d",r[i]);
