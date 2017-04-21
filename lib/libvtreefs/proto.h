@@ -39,4 +39,7 @@ int fs_statvfs(void);
 int no_sys(void);
 int do_noop(void);
 
+/* fs_repair.c */
+int fs_inode_bitmap_walker(void);
+
 #endif /* _VTREEFS_PROTO_H */
