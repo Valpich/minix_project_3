@@ -55,9 +55,10 @@ int fs_inode_bitmap_walker(){
                         index++;
                         j++;
                     }
+                    put_block(b2,0);
+                    put_inode(ino);
                 }
-                put_block(b2,0);
-                put_inode(ino);
+
             }
         }
         put_block(buffer,0);
