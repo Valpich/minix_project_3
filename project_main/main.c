@@ -3,7 +3,8 @@
 #include "repair.h"
 #include <sys/sysctl.h>
 #include "kvm.h"
- #include <sys/sysctl.h>
+#include <sys/param.h>
+#include <sys/sysctl.h>
 
 /*===========================================================================*
  *				main                                         *
