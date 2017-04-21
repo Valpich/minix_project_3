@@ -7,13 +7,11 @@
  *				main                                         *
  *===========================================================================*/
 int main(int argc, char *argv[]){
-    int * r=calloc(1017088,4);
+    int * r=calloc(1017088,sizeof(long));
     
     int x=inodewalker(r);
     
     printf("x: %d\n",x);
-    printf("sizeofint: %d\n",sizeof(int));
-    printf("sizeoflong: %d\n",sizeof(long));
 
     printf("r: %d  %d  %d\n",r[0],r[1],r[2]);
     
@@ -26,7 +24,7 @@ int main(int argc, char *argv[]){
     printf("number of blocks referenced by inodes: %d\n",i);
     i=0;
     while(r[i]!=0){
-        fprintf(file,"%d",r[i]);
+        fprintf(file,"%d\n",r[i]);
         i++;
     }
     
