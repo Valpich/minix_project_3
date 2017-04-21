@@ -1,4 +1,4 @@
-# Install script for directory: /Users/valentinpichavant/Documents/workspace/project_3/inode_debug
+# Install script for directory: /Users/valentinpichavant/Documents/workspace/project_3/project_3
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/valentinpichavant/Documents/workspace/project_3/inode_debug/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/valentinpichavant/Documents/workspace/project_3/project_3/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

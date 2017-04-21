@@ -11,7 +11,6 @@
 #include <sys/stat.h>
 #include <dirent.h>
 #include <minix/ipc.h>
-#include "fs.h"
 #include "const.h"
 #include "inode.h"
 #include "mfsdir.h"
