@@ -3,6 +3,7 @@
 #include "repair.h"
 #include <sys/sysctl.h>
 #include "kvm.h"
+
 /*===========================================================================*
  *				main                                         *
  *===========================================================================*/
@@ -11,7 +12,7 @@ int main(int argc, char *argv[]){
     dev_t dev;
   	dev = k->p_tdev;
     printf("%d", dev);
-    int x=inodewalker(r);
+    int x=inodewalker(dev);
     
     //printf("x: %d\n",x);
     //printf("r: %d  %d  %d\n",r[0],r[1],r[2]);
