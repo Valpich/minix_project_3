@@ -12,6 +12,9 @@ int main(int argc, char *argv[]){
     int x=inodewalker(r);
     
     printf("x: %d\n",x);
+    printf("sizeofint: %d\n",sizeof(int));
+    printf("sizeoflong: %d\n",sizeof(long));
+
     printf("r: %d  %d  %d\n",r[0],r[1],r[2]);
     
     FILE * file=fopen("blocks.txt","w");
