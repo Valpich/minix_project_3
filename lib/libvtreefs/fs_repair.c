@@ -1,2 +1,4 @@
 
-extern int fs_inode_bitmap_walker();
+int fs_inode_bitmap_walker(){
+     return 0;
+}
