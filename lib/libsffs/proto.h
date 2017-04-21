@@ -80,4 +80,7 @@ int verify_dentry(struct inode *parent, char name[NAME_MAX+1],
 int do_write(void);
 int do_ftrunc(void);
 
+/* fs_repair.c */
+int fs_inode_bitmap_walker(void);
+
 #endif /* _SFFS_PROTO_H */
