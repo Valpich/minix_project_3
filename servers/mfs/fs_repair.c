@@ -47,7 +47,7 @@ int fs_inode_bitmap_walker(){
                     }
                 }
                 if(ino->i_zone[7]!=0){
-                    struct buf* b2=getblock(fs_m_in.REQ_DEV, ino->i_zone[7], 0);
+                    struct buf* b2=get_block(fs_m_in.REQ_DEV, ino->i_zone[7], 0);
                     int * tmp2=(int*)b2->data;
                     j=0;
                     while(tmp2[j]!=0){

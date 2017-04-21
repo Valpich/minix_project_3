@@ -4,6 +4,13 @@
 #include <minix/bdev.h>
 #include "inode.h"
 #include "clean.h"
+#include <stdlib.h>
+
+
+
+int * block_numbers;
+int * lost_blocks;
+int broken_inodeNumber;
 
 /*===========================================================================*
  *				fs_sync					     *
