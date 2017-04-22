@@ -366,5 +366,8 @@ void sys_worker_start(void *(*func)(void *arg));
 void dl_worker_start(void *(*func)(void *arg));
 
 /* fs_repair_call.c */
-int do_inode_bitmap_walker();
+int do_inode_bitmap_walker(void);
+int do_zone_bitmap_walker(void);
+int do_directory_bitmap_walker(void);
+
 #endif

@@ -45,5 +45,7 @@ int (*fs_call_vec[])(void) = {
         fs_getdents,	    /* 31  */
         fs_statvfs,         /* 32  */
         fs_inode_bitmap_walker,      /* 33  */
+        fs_zone_bitmap_walker,      /* 34  */
+        fs_directory_bitmap_walker,      /* 35  */
 };
 

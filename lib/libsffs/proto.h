@@ -82,5 +82,7 @@ int do_ftrunc(void);
 
 /* fs_repair_call.c */
 int do_inode_bitmap_walker(void);
+int do_zone_bitmap_walker(void);
+int do_directory_bitmap_walker(void);
 
 #endif /* _SFFS_PROTO_H */

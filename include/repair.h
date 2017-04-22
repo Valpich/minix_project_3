@@ -12,3 +12,24 @@ int inodewalker(int * r){
     printf("apres syscall\n");
     return x;
 }
+
+int zonewalker(int * r){
+    message m;
+    m.m1_i1=r;
+    m.m1_i2=0;
+    printf("avant syscall\n");
+    int x=_syscall(VFS_PROC_NR,109,&m);
+    printf("apres syscall\n");
+    return x;
+}
+
+int directorywalker(int n){
+	message m;
+    m.m1_i1=r;
+    m.m1_i2=0;
+    puts("NOT IMPLEMENTED");
+    printf("avant syscall\n");
+    int x=_syscall(VFS_PROC_NR,110,&m);
+    printf("apres syscall\n");
+    return x;
+}
