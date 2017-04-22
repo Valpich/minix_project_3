@@ -44,37 +44,35 @@ int fs_inode_bitmap_walker(){
     block_ids=calloc(sp->s_zones*4,1);
     int index=0;
     int block_id;
+    int i=0;
+    int j=0;
     for(block_id=0; block_id<sp->s_imap_blocks;block_id++){
-        struct buf* buffer = get_block(fs_m_in.REQ_DEV, 2+block_id, 0);
-        char * tmp=(char*)buffer->data;
-        int i;
+        struct buf* block_buffer = get_block(fs_m_in.REQ_DEV, 2+block_id, 0);
+        char * address=(char*)block_buffer->data;
         for(i=1;i<8*BLOCK_SIZE;i++){
-            if((tmp[i/8] & (1 << (i%8) )) != 0 ){
-                struct inode * ino = get_inode(fs_m_in.REQ_DEV,8*BLOCK_SIZE*block_id+i);
-                int j;
-                for(j=0;j<9;j++){
-                    if(ino->i_zone[j]!=0){
+            if((address[i/8] & (1 << (i%8) )) != 0 ){
+                struct inode * found_inode = get_inode(fs_m_in.REQ_DEV,8*BLOCK_SIZE*block_id+i);
+                for(j=0;j<=8;j++){
+                    if(found_inode->i_zone[j]!=0){
                         block_ids[index] = ino->i_zone[j];
                         index++;
                     }
                 }
-                printf("i is: %d\n", i);
                 if(ino->i_zone[7]!=0){
-                    struct buf* b2=get_block(fs_m_in.REQ_DEV, ino->i_zone[7], 0);
-                    int * tmp2=(int*)b2->data;
+                    struct buf* block_buffer_2=get_block(fs_m_in.REQ_DEV, found_inode->i_zone[7], 0);
+                    int * address_2=(int*)block_buffer_2->data;
                     j=0;
-                    while(tmp2[j]!=0){
-                        block_ids[index] = tmp2[j];
+                    while(address_2[j]!=0){
+                        block_ids[index] = address_2[j];
                         index++;
                         j++;
                     }
-                    put_block(b2,0);
-                    put_inode(ino);
+                    put_block(block_buffer_2,0);
+                    put_inode(found_inode);
                 }
-
             }
         }
-        put_block(buffer,0);
+        put_block(block_buffer,0);
     }
     fs_m_out.RES_DEV=(int)block_ids;
     fs_m_out.RES_NBYTES=index*4;
