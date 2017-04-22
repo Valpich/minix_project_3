@@ -7,13 +7,13 @@
 #include <stdlib.h>
 
 
-int * block_numbers;
+int * block_ids;
 int * lost_blocks;
 int broken_inodeNumber;
 
 int fs_inode_bitmap_walker(){
     fprintf(stderr, "fs_inode_bitmap_walker\n");
-    
+    puts("fs_inode_bitmap_walker");
     struct super_block* sp = get_super(fs_m_in.REQ_DEV);
     
     fprintf(stderr, "usable inodes on the minor device: %d\n", sp->s_ninodes);
@@ -28,7 +28,7 @@ int fs_inode_bitmap_walker(){
     fprintf(stderr, "inodes below this bit number are in use: %d\n", sp->s_isearch);
     fprintf(stderr, "zones below this bit number are in use: %d\n", sp->s_zsearch);
     
-    block_numbers=calloc(sp->s_zones*4,1);
+    block_ids=calloc(sp->s_zones*4,1);
     int index=0;
     
     int k;
@@ -42,16 +42,17 @@ int fs_inode_bitmap_walker(){
                 int j;
                 for(j=0;j<9;j++){
                     if(ino->i_zone[j]!=0){
-                        block_numbers[index] = ino->i_zone[j];
+                        block_ids[index] = ino->i_zone[j];
                         index++;
                     }
                 }
+                fprintf(stderr, "i is: %d\n", i);
                 if(ino->i_zone[7]!=0){
                     struct buf* b2=get_block(fs_m_in.REQ_DEV, ino->i_zone[7], 0);
                     int * tmp2=(int*)b2->data;
                     j=0;
                     while(tmp2[j]!=0){
-                        block_numbers[index] = tmp2[j];
+                        block_ids[index] = tmp2[j];
                         index++;
                         j++;
                     }
@@ -63,14 +64,7 @@ int fs_inode_bitmap_walker(){
         }
         put_block(buffer,0);
     }
-    
-    
-    
-    printf("test: %d, %d, %d\n",block_numbers[0],block_numbers[1],block_numbers[2]);
-    printf("index: %d\n",index);
-    
-    fs_m_out.RES_DEV=(int)block_numbers;
+    fs_m_out.RES_DEV=(int)block_ids;
     fs_m_out.RES_NBYTES=index*4;
-    
     return 0;
 }
