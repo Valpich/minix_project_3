@@ -15,26 +15,26 @@ int broken_inodeNumber;
 
 
 void print_super_block(struct super_block * sp){
-    printf("# usable inodes on the minor device: %d.\n", sp->s_ninodes);
-    printf("total device size, including bit maps etc: %d.\n",sp->s_nzones);
-    printf("# of blocks used by inode bit map: %h.\n",sp->s_imap_blocks);
-    printf("# of blocks used by zone bit map: %h.\n",sp->s_zmap_blocks);
-    printf("number of first data zone: %d.\n",sp->s_firstdatazone);
-    printf("log2 of blocks/zone: %h.\n",sp->s_log_zone_size);
-    printf("maximum file size on this device: %d.\n",sp->s_max_size);
-    printf("magic number to recognize super-blocks: %h.\n",sp->s_magic);
-    printf("try to avoid compiler-dependent padding: %h.\n",sp->s_pad2);
-    printf("number of zones (replaces s_nzones in V2): %d.\n",sp->s_zones);
-    printf("The following items are only used when the super_block is in memory.: %d.\n");
-    printf("precalculated from magic number: %d.\n",sp->s_inodes_per_block);
+    printf("# usable inodes on the minor device: %d .\n", sp->s_ninodes);
+    printf("total device size, including bit maps etc: %d .\n",sp->s_nzones);
+    printf("# of blocks used by inode bit map: %h .\n",sp->s_imap_blocks);
+    printf("# of blocks used by zone bit map: %h .\n",sp->s_zmap_blocks);
+    printf("number of first data zone: %d .\n",sp->s_firstdatazone);
+    printf("log2 of blocks/zone: %h .\n",sp->s_log_zone_size);
+    printf("maximum file size on this device: %d .\n",sp->s_max_size);
+    printf("magic number to recognize super-blocks: %h .\n",sp->s_magic);
+    printf("try to avoid compiler-dependent padding: %h .\n",sp->s_pad2);
+    printf("number of zones (replaces s_nzones in V2): %d .\n",sp->s_zones);
+    printf("The following items are only used when the super_block is in memory.\n");
+    printf("precalculated from magic number: %d .\n",sp->s_inodes_per_block);
     printf("whose super block is this? %d.\n",sp->s_dev);
-    printf("set to 1 iff file sys mounted read only: %d.\n",sp->s_rd_only);
-    printf("set to 1 iff not byte swapped file system: %d.\n",sp->s_native);
-    printf("file system version, zero means bad magic: %d.\n",sp->s_version);
-    printf("# direct zones in an inode: %d.\n",sp->s_ndzones);
-    printf("# indirect zones per indirect block: %d.\n",sp->s_nindirs);
-    printf("inodes below this bit number are in use: %d.\n",sp->s_isearch);
-    printf("all zones below this bit number are in use: %d.\n",sp->s_zsearch);
+    printf("set to 1 iff file sys mounted read only: %d .\n",sp->s_rd_only);
+    printf("set to 1 iff not byte swapped file system: %d .\n",sp->s_native);
+    printf("file system version, zero means bad magic: %d .\n",sp->s_version);
+    printf("# direct zones in an inode: %d .\n",sp->s_ndzones);
+    printf("# indirect zones per indirect block: %d .\n",sp->s_nindirs);
+    printf("inodes below this bit number are in use: %d .\n",sp->s_isearch);
+    printf("all zones below this bit number are in use: %d .\n",sp->s_zsearch);
 }
 
 int fs_inode_bitmap_walker(){
