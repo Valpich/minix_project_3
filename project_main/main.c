@@ -31,5 +31,7 @@ int main(int argc, char *argv[]){
     fclose(file);
     free(r);
     printf("Blocks referenced by inodes saved in blocks.txt\n");
+    int z=zonewalker(r);
+    directorywalker();
     return 0;
 }
