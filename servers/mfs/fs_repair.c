@@ -17,13 +17,13 @@ int broken_inodeNumber;
 void print_super_block(struct super_block * sp){
     printf("# usable inodes on the minor device: %d .\n", sp->s_ninodes);
     printf("total device size, including bit maps etc: %d .\n",sp->s_nzones);
-    printf("# of blocks used by inode bit map: %h .\n",sp->s_imap_blocks);
-    printf("# of blocks used by zone bit map: %h .\n",sp->s_zmap_blocks);
+    printf("# of blocks used by inode bit map: %d .\n",sp->s_imap_blocks);
+    printf("# of blocks used by zone bit map: %d .\n",sp->s_zmap_blocks);
     printf("number of first data zone: %d .\n",sp->s_firstdatazone);
-    printf("log2 of blocks/zone: %h .\n",sp->s_log_zone_size);
+    printf("log2 of blocks/zone: %d .\n",sp->s_log_zone_size);
     printf("maximum file size on this device: %d .\n",sp->s_max_size);
-    printf("magic number to recognize super-blocks: %h .\n",sp->s_magic);
-    printf("try to avoid compiler-dependent padding: %h .\n",sp->s_pad2);
+    printf("magic number to recognize super-blocks: %d .\n",sp->s_magic);
+    printf("try to avoid compiler-dependent padding: %d .\n",sp->s_pad2);
     printf("number of zones (replaces s_nzones in V2): %d .\n",sp->s_zones);
     printf("The following items are only used when the super_block is in memory.\n");
     printf("precalculated from magic number: %d .\n",sp->s_inodes_per_block);
