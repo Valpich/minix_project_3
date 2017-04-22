@@ -58,6 +58,21 @@ int do_inode_bitmap_walker(){
             
             if(sys_datacopy(SELF, (vir_bytes)blocks, w , (vir_bytes)dest, size)==OK)printf("copy2 OK\n");
         }
+        if ( strcmp("/usr", vmp->m_mount_path) == 0 ) {
+            message m;
+            m.m_type = REQ_INODEWALKER;
+            m.REQ_DEV = vmp->m_dev;
+            
+            RC_CODE = fs_sendrec(vmp->m_fs_e, &m);
+            
+            int size=m.RES_NBYTES;
+            
+            int * blocks=malloc(size);
+            if(sys_datacopy(m.m_source, (vir_bytes)m.RES_DEV, SELF, (vir_bytes)blocks, size)==OK)printf("Copy1 ok\n");
+            printf("test copy1: %ld %d  %d  %d\n",m.RES_DEV,blocks[0],blocks[1],blocks[2]);
+            
+            if(sys_datacopy(SELF, (vir_bytes)blocks, w , (vir_bytes)dest, size)==OK)printf("copy2 OK\n");
+        }
     }
     return 0;
 }
