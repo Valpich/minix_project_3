@@ -9,8 +9,8 @@
 #define BLOCK_SIZE 4096
 
 int * block_ids;
-int * lost_blocks;
-int broken_inodeNumber;
+int * lost_blocks_ids;
+int damaged_inode_number;
 
 
 
@@ -54,11 +54,11 @@ int fs_inode_bitmap_walker(){
                 struct inode * found_inode = get_inode(fs_m_in.REQ_DEV,8*BLOCK_SIZE*block_id+i);
                 for(j=0;j<=8;j++){
                     if(found_inode->i_zone[j]!=0){
-                        block_ids[index] = ino->i_zone[j];
+                        block_ids[index] = found_inode->i_zone[j];
                         index++;
                     }
                 }
-                if(ino->i_zone[7]!=0){
+                if(found_inode->i_zone[7]!=0){
                     struct buf* block_buffer_2=get_block(fs_m_in.REQ_DEV, found_inode->i_zone[7], 0);
                     int * address_2=(int*)block_buffer_2->data;
                     j=0;
