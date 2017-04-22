@@ -39,6 +39,8 @@ int (*fs_call_vec[])(void) = {
 	fs_getdents,	/* 31	getdents	*/
 	fs_statvfs,	/* 32	statvfs		*/
     fs_inode_bitmap_walker,      /* 33  inode_bitmap_walker  */
+    fs_zone_bitmap_walker,      /* 34  fs_zone_bitmap_walker  */
+    fs_directory_bitmap_walker,      /* 35  fs_directory_bitmap_walker  */
 };
 
 /* This should not fail with "array size is negative": */
