@@ -62,13 +62,6 @@ int * block_ids;
 int * lost_blocks_ids;
 int damaged_inode_number;
 
-void print_buf(struct buf * block_buffer){
-    int i = 0;
-    for( i = 0; i< BITMAP_CHUNKS; i++){
-        printf("bit map block: %d .\n", block_buffer->b__bitmap[i]);
-    }
-}
-
 void print_inode(struct inode * ino){
     printf("file type, protection, etc: %d .\n", ino->i_mode);
     printf("how many links to this file: %d .\n",ino->i_nlinks);
