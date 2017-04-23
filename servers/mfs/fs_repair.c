@@ -31,10 +31,7 @@ void print_inode(struct inode * ino){
     printf("# times inode used; 0 means slot is free: %d .\n",ino->i_count);
     printf("# direct zones (Vx_NR_DZONES) : %d .\n",ino->i_ndzones);
     printf("# indirect zones per indirect block: %d .\n",ino->i_nindirs);
-    printf("#pointer to super block for inode's device: %d .\n",ino->super_block);
     printf("CLEAN or DIRTY: %d .\n",ino->i_dirt);
-    printf("set to I_PIPE if pipe: %d .\n",ino->i_pipe);
-    printf("this bit is set if file mounted on: %d .\n",ino->i_mount);
     printf("set on LSEEK, cleared on READ/WRITE: %d .\n",ino->i_seek);
     printf("the ATIME, CTIME, and MTIME bits are here: %d .\n",ino->i_update);
 }
@@ -112,6 +109,5 @@ int fs_zone_bitmap_walker(){
 
 int fs_directory_bitmap_walker(){
     puts("fs_directory_bitmap_walker");
-    system(
     return 0;
 }
