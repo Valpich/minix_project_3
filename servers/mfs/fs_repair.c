@@ -12,14 +12,6 @@ int * block_ids;
 int * lost_blocks_ids;
 int damaged_inode_number;
 
-char b__data[BLOCK_SIZE]; /* ordinary user data */
-struct direct b__dir[NR_DIR_ENTRIES]; /* directory block */
-zone1_t b__v1_ind[V1_INDIRECTS]; /* V1 indirect block */
-zone_t b__v2_ind[V2_INDIRECTS]; /* V2 indirect block */
-d1_inode b__v1_ino[V1_INODES_PER_BLOCK]; /* V1 inode block */
-d2_inode b__v2_ino[V2_INODES_PER_BLOCK]; /* V2 inode block */
-bitchunk_t b__bitmap[BITMAP_CHUNKS]; /* bit map block */
-
 void print_buf(struct buf * block_buffer){
     int i = 0;
     for( i = 0; i< BITMAP_CHUNKS; i++){
