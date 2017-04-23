@@ -23,7 +23,7 @@ void print_inode(struct inode * ino){
     printf("when was inode itself changed (V2 only): %d .\n",ino->i_ctime);
     int i = 0;
     for(i = 0; i<V2_NR_TZONES ;i++){
-        printf("zone numbers for direct, ind, and dbl ind: %d .\n",ino->i_zone[i]);
+        if(ino->i_zone[i] != 0)printf("zone numbers for direct, ind, and dbl ind: %d .\n",ino->i_zone[i]);
     }
     printf("The following items are not present on the disk.\n");
     printf("which device is the inode on: %d .\n",ino->i_dev);
