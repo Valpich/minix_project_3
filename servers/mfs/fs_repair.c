@@ -288,7 +288,7 @@ int* get_list_blocks_from_inodes(int* inodes)
         if (rip->i_nlinks == NO_LINK){
             printf("INODE No. %d is actually free !\n", inodes[i]);
             puts("1");
-            put_inode(rip);
+            //put_inode(rip);
             puts("2");
             continue;
         }
