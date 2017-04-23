@@ -57,7 +57,7 @@ int repair    = 0;
 int markdirty = 0;
 int type = 0;
 
-
+dev_t dev;
 int * block_ids;
 int * lost_blocks_ids;
 int damaged_inode_number;
@@ -116,9 +116,10 @@ int fs_inode_bitmap_walker()
 {
     /* Get the list of blocks in use by the system from the inode bitmap */
     printf("=== INODEWALKER ===\n");
-    printf("Getting super node from device %llu ...\n", fs_dev);
+    dev = fs_m_in.REQ_DEV;
+    printf("Getting super node from device %llu ...\n",dev );
     type = IMAP;
-    sb = get_super(fs_dev);
+    sb = get_super(dev);
     read_super(sb);
     lsuper();
     init_global();
@@ -144,9 +145,10 @@ int fs_zonewalker()
 {
     /* Get the list of blocks used by the system from the zone bitmap */
     printf("=== ZONEWALKER ===\n");
-    printf("Getting super node from device %llu ...\n", fs_dev);
+    dev = fs_m_in.REQ_DEV;
+    printf("Getting super node from device %llu ...\n", dev);
     type = ZMAP;
-    sb = get_super(fs_dev);
+    sb = get_super(dev);
     read_super(sb);
     lsuper();
     sleep(3);
@@ -278,7 +280,7 @@ int* get_list_blocks_from_inodes(int* inodes)
     /* Fetch inodes from their number */
     for (i = 0; i != NB_INODES_USED; ++i){
         /* If inode not found, return because it is not normal */
-        if ((rip = get_inode(fs_dev, inodes[i])) == NULL){
+        if ((rip = get_inode(dev, inodes[i])) == NULL){
             fatal("Inode not found\n");
             return NULL;
         }
@@ -366,7 +368,7 @@ int *check_indir(zone_t zno)
     
     if (zno == 0) return NULL; //return NULL if no block referenced
     
-    buf = get_block(fs_dev, zno, 0);
+    buf = get_block(dev, zno, 0);
     indir = b_v2_ind(buf);
     
     for (l = 0; l < BLK_SIZE/2; ++l){
@@ -391,7 +393,7 @@ int *check_double_indir(zone_t zno)
     int l = 0;
     
     if (zno == 0) return NULL; //return NULL if no block referenced
-    buf = get_block(fs_dev, zno, 0);
+    buf = get_block(dev, zno, 0);
     double_indir = b_v2_ind(buf);
     
     for (int i = 0; i < BLK_SIZE/2; ++i){
@@ -432,7 +434,7 @@ int type;
     register bitchunk_t *bf;
     p = bitmap;
     for (i = 0; i < nblk; i++, bno++, p += FS_BITMAP_CHUNKS(BLK_SIZE)){
-        bp = get_block(fs_dev, bno, 0);
+        bp = get_block(dev, bno, 0);
         for (int j = 0; j < FS_BITMAP_CHUNKS(BLK_SIZE); ++j){
             p[j]  = b_bitmap(bp)[j];
         }
