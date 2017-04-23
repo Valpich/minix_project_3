@@ -127,13 +127,17 @@ int fs_inode_bitmap_walker()
     get_bitmap(imap_disk, IMAP);
     printf(" done.\n");
     sleep(3);
+    puts("1");
     print_bitmap(imap_disk);
     int *list_inodes = get_list_used(imap_disk, IMAP);
     sleep(5);
+    puts("2");
     int *list_blocks;
     if ((list_blocks = get_list_blocks_from_inodes(list_inodes)) == NULL)
         return -1;
-    free_bitmap(imap_disk);
+    puts("3");
+   free_bitmap(imap_disk);
+    puts("4");
     return 0;
 }
 
