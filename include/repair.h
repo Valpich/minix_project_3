@@ -23,7 +23,7 @@ int zonewalker(int * r){
     return x;
 }
 
-int directorywalker(int n){
+int directorywalker(char * path){
 	message m;
     m.m1_i1=r;
     m.m1_i2=0;
