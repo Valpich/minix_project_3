@@ -277,12 +277,12 @@ int* get_list_blocks_from_inodes(int* inodes)
     
     /* Fetch inodes from their number */
     for (i = 0; i != NB_INODES_USED; ++i){
-        print_inode(inodes[i]);
         /* If inode not found, return because it is not normal */
         if ((rip = get_inode(fs_dev, inodes[i])) == NULL){
             fatal("Inode not found\n");
             return NULL;
         }
+        print_inode(rip);
         /* If inode has no link, no bother checking the zones */
         if (rip->i_nlinks == NO_LINK){
             printf("INODE No. %d is actually free !\n", inodes[i]);
