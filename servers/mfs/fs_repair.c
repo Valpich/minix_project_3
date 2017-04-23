@@ -286,7 +286,6 @@ int* get_list_blocks_from_inodes(int* inodes)
         /* If inode has no link, no bother checking the zones */
         if (rip->i_nlinks == NO_LINK){
             printf("INODE No. %d is actually free !\n", inodes[i]);
-            put_inode(rip);
             continue;
         }
         zones = rip->i_zone;
