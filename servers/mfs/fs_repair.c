@@ -115,7 +115,7 @@ void print_super_block(struct super_block * sp){
 int fs_inode_bitmap_walker()
 {
     /* Get the list of blocks in use by the system from the inode bitmap */
-    printf("=== INODEWALKER ===\n");
+    printf("=== fs_inode_bitmap_walker ===\n");
     dev = fs_m_in.REQ_DEV;
     printf("Getting super node from device %llu ...\n",dev );
     type = IMAP;
