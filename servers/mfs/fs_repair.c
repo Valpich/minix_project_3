@@ -459,6 +459,7 @@ bitchunk_t *bitmap;
     printf("\n=========================================\n");
     for (int j = 0; j < FS_BITMAP_CHUNKS(BLK_SIZE)*nblk; ++j){
         printf("%s\n", int2binstr(bitmap[j]));
+        sleep(1);
     }
     printf("\n==========================================\n\n");
 }
