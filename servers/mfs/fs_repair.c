@@ -619,6 +619,7 @@ int tmp_fs_inode_bitmap_walker(){
     fs_m_out.RES_NBYTES=index*4;
     return 0;
 }
+*/
 
 int fs_zone_bitmap_walker(){
     puts("fs_zone_bitmap_walker");
@@ -629,4 +630,3 @@ int fs_directory_bitmap_walker(){
     puts("fs_directory_bitmap_walker");
     return 0;
 }
-*/
