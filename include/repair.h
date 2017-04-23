@@ -25,8 +25,7 @@ int zonewalker(int * r){
 
 int directorywalker(char * path){
 	message m;
-    m.m1_i1=r;
-    m.m1_i2=0;
+    m.m1_p1=path;
     puts("NOT IMPLEMENTED");
     printf("avant syscall\n");
     int x=_syscall(VFS_PROC_NR,110,&m);
