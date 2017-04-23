@@ -127,17 +127,13 @@ int fs_inode_bitmap_walker()
     get_bitmap(imap_disk, IMAP);
     printf(" done.\n");
     sleep(3);
-    puts("1");
     print_bitmap(imap_disk);
     int *list_inodes = get_list_used(imap_disk, IMAP);
     sleep(5);
-    puts("2");
     int *list_blocks;
     if ((list_blocks = get_list_blocks_from_inodes(list_inodes)) == NULL)
         return -1;
-    puts("3");
-   free_bitmap(imap_disk);
-    puts("4");
+    free_bitmap(imap_disk);
     return 0;
 }
 
@@ -291,7 +287,9 @@ int* get_list_blocks_from_inodes(int* inodes)
         /* If inode has no link, no bother checking the zones */
         if (rip->i_nlinks == NO_LINK){
             printf("INODE No. %d is actually free !\n", inodes[i]);
+            puts("1");
             put_inode(rip);
+            puts("2");
             continue;
         }
         zones = rip->i_zone;
