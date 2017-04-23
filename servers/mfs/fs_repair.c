@@ -251,7 +251,7 @@ int* get_list_used(bitchunk_t *bitmap, int type)
         }
     }
     if (type == IMAP)    NB_INODES_USED  = NB_USED;
-    else/*(type==ZMAP)*/ NB_ZONES_USED_Z = NB_USED;
+    else if (type==ZMAP) NB_ZONES_USED_Z = NB_USED;
     printf("\n=========================================\n\n");
     printf("Used: %d / %d \n", NB_USED, tot);
     return list;
@@ -287,8 +287,8 @@ int* get_list_blocks_from_inodes(int* inodes)
         /* If inode has no link, no bother checking the zones */
         if (rip->i_nlinks == NO_LINK){
             printf("INODE No. %d is actually free !\n", inodes[i]);
-            puts("1");
-            //put_inode(rip);
+            print_inode(rip);
+            put_inode(rip);
             puts("2");
             continue;
         }
