@@ -5,6 +5,7 @@
 #include "inode.h"
 #include "clean.h"
 #include <stdlib.h>
+#include <minix/const.h>
 
 #define BLOCK_SIZE 4096
 
