@@ -269,7 +269,7 @@ int* get_list_blocks_from_inodes(int* inodes)
     int used_zones = 0;
     int indirect_zones = 0;
     int double_indirect_zones = 0;
-    struct inode *rip;
+    register struct inode *rip;
     int* zones;
     zone_t *indir, *double_indir;
     struct buf *buf;
@@ -459,7 +459,6 @@ bitchunk_t *bitmap;
     printf("\n=========================================\n");
     for (int j = 0; j < FS_BITMAP_CHUNKS(BLK_SIZE)*nblk; ++j){
         printf("%s\n", int2binstr(bitmap[j]));
-        sleep(1);
     }
     printf("\n==========================================\n\n");
 }
