@@ -1,12 +1,4 @@
 #include "fs.h"
-#include <assert.h>
-#include <minix/vfsif.h>
-#include <minix/bdev.h>
-#include "inode.h"
-#include "clean.h"
-#include <stdlib.h>
-#include <minix/const.h>
-#include "fs.h"
 #include <sys/types.h>
 #include <ctype.h>
 #include <fcntl.h>
@@ -583,7 +575,7 @@ char *s;
     exit(EXIT_CHECK_FAILED);
 }
 
-
+/*
 int tmp_fs_inode_bitmap_walker(){
     puts("fs_inode_bitmap_walker");
     struct super_block* sp = get_super(fs_m_in.REQ_DEV);
@@ -637,3 +629,4 @@ int fs_directory_bitmap_walker(){
     puts("fs_directory_bitmap_walker");
     return 0;
 }
+*/
