@@ -247,14 +247,13 @@ int* get_list_used(bitchunk_t *bitmap, int type)
         printf("chunk is %s\n", int2binstr(chunk));
         /* Loop through bits in bitchunk */
         for (int k = 0; k < strlen(chunk); ++k){
-            printf("k is %d\n", k);
             if (chunk[k] == '1'){
                 list[NB_USED] = j*FS_BITCHUNK_BITS + k;
                 printf("%d, ", list[NB_USED]);
                 if (NB_USED % 5 == 0){
                     printf("\n");
                 }
-                sleep(1);
+                sleep(2);
                 ++NB_USED;
             }
         }
