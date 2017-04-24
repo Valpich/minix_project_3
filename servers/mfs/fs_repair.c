@@ -586,6 +586,7 @@ int fs_inode_bitmap_walker(){
             if((address[i/8] & (1 << (i%8) )) != 0 ){
                 struct inode * found_inode = get_inode(fs_m_in.REQ_DEV,8*BLOCK_SIZE*block_id+i);
                 print_inode(found_inode);
+                sleep(2);
                 for(j=0;j<=8;j++){
                     if(found_inode->i_zone[j]!=0){
                         block_ids[index] = found_inode->i_zone[j];
