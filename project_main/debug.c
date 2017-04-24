@@ -17,7 +17,7 @@
 
 
 
-PUBLIC int do_stat(char *path_tmp)
+int do_stat(char *path_tmp)
 {
 /* Retrieve inode status.
  */
