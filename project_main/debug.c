@@ -82,7 +82,7 @@ static void list_dir (const char * dir_name) {
 
 #endif /* 0 */
 
-if (entry->d_type & DT_DIR) {
+if ((s.st_mode & S_IFMT) == S_IFDIR) {
 
       /* Check that the directory is not "d" or d's parent. */
 
