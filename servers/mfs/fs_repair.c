@@ -231,7 +231,7 @@ unsigned long minix_count_free_inodes(struct super_block *sb, bitchunk_t *bitmap
  {
         unsigned long bits = sb->s_ninodes + 1;
  
-        return count_free(map, sb->s_blocksize, bits);
+        return count_free(bitmap, sb->s_blocksize, bits);
  }
 
 int iterate_bitchunk(bitchunk_t *bitmap,int nblk, int* list){
