@@ -29,7 +29,6 @@
 #define EXIT_SIGNALED             12
 #define INDCHUNK	((int) (CINDIR * ZONE_NUM_SIZE))
 #define BLOCK_SIZE 4096
-#define WORDS_PER_BLOCK (BLOCK_SIZE / (int) sizeof(bitchunk_t))
 
 /* Global variables */
 bitchunk_t *imap_disk;			 /* imap from the disk */
@@ -210,7 +209,7 @@ void init_global()
     BLK_IMAP 		= 2;
     BLK_ZMAP 		= BLK_IMAP + N_IMAP;
     BLK_ILIST 		= BLK_ZMAP + N_ZMAP;
-    WORDS_PER_BLOCK = BLK_SIZE / (int) sizeof(bitchunk_t);
+    WORDS_PER_BLOCK = BLOCK_SIZE / (int)sizeof(bitchunk_t);
 }
 
 /*===========================================================================*
@@ -240,7 +239,7 @@ int* get_list_used(bitchunk_t *bitmap, int type)
     sleep(1);
     printf("\n=========================================\n");
     /* Loop through bitchunks in bitmap */
-    printf("nblk * WORDS_PER_BLOC is %d", nblk * WORDS_PER_BLOC);
+    printf("WORDS_PER_BLOC is %d",WORDS_PER_BLOCK);
     int j = nblk * WORDS_PER_BLOCK;
     do{
         printf("j is %d", j);
