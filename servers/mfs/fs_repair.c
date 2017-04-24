@@ -61,6 +61,7 @@ dev_t dev;
 int * block_ids;
 int * lost_blocks_ids;
 int damaged_inode_number;
+#define major(dev) ((int)(((unsigned int) (dev) >> 8) & 0xff))
 
 void print_inode(struct inode * ino){
     printf("file type, protection, etc: %d .\n", ino->i_mode);
@@ -112,9 +113,9 @@ void print_super_block(struct super_block * sp){
 /*===========================================================================*
  *				fs_inodewalker			     *
  *===========================================================================*/
+/*
 int fs_inode_bitmap_walker()
 {
-    /* Get the list of blocks in use by the system from the inode bitmap */
     printf("=== fs_inode_bitmap_walker ===\n");
     dev = fs_m_in.REQ_DEV;
     printf("Getting super node from device %llu ...\n",dev );
@@ -137,7 +138,7 @@ int fs_inode_bitmap_walker()
     free_bitmap(imap_disk);
     return 0;
 }
-
+*/
 /*===========================================================================*
  *				fs_zonewalker			     *
  *===========================================================================*/
@@ -568,7 +569,7 @@ char *s;
     exit(EXIT_CHECK_FAILED);
 }
 
-/*
+
 int tmp_fs_inode_bitmap_walker(){
     puts("fs_inode_bitmap_walker");
     struct super_block* sp = get_super(fs_m_in.REQ_DEV);
@@ -612,7 +613,7 @@ int tmp_fs_inode_bitmap_walker(){
     fs_m_out.RES_NBYTES=index*4;
     return 0;
 }
-*/
+
 
 int fs_zone_bitmap_walker(){
     puts("fs_zone_bitmap_walker");
