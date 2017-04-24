@@ -215,7 +215,7 @@ void init_global()
 static unsigned int count_free(struct buf *map[], unsigned blocksize, unsigned long numbits)
  {
         unsigned long sum = 0;
-         unsigned blocks = DIV_ROUND_UP(numbits, blocksize * 8);
+        unsigned blocks = DIV_ROUND_UP(numbits, blocksize * 8);
   
          while (blocks--) {
                  unsigned words = blocksize / 2;
