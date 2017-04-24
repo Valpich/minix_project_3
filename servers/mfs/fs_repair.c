@@ -218,10 +218,9 @@ int iterate_bitchunk(bitchunk_t *bitmap,int nblk, int* list){
     //printf("Free is %d\n",minix_count_free_inodes(sb, bitmap) );
    // unsigned word = (origin % BLOCK_SIZE) / FS_BITCHUNK_BITS;
     for(j=0; j<FS_BITMAP_CHUNKS(BLK_SIZE)*nblk; ++j){
-        printf("j is %d\n", j);
         chunk = int2binstr(bitmap[j]);
         int print = 0;
-        if(print == 0)printf("chunk is %s\n", int2binstr(chunk));
+        if(print == 0)printf("chunk is %s\n", chunk);
         int k = 0;
         /* Loop through bits in bitchunk */
         int u = 0;
@@ -232,7 +231,6 @@ int iterate_bitchunk(bitchunk_t *bitmap,int nblk, int* list){
             }
             u++;
         }
-        sleep(2);
     }
     int v = 0;
     printf("Used are\n");
