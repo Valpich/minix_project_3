@@ -30,8 +30,8 @@ int inodeFinder(char* dir, char* file) {
   fd = open(total, O_RDONLY);
 
   if (fd < 0) {
-    perror ("open");
-    return 0;
+    //perror ("open");
+    //return 0;
   }
 
   fstat(fd, &buf);
