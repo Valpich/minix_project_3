@@ -16,10 +16,6 @@
 #include <limits.h>
 #include <errno.h>
 #include "buf.h"
-#include "minix.h"
- #include <linux/buffer_head.h>
-#include <linux/bitops.h>
- #include <linux/sched.h>
 #include <sys/stat.h>
 #include <dirent.h>
 
