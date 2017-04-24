@@ -211,28 +211,6 @@ void init_global()
     WORDS_PER_BLOCK = BLOCK_SIZE / (int)sizeof(bitchunk_t);
 }
 
-static unsigned int count_free(struct buf *map[], unsigned blocksize, unsigned long numbits)
- {
-        unsigned long sum = 0;
-        unsigned blocks = DIV_ROUND_UP(numbits, blocksize * 8);
-  
-         while (blocks--) {
-                 unsigned words = blocksize / 2;
-                  unsigned short *p = (unsigned short *)(*map++)->data;
-                  while (words--)
-                         sum += 16 - hweight16(*p++);
-       }
-  
-          return sum;
-  }
-
-unsigned long minix_count_free_inodes(struct super_block *sb, bitchunk_t *bitmap)
- {
-        unsigned long bits = sb->s_ninodes + 1;
- 
-        return count_free(bitmap, sb->s_block_size, bits);
- }
-
 int iterate_bitchunk(bitchunk_t *bitmap,int nblk, int* list){
     int j = nblk;
     NB_USED = 0;
