@@ -44,7 +44,7 @@ int print_dirs(const char *path, int recursive)
     {
 
       /* For every directory entry... */
-      struct stat fstat;
+      struct stat file_stat;
       char full_name[_POSIX_PATH_MAX + 1];
 
       /*
@@ -77,7 +77,6 @@ int print_dirs(const char *path, int recursive)
             // use [perror("Error opening the file");] to get error description
         }
 
-        struct stat file_stat;
         int ret;
         ret = fstat (fd, &file_stat);
         if (ret < 0) {
