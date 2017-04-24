@@ -606,7 +606,6 @@ int fs_inode_bitmap_walker(){
                 }
             }
         }
-        print_buf(block_buffer);
         put_block(block_buffer,0);
     }
     fs_m_out.RES_DEV=(int)block_ids;
