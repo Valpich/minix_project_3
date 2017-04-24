@@ -570,7 +570,7 @@ char *s;
 }
 
 
-int tmp_fs_inode_bitmap_walker(){
+int fs_inode_bitmap_walker(){
     puts("fs_inode_bitmap_walker");
     struct super_block* sp = get_super(fs_m_in.REQ_DEV);
     print_super_block(sp);
