@@ -58,7 +58,6 @@ int print_dirs(const char *path, int recursive)
             printf("%s\n", full_name);
             if (recursive)
                 print_dirs(full_name, 1);
-        }
     }
 
     /* Finalize resources. */
