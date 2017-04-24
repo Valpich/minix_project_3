@@ -213,8 +213,10 @@ void init_global()
     WORDS_PER_BLOCK = BLOCK_SIZE / (int)sizeof(bitchunk_t);
 }
 
-void iterate_bitchunk(bitchunk_t *bitmap,int nblk){
+int iterate_bitchunk(bitchunk_t *bitmap,int nblk){
     int j = nblk;
+    NB_USED = 0;
+    char* chunk;
     for(j=0; j<FS_BITMAP_CHUNKS(BLOCK_SIZE); ++j){
         printf("j is %d\n", j);
         int print = 0;
@@ -231,6 +233,7 @@ void iterate_bitchunk(bitchunk_t *bitmap,int nblk){
             sleep(2);
         }
     }
+    return NB_USED;
 }
 
 /*===========================================================================*
@@ -243,8 +246,6 @@ int* get_list_used(bitchunk_t *bitmap, int type)
     int nblk;
     int tot;
     bitchunk_t *buf;
-    char* chunk;
-    NB_USED = 0;
     if (type == IMAP){
         nblk = N_IMAP;
         tot  = NB_INODES;
@@ -261,7 +262,7 @@ int* get_list_used(bitchunk_t *bitmap, int type)
     printf("\n=========================================\n");
     /* Loop through bitchunks in bitmap */
     printf("WORDS_PER_BLOC is %d\n",WORDS_PER_BLOCK);
-    iterate_bitchunk(bitmap, nblk);
+    NB_USED = iterate_bitchunk(bitmap, nblk);
     if (type == IMAP)    NB_INODES_USED  = NB_USED;
     else if (type==ZMAP) NB_ZONES_USED_Z = NB_USED;
     printf("\n=========================================\n\n");
