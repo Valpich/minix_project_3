@@ -84,27 +84,6 @@ static void list_dir (const char * dir_name) {
 
 #endif /* 0 */
 
-
-        if (entry->d_type & DT_DIR) {
-
-            /* Check that the directory is not "d" or d's parent. */
-
-            if (strcmp (d_name, "..") != 0 &&
-                strcmp (d_name, ".") != 0) {
-                int path_length;
-                char path[PATH_MAX];
-
-                path_length = snprintf (path, PATH_MAX,
-                                        "%s/%s", dir_name, d_name);
-                printf ("%s\n", path);
-                if (path_length >= PATH_MAX) {
-                    fprintf (stderr, "Path length has got too long.\n");
-                    exit (EXIT_FAILURE);
-                }
-                /* Recursively call "list_dir" with the new path. */
-                list_dir (path);
-            }
-	}
     }
     /* After going through all the entries, close the directory. */
     if (closedir (d)) {
