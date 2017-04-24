@@ -16,7 +16,10 @@
 #include <limits.h>
 #include <errno.h>
 #include "buf.h"
-
+#include "minix.h"
+ #include <linux/buffer_head.h>
+#include <linux/bitops.h>
+ #include <linux/sched.h>
 #include <sys/stat.h>
 #include <dirent.h>
 
@@ -122,6 +125,7 @@ int fs_inode_bitmap_walker()
     printf("Getting super node from device %llu ...\n",dev );
     type = IMAP;
     sb = get_super(dev);
+    printf("Free is %d\n",minix_count_free_inodes(sb) );
     read_super(sb);
     lsuper();
     init_global();
@@ -213,10 +217,34 @@ void init_global()
     WORDS_PER_BLOCK = BLOCK_SIZE / (int)sizeof(bitchunk_t);
 }
 
+static __u32 count_free(struct buffer_head *map[], unsigned blocksize, __u32 numbits)
+ {
+        __u32 sum = 0;
+         unsigned blocks = DIV_ROUND_UP(numbits, blocksize * 8);
+  
+         while (blocks--) {
+                 unsigned words = blocksize / 2;
+                  __u16 *p = (__u16 *)(*map++)->b_data;
+                  while (words--)
+                         sum += 16 - hweight16(*p++);
+       }
+  
+          return sum;
+  }
+
+unsigned long minix_count_free_inodes(struct super_block *sb)
+ {
+         struct minix_sb_info *sbi = minix_sb(sb);
+        u32 bits = sbi->s_ninodes + 1;
+ 
+        return count_free(sbi->s_imap, sb->s_blocksize, bits);
+ }
+
 int iterate_bitchunk(bitchunk_t *bitmap,int nblk, int* list){
     int j = nblk;
     NB_USED = 0;
     char* chunk;
+    unsigned word = (origin % BITS_PER_BLOCK) / BITCHUNK_BITS;
     for(j=0; j<FS_BITMAP_CHUNKS(BLOCK_SIZE); ++j){
         printf("j is %d\n", j);
         int print = 0;
@@ -224,7 +252,7 @@ int iterate_bitchunk(bitchunk_t *bitmap,int nblk, int* list){
         chunk = int2binstr(bitmap[j]);
 
         /* Loop through bits in bitchunk */
-        for (int k = 0; k < BITMAP_CHUNKS; ++k){
+        for (int k = 0; k < length(chunk); ++k){
             if (chunk[k] == '1'){
                 list[NB_USED] = j*FS_BITCHUNK_BITS + k;
                 ++NB_USED;
