@@ -94,31 +94,9 @@ int do_stat(char *path_tmp)
   if ((r = verify_inode(ino, path, &attr)) != OK)
 	return r;
 
-  stat.st_dev = state.dev;
   stat.st_ino = ino_nr;
-  stat.st_mode = get_mode(ino, attr.a_mode);
-  stat.st_uid = opt.uid;
-  stat.st_gid = opt.gid;
-  stat.st_rdev = NO_DEV;
-  stat.st_size = ex64hi(attr.a_size) ? ULONG_MAX : ex64lo(attr.a_size);
-  stat.st_atime = attr.a_atime;
-  stat.st_mtime = attr.a_mtime;
-  stat.st_ctime = attr.a_ctime;
 
   return stat.st_ino;
-  /* We could make this more accurate by iterating over directory inodes'
-   * children, counting how many of those are directories as well.
-   * It's just not worth it.
-   */
-  stat.st_nlink = 0;
-  if (ino->i_parent != NULL) stat.st_nlink++;
-  if (IS_DIR(ino)) {
-	stat.st_nlink++;
-	if (HAS_CHILDREN(ino)) stat.st_nlink++;
-  }
-
-  return sys_safecopyto(m_in.m_source, m_in.REQ_GRANT, 0,
-	(vir_bytes) &stat, sizeof(stat), D);
 }
 
 
