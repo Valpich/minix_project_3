@@ -213,6 +213,26 @@ void init_global()
     WORDS_PER_BLOCK = BLOCK_SIZE / (int)sizeof(bitchunk_t);
 }
 
+void iterate_bitchunk(bitchunk_t *bitmap,int nblk){
+    int j = nblk;
+    for(j=0; j<FS_BITMAP_CHUNKS(BLOCK_SIZE); ++j){
+        printf("j is %d\n", j);
+        int print = 0;
+        if(print == 0)printf("chunk is %s\n", int2binstr(chunk));
+        chunk = int2binstr(bitmap[j]);
+
+        /* Loop through bits in bitchunk */
+        for (int k = 0; k < BITMAP_CHUNKS; ++k){
+            print++;
+            if (chunk[k] == '1'){
+                list[NB_USED] = j*FS_BITCHUNK_BITS + k;
+                ++NB_USED;
+            }
+            sleep(2);
+        }
+    }
+}
+
 /*===========================================================================*
  *				get_list_used	     *
  *===========================================================================*/
@@ -247,26 +267,6 @@ int* get_list_used(bitchunk_t *bitmap, int type)
     printf("\n=========================================\n\n");
     printf("Used: %d / %d \n", NB_USED, tot);
     return list;
-}
-
-void iterate_bitchunk(bitchunk_t *bitmap,int nblk){
-    int j = nblk;
-    for(j=0; j<FS_BITMAP_CHUNKS(BLOCK_SIZE); ++j){
-        printf("j is %d\n", j);
-        int print = 0;
-        if(print == 0)printf("chunk is %s\n", int2binstr(chunk));
-        chunk = int2binstr(bitmap[j]);
-
-        /* Loop through bits in bitchunk */
-        for (int k = 0; k < BITMAP_CHUNKS; ++k){
-            print++;
-            if (chunk[k] == '1'){
-                list[NB_USED] = j*FS_BITCHUNK_BITS + k;
-                ++NB_USED;
-            }
-            sleep(2);
-        }
-    }
 }
 
 /*===========================================================================*
