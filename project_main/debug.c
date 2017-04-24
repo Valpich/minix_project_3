@@ -25,8 +25,6 @@ int inodeFinder(char* dir, char* file) {
   int inode;
   int fd;
 
-  return do_stat(total);
-
   fd = open(total, O_RDONLY);
 
 
