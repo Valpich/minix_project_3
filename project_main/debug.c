@@ -23,26 +23,21 @@ int inodeFinder(char* dir, char* file) {
   strlcat(total, file, len);
 
   int fd, inode;
-  struct stat buf;
-
-  int ret;
-
   fd = open(total, O_RDONLY);
 
   if (fd < 0) {
-    //perror ("open");
-    //return 0;
+      // some error occurred while opening the file
+      // use [perror("Error opening the file");] to get error description
   }
 
-  fstat(fd, &buf);
-  if ( ret <0 ) {
-       perror ("fstat");
-       return -1;
+  struct stat file_stat;
+  int ret;
+  ret = fstat (fd, &file_stat);
+  if (ret < 0) {
+     // error getting file stat
   }
 
-  int d = close(fd);
-
-  return buf.st_ino;
+  return inode = file_stat.st_ino;
 }
 
 /* List the files in "dir_name". */
