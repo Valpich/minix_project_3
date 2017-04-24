@@ -6,7 +6,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <minix/ipc.h>
-#include <minix/minix.h>
 #include "const.h"
 #include "inode.h"
 #include "type.h"
@@ -122,7 +121,6 @@ int fs_inode_bitmap_walker()
     printf("Getting super node from device %llu ...\n",dev );
     type = IMAP;
     sb = get_super(dev);
-    printf("Free is %d\n",minix_count_free_inodes(sb) );
     read_super(sb);
     lsuper();
     init_global();
@@ -229,18 +227,18 @@ static unsigned int count_free(struct buffer_head *map[], unsigned blocksize, un
           return sum;
   }
 
-unsigned long minix_count_free_inodes(struct super_block *sb)
+unsigned long minix_count_free_inodes(struct super_block *sb, bitchunk_t *bitmap)
  {
-         struct minix_sb_info *sbi = minix_sb(sb);
-        unsigned long bits = sbi->s_ninodes + 1;
+        unsigned long bits = sb->s_ninodes + 1;
  
-        return count_free(sbi->s_imap, sb->s_blocksize, bits);
+        return count_free(map, sb->s_blocksize, bits);
  }
 
 int iterate_bitchunk(bitchunk_t *bitmap,int nblk, int* list){
     int j = nblk;
     NB_USED = 0;
     char* chunk;
+    printf("Free is %d\n",minix_count_free_inodes(sb, bitmap) );
    // unsigned word = (origin % BLOCK_SIZE) / FS_BITCHUNK_BITS;
     for(j=0; j<FS_BITMAP_CHUNKS(BLOCK_SIZE); ++j){
         printf("j is %d\n", j);
