@@ -240,14 +240,24 @@ int* get_list_used(bitchunk_t *bitmap, int type)
     printf("\n=========================================\n");
     /* Loop through bitchunks in bitmap */
     printf("WORDS_PER_BLOC is %d\n",WORDS_PER_BLOCK);
-    int j = nblk * WORDS_PER_BLOCK;
-    do{
+    iterate_bitchunk(bitmap, nblk);
+    if (type == IMAP)    NB_INODES_USED  = NB_USED;
+    else if (type==ZMAP) NB_ZONES_USED_Z = NB_USED;
+    printf("\n=========================================\n\n");
+    printf("Used: %d / %d \n", NB_USED, tot);
+    return list;
+}
+
+void iterate_bitchunk(bitchunk_t *bitmap,int nblk){
+    int j = nblk;
+    for(j=0; j<FS_BITMAP_CHUNKS(BLK_SIZE); ++j){
         printf("j is %d\n", j);
+        int print = 0;
+        if(print == 0)printf("chunk is %s\n", int2binstr(chunk));
         chunk = int2binstr(bitmap[j]);
+
         /* Loop through bits in bitchunk */
-        for (int k = 0; k < strlen(chunk); ++k){
-            int print = 0;
-            if(print == 0)printf("chunk is %s\n", int2binstr(chunk));
+        for (int k = 0; k < BITMAP_CHUNKS; ++k){
             print++;
             if (chunk[k] == '1'){
                 list[NB_USED] = j*FS_BITCHUNK_BITS + k;
@@ -255,12 +265,7 @@ int* get_list_used(bitchunk_t *bitmap, int type)
             }
             sleep(2);
         }
-    }while(--j >0);
-    if (type == IMAP)    NB_INODES_USED  = NB_USED;
-    else if (type==ZMAP) NB_ZONES_USED_Z = NB_USED;
-    printf("\n=========================================\n\n");
-    printf("Used: %d / %d \n", NB_USED, tot);
-    return list;
+    }
 }
 
 /*===========================================================================*
