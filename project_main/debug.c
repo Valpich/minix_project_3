@@ -85,7 +85,7 @@ static void list_dir (const char * dir_name) {
 
 struct stat s;
 stat(entry->d_name, &s);
-if ((s.st_mode & S_IFMT) == S_IFDIR) {
+if ((s.st_mode & S_IFMT) != S_IFDIR) {
 
       /* Check that the directory is not "d" or d's parent. */
 
