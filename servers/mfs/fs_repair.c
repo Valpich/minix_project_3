@@ -213,7 +213,7 @@ void init_global()
     WORDS_PER_BLOCK = BLOCK_SIZE / (int)sizeof(bitchunk_t);
 }
 
-int iterate_bitchunk(bitchunk_t *bitmap,int nblk){
+int iterate_bitchunk(bitchunk_t *bitmap,int nblk, int* list){
     int j = nblk;
     NB_USED = 0;
     char* chunk;
@@ -262,7 +262,7 @@ int* get_list_used(bitchunk_t *bitmap, int type)
     printf("\n=========================================\n");
     /* Loop through bitchunks in bitmap */
     printf("WORDS_PER_BLOC is %d\n",WORDS_PER_BLOCK);
-    NB_USED = iterate_bitchunk(bitmap, nblk);
+    NB_USED = iterate_bitchunk(bitmap, nblk, list);
     if (type == IMAP)    NB_INODES_USED  = NB_USED;
     else if (type==ZMAP) NB_ZONES_USED_Z = NB_USED;
     printf("\n=========================================\n\n");
