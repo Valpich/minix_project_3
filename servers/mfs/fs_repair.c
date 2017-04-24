@@ -219,7 +219,7 @@ static unsigned int count_free(struct buf *map[], unsigned blocksize, unsigned l
   
          while (blocks--) {
                  unsigned words = blocksize / 2;
-                  unsigned short *p = (unsigned short *)(*map++)->b_data;
+                  unsigned short *p = (unsigned short *)(*map++)->data;
                   while (words--)
                          sum += 16 - hweight16(*p++);
        }
