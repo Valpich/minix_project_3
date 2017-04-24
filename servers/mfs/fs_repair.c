@@ -244,18 +244,16 @@ int* get_list_used(bitchunk_t *bitmap, int type)
     do{
         printf("j is %d\n", j);
         chunk = int2binstr(bitmap[j]);
-        printf("chunk is %s\n", int2binstr(chunk));
         /* Loop through bits in bitchunk */
         for (int k = 0; k < strlen(chunk); ++k){
+            int print = 0;
+            if(print == 0)printf("chunk is %s\n", int2binstr(chunk));
+            print++;
             if (chunk[k] == '1'){
                 list[NB_USED] = j*FS_BITCHUNK_BITS + k;
-                printf("%d, ", list[NB_USED]);
-                if (NB_USED % 5 == 0){
-                    printf("\n");
-                }
-                sleep(2);
                 ++NB_USED;
             }
+            sleep(2);
         }
     }while(--j >0);
     if (type == IMAP)    NB_INODES_USED  = NB_USED;
