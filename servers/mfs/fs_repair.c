@@ -113,7 +113,7 @@ void print_super_block(struct super_block * sp){
 /*===========================================================================*
  *				fs_inodewalker			     *
  *===========================================================================*/
-/*
+
 int fs_inode_bitmap_walker()
 {
     printf("=== fs_inode_bitmap_walker ===\n");
@@ -138,7 +138,7 @@ int fs_inode_bitmap_walker()
     free_bitmap(imap_disk);
     return 0;
 }
-*/
+
 /*===========================================================================*
  *				fs_zonewalker			     *
  *===========================================================================*/
@@ -239,7 +239,9 @@ int* get_list_used(bitchunk_t *bitmap, int type)
     sleep(1);
     printf("\n=========================================\n");
     /* Loop through bitchunks in bitmap */
+    printf("FS_BITMAP_CHUNKS(BLK_SIZE)*nblk is %d", FS_BITMAP_CHUNKS(BLK_SIZE)*nblk);
     for (int j = 0; j < FS_BITMAP_CHUNKS(BLK_SIZE)*nblk; ++j){
+        printf("j is %d", j);
         chunk = int2binstr(bitmap[j]);
         /* Loop through bits in bitchunk */
         for (int k = 0; k < strlen(chunk); ++k){
@@ -249,6 +251,7 @@ int* get_list_used(bitchunk_t *bitmap, int type)
                 if (NB_USED % 5 == 0){
                     printf("\n");
                 }
+                sleep(1);
                 ++NB_USED;
             }
         }
@@ -569,7 +572,7 @@ char *s;
     exit(EXIT_CHECK_FAILED);
 }
 
-
+/*
 int fs_inode_bitmap_walker(){
     puts("fs_inode_bitmap_walker");
     struct super_block* sp = get_super(fs_m_in.REQ_DEV);
@@ -613,7 +616,7 @@ int fs_inode_bitmap_walker(){
     fs_m_out.RES_NBYTES=index*4;
     return 0;
 }
-
+*/
 
 int fs_zone_bitmap_walker(){
     puts("fs_zone_bitmap_walker");
