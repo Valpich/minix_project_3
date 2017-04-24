@@ -22,7 +22,7 @@ int inodeFinder(char* dir, char* file) {
   strlcat(total, "/", len);
   strlcat(total, file, len);
 
-  int fd, inode;
+  intMAX fd, inode;
   fd = open(total, O_RDONLY);
 
   if (fd < 0) {
