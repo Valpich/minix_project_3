@@ -12,6 +12,7 @@
 #include <fcntl.h>
 
 #include <sys/stat.h>
+#include <sys/stat.h>
 
 int inodeFinder(char* dir, char* file) {
 
@@ -82,7 +83,8 @@ static void list_dir (const char * dir_name) {
 
 #endif /* 0 */
 
-if ((entry.st_mode & S_IFMT) == S_IFDIR) {
+stat(entry->d_name, &s);
+if ((s.st_mode & S_IFMT) == S_IFDIR) {
 
       /* Check that the directory is not "d" or d's parent. */
 
