@@ -27,7 +27,6 @@
 #include <sys/stat.h>
 #include <sys/queue.h>
 
-#include "hgfs.h"
 
 #include "type.h"
 #include "const.h"
