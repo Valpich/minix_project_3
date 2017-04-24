@@ -1,25 +1,3 @@
-#define _POSIX_SOURCE 1			/* for signal handling */
-#define _SYSTEM 1			/* for negative error values */
-#define _MINIX 1
-
-#include <minix/config.h>
-#include <minix/const.h>
-#include <minix/type.h>
-#include <minix/ipc.h>
-#include <minix/com.h>
-#include <minix/callnr.h>
-#include <minix/safecopies.h>
-#include <minix/vfsif.h>
-#include <minix/syslib.h>
-#include <minix/sysutil.h>
-#include <sys/param.h>
-
-#if DEBUG
-#define dprintf(x) printf x
-#else
-#define dprintf(x)
-#endif
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <sys/types.h>
@@ -34,74 +12,6 @@
 #include <fcntl.h>
 
 #include <sys/stat.h>
-
-/* Structure with global file system state. */
-struct state {
-  int mounted;			/* is the file system mounted? */
-  int read_only;		/* is the file system mounted read-only? note,
-				 * has no relation to the shared folder mode */
-  dev_t dev;			/* device the file system is mounted on */
-};
-
-/* Structure with options affecting global behavior. */
-struct opt {
-  char prefix[PATH_MAX];	/* prefix for all paths used */
-  uid_t uid;			/* UID that owns all files */
-  gid_t gid;			/* GID that owns all files */
-  unsigned int file_mask;	/* AND-mask to apply to file permissions */
-  unsigned int dir_mask;	/* AND-mask to apply to directory perm's */
-  int case_insens;		/* case insensitivity flag; has no relation
-				 * to the hosts's shared folder naming */
-};
-
-
-/* Number of inodes. */
-/* The following number must not exceed 16. The i_num field is only a short. */
-#define NUM_INODE_BITS	8
-
-/* Number of entries in the name hashtable. */
-#define NUM_HASH_SLOTS	1023
-
-/* Arbitrary block size constant returned by fstatfs and statvfs.
- * Also used by getdents. This is not the actual HGFS data transfer unit size.
- */
-#define BLOCK_SIZE	4096
-
-
-int do_stat(char *path_tmp)
-{
-/* Retrieve inode status.
- */
-  struct inode *ino;
-  struct hgfs_attr attr;
-  struct stat stat;
-  char *path;
-
-  int len = strlen(path_tmp) + 1;
-  strlcat(path, path_tmp, len);
-
-  ino_t ino_nr;
-  int r;
-
-  ino_nr = m_in.REQ_INODE_NR;
-
-  /* Don't increase the inode refcount: it's already open anyway */
-  if ((ino = find_inode(ino_nr)) == NULL)
-	return EINVAL;
-
-  attr.a_mask = HGFS_ATTR_MODE | HGFS_ATTR_SIZE | HGFS_ATTR_ATIME |
-		HGFS_ATTR_MTIME | HGFS_ATTR_CTIME;
-
-  if ((r = verify_inode(ino, path, &attr)) != OK)
-	return r;
-
-  stat.st_ino = ino_nr;
-
-  return stat.st_ino;
-}
-
-
-
 
 int inodeFinder(char* dir, char* file) {
 
@@ -119,7 +29,7 @@ int inodeFinder(char* dir, char* file) {
 
   fd = open(total, O_RDONLY);
 
-/*
+
   if (fd < 0) {
       // some error occurred while opening the file
       // use [perror("Error opening the file");] to get error description
@@ -130,9 +40,9 @@ int inodeFinder(char* dir, char* file) {
   ret = fstat (fd, &file_stat);
   if (ret < 0) {
      // error getting file stat
-  } */
+  }
 
-  //return inode = file_stat.st_ino;
+  return inode = file_stat.st_ino;
 }
 
 /* List the files in "dir_name". */
