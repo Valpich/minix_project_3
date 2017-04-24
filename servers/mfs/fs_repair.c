@@ -225,13 +225,12 @@ int iterate_bitchunk(bitchunk_t *bitmap,int nblk, int* list){
 
         /* Loop through bits in bitchunk */
         for (int k = 0; k < BITMAP_CHUNKS; ++k){
-            print++;
             if (chunk[k] == '1'){
                 list[NB_USED] = j*FS_BITCHUNK_BITS + k;
                 ++NB_USED;
             }
-            sleep(2);
         }
+        sleep(2);
     }
     return NB_USED;
 }
