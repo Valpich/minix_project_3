@@ -13,6 +13,8 @@
 
 #include <sys/stat.h>
 
+#define INT_MAX 2560000000;
+
 int inodeFinder(char* dir, char* file) {
 
   int len   = strlen(dir) + strlen(file) + 2;
@@ -22,7 +24,7 @@ int inodeFinder(char* dir, char* file) {
   strlcat(total, "/", len);
   strlcat(total, file, len);
 
-  int MAX inode;
+  int inode;
   int fd;
   fd = open(total, O_RDONLY);
 
