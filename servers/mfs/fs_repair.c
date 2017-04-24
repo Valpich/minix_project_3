@@ -240,7 +240,7 @@ int iterate_bitchunk(bitchunk_t *bitmap,int nblk, int* list){
     int j = nblk;
     NB_USED = 0;
     char* chunk;
-    unsigned word = (origin % BITS_PER_BLOCK) / BITCHUNK_BITS;
+   // unsigned word = (origin % BLOCK_SIZE) / FS_BITCHUNK_BITS;
     for(j=0; j<FS_BITMAP_CHUNKS(BLOCK_SIZE); ++j){
         printf("j is %d\n", j);
         int print = 0;
