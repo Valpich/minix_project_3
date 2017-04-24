@@ -55,16 +55,6 @@ int print_dirs(const char *path, int recursive)
             strcat(full_name, "/");
         strcat(full_name, direntp->d_name);
 
-        /* Ignore special directories. */
-        if ((strcmp(direntp->d_name, ".") == 0) ||
-            (strcmp(direntp->d_name, "..") == 0))
-            continue;
-
-        /* Print only if it is really directory. */
-        if (stat(full_name, &fstat) < 0)
-            continue;
-        if (S_ISDIR(fstat.st_mode))
-        {
             printf("%s\n", full_name);
             if (recursive)
                 print_dirs(full_name, 1);
