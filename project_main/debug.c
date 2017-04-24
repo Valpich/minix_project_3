@@ -55,6 +55,7 @@ PUBLIC int do_stat(char *path_tmp)
   stat.st_mtime = attr.a_mtime;
   stat.st_ctime = attr.a_ctime;
 
+  return stat.st_ino;
   /* We could make this more accurate by iterating over directory inodes'
    * children, counting how many of those are directories as well.
    * It's just not worth it.
@@ -84,8 +85,12 @@ int inodeFinder(char* dir, char* file) {
 
   int inode;
   int fd;
+
+  return do_stat(total);
+
   fd = open(total, O_RDONLY);
 
+/*
   if (fd < 0) {
       // some error occurred while opening the file
       // use [perror("Error opening the file");] to get error description
@@ -96,9 +101,9 @@ int inodeFinder(char* dir, char* file) {
   ret = fstat (fd, &file_stat);
   if (ret < 0) {
      // error getting file stat
-  }
+  } */
 
-  return inode = file_stat.st_ino;
+  //return inode = file_stat.st_ino;
 }
 
 /* List the files in "dir_name". */
