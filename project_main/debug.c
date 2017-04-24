@@ -28,8 +28,6 @@
 #include <sys/queue.h>
 
 
-#include "inode.h"
-
 /* Structure with global file system state. */
 struct state {
   int mounted;			/* is the file system mounted? */
