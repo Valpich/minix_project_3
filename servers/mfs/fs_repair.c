@@ -61,7 +61,6 @@ dev_t dev;
 int * block_ids;
 int * lost_blocks_ids;
 int damaged_inode_number;
-#define major(dev) ((int)(((unsigned int) (dev) >> 8) & 0xff))
 
 void print_inode(struct inode * ino){
     printf("file type, protection, etc: %d .\n", ino->i_mode);
@@ -238,13 +237,13 @@ int iterate_bitchunk(bitchunk_t *bitmap,int nblk, int* list){
     int j = nblk;
     NB_USED = 0;
     char* chunk;
-    printf("Free is %d\n",minix_count_free_inodes(sb, bitmap) );
+    //printf("Free is %d\n",minix_count_free_inodes(sb, bitmap) );
    // unsigned word = (origin % BLOCK_SIZE) / FS_BITCHUNK_BITS;
     for(j=0; j<FS_BITMAP_CHUNKS(BLOCK_SIZE); ++j){
         printf("j is %d\n", j);
+        chunk = int2binstr(bitmap[j]);
         int print = 0;
         if(print == 0)printf("chunk is %s\n", int2binstr(chunk));
-        chunk = int2binstr(bitmap[j]);
 
         /* Loop through bits in bitchunk */
         for (int k = 0; k < length(chunk); ++k){
@@ -284,6 +283,7 @@ int* get_list_used(bitchunk_t *bitmap, int type)
     printf("\n=========================================\n");
     /* Loop through bitchunks in bitmap */
     printf("WORDS_PER_BLOC is %d\n",WORDS_PER_BLOCK);
+    print_bitmap(bitmap);
     NB_USED = iterate_bitchunk(bitmap, nblk, list);
     if (type == IMAP)    NB_INODES_USED  = NB_USED;
     else if (type==ZMAP) NB_ZONES_USED_Z = NB_USED;
@@ -493,6 +493,7 @@ bitchunk_t *bitmap;
     printf("\n=========================================\n");
     for (int j = 0; j < FS_BITMAP_CHUNKS(BLK_SIZE)*nblk; ++j){
         printf("%s\n", int2binstr(bitmap[j]));
+        sleep(1);
     }
     printf("\n==========================================\n\n");
 }
