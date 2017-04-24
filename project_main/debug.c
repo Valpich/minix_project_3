@@ -20,19 +20,20 @@
 #define dprintf(x)
 #endif
 
-#include <string.h>
-#include <errno.h>
-#include <assert.h>
-#include <limits.h>
-#include <sys/stat.h>
-#include <sys/queue.h>
-
-#include <fcntl.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <sys/types.h>
 #include <string.h>
 #include <errno.h>
+#include <unistd.h> // for open
+/* "readdir" etc. are defined here. */
+#include <dirent.h>
+/* limits.h defines "PATH_MAX". */
+#include <limits.h>
+
+#include <fcntl.h>
+
+#include <sys/stat.h>
 
 /* Structure with global file system state. */
 struct state {
