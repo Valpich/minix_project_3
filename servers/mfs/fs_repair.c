@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <minix/ipc.h>
+#include <minix/minix.h>
 #include "const.h"
 #include "inode.h"
 #include "type.h"
@@ -215,7 +216,7 @@ void init_global()
 
 static unsigned int count_free(struct buffer_head *map[], unsigned blocksize, unsigned long numbits)
  {
-        unsigned int sum = 0;
+        unsigned long sum = 0;
          unsigned blocks = DIV_ROUND_UP(numbits, blocksize * 8);
   
          while (blocks--) {
