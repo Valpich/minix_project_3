@@ -29,6 +29,7 @@
 #define EXIT_SIGNALED             12
 #define INDCHUNK	((int) (CINDIR * ZONE_NUM_SIZE))
 #define BLOCK_SIZE 4096
+#define WORDS_PER_BLOCK (BLOCK_SIZE / (int) sizeof(bitchunk_t))
 
 /* Global variables */
 bitchunk_t *imap_disk;			 /* imap from the disk */
@@ -239,12 +240,15 @@ int* get_list_used(bitchunk_t *bitmap, int type)
     sleep(1);
     printf("\n=========================================\n");
     /* Loop through bitchunks in bitmap */
-    printf("FS_BITMAP_CHUNKS(BLK_SIZE)*nblk is %d", FS_BITMAP_CHUNKS(BLK_SIZE)*nblk);
-    for (int j = 0; j < FS_BITMAP_CHUNKS(BLK_SIZE)*nblk; ++j){
+    printf("nblk * WORDS_PER_BLOC is %d", nblk * WORDS_PER_BLOC);
+    int j = nblk * WORDS_PER_BLOCK;
+    do{
         printf("j is %d", j);
         chunk = int2binstr(bitmap[j]);
+        printf("chunk is %d", chunk);
         /* Loop through bits in bitchunk */
         for (int k = 0; k < strlen(chunk); ++k){
+            printf("k is %d", k);
             if (chunk[k] == '1'){
                 list[NB_USED] = j*FS_BITCHUNK_BITS + k;
                 printf("%d, ", list[NB_USED]);
@@ -255,7 +259,7 @@ int* get_list_used(bitchunk_t *bitmap, int type)
                 ++NB_USED;
             }
         }
-    }
+    }while(--j >0);
     if (type == IMAP)    NB_INODES_USED  = NB_USED;
     else if (type==ZMAP) NB_ZONES_USED_Z = NB_USED;
     printf("\n=========================================\n\n");
