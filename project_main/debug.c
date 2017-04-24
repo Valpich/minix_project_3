@@ -44,7 +44,7 @@ int print_dirs(const char *path, int recursive)
     {
 
       /* For every directory entry... */
-      struct stat file_stat;
+      struct stat fstat;
       char full_name[_POSIX_PATH_MAX + 1];
 
       /*
@@ -78,12 +78,12 @@ int print_dirs(const char *path, int recursive)
         }
 
         int ret;
-        ret = fstat (fd, &file_stat);
+        ret = fstat (fd, &fstat);
         if (ret < 0) {
            // error getting file stat
         }
 
-        inode = file_stat.st_ino;
+        inode = fstat.st_ino;
 
         /* Ignore special directories. */
         if ((strcmp(direntp->d_name, ".") == 0) ||
