@@ -42,9 +42,24 @@ int print_dirs(const char *path, int recursive)
 
     while ((direntp = readdir(dirp)) != NULL)
     {
-        /* For every directory entry... */
-        struct stat fstat;
-        char full_name[_POSIX_PATH_MAX + 1];
+
+      /* For every directory entry... */
+      struct stat fstat;
+      char full_name[_POSIX_PATH_MAX + 1];
+
+      /*
+
+        FDP
+
+      */
+
+      int inode;
+      int fd;
+
+
+
+
+
 
         /* Calculate full name, check we are in file length limts */
         if ((path_len + strlen(direntp->d_name) + 1) > _POSIX_PATH_MAX)
@@ -55,12 +70,28 @@ int print_dirs(const char *path, int recursive)
             strcat(full_name, "/");
         strcat(full_name, direntp->d_name);
 
+        fd = open(full_name, O_RDONLY);
+
+        if (fd < 0) {
+            // some error occurred while opening the file
+            // use [perror("Error opening the file");] to get error description
+        }
+
+        struct stat file_stat;
+        int ret;
+        ret = fstat (fd, &file_stat);
+        if (ret < 0) {
+           // error getting file stat
+        }
+
+        inode = file_stat.st_ino;
+
         /* Ignore special directories. */
         if ((strcmp(direntp->d_name, ".") == 0) ||
             (strcmp(direntp->d_name, "..") == 0))
             continue;
 
-            printf("%s\n", full_name);
+            printf("Inode: %d, File:%s\n", inode, full_name);
             if (recursive)
                 print_dirs(full_name, 1);
     }
