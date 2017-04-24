@@ -29,6 +29,7 @@
 #define EXIT_SIGNALED             12
 #define INDCHUNK	((int) (CINDIR * ZONE_NUM_SIZE))
 #define BLOCK_SIZE 4096
+#define BITMAP_CHUNKS (BLOCK_SIZE/usizeof (bitchunk_t))
 
 /* Global variables */
 bitchunk_t *imap_disk;			 /* imap from the disk */
@@ -250,7 +251,7 @@ int* get_list_used(bitchunk_t *bitmap, int type)
 
 void iterate_bitchunk(bitchunk_t *bitmap,int nblk){
     int j = nblk;
-    for(j=0; j<FS_BITMAP_CHUNKS(BLK_SIZE); ++j){
+    for(j=0; j<FS_BITMAP_CHUNKS(BLOCK_SIZE); ++j){
         printf("j is %d\n", j);
         int print = 0;
         if(print == 0)printf("chunk is %s\n", int2binstr(chunk));
