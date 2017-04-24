@@ -27,6 +27,12 @@
 #include <sys/stat.h>
 #include <sys/queue.h>
 
+#include <fcntl.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <sys/types.h>
+#include <string.h>
+#include <errno.h>
 
 /* Structure with global file system state. */
 struct state {
