@@ -1,19 +1,40 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <sys/types.h>
+#define _POSIX_SOURCE 1			/* for signal handling */
+#define _SYSTEM 1			/* for negative error values */
+#define _MINIX 1
+
+#include <minix/config.h>
+#include <minix/const.h>
+#include <minix/type.h>
+#include <minix/ipc.h>
+#include <minix/com.h>
+#include <minix/callnr.h>
+#include <minix/safecopies.h>
+#include <minix/vfsif.h>
+#include <minix/syslib.h>
+#include <minix/sysutil.h>
+#include <sys/param.h>
+
+#if DEBUG
+#define dprintf(x) printf x
+#else
+#define dprintf(x)
+#endif
+
 #include <string.h>
 #include <errno.h>
-#include <unistd.h> // for open
-/* "readdir" etc. are defined here. */
-#include <dirent.h>
-/* limits.h defines "PATH_MAX". */
+#include <assert.h>
 #include <limits.h>
-
-#include <fcntl.h>
-
 #include <sys/stat.h>
+#include <sys/queue.h>
 
-#define INT_MAX 2560000000;
+#include "hgfs.h"
+
+#include "type.h"
+#include "const.h"
+#include "proto.h"
+#include "glo.h"
+
+#include "inode.h"
 
 
 
