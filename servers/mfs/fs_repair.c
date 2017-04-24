@@ -224,12 +224,7 @@ int iterate_bitchunk(bitchunk_t *bitmap,int nblk, int* list){
         if(print == 0)printf("chunk is %s\n", int2binstr(chunk));
 
         /* Loop through bits in bitchunk */
-        for (int k = 0; k < length(chunk); ++k){
-            if (chunk[k] == '1'){
-                list[NB_USED] = j*FS_BITCHUNK_BITS + k;
-                ++NB_USED;
-            }
-        }
+       
         sleep(2);
     }
     return NB_USED;
