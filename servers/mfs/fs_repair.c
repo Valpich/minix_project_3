@@ -239,15 +239,15 @@ int* get_list_used(bitchunk_t *bitmap, int type)
     sleep(1);
     printf("\n=========================================\n");
     /* Loop through bitchunks in bitmap */
-    printf("WORDS_PER_BLOC is %d",WORDS_PER_BLOCK);
+    printf("WORDS_PER_BLOC is %d\n",WORDS_PER_BLOCK);
     int j = nblk * WORDS_PER_BLOCK;
     do{
-        printf("j is %d", j);
+        printf("j is %d\n", j);
         chunk = int2binstr(bitmap[j]);
-        printf("chunk is %d", chunk);
+        printf("chunk is %s\n", int2binstr(chunk));
         /* Loop through bits in bitchunk */
         for (int k = 0; k < strlen(chunk); ++k){
-            printf("k is %d", k);
+            printf("k is %d\n", k);
             if (chunk[k] == '1'){
                 list[NB_USED] = j*FS_BITCHUNK_BITS + k;
                 printf("%d, ", list[NB_USED]);
