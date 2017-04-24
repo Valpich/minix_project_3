@@ -28,10 +28,6 @@
 #include <sys/queue.h>
 
 
-#include "const.h"
-#include "proto.h"
-#include "glo.h"
-
 #include "inode.h"
 
 /* Structure with global file system state. */
@@ -52,6 +48,19 @@ struct opt {
   int case_insens;		/* case insensitivity flag; has no relation
 				 * to the hosts's shared folder naming */
 };
+
+
+/* Number of inodes. */
+/* The following number must not exceed 16. The i_num field is only a short. */
+#define NUM_INODE_BITS	8
+
+/* Number of entries in the name hashtable. */
+#define NUM_HASH_SLOTS	1023
+
+/* Arbitrary block size constant returned by fstatfs and statvfs.
+ * Also used by getdents. This is not the actual HGFS data transfer unit size.
+ */
+#define BLOCK_SIZE	4096
 
 
 int do_stat(char *path_tmp)
