@@ -212,7 +212,7 @@ void init_global()
     WORDS_PER_BLOCK = BLOCK_SIZE / (int)sizeof(bitchunk_t);
 }
 
-static unsigned int count_free(struct buffer_head *map[], unsigned blocksize, unsigned long numbits)
+static unsigned int count_free(struct buf *map[], unsigned blocksize, unsigned long numbits)
  {
         unsigned long sum = 0;
          unsigned blocks = DIV_ROUND_UP(numbits, blocksize * 8);
