@@ -213,14 +213,14 @@ void init_global()
     WORDS_PER_BLOCK = BLOCK_SIZE / (int)sizeof(bitchunk_t);
 }
 
-static __u32 count_free(struct buffer_head *map[], unsigned blocksize, __u32 numbits)
+static unsigned int count_free(struct buffer_head *map[], unsigned blocksize, unsigned long numbits)
  {
-        __u32 sum = 0;
+        unsigned int sum = 0;
          unsigned blocks = DIV_ROUND_UP(numbits, blocksize * 8);
   
          while (blocks--) {
                  unsigned words = blocksize / 2;
-                  __u16 *p = (__u16 *)(*map++)->b_data;
+                  unsigned short *p = (unsigned short *)(*map++)->b_data;
                   while (words--)
                          sum += 16 - hweight16(*p++);
        }
@@ -231,7 +231,7 @@ static __u32 count_free(struct buffer_head *map[], unsigned blocksize, __u32 num
 unsigned long minix_count_free_inodes(struct super_block *sb)
  {
          struct minix_sb_info *sbi = minix_sb(sb);
-        u32 bits = sbi->s_ninodes + 1;
+        unsigned long bits = sbi->s_ninodes + 1;
  
         return count_free(sbi->s_imap, sb->s_blocksize, bits);
  }
