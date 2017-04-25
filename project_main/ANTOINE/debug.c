@@ -12,7 +12,7 @@
 #include <a.out.h>
 #include <dirent.h>
 
-#include <commands/fsck.mfs/fsck.h>
+#include <fsck.mfs/fsck.h>
 
 struct stack {
   dir_struct *st_dir;
