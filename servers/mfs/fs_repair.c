@@ -126,7 +126,7 @@ int fs_inode_bitmap_walker()
     sb = get_super(dev);
     read_super(sb);
     print_super_block(sb);
-    sleep(2)
+    sleep(2);
     init_global();
     imap_disk = alloc_bitmap(N_IMAP);
     puts("Loading inode bitmap.\n");
@@ -160,7 +160,6 @@ int fs_zone_bitmap_walker()
     zmap_disk = alloc_bitmap(N_ZMAP);
     puts("Loading zone bitmap.\n");
     get_bitmap(zmap_disk, ZMAP);
-    sleep(3);
     list = get_list_used(zmap_disk, ZMAP);
     free_bitmap(zmap_disk);
     puts("fs_inode_bitmap_walker ended with success\n");
