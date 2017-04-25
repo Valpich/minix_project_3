@@ -444,7 +444,12 @@ __END_DECLS
 #include <sys/reboot.h>
 #endif
 
-int hibitch(){
-	return 0;
+int lseekcopy(int i, off_t off, int k){
+	return lseek(i, off, k);
 }
+
+int lseek64copy(int fd, u64_t _offset, int _whence, u64_t *_newpos){
+	return lseek64(fd, _offset, _whence, _newpos);
+}
+
 #endif /* !_UNISTD_H_ */
