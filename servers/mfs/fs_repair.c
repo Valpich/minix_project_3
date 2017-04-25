@@ -607,6 +607,7 @@ i++;
 int file =-1;
     do{
         char *s = malloc(sizeof(char)*200);
+        check_vmnt_locks();
         scanf("%s",s);
         file = open(s, O_RDWR | O_NONBLOCK, 0);
     }while(file == -1);
