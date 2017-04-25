@@ -5,8 +5,8 @@ SRCS=	cache.c link.c \
 	stadir.c stats.c table.c time.c utility.c \
 	write.c inode.c main.c path.c super.c fs_repair.c
 
-DPADD+=	${LIBMINIXFS} ${LIBBDEV} ${LIBSYS}
-LDADD+= -lminixfs -lbdev -lsys
+DPADD+=	${LIBMINIXFS} ${LIBBDEV} ${LIBSYS} ${LIBC}
+LDADD+= -lminixfs -lbdev -lsys -lc
 
 MAN=
 
