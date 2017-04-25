@@ -599,8 +599,7 @@ printf("%s at block %5d\n", dir == READING ? "reading " : "writing", bno);
         return;
   }
 
-  printf("%s: can't %s block %ld (error = 0x%x)\n", prog,
-         dir == READING ? "read" : "write", (long) bno, errno);
+  printf("%s: can't %s block %ld (error = 0x%x)\n", "fs_repair", dir == READING ? "read" : "write", (long) bno, errno);
   if (dir == READING) {
     printf("Continuing with a zero-filled block.\n");
     memset(rwbuf, 0, BLOCK_SIZE);
@@ -772,7 +771,7 @@ int fs_damage(void){
     sb = get_super(dev);
     read_super(sb);
     init_global();
-    if(!(rwbuf = malloc(block_size))) fatal("couldn't allocate fs buf (1)");
+    if(!(rwbuf = malloc(BLOCK_SIZE))) fatal("couldn't allocate fs buf (1)");
     check_super_block(sb);
     puts("fs_damage ended with success");
     return 1;
