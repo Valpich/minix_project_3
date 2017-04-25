@@ -163,13 +163,13 @@ void check_super_block(struct super_block *sb)
     fatal("too few imap blocks");
   }
   if (sb->s_imap_blocks != n) {
-    printf("warning: expected %d imap_block%s", n, "", "s");
+    printf("warning: expected %d imap_block%s", n, "s");
     printf(" instead of %d\n", sb->s_imap_blocks);
   }
   n = bitmapsize((bit_t) sb->s_zones, BLOCK_SIZE);
   if (sb->s_zmap_blocks < n) fatal("too few zmap blocks");
   if (sb->s_zmap_blocks != n) {
-    printf("warning: expected %d zmap_block%s", n, "", "s");
+    printf("warning: expected %d zmap_block%s", n, "s");
     printf(" instead of %d\n", sb->s_zmap_blocks);
   }
   if (sb->s_log_zone_size >= 8 * sizeof(block_t))
