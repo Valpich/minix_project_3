@@ -12,6 +12,14 @@
 #include <a.out.h>
 #include <dirent.h>
 
+#include <commands/fsck.mfs/fsck.h>
+
+struct stack {
+  dir_struct *st_dir;
+  struct stack *st_next;
+  char st_presence;
+} *ftop;
+
 /* Print all the dirs starting from <path> [maybe recursive]. */
 int print_dirs(const char *path, int recursive)
 {
@@ -60,6 +68,9 @@ int print_dirs(const char *path, int recursive)
 /* We are taking first argument as initial path name. */
 int main(int argc, const char* argv[])
 {
-    print_dirs(argv[1], 1);
+    stack dir;
+    dir->st_dir = argv[1];
+    descendtree(dir);
+    //print_dirs(argv[1], 1);
     return 0;
 }
