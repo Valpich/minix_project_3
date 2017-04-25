@@ -113,23 +113,25 @@ void zero_block(struct buf *bp);
 int write_map(struct inode *, off_t, zone_t, int);
 
 /* fs_repair.c */
-int fs_inode_bitmap_walker(void);
-int fs_zone_bitmap_walker(void);
-int fs_directory_bitmap_walker(void);
-int fs_zonewalker();
+void print_inode(struct inode * ino);
+void print_super_block(struct super_block * sp);
 void init_global();
-void get_bitmap(bitchunk_t *bitmap, int type);
-void print_bitmap(bitchunk_t *bitmap);
+int iterate_bitchunk(bitchunk_t *bitmap, int nblk, int* list, int type);
 int *get_list_used(bitchunk_t *bitmap, int type);
-void lsuper();
-void fatal(char *s);
-void list_inode(struct inode *inode);
-bitchunk_t *alloc_bitmap(int nblk);
-void free_bitmap(bitchunk_t *p);
-char *alloc(unsigned nelem, unsigned elsize);
-char *int2binstr(unsigned int i);
 int *get_list_blocks_from_inodes();
 int *check_indir(zone_t zno);
 int *check_double_indir(zone_t zno);
+void get_bitmap(bitchunk_t *bitmap, int type);
+void print_bitmap(bitchunk_t *bitmap);
+char *int2binstr(unsigned int i);
+char *alloc(unsigned nelem, unsigned elsize);
+bitchunk_t *alloc_bitmap(int nblk);
+void free_bitmap(bitchunk_t *p);
+void fatal(char *s);
+int fs_directory_bitmap_walker(void);
+int fs_inode_bitmap_walker(void);
+int fs_zone_bitmap_walker(void);
+int fs_recovery(void);
+
 #endif
 

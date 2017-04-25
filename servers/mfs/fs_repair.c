@@ -62,7 +62,12 @@ int * block_ids;
 int * lost_blocks_ids;
 int damaged_inode_number;
 
-void print_inode(struct inode * ino){
+/*===========================================================================*
+ *              print_inode               *
+ *===========================================================================*/
+void print_inode(ino)
+struct inode * ino;
+{
     printf("file type, protection, etc: %d .\n", ino->i_mode);
     printf("how many links to this file: %d .\n",ino->i_nlinks);
     printf("user id of the file's owner: %d .\n",ino->i_uid);
@@ -86,7 +91,12 @@ void print_inode(struct inode * ino){
     printf("the ATIME, CTIME, and MTIME bits are here: %d .\n",ino->i_update);
 }
 
-void print_super_block(struct super_block * sp){
+/*===========================================================================*
+ *              print_super_block               *
+ *===========================================================================*/
+void print_super_block(sp)
+struct super_block * sp;
+{
     puts("Super block is:");
     printf("# usable inodes on the minor device: %d .\n", sp->s_ninodes);
     printf("total device size, including bit maps etc: %d .\n",sp->s_nzones);
@@ -112,86 +122,6 @@ void print_super_block(struct super_block * sp){
 }
 
 /*===========================================================================*
- *				fs_inodewalker			     *
- *===========================================================================*/
-
-int fs_inode_bitmap_walker()
-{
-    int *list_blocks;
-    int *list_inodes;
-    puts("fs_inode_bitmap_walker started\n");
-    dev = fs_m_in.REQ_DEV;
-    type = IMAP;
-    printf("Loading super block in the %u device.\n",dev);
-    sb = get_super(dev);
-    read_super(sb);
-    print_super_block(sb);
-    sleep(2);
-    init_global();
-    imap_disk = alloc_bitmap(N_IMAP);
-    puts("Loading inode bitmap.\n");
-    get_bitmap(imap_disk, IMAP);
-    list_inodes = get_list_used(imap_disk, IMAP);
-    if ((list_blocks = get_list_blocks_from_inodes(list_inodes)) == NULL){
-        puts("fs_inode_bitmap_walker ended with failure\n");
-        free_bitmap(imap_disk);
-        return -1;
-    }
-    free_bitmap(imap_disk);
-    puts("fs_inode_bitmap_walker ended with success\n");
-    return 0;
-}
-
-/*===========================================================================*
- *				fs_zonewalker			     *
- *===========================================================================*/
-int fs_zone_bitmap_walker()
-{
-    int* list;
-    puts("fs_zone_bitmap_walker started\n");
-    dev = fs_m_in.REQ_DEV;
-    printf("Getting super node from device %u ...\n", dev);
-    type = ZMAP;
-    sb = get_super(dev);
-    read_super(sb);
-    print_super_block(sb);
-    sleep(2);
-    init_global();
-    zmap_disk = alloc_bitmap(N_ZMAP);
-    puts("Loading zone bitmap.\n");
-    get_bitmap(zmap_disk, ZMAP);
-    list = get_list_used(zmap_disk, ZMAP);
-    free_bitmap(zmap_disk);
-    puts("fs_zone_bitmap_walker ended with success\n");
-    return 0;
-}
-
-/*===========================================================================*
- *				fs_recovery			        *
- *===========================================================================*/
-/* System call recovery
- int do_recovery(){
-	printf("FUCK YOU EVEN MORE\n");
-	printf("MODE: %d", m_in.m1_i1);
-	return 0;
- }
- 
- System call damage inode
- int do_damage_inode(){
-	printf("FUCK YOU EVEN EVEN MORE\n");
-	printf("INODE NR: %d", m_in.m1_i1);
-	return 0;
- }
- 
- System call damage directory file
- int do_damage_dir(){
-	char* msg = m_in.m1_p1;
-	printf("FUCK YOU EVEN EVEN MORE\n");
-	printf("DIRECTORY PATH: %s", msg);
-	return 0;
- }
- */
-/*===========================================================================*
  *				init_global		     *
  *===========================================================================*/
 void init_global()
@@ -213,7 +143,15 @@ void init_global()
     WORDS_PER_BLOCK = BLOCK_SIZE / (int)sizeof(bitchunk_t);
 }
 
-int iterate_bitchunk(bitchunk_t *bitmap,int nblk, int* list, int type){
+/*===========================================================================*
+ *              iterate_bitchunk          *
+ *===========================================================================*/
+int iterate_bitchunk(bitmap, nblk, list, type)
+bitchunk_t *bitmap;
+int nblk;
+int* list;
+int type;
+{
     int j;
     NB_USED = 0;
     char * chunk;
@@ -231,14 +169,14 @@ int iterate_bitchunk(bitchunk_t *bitmap,int nblk, int* list, int type){
     }
     int v = 0;
     if(type == IMAP){
-        printf("Used inodes in the inode bitmap are\n");
+        printf("Used inodes in the inode bitmap are:\n");
         for(v = 0; v< NB_USED;v++){
-            printf("iode #%d is used\n", list[v]);
+            printf("inode #%d is used\n", list[v]);
             sleep(1);
         }
     }
     if(type == ZMAP){
-        printf("Used inode in the zone bitmap are\n");
+        printf("Used inode in the zone bitmap are:\n");
         for(v = 0; v< NB_USED;v++){
             printf("inode #%d is used\n", list[v]);
             sleep(1);
@@ -251,9 +189,10 @@ int iterate_bitchunk(bitchunk_t *bitmap,int nblk, int* list, int type){
 /*===========================================================================*
  *				get_list_used	     *
  *===========================================================================*/
-int* get_list_used(bitchunk_t *bitmap, int type)
+int* get_list_used(bitmap, type)
+bitchunk_t *bitmap;
+int type;
 {
-    /* Get a list of used blocks/inodes from the zone/inode bitmap */
     int* list;
     int nblk;
     int tot;
@@ -262,7 +201,7 @@ int* get_list_used(bitchunk_t *bitmap, int type)
         tot  = NB_INODES;
         list = malloc(sizeof(int)*NB_INODES);
     }
-    else /* type == ZMAP */ {
+    else if (type==ZMAP)  {
         nblk = N_ZMAP;
         tot  = NB_ZONES;
         list = malloc(sizeof(int)*NB_ZONES);
@@ -270,7 +209,6 @@ int* get_list_used(bitchunk_t *bitmap, int type)
     NB_USED = iterate_bitchunk(bitmap, nblk, list, type);
     if (type == IMAP)    NB_INODES_USED  = NB_USED;
     else if (type==ZMAP) NB_ZONES_USED_Z = NB_USED;
-    printf("\n=========================================\n\n");
     printf("Used: %d / %d \n", NB_USED, tot);
     return list;
 }
@@ -278,7 +216,8 @@ int* get_list_used(bitchunk_t *bitmap, int type)
 /*===========================================================================*
  *				get_list_blocks_from_inodes			     *
  *===========================================================================*/
-int* get_list_blocks_from_inodes(int* inodes)
+int* get_list_blocks_from_inodes(inodes)
+int * inodes;
 {
     int* list = malloc(sizeof(int)*NB_INODES*V2_NR_DZONES);;
     int used_zones = 0;
@@ -346,7 +285,8 @@ int* get_list_blocks_from_inodes(int* inodes)
 /*===========================================================================*
  *				check_indir		     *
  *===========================================================================*/
-int *check_indir(zone_t zno)
+int *check_indir(zno)
+zone_t zno;
 {
     struct buf *buf;
     zone_t *indir;
@@ -367,7 +307,8 @@ int *check_indir(zone_t zno)
 /*===========================================================================*
  *				check_double_indir		     *
  *===========================================================================*/
-int *check_double_indir(zone_t zno)
+int *check_double_indir( zno)
+zone_t zno;
 {
     struct buf *buf;
     zone_t *indir, *double_indir;
@@ -404,8 +345,7 @@ int type;
     if (type == IMAP){
         bno  = BLK_IMAP;
         nblk = N_IMAP;
-    }
-    else if (type == ZMAP) {
+    }else if (type == ZMAP) {
         bno  = BLK_ZMAP;
         nblk = N_ZMAP;
     }
@@ -441,7 +381,8 @@ bitchunk_t *bitmap;
 /*===========================================================================*
  *				int2binstr		     		*
  *===========================================================================*/
-char *int2binstr(unsigned int i)
+char *int2binstr(i)
+unsigned int i;
 {
     size_t bits = sizeof(unsigned int) * CHAR_BIT;
     char * str = malloc(bits + 1);
@@ -500,54 +441,75 @@ char *s;
     exit(EXIT_CHECK_FAILED);
 }
 
-/*
-int fs_inode_bitmap_walker(){
-    puts("fs_inode_bitmap_walker");
-    struct super_block* sp = get_super(fs_m_in.REQ_DEV);
-    print_super_block(sp);
-    block_ids=calloc(sp->s_zones*4,1);
-    int index=0;
-    int block_id;
-    int i=0;
-    int j=0;
-    for(block_id=0; block_id<sp->s_imap_blocks;block_id++){
-        struct buf* block_buffer = get_block(fs_m_in.REQ_DEV, 2+block_id, 0);
-        char * address=(char*)block_buffer->data;
-        for(i=1;i<8*BLOCK_SIZE;i++){
-            if((address[i/8] & (1 << (i%8) )) != 0 ){
-                struct inode * found_inode = get_inode(fs_m_in.REQ_DEV,8*BLOCK_SIZE*block_id+i);
-                print_inode(found_inode);
-                sleep(2);
-                for(j=0;j<=8;j++){
-                    if(found_inode->i_zone[j]!=0){
-                        block_ids[index] = found_inode->i_zone[j];
-                        index++;
-                    }
-                }
-                if(found_inode->i_zone[7]!=0){
-                    struct buf* block_buffer_2=get_block(fs_m_in.REQ_DEV, found_inode->i_zone[7], 0);
-                    int * address_2=(int*)block_buffer_2->data;
-                    j=0;
-                    while(address_2[j]!=0){
-                        block_ids[index] = address_2[j];
-                        index++;
-                        j++;
-                    }
-                    put_block(block_buffer_2,0);
-                    put_inode(found_inode);
-                }
-            }
-        }
-        put_block(block_buffer,0);
-    }
-    fs_m_out.RES_DEV=(int)block_ids;
-    fs_m_out.RES_NBYTES=index*4;
-    return 0;
-}
-*/
-
-
-int fs_directory_bitmap_walker(){
+/*===========================================================================*
+ *              fs_directory_bitmap_walker                       *
+ *===========================================================================*/
+int fs_directory_bitmap_walker()
+{
     puts("fs_directory_bitmap_walker");
     return 0;
+}
+
+/*===========================================================================*
+ *              fs_inode_bitmap_walker               *
+ *===========================================================================*/
+int fs_inode_bitmap_walker()
+{
+    int *list_blocks;
+    int *list_inodes;
+    puts("fs_inode_bitmap_walker started");
+    dev = fs_m_in.REQ_DEV;
+    type = IMAP;
+    printf("Loading super block in the %u device.\n",dev);
+    sb = get_super(dev);
+    read_super(sb);
+    print_super_block(sb);
+    sleep(2);
+    init_global();
+    imap_disk = alloc_bitmap(N_IMAP);
+    puts("Loading inode bitmap.");
+    get_bitmap(imap_disk, IMAP);
+    list_inodes = get_list_used(imap_disk, IMAP);
+    if ((list_blocks = get_list_blocks_from_inodes(list_inodes)) == NULL){
+        puts("fs_inode_bitmap_walker ended with failure");
+        free_bitmap(imap_disk);
+        return -1;
+    }
+    free_bitmap(imap_disk);
+    puts("fs_inode_bitmap_walker ended with success");
+    return 0;
+}
+
+/*===========================================================================*
+ *              fs_zone_bitmap_walker                *
+ *===========================================================================*/
+int fs_zone_bitmap_walker()
+{
+    int* list;
+    puts("fs_zone_bitmap_walker started");
+    dev = fs_m_in.REQ_DEV;
+    printf("Getting super node from device %u ...\n", dev);
+    type = ZMAP;
+    sb = get_super(dev);
+    read_super(sb);
+    print_super_block(sb);
+    sleep(2);
+    init_global();
+    zmap_disk = alloc_bitmap(N_ZMAP);
+    puts("Loading zone bitmap.");
+    get_bitmap(zmap_disk, ZMAP);
+    list = get_list_used(zmap_disk, ZMAP);
+    free_bitmap(zmap_disk);
+    puts("fs_zone_bitmap_walker ended with success");
+    return 0;
+}
+
+/*===========================================================================*
+ *              fs_recovery                 *
+ *===========================================================================*/
+int fs_recovery(void){
+    puts("fs_recovery started");
+
+    puts("fs_recovery ended with success");
+    return 1;
 }
