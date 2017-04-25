@@ -126,6 +126,7 @@ int fs_inode_bitmap_walker()
     sb = get_super(dev);
     read_super(sb);
     print_super_block(sb);
+    sleep(2)
     init_global();
     imap_disk = alloc_bitmap(N_IMAP);
     puts("Loading inode bitmap.\n");
@@ -144,26 +145,25 @@ int fs_inode_bitmap_walker()
 /*===========================================================================*
  *				fs_zonewalker			     *
  *===========================================================================*/
-int fs_zonewalker()
+int fs_zone_bitmap_walker()
 {
-    /* Get the list of blocks used by the system from the zone bitmap */
-    printf("=== ZONEWALKER ===\n");
+    int* list;
+    puts("fs_zone_bitmap_walker started\n");
     dev = fs_m_in.REQ_DEV;
     printf("Getting super node from device %llu ...\n", dev);
     type = ZMAP;
     sb = get_super(dev);
     read_super(sb);
-    lsuper();
-    sleep(3);
+    print_super_block(sb);
+    sleep(2);
     init_global();
     zmap_disk = alloc_bitmap(N_ZMAP);
-    printf("Loading zone bitmap from disk ...\n");
+    puts("Loading zone bitmap.\n");
     get_bitmap(zmap_disk, ZMAP);
-    printf(" done.\n\n");
     sleep(3);
-    //print_bitmap(zmap_disk);
-    int* list = get_list_used(zmap_disk, ZMAP);
+    list = get_list_used(zmap_disk, ZMAP);
     free_bitmap(zmap_disk);
+    puts("fs_inode_bitmap_walker ended with success\n");
     return 0;
 }
 
@@ -245,6 +245,7 @@ int iterate_bitchunk(bitchunk_t *bitmap,int nblk, int* list, int type){
             sleep(1);
         }
     }
+    sleep(5);
     return NB_USED;
 }
 
@@ -253,7 +254,7 @@ int iterate_bitchunk(bitchunk_t *bitmap,int nblk, int* list, int type){
  *===========================================================================*/
 int* get_list_used(bitchunk_t *bitmap, int type)
 {
-    /* Get a list of unused blocks/inodes from the zone/inode bitmap */
+    /* Get a list of used blocks/inodes from the zone/inode bitmap */
     int* list;
     int nblk;
     int tot;
@@ -631,10 +632,6 @@ int fs_inode_bitmap_walker(){
 }
 */
 
-int fs_zone_bitmap_walker(){
-    puts("fs_zone_bitmap_walker");
-    return 0;
-}
 
 int fs_directory_bitmap_walker(){
     puts("fs_directory_bitmap_walker");
