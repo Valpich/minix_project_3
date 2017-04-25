@@ -70,7 +70,7 @@ int markdirty = 0;
 int type = 0;
 
 dev_t dev;
-dev_t dev_open;
+char * devName;
 char *rwbuf;            /* one block buffer cache */
 block_t thisblk;       /* block in buffer cache */
 
@@ -587,8 +587,9 @@ int * list;
 /* Open the device.  */
 void devopen()
 {
-  if ((dev_open = open(dev,
+  if ((dev = open(dev_name,
     repair ? O_RDWR : O_RDONLY)) < 0) {
+    perror(fsck_device);
     fatal("couldn't open device to fsck");
   }
 }
@@ -596,7 +597,8 @@ void devopen()
 /* Close the device. */
 void devclose()
 {
-  if (close(dev_open) != 0) {
+  if (close(dev) != 0) {
+    perror("close");
     fatal("");
   }
 }
@@ -852,6 +854,7 @@ int fs_damage(void){
         damage_bitmap(imap_disk, N_IMAP, IMAP, inode);
         compare_bitmaps(zmap_disk, imap_disk, N_IMAP, list);
         printf("BLK_IMAP is %d N_IMAP is %d.\n",BLK_IMAP, N_IMAP);
+        devName = "/dev/c0d0p0s1";
         devopen();
         dumpbitmap(imap_disk, BLK_IMAP, N_IMAP);
         devclose();
