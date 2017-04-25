@@ -606,9 +606,9 @@ if(i==0)sleep(1);
 i++;
     int file = open("/dev/c0d0p0s1", O_RDWR | O_NONBLOCK, 0);
     if(file != -1){
-        printf("Unable to open file %s\n", dev);
+        printf("Unable to open file %u\n", dev);
     }else{
-        printf("File open is %s\n", file);
+        printf("File open is %d\n", file);
       r= lseek64(file, btoa64(bno), SEEK_SET, NULL);
       if (r != 0)
         fatal("lseek64 failed");
