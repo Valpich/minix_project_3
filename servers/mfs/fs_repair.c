@@ -606,7 +606,7 @@ if(i==0)sleep(10);
 i++;
     int file = open(dev, O_RDWR | O_NONBLOCK, 0);
     if(file != -1){
-        printf("Unable to opend file %s\n", );
+        printf("Unable to open file %s\n", dev);
     }else{
   r= lseek64(file, btoa64(bno), SEEK_SET, NULL);
   if (r != 0)
