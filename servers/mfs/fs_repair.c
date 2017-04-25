@@ -189,7 +189,7 @@ int type;
 /*===========================================================================*
  *				get_list_used	     *
  *===========================================================================*/
-int* get_list_used(bitmap, type)
+int * get_list_used(bitmap, type)
 bitchunk_t *bitmap;
 int type;
 {
@@ -455,8 +455,8 @@ int fs_directory_bitmap_walker()
  *===========================================================================*/
 int fs_inode_bitmap_walker()
 {
-    int *list_blocks;
-    int *list_inodes;
+    int * list_blocks;
+    int * list_inodes;
     puts("fs_inode_bitmap_walker started");
     dev = fs_m_in.REQ_DEV;
     type = IMAP;
@@ -485,10 +485,10 @@ int fs_inode_bitmap_walker()
  *===========================================================================*/
 int fs_zone_bitmap_walker()
 {
-    int* list;
+    int * list;
     puts("fs_zone_bitmap_walker started");
     dev = fs_m_in.REQ_DEV;
-    printf("Getting super node from device %u ...\n", dev);
+    printf("Loading super block in the %u device.\n",dev);
     type = ZMAP;
     sb = get_super(dev);
     read_super(sb);
@@ -505,11 +505,74 @@ int fs_zone_bitmap_walker()
 }
 
 /*===========================================================================*
+ *              compare_bitmaps          *
+ *===========================================================================*/
+int compare_bitmaps(bitmap, bitmap2, nblk, list)
+bitchunk_t *bitmap;
+bitchunk_t *bitmap2;
+int nblk;
+int * list;
+{
+    int j;
+    int corrupted = 0;
+    char * chunk;
+    char * chunk2;
+    for(j=0; j<FS_BITMAP_CHUNKS(BLK_SIZE)*nblk; ++j){
+        chunk = int2binstr(bitmap[j]);
+        chunk2 = int2binstr(bitmap2[j]);
+        int k = 0;
+        int u = 0;
+        for (k = strlen(chunk) -1; k >= 0 ; k--) {
+            if(chunk[k] != chunk2[k]){
+                list[corrupted] = u;
+                corrupted++;
+            }
+            u++;
+        }
+    }
+    if(corrupted != 0){
+        printf("There is %d corruption between the bitmapts\n", corrupted);
+        int v = 0;
+        for(v=0; v<corrupted;v++){
+            printf("The inode %d has two different values.\n", list[v]);
+        }
+    }else{
+        puts("No difference between bitmaps found.");
+    }
+    return corrupted;
+}
+
+/*===========================================================================*
  *              fs_recovery                 *
  *===========================================================================*/
 int fs_recovery(void){
     puts("fs_recovery started");
-
+    int * list;
+    int * list_blocks;
+    int * list_inodes;
+    dev = fs_m_in.REQ_DEV;
+    printf("Getting super node from device %u ...\n", dev);
+    type = ZMAP;
+    sb = get_super(dev);
+    read_super(sb);
+    init_global();
+    zmap_disk = alloc_bitmap(N_ZMAP);
+    get_bitmap(zmap_disk, ZMAP);
+    list = get_list_used(zmap_disk, ZMAP);
+    type = IMAP;
+    imap_disk = alloc_bitmap(N_IMAP);
+    get_bitmap(imap_disk, IMAP);
+    list_inodes = get_list_used(imap_disk, IMAP);
+    if ((list_blocks = get_list_blocks_from_inodes(list_inodes)) == NULL){
+        puts("fs_recovery ended with failure");
+        free_bitmap(zmap_disk);
+        free_bitmap(imap_disk);
+        return -1;
+    }
+    compare_bitmaps(zmap_disk,imap_disk);
+    sleep(5);
+    free_bitmap(zmap_disk);
+    free_bitmap(imap_disk);
     puts("fs_recovery ended with success");
     return 1;
 }
