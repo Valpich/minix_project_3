@@ -613,6 +613,7 @@ i++;
         printf("Unable to open file %u\n", dev);
     }else{
         printf("File open is %d\n", file);
+        sleep(22);
       r= lseek64(file, btoa64(bno), SEEK_SET, NULL);
       if (r != 0)
         fatal("lseek64 failed");
@@ -620,8 +621,6 @@ i++;
         if (read(dev, rwbuf, BLOCK_SIZE) == BLOCK_SIZE)
             return;
       } else {
-        printf("Writting %s\n", rwbuf);
-        sleep(1);
         if (write(dev, rwbuf, BLOCK_SIZE) == BLOCK_SIZE){
             close(file);
             return;
@@ -672,8 +671,11 @@ int nblk;
   register int i;
   register bitchunk_t *p = bitmap;
 
-  for (i = 0; i < nblk; i++, bno++, p += WORDS_PER_BLOCK)
+  for (i = 0; i < nblk; i++, bno++, p += WORDS_PER_BLOCK){
+    printf("p is %s\n",p );
+    sleep(1);
     devwrite(bno, 0, (char *) p, BLOCK_SIZE);
+  }
 }
 
 /*===========================================================================*
