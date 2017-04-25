@@ -596,7 +596,7 @@ int dir;
   if (dir == READING && bno == thisblk) return;
   thisblk = bno;
 
-#if 0
+#if 1
 printf("%s at block %5d\n", dir == READING ? "reading " : "writing", bno);
 #endif
   r= lseek64(dev, btoa64(bno), SEEK_SET, NULL);
@@ -629,7 +629,6 @@ char *buf;
 int size;
 {
   if(!BLOCK_SIZE) fatal("devwrite() with unknown block size");
-  if (!repair) fatal("internal error (devwrite)");
   if (offset >= BLOCK_SIZE)
   {
     block += offset/BLOCK_SIZE;

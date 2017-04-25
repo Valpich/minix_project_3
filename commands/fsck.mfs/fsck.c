@@ -411,9 +411,10 @@ int dir;
   if (dir == READING && bno == thisblk) return;
   thisblk = bno;
 
-#if 0
+#if 1
 printf("%s at block %5d\n", dir == READING ? "reading " : "writing", bno);
 #endif
+printf("dev is %d SEEK_SET is  %d.\n", dev, SEEK_SET);
   r= lseek64(dev, btoa64(bno), SEEK_SET, NULL);
   if (r != 0)
 	fatal("lseek64 failed");
