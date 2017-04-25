@@ -6,11 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include <minix/config.h>
-#include <minix/const.h>
-#include <minix/type.h>
-#include <minix/u64.h>
-#include <minix/fslib.h>
+
 #include <stdio.h>
 #include <sys/stat.h>
 #include <a.out.h>
