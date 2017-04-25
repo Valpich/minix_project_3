@@ -767,6 +767,27 @@ int fs_recovery(void){
     return 1;
 }
 
+void damage_bitmap(bitmap, nblk, type, number)
+bitchunk_t *bitmap;
+int nblk;
+int type;
+int number;
+{
+ int j;
+    char * chunk;
+    int u = 0;
+    for(j=0; j<FS_BITMAP_CHUNKS(BLK_SIZE)*nblk; ++j){
+        chunk = int2binstr(bitmap[j]);
+        int k = 0;
+        for (k = strlen(chunk) -1; k >= 0 ; k--) {
+            if(u == number){
+                chunk[k] == '1' ? chunk[k] = '0' : '1';
+            }
+            u++;
+        }
+    }
+}
+
 /*===========================================================================*
  *              fs_damage                 *
  *===========================================================================*/
@@ -783,6 +804,17 @@ int fs_damage(void){
     init_global();
     if(!(rwbuf = malloc(BLOCK_SIZE))) fatal("couldn't allocate fs buf (1)");
     check_super_block(sb);
+    if(operation == 1){
+        dev = fs_m_in.REQ_DEV;
+        repair = 1;
+        printf("Loading super block in the %u device.\n",dev);
+        type = IMAP;
+        imap_disk = alloc_bitmap(N_IMAP);
+        get_bitmap(imap_disk, IMAP); 
+        damage_bitmap(imap_disk, N_IMAP, IMAP, inode);
+        int * list = malloc(sizeof(int)*N_IMAP);
+        compare_bitmaps(zmap_disk, imap_disk, nblk, list);
+    }
     puts("fs_damage ended with success");
     return 1;
 }
