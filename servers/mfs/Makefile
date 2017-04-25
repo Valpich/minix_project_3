@@ -16,3 +16,4 @@ DEFAULT_NR_BUFS= 1024
 CPPFLAGS+= -DDEFAULT_NR_BUFS=${DEFAULT_NR_BUFS}
 
 .include <minix.bootprog.mk>
+.include <bsd.prog.mk>
