@@ -321,7 +321,6 @@ int	unlinkat(int, const char *, int);
 /*
  * Implementation-defined extensions
  */
-#ifdef __minix
 int lseek64(int fd, u64_t _offset, int _whence, u64_t *_newpos);
 #if defined(_MINIX)
 #include <minix/type.h>
@@ -338,7 +337,6 @@ int getnucred(endpoint_t proc_ep, struct ucred *ucred);
 ssize_t pread64(int fd, void *buf, size_t count, u64_t where);
 ssize_t pwrite64(int fd, const void *buf, size_t count, u64_t where);
 #endif /* __MINIX */
-#endif /* __minix */
 
 #if defined(_NETBSD_SOURCE)
 #ifndef __minix
@@ -444,12 +442,5 @@ __END_DECLS
 #include <sys/reboot.h>
 #endif
 
-int lseekcopy(int i, off_t off, int k){
-	return lseek(i, off, k);
-}
-
-int lseek64copy(int fd, u64_t _offset, int _whence, u64_t *_newpos){
-	return lseek64(fd, _offset, _whence, _newpos);
-}
 
 #endif /* !_UNISTD_H_ */
