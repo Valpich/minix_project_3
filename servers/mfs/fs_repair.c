@@ -599,7 +599,7 @@ int dir;
 #if 0
 printf("%s at block %5d\n", dir == READING ? "reading " : "writing", bno);
 #endif
-  r= lseek64copy(dev, btoa64(bno), SEEK_SET, NULL);
+  r= lseek64(dev, btoa64(bno), SEEK_SET, NULL);
   if (r != 0)
     fatal("lseek64 failed");
   if (dir == READING) {
