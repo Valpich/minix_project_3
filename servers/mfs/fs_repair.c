@@ -32,7 +32,6 @@
 #include <string.h>
 #include <unistd.h>
 #include <a.out.h>
-#include <sys-minix>
 
 /* Defines */
 #define EXIT_OK                    0
