@@ -574,6 +574,43 @@ int * list;
 }
 
 /*===========================================================================*
+ *              devio          *
+ *===========================================================================*/
+void devio(bno, dir)
+block_nr bno;
+int dir;
+{
+  int r;
+
+  if(!block_size) fatal("devio() with unknown block size");
+  if (dir == READING && bno == thisblk) return;
+  thisblk = bno;
+
+#if 0
+printf("%s at block %5d\n", dir == READING ? "reading " : "writing", bno);
+#endif
+  r= lseek64(dev, btoa64(bno), SEEK_SET, NULL);
+  if (r != 0)
+    fatal("lseek64 failed");
+  if (dir == READING) {
+    if (read(dev, rwbuf, block_size) == block_size)
+        return;
+  } else {
+    if (write(dev, rwbuf, block_size) == block_size)
+        return;
+  }
+
+  printf("%s: can't %s block %ld (error = 0x%x)\n", prog,
+         dir == READING ? "read" : "write", (long) bno, errno);
+  if (dir == READING) {
+    printf("Continuing with a zero-filled block.\n");
+    memset(rwbuf, 0, block_size);
+    return;
+  }
+  fatal("");
+}
+
+/*===========================================================================*
  *              devwrite          *
  *===========================================================================*/
 void devwrite(block, offset, buf, size)
