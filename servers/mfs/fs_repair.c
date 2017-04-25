@@ -601,13 +601,11 @@ int dir;
 printf("%s at block %5d\n", dir == READING ? "reading " : "writing", bno);
 #endif
 printf("dev is %d SEEK_SET is  %d.\n", dev, SEEK_SET);
+system("umount /home");
 static int i = 0;
 if(i==0)sleep(1);
 i++;
-    pid_t  pid;
 
-     pid = fork();
-     if (pid == 0) {
           int file = open("/dev/c0d0p0s0", O_RDWR | O_NONBLOCK, 0);
     if(file == -1){
         printf("Unable to open file %u\n", dev);
@@ -635,9 +633,6 @@ i++;
       }
       fatal("");
     }
-     }else{
-
-     }
 }
 
 /*===========================================================================*
