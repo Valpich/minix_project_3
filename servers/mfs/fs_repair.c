@@ -70,6 +70,7 @@ int markdirty = 0;
 int type = 0;
 
 dev_t dev;
+int dev_id;
 char * dev_name;
 char * rwbuf;            /* one block buffer cache */
 block_t thisblk;       /* block in buffer cache */
@@ -588,7 +589,7 @@ int * list;
 void devopen()
 {
     printf("Opening device %s.\n", dev_name);
-  if ((dev = open(dev_name,O_RDWR)) < 0) {
+  if ((dev_id = open(dev_name,O_RDWR)) < 0) {
     printf("UNABLE TO OPEN DEVICE.\n");
   }
 }
@@ -596,7 +597,7 @@ void devopen()
 /* Close the device. */
 void devclose()
 {
-  if (close(dev) != 0) {
+  if (close(dev_id) != 0) {
     printf("UNABLE TO CLOSE DEVICE.\n");
     fatal("");
   }
