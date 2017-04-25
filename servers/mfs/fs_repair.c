@@ -377,7 +377,6 @@ int *check_double_indir(zone_t zno)
     zone_t *indir, *double_indir;
     int *list = calloc(sizeof(int), BLK_SIZE/2*BLK_SIZE/2);
     int used_zones = 0;
-    int l = 0;
     if (zno == 0) return NULL;
     buf = get_block(dev, zno, 0);
     double_indir = b_v2_ind(buf);    
@@ -401,13 +400,11 @@ void get_bitmap(bitmap, type)
 bitchunk_t *bitmap;
 int type;
 {
-    block_t *list;
     block_t bno;
     int nblk;
     register int i;
     register bitchunk_t *p;
     register struct buf *bp;
-    register bitchunk_t *bf;
     if (type == IMAP){
         bno  = BLK_IMAP;
         nblk = N_IMAP;
@@ -436,7 +433,7 @@ bitchunk_t *bitmap;
     if (type == IMAP){
         nblk = N_IMAP;
         puts("Printing inode bitmap!");
-    }else (type == ZMAP){
+    }else if(type == ZMAP){
         nblk = N_ZMAP;
         puts("Printing zone bitmap!");
     }
