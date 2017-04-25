@@ -393,6 +393,7 @@ int * inodes;
         printf("Number of indirect zones:        %d\n", indirect_zones);
         printf("Number of double indirect zones: %d\n", double_indirect_zones);
     }
+    sleep(5);
     NB_ZONES_USED_I = used_zones;
     return list;
 }
@@ -779,12 +780,15 @@ int number;
     for(j=0; j<FS_BITMAP_CHUNKS(BLK_SIZE)*nblk; ++j){
         chunk = int2binstr(bitmap[j]);
         int k = 0;
+        printf("chunk before is %s.\n", chunk);
         for (k = strlen(chunk) -1; k >= 0 ; k--) {
             if(u == number){
                 chunk[k] == '1' ? chunk[k] = '0' : '1';
             }
             u++;
         }
+        printf("chunk after is %s.\n", chunk);
+        sleep(1);
     }
 }
 
