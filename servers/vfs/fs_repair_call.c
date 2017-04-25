@@ -105,7 +105,6 @@ int do_damage(){
             m.m1_p1 = folder;
             mark_vmnt_free(vmp);
             RC_CODE = fs_sendrec(vmp->m_fs_e, &m);
-        }
     }
     return 0;
 }
