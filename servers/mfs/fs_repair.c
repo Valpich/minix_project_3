@@ -1,39 +1,26 @@
-
-#define __minix 1;
-#include "fs.h"
 #include <sys/types.h>
 #include <ctype.h>
+#include <errno.h>
 #include <fcntl.h>
-#include <stdio.h>
+#include <limits.h>
 #include <stdlib.h>
 #include <string.h>
-#include <minix/ipc.h>
+#include <unistd.h>
 #include <minix/config.h>
 #include <minix/const.h>
 #include <minix/type.h>
 #include <minix/u64.h>
+#include "mfs/const.h"
+#include "mfs/inode.h"
+#include "mfs/type.h"
+#include "mfs/mfsdir.h"
 #include <minix/fslib.h>
-#include "const.h"
-#include "inode.h"
-#include "type.h"
-#include "const.h"
-#include "mfsdir.h"
-#include "super.h"
-#include <unistd.h>
-#include <time.h>
-#include <limits.h>
-#include <errno.h>
-#include "buf.h"
+#include <stdio.h>
 #include <sys/stat.h>
-#include <dirent.h>
-#include <ctype.h>
-#include <errno.h>
-#include <fcntl.h>
-#include <limits.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
 #include <a.out.h>
+#include <dirent.h>
+
+#include "exitvalues.h"
 
 /* Defines */
 #define EXIT_OK                    0
