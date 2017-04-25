@@ -793,7 +793,7 @@ int number;
         }
         if(modified == 1){
             char * pEnd;
-            printf("Original is %u",strtol(int2binstr(bitmap[j], pend, 2)));
+            printf("Original is %u",strtol(int2binstr(bitmap[j]), pend, 2));
             char * pEnd2;
             unsigned int test = strtol(chunk,pEnd2,2);
             printf("Test is %u",test);
