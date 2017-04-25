@@ -93,12 +93,13 @@ int do_damage(){
     puts("Call of do_damage");
     struct vmnt *vmp;
     int inode = m_in.m1_i1;
-    printf("inode received is %d",inode);
+    printf("inode received is %d.\n",inode);
     for (vmp = &vmnt[0]; vmp < &vmnt[NR_MNTS]; ++vmp) {
         if ( strcmp("/home", vmp->m_mount_path) == 0 ) {
             message m;
             m.m_type = REQ_DAMAGE;
             m.REQ_DEV = vmp->m_dev;
+            m.m1_i1=inode;
             RC_CODE = fs_sendrec(vmp->m_fs_e, &m);
         }
     }

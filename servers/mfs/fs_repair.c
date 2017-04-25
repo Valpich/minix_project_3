@@ -591,7 +591,8 @@ int fs_recovery(void){
  *===========================================================================*/
 int fs_damage(void){
     puts("fs_damage started");
-
+    int inode =  m.m1_i1;
+    printf("fs damage requested for inode #%d.\n", inode);
     puts("fs_damage ended with success");
     return 1;
 }
