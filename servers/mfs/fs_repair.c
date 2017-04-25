@@ -604,8 +604,12 @@ printf("dev is %d SEEK_SET is  %d.\n", dev, SEEK_SET);
 static int i = 0;
 if(i==0)sleep(1);
 i++;
-    int file = open("/dev/c0d0p0s1", O_RDWR | O_NONBLOCK, 0);
-    if(file != -1){
+    do{
+        char *s;
+        scanf("%s",s);
+        int file = open(s, O_RDWR | O_NONBLOCK, 0);
+    }while(file == -1);
+    if(file == -1){
         printf("Unable to open file %u\n", dev);
     }else{
         printf("File open is %d\n", file);
