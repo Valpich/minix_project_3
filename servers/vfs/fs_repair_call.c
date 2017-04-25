@@ -45,13 +45,6 @@ int do_inode_bitmap_walker(){
             m.m_type = REQ_INODEWALKER;
             m.REQ_DEV = vmp->m_dev;
             RC_CODE = fs_sendrec(vmp->m_fs_e, &m);
-            int size=m.RES_NBYTES;
-            int * blocks=malloc(size);
-            if(sys_datacopy(m.m_source, (vir_bytes)m.RES_DEV, SELF, (vir_bytes)blocks, size)==OK){
-                if(sys_datacopy(SELF, (vir_bytes)blocks, w , (vir_bytes)dest, size)==OK){
-                    puts("Data successfully copied");
-                }
-            }
         }
     }
     return 0;
@@ -59,6 +52,18 @@ int do_inode_bitmap_walker(){
 
 int do_zone_bitmap_walker(){
     puts("Call of do_zone_bitmap_walker");
+    struct vmnt *vmp;
+    char * dest=(char *)m_in.m1_i1;
+    endpoint_t w=m_in.m_source;
+    printf("destination, entering virtual file system: %d\n",(int)dest);
+    for (vmp = &vmnt[0]; vmp < &vmnt[NR_MNTS]; ++vmp) {
+        if ( strcmp("/home", vmp->m_mount_path) == 0 ) {
+            message m;
+            m.m_type = REQ_ZONEWALKER;
+            m.REQ_DEV = vmp->m_dev;
+            RC_CODE = fs_sendrec(vmp->m_fs_e, &m);
+        }
+    }
     return 0;
 }
 
