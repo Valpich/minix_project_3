@@ -34,6 +34,7 @@
 #define V2_NR_TZONES      10    /* total # zone numbers in a V2 inode */
 #define BITMAP_CHUNKS (BLOCK_SIZE/usizeof (bitchunk_t))
 #define MAX_ZONES (V2_NR_DZONES+V2_INDIRECTS(BLOCK_SIZE)+(long)V2_INDIRECTS(BLOCK_SIZE)*V2_INDIRECTS(BLOCK_SIZE))
+#define btoa64(b)   (mul64u(b, BLOCK_SIZE))
 
 /* Global variables */
 bitchunk_t *imap_disk;			 /* imap from the disk */
@@ -63,6 +64,8 @@ int type = 0;
 
 dev_t dev;
 char *rwbuf;            /* one block buffer cache */
+block_t 
+;       /* block in buffer cache */
 
 
 /*===========================================================================*
@@ -144,6 +147,7 @@ void init_global()
     BLK_ZMAP 		= BLK_IMAP + N_IMAP;
     BLK_ILIST 		= BLK_ZMAP + N_ZMAP;
     WORDS_PER_BLOCK = BLOCK_SIZE / (int)sizeof(bitchunk_t);
+    thisblk = NO_BLOCK;
 }
 
 /*===========================================================================*
