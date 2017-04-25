@@ -38,6 +38,8 @@
 #define V1_INDIRECTS   (BLOCK_SIZE/V1_ZONE_NUM_SIZE)  /* # zones/indir block */
 #define V2_ZONE_NUM_SIZE            usizeof (zone_t)  /* # bytes in V2 zone  */
 #define V2_INDIRECTS   (BLOCK_SIZE/V2_ZONE_NUM_SIZE)  /* # zones/indir block */
+#define SCALE           ((int) ztob(1)) /* # blocks in a zone */
+
 /* Global variables */
 bitchunk_t *imap_disk;			 /* imap from the disk */
 bitchunk_t *zmap_disk;			 /* zmap from the disk */
