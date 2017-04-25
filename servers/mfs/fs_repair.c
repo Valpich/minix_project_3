@@ -1,4 +1,7 @@
 
+#include "fs.h"
+#include "super.h"
+#include "buf.h"
 
 #include <sys/types.h>
 #include <ctype.h>
@@ -21,10 +24,6 @@
 #include <sys/stat.h>
 #include <a.out.h>
 #include <dirent.h>
-
-#include "fs.h"
-#include "super.h"
-#include "buf.h"
 
 
 /* Defines */
