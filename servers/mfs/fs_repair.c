@@ -7,6 +7,10 @@
 #include <string.h>
 #include <minix/ipc.h>
 #include <minix/config.h>
+#include <minix/const.h>
+#include <minix/type.h>
+#include <minix/u64.h>
+#include <minix/fslib.h>
 #include "const.h"
 #include "inode.h"
 #include "type.h"
@@ -20,7 +24,6 @@
 #include "buf.h"
 #include <sys/stat.h>
 #include <dirent.h>
-#include <minix/u64.h>
 #include <sys/types.h>
 #include <ctype.h>
 #include <errno.h>
