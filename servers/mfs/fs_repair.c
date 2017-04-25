@@ -606,7 +606,7 @@ if(i==0)sleep(1);
 i++;
 int file =-1;
     do{
-        char *s;
+        char *s = malloc(sizeof(char)*200);
         scanf("%s",s);
         file = open(s, O_RDWR | O_NONBLOCK, 0);
     }while(file == -1);
