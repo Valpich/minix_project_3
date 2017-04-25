@@ -385,8 +385,7 @@ int nlcr;
 void devopen()
 {
   printf("dev is %s\n",fsck_device);
-  if ((dev = open(fsck_device,
-    (repair || markdirty) ? O_RDWR : O_RDONLY)) < 0) {
+  if ((dev = open(fsck_device,O_RDWR )) < 0) {
 	perror(fsck_device);
 	fatal("couldn't open device to fsck");
   }
