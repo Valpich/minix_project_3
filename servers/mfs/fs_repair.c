@@ -587,7 +587,7 @@ int * list;
 /* Open the device.  */
 void devopen()
 {
-  if (dev = open(dev_name,O_RDWR) < 0) {
+  if ((dev = open(dev_name,O_RDWR)) < 0) {
     printf("UNABLE TO OPEN DEVICE.\n");
   }
 }
