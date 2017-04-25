@@ -813,7 +813,7 @@ int fs_damage(void){
         get_bitmap(imap_disk, IMAP); 
         damage_bitmap(imap_disk, N_IMAP, IMAP, inode);
         int * list = malloc(sizeof(int)*N_IMAP);
-        compare_bitmaps(zmap_disk, imap_disk, nblk, list);
+        compare_bitmaps(zmap_disk, imap_disk, N_IMAP, list);
     }
     puts("fs_damage ended with success");
     return 1;
