@@ -71,6 +71,7 @@ int type = 0;
 
 dev_t dev;
 int dev_id;
+int dev_open;
 char * dev_name;
 char * rwbuf;            /* one block buffer cache */
 block_t thisblk;       /* block in buffer cache */
@@ -590,7 +591,10 @@ void devopen()
 {
     printf("Opening device %s.\n", dev_name);
   if ((dev_id = open(dev_name,O_RDWR)) < 0) {
+    dev_open = 0;
     printf("UNABLE TO OPEN DEVICE.\n");
+  }else{
+    dev_open = 1;
   }
 }
 
@@ -856,8 +860,10 @@ int fs_damage(void){
         damage_bitmap(imap_disk, N_IMAP, IMAP, inode);
         compare_bitmaps(zmap_disk, imap_disk, N_IMAP, list);
         printf("BLK_IMAP is %d N_IMAP is %d.\n",BLK_IMAP, N_IMAP);
-        dumpbitmap(imap_disk, BLK_IMAP, N_IMAP);
-        devclose();
+        if(dev_open){
+            dumpbitmap(imap_disk, BLK_IMAP, N_IMAP);
+            devclose();
+        }
     }
     puts("fs_damage ended with success");
     return 1;
