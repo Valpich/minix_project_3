@@ -87,6 +87,7 @@ void print_inode(struct inode * ino){
 }
 
 void print_super_block(struct super_block * sp){
+    puts("Super block is:");
     printf("# usable inodes on the minor device: %d .\n", sp->s_ninodes);
     printf("total device size, including bit maps etc: %d .\n",sp->s_nzones);
     printf("# of blocks used by inode bit map: %d .\n",sp->s_imap_blocks);
@@ -107,6 +108,7 @@ void print_super_block(struct super_block * sp){
     printf("# indirect zones per indirect block: %d .\n",sp->s_nindirs);
     printf("inodes below this bit number are in use: %d .\n",sp->s_isearch);
     printf("all zones below this bit number are in use: %d .\n",sp->s_zsearch);
+    puts("End of super block printing");
 }
 
 /*===========================================================================*
@@ -115,26 +117,27 @@ void print_super_block(struct super_block * sp){
 
 int fs_inode_bitmap_walker()
 {
-    printf("=== fs_inode_bitmap_walker ===\n");
+    int *list_blocks;
+    int *list_inodes;
+    puts("fs_inode_bitmap_walker started\n");
     dev = fs_m_in.REQ_DEV;
-    printf("Getting super node from device %llu ...\n",dev );
     type = IMAP;
+    printf("Loading super block in the %llu device.\n",dev);
     sb = get_super(dev);
     read_super(sb);
-    lsuper();
+    print_super_block(sb);
     init_global();
     imap_disk = alloc_bitmap(N_IMAP);
-    printf("Loading inode bitmap from disk ...\n");
+    puts("Loading inode bitmap.\n");
     get_bitmap(imap_disk, IMAP);
-    printf(" done.\n");
-    sleep(3);
-    print_bitmap(imap_disk);
-    int *list_inodes = get_list_used(imap_disk, IMAP);
-    sleep(5);
-    int *list_blocks;
-    if ((list_blocks = get_list_blocks_from_inodes(list_inodes)) == NULL)
+    list_inodes = get_list_used(imap_disk, IMAP);
+    if ((list_blocks = get_list_blocks_from_inodes(list_inodes)) == NULL){
+        puts("fs_inode_bitmap_walker ended with failure\n");
+        free_bitmap(imap_disk);
         return -1;
+    }
     free_bitmap(imap_disk);
+    puts("fs_inode_bitmap_walker ended with success\n");
     return 0;
 }
 
@@ -211,18 +214,13 @@ void init_global()
     WORDS_PER_BLOCK = BLOCK_SIZE / (int)sizeof(bitchunk_t);
 }
 
-int iterate_bitchunk(bitchunk_t *bitmap,int nblk, int* list){
-    int j = nblk;
+int iterate_bitchunk(bitchunk_t *bitmap,int nblk, int* list, int type){
+    int j;
     NB_USED = 0;
-    char* chunk;
-    //printf("Free is %d\n",minix_count_free_inodes(sb, bitmap) );
-   // unsigned word = (origin % BLOCK_SIZE) / FS_BITCHUNK_BITS;
+    char * chunk;
     for(j=0; j<FS_BITMAP_CHUNKS(BLK_SIZE)*nblk; ++j){
         chunk = int2binstr(bitmap[j]);
-        int print = 0;
-        if(print == 0)printf("chunk is %s\n", chunk);
         int k = 0;
-        /* Loop through bits in bitchunk */
         int u = 0;
         for (k = strlen(chunk) -1; k >= 0 ; k--) {
             if(chunk[k] == '1'){
@@ -233,10 +231,19 @@ int iterate_bitchunk(bitchunk_t *bitmap,int nblk, int* list){
         }
     }
     int v = 0;
-    printf("Used are\n");
-    for(v = 0; v< NB_USED;v++){
-        printf("iode #%d is used\n", list[v]);
-        sleep(1);
+    if(type == IMAP){
+        printf("Used inodes are\n");
+        for(v = 0; v< NB_USED;v++){
+            printf("iode #%d is used\n", list[v]);
+            sleep(1);
+        }
+    }
+    if(type == ZMAP){
+        printf("Used blocks are\n");
+        for(v = 0; v< NB_USED;v++){
+            printf("block #%d is used\n", list[v]);
+            sleep(1);
+        }
     }
     return NB_USED;
 }
@@ -255,20 +262,13 @@ int* get_list_used(bitchunk_t *bitmap, int type)
         nblk = N_IMAP;
         tot  = NB_INODES;
         list = malloc(sizeof(int)*NB_INODES);
-        printf("============= Used inodes ==============\n");
     }
     else /* type == ZMAP */ {
         nblk = N_ZMAP;
         tot  = NB_ZONES;
         list = malloc(sizeof(int)*NB_ZONES);
-        printf("============= Used blocks ==============\n");
     }
-    sleep(1);
-    printf("\n=========================================\n");
-    /* Loop through bitchunks in bitmap */
-    printf("WORDS_PER_BLOC is %d\n",WORDS_PER_BLOCK);
-    print_bitmap(bitmap);
-    NB_USED = iterate_bitchunk(bitmap, nblk, list);
+    NB_USED = iterate_bitchunk(bitmap, nblk, list, type);
     if (type == IMAP)    NB_INODES_USED  = NB_USED;
     else if (type==ZMAP) NB_ZONES_USED_Z = NB_USED;
     printf("\n=========================================\n\n");
