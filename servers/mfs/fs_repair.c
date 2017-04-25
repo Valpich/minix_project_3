@@ -167,56 +167,84 @@ size_t blk_size;
 void check_super_block(sb)
 struct super_block *sb;
 {
-  register int n;
-  register off_t maxsize;
-  n = bitmapsize((bit_t) sb->s_ninodes + 1, BLOCK_SIZE);
-  if (sb->s_magic != SUPER_V2 && sb->s_magic != SUPER_V3)
-    fatal("bad magic number in super block");
-  if (sb->s_imap_blocks < n) {
-    printf("need %d bocks for inode bitmap; only have %d\n",
-        n, sb->s_imap_blocks);
-    fatal("too few imap blocks");
-  }
-  if (sb->s_imap_blocks != n) {
-    printf("warning: expected %d imap_block%s", n, "s");
-    printf(" instead of %d\n", sb->s_imap_blocks);
-  }
-  n = bitmapsize((bit_t) sb->s_zones, BLOCK_SIZE);
-  if (sb->s_zmap_blocks < n) fatal("too few zmap blocks");
-  if (sb->s_zmap_blocks != n) {
+    register int n;
+    register off_t maxsize;
+    n = bitmapsize((bit_t) sb->s_ninodes + 1, BLOCK_SIZE);
+    if (sb->s_magic != SUPER_V2 && sb->s_magic != SUPER_V3){
+        fatal("bad magic number in super block");
+    }else{
+        puts("super block magic number is correct.");
+    }
+    if (sb->s_imap_blocks < n) {
+        printf("need %d bocks for inode bitmap; only have %d\n", n, sb->s_imap_blocks);
+        fatal("too few imap blocks");
+    }else{
+        puts("super block s_imap_blocks size is correct.");
+    }
+    if (sb->s_imap_blocks != n) {
+        printf("warning: expected %d imap_block%s", n, "s");
+        printf(" instead of %d\n", sb->s_imap_blocks);
+    }else{
+        puts("super block s_imap_blocks size is correct.");
+    }
+    n = bitmapsize((bit_t) sb->s_zones, BLOCK_SIZE);
+    if (sb->s_zmap_blocks < n) {
+        fatal("too few zmap blocks");
+    }else{
+        puts("super block s_zmap_blocks size is correct.");
+    }
+    if (sb->s_zmap_blocks != n) {
     printf("warning: expected %d zmap_block%s", n, "s");
     printf(" instead of %d\n", sb->s_zmap_blocks);
-  }
-  if (sb->s_log_zone_size >= 8 * sizeof(block_t))
-    fatal("log_zone_size too large");
-  if (sb->s_log_zone_size > 8) printf("warning: large log_zone_size (%d)\n",
-           sb->s_log_zone_size);
-  sb->s_firstdatazone = (BLK_ILIST + N_ILIST +  ((int)((block_t) (1) << sb->s_log_zone_size)) - 1) >> sb->s_log_zone_size;
-  if (sb->s_firstdatazone_old != 0) {
-    if (sb->s_firstdatazone_old >= sb->s_zones)
-        fatal("first data zone too large");
-    if (sb->s_firstdatazone_old < sb->s_firstdatazone)
-        fatal("first data zone too small");
-    if (sb->s_firstdatazone_old != sb->s_firstdatazone) {
-        printf("warning: expected first data zone to be %u ",
-            sb->s_firstdatazone);
-        printf("instead of %u\n", sb->s_firstdatazone_old);
-        sb->s_firstdatazone = sb->s_firstdatazone_old;
     }
-  }
-  maxsize = MAX_FILE_POS;
-  if (((maxsize - 1) >> sb->s_log_zone_size) / BLOCK_SIZE >= MAX_ZONES)
-    maxsize = ((long) MAX_ZONES * BLOCK_SIZE) << sb->s_log_zone_size;
-  if(maxsize <= 0)
-    maxsize = LONG_MAX;
-  if (sb->s_max_size != maxsize) {
-    printf("warning: expected max size to be %d ", maxsize);
-    printf("instead of %d\n", sb->s_max_size);
-  }
-
-  if(sb->s_flags & MFSFLAG_MANDATORY_MASK) {
-    fatal("unsupported feature bits - newer fsck needed");
-  }
+    if (sb->s_log_zone_size >= 8 * sizeof(block_t)){
+        fatal("log_zone_size too large");
+    }else{
+        puts("super block s_log_zone_size is correct.");
+    }
+    if (sb->s_log_zone_size > 8) {
+        printf("warning: large log_zone_size (%d)\n", sb->s_log_zone_size);
+    }else{
+        puts("super block s_log_zone_size is not large.");
+    }
+    sb->s_firstdatazone = (BLK_ILIST + N_ILIST +  ((int)((block_t) (1) << sb->s_log_zone_size)) - 1) >> sb->s_log_zone_size;
+    if (sb->s_firstdatazone_old != 0) {
+        if (sb->s_firstdatazone_old >= sb->s_zones){
+            fatal("first data zone too large");
+        }else{
+            puts("super block s_firstdatazone is not too large.");
+        }
+        if (sb->s_firstdatazone_old < sb->s_firstdatazone){
+            fatal("first data zone too small");
+        }else{
+            puts("super block s_firstdatazone is not too small.");
+        }
+        if (sb->s_firstdatazone_old != sb->s_firstdatazone) {
+            printf("warning: expected first data zone to be %u ", sb->s_firstdatazone);
+            printf("instead of %u\n", sb->s_firstdatazone_old);
+            sb->s_firstdatazone = sb->s_firstdatazone_old;
+        }else{
+            puts("super block s_firstdatazone_old is correct.");
+        }
+    }
+    maxsize = MAX_FILE_POS;
+    if (((maxsize - 1) >> sb->s_log_zone_size) / BLOCK_SIZE >= MAX_ZONES){
+        maxsize = ((long) MAX_ZONES * BLOCK_SIZE) << sb->s_log_zone_size;
+    }
+    if(maxsize <= 0){
+        maxsize = LONG_MAX;
+    }
+    if (sb->s_max_size != maxsize) {
+        printf("warning: expected max size to be %d ", maxsize);
+        printf("instead of %d\n", sb->s_max_size);
+    }else{
+        puts("super block s_max_size is correct.");
+    }
+    if(sb->s_flags & MFSFLAG_MANDATORY_MASK) {
+        fatal("unsupported feature bits - newer fsck needed");
+    }else{
+        puts("super block s_flags is correct.");
+    }
 }
 
 /*===========================================================================*
