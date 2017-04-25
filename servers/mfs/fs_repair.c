@@ -779,17 +779,27 @@ int number;
     int u = 0;
     for(j=0; j<FS_BITMAP_CHUNKS(BLK_SIZE)*nblk; ++j){
         chunk = int2binstr(bitmap[j]);
+        int modified = 0;
         int k = 0;
         for (k = strlen(chunk) -1; k >= 0 ; k--) {
             if(u == number){
                 printf("chunk before is %s.\n", chunk);
                 chunk[k] == '1' ? chunk[k] = '0' : '1';
                 printf("chunk after is %s.\n", chunk);
+                modified = 1;
                 sleep(1);
             }
             u++;
         }
-        bitmap[j] = chunk;
+        if(modified == 1){
+            char * pEnd;
+            printf("Original is %u",strtol(int2binstr(bitmap[j], pend, 2)));
+            char * pEnd2;
+            unsigned int test = strtol(chunk,pEnd2,2);
+            printf("Test is %u",test);
+            bitmap[j] = test;
+            sleep(1);
+        }
     }
 }
 
