@@ -21,6 +21,14 @@
 #include <sys/stat.h>
 #include <dirent.h>
 #include <minix/u64.h>
+#include <sys/types.h>
+#include <ctype.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <limits.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
 
 /* Defines */
 #define EXIT_OK                    0
