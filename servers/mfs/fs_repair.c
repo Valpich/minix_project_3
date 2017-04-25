@@ -789,6 +789,7 @@ int number;
             }
             u++;
         }
+        bitmap[j] = chunk;
     }
 }
 
