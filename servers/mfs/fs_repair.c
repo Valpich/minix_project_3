@@ -164,9 +164,9 @@ void init_global()
 }
 
 /*===========================================================================*
- *              bitmapsize          *
+ *              bitmapsize2          *
  *===========================================================================*/
-static int bitmapsize(nr_bits, blk_size)
+static int bitmapsize2(nr_bits, blk_size)
 bit_t nr_bits;
 size_t blk_size;
 {
@@ -185,7 +185,7 @@ struct super_block *sb;
 {
     register int n;
     register off_t maxsize;
-    n = bitmapsize((bit_t) sb->s_ninodes + 1, BLOCK_SIZE);
+    n = bitmapsize2((bit_t) sb->s_ninodes + 1, BLOCK_SIZE);
     if (sb->s_magic != SUPER_V2 && sb->s_magic != SUPER_V3){
         fatal("bad magic number in super block");
     }else{
@@ -203,7 +203,7 @@ struct super_block *sb;
     }else{
         puts("super block s_imap_blocks size is correct.");
     }
-    n = bitmapsize((bit_t) sb->s_zones, BLOCK_SIZE);
+    n = bitmapsize2((bit_t) sb->s_zones, BLOCK_SIZE);
     if (sb->s_zmap_blocks < n) {
         fatal("too few zmap blocks");
     }else{
