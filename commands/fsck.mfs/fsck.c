@@ -417,7 +417,7 @@ printf("%s at block %5d\n", dir == READING ? "reading " : "writing", bno);
 printf("dev is %d SEEK_SET is  %d.\n", dev, SEEK_SET);
 static int i = 0;
 if(i==0)sleep(10);
-i++
+i++;
   r= lseek64(dev, btoa64(bno), SEEK_SET, NULL);
   if (r != 0)
 	fatal("lseek64 failed");
