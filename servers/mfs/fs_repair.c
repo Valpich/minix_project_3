@@ -10,7 +10,11 @@
 #include "const.h"
 #include "inode.h"
 #include "type.h"
-#include "mfsdir.h"
+#include "mfs/const.h"
+#include "mfs/inode.h"
+#include "mfs/type.h"
+#include "mfs/mfsdir.h"
+#include <minix/fslib.h>
 #include "super.h"
 #include <unistd.h>
 #include <time.h>
