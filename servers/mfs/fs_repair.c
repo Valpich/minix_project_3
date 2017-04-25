@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <minix/ipc.h>
+#include <minix/config.h>
 #include "const.h"
 #include "inode.h"
 #include "type.h"
