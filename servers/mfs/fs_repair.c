@@ -24,6 +24,7 @@
 
 #include "fs.h"
 #include "super.h"
+#include "buf.h"
 
 
 /* Defines */
