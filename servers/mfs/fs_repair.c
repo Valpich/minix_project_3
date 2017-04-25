@@ -12,7 +12,6 @@
 #include "type.h"
 #include "const.h"
 #include "mfsdir.h"
-#include <minix/fslib.h>
 #include "super.h"
 #include <unistd.h>
 #include <time.h>
@@ -21,6 +20,7 @@
 #include "buf.h"
 #include <sys/stat.h>
 #include <dirent.h>
+#include <minix/u64.h>
 
 /* Defines */
 #define EXIT_OK                    0
@@ -150,6 +150,20 @@ void init_global()
     BLK_ILIST 		= BLK_ZMAP + N_ZMAP;
     WORDS_PER_BLOCK = BLOCK_SIZE / (int)sizeof(bitchunk_t);
     thisblk = NO_BLOCK;
+}
+
+/*===========================================================================*
+ *              bitmapsize          *
+ *===========================================================================*/
+static int bitmapsize(nr_bits, blk_size)
+bit_t nr_bits;
+size_t blk_size;
+{
+    block_t nr_blocks;
+    nr_blocks = nr_bits / FS_BITS_PER_BLOCK(blk_size);
+    if (nr_blocks * FS_BITS_PER_BLOCK(blk_size) < nr_bits)
+        ++nr_blocks;
+    return(nr_blocks);
 }
 
 /*===========================================================================*
