@@ -1,76 +1,125 @@
-#include <sys/types.h>
-#include <ctype.h>
-#include <errno.h>
-#include <fcntl.h>
-#include <limits.h>
 #include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-
 #include <stdio.h>
-#include <sys/stat.h>
-#include <a.out.h>
+#include <sys/types.h>
+#include <string.h>
+#include <errno.h>
+#include <unistd.h> // for open
+/* "readdir" etc. are defined here. */
 #include <dirent.h>
+/* limits.h defines "PATH_MAX". */
+#include <limits.h>
 
-#include <fsck.mfs/fsck.h>
+#include <fcntl.h>
 
-struct stack {
-  dir_struct *st_dir;
-  struct stack *st_next;
-  char st_presence;
-} *ftop;
+#include <sys/stat.h>
+#include <sys/stat.h>
 
-/* Print all the dirs starting from <path> [maybe recursive]. */
-int print_dirs(const char *path, int recursive)
-{
-    struct dirent *direntp = NULL;
-    DIR *dirp = NULL;
-    size_t path_len;
+int inodeFinder(char* dir, char* file) {
 
-    /* Check input parameters. */
-    if (!path)
-        return -1;
-    path_len = strlen(path);
+  int len   = strlen(dir) + strlen(file) + 2;
+  char *total = malloc(len);
 
-    if (!path || !path_len || (path_len > _POSIX_PATH_MAX))
-        return -1;
+  strlcat(total, dir, len);
+  strlcat(total, "/", len);
+  strlcat(total, file, len);
 
-    /* Open directory */
-    dirp = opendir(path);
-    if (dirp == NULL)
-        return -1;
+  int inode;
+  int fd;
 
-    while ((direntp = readdir(dirp)) != NULL)
-    {
-        /* For every directory entry... */
-        struct stat fstat;
-        char full_name[_POSIX_PATH_MAX + 1];
+  fd = open(total, O_RDONLY);
 
-        /* Calculate full name, check we are in file length limts */
-        if ((path_len + strlen(direntp->d_name) + 1) > _POSIX_PATH_MAX)
-            continue;
 
-        strcpy(full_name, path);
-        if (full_name[path_len - 1] != '/')
-            strcat(full_name, "/");
-        strcat(full_name, direntp->d_name);
+  if (fd < 0) {
+      // some error occurred while opening the file
+      // use [perror("Error opening the file");] to get error description
+  }
 
-            printf("%s\n", full_name);
-            if (recursive)
-                print_dirs(full_name, 1);
-    }
+  struct stat file_stat;
+  int ret;
+  ret = fstat (fd, &file_stat);
+  if (ret < 0) {
+     // error getting file stat
+  }
 
-    /* Finalize resources. */
-    (void)closedir(dirp);
-    return 0;
+  return inode = file_stat.st_ino;
 }
 
-/* We are taking first argument as initial path name. */
-int main(int argc, const char* argv[])
+/* List the files in "dir_name". */
+static void list_dir (const char * dir_name) {
+    DIR * d;
+
+    /* Open the directory specified by "dir_name". */
+
+    d = opendir (dir_name);
+
+    /* Check it was opened. */
+    if (! d) {
+        fprintf (stderr, "Cannot open directory '%s': %s\n",
+                 dir_name, strerror (errno));
+        exit (EXIT_FAILURE);
+    }
+    while (1) {
+        struct dirent * entry;
+        const char * d_name;
+
+        /* "Readdir" gets subsequent entries from "d". */
+        entry = readdir (d);
+        if (! entry) {
+            /* There are no more entries in this directory, so break
+               out of the while loop. */
+            break;
+        }
+        d_name = entry->d_name;
+        /* Print the name of the file and directory. */
+	printf ("Inode: %d, Dir-Name: %s/%s\n", inodeFinder(dir_name, d_name), dir_name, d_name);
+
+#if 0
+	/* If you don't want to print the directories, use the
+	   following line: */
+
+        if (! (entry->d_type & DT_DIR)) {
+	    printf ("%s/%s\n", dir_name, d_name);
+	}
+
+#endif /* 0 */
+
+struct stat s;
+stat(entry->d_name, &s);
+if ((s.st_mode & S_IFMT) != S_IFDIR) {
+
+      /* Check that the directory is not "d" or d's parent. */
+
+      if (strcmp (d_name, "..") != 0 &&
+          strcmp (d_name, ".") != 0) {
+          int path_length;
+          char path[PATH_MAX];
+
+          path_length = snprintf (path, PATH_MAX,
+                                  "%s/%s", dir_name, d_name);
+          printf ("%s\n", path);
+          if (path_length >= PATH_MAX) {
+              fprintf (stderr, "Path length has got too long.\n");
+              exit (EXIT_FAILURE);
+          }
+          /* Recursively call "list_dir" with the new path. */
+          list_dir (path);
+      }
+  }
+
+    }
+    /* After going through all the entries, close the directory. */
+    if (closedir (d)) {
+        fprintf (stderr, "Could not close '%s': %s\n",
+                 dir_name, strerror (errno));
+        exit (EXIT_FAILURE);
+    }
+}
+
+int main ()
 {
-    stack dir;
-    dir->st_dir = argv[1];
-    descendtree(dir);
-    //print_dirs(argv[1], 1);
+    char * p = malloc(sizeof(char) * 128);
+    printf("Enter you directory: ");
+    scanf("%126s",p);
+    list_dir (p);
     return 0;
 }
