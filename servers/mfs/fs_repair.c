@@ -62,9 +62,8 @@ int markdirty = 0;
 int type = 0;
 
 dev_t dev;
-int * block_ids;
-int * lost_blocks_ids;
-int damaged_inode_number;
+char *rwbuf;            /* one block buffer cache */
+
 
 /*===========================================================================*
  *              print_inode               *
@@ -629,7 +628,6 @@ int size;
   if (size != BLOCK_SIZE) devio(block, READING);
   memmove(&rwbuf[offset], buf, size);
   devio(block, WRITING);
-  changed = 1;
 }
 
 /*===========================================================================*
@@ -774,6 +772,7 @@ int fs_damage(void){
     sb = get_super(dev);
     read_super(sb);
     init_global();
+    if(!(rwbuf = malloc(block_size))) fatal("couldn't allocate fs buf (1)");
     check_super_block(sb);
     puts("fs_damage ended with success");
     return 1;
