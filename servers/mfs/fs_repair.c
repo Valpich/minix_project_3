@@ -620,8 +620,12 @@ i++;
         if (read(dev, rwbuf, BLOCK_SIZE) == BLOCK_SIZE)
             return;
       } else {
-        if (write(dev, rwbuf, BLOCK_SIZE) == BLOCK_SIZE)
+        printf("Writting %s\n", rwbuf);
+        sleep(1);
+        if (write(dev, rwbuf, BLOCK_SIZE) == BLOCK_SIZE){
+            close(file);
             return;
+        }
       }
 
       printf("%s: can't %s block %ld (error = 0x%x)\n", "fs_repair", dir == READING ? "read" : "write", (long) bno, errno);
