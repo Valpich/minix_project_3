@@ -35,9 +35,8 @@
 #define BITMAP_CHUNKS (BLOCK_SIZE/usizeof (bitchunk_t))
 #define MAX_ZONES (V2_NR_DZONES+V2_INDIRECTS+(long)V2_INDIRECTS*V2_INDIRECTS)
 #define V1_ZONE_NUM_SIZE           usizeof (zone1_t)  /* # bytes in V1 zone  */
-#define V1_INDIRECTS   (BLOCK_SIZE/V1_ZONE_NUM_SIZE)  /* # zones/indir block */
 #define V2_ZONE_NUM_SIZE            usizeof (zone_t)  /* # bytes in V2 zone  */
-#define V2_INDIRECTS   (BLOCK_SIZE/V2_ZONE_NUM_SIZE)  /* # zones/indir block */
+
 /* Global variables */
 bitchunk_t *imap_disk;			 /* imap from the disk */
 bitchunk_t *zmap_disk;			 /* zmap from the disk */
@@ -157,7 +156,7 @@ void check_super_block(struct super_block *sb)
 {
   register int n;
   register off_t maxsize;
-  n = bitmapsize((bit_t) sb->s_ninodes + 1, block_size);
+  n = bitmapsize((bit_t) sb->s_ninodes + 1, BLOCK_SIZE);
   if (sb->s_magic != SUPER_V2 && sb->s_magic != SUPER_V3)
     fatal("bad magic number in super block");
   if (sb->s_imap_blocks < n) {
