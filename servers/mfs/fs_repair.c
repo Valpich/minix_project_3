@@ -32,6 +32,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <a.out.h>
 
 /* Defines */
 #define EXIT_OK                    0
