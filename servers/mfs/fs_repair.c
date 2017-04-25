@@ -56,7 +56,7 @@ unsigned int NB_ZONES_USED_I = 0;/* # zones used (from IMAP) */
 int repair    = 0;
 int markdirty = 0;
 int type = 0;
-int repair = 0;
+
 dev_t dev;
 int * block_ids;
 int * lost_blocks_ids;
