@@ -31,7 +31,7 @@
 #include <minix/const.h>
 #include <minix/type.h>
 #include <minix/u64.h>
-//#include "mfs/const.h"
+#include "mfs/const.h"
 #include "mfs/inode.h"
 #include "mfs/type.h"
 #include "mfs/mfsdir.h"
