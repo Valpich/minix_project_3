@@ -14,6 +14,7 @@ int main(int argc, char *argv[]){
     int z=zonewalker(r);
     directorywalker("hello");
     recovery(r);
-    damage(r,2)
+    int inode = 2;
+    damage(r,&inode);
     return 0;
 }
