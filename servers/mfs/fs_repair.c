@@ -38,7 +38,6 @@
 #define V1_INDIRECTS   (BLOCK_SIZE/V1_ZONE_NUM_SIZE)  /* # zones/indir block */
 #define V2_ZONE_NUM_SIZE            usizeof (zone_t)  /* # bytes in V2 zone  */
 #define V2_INDIRECTS   (BLOCK_SIZE/V2_ZONE_NUM_SIZE)  /* # zones/indir block */
-#define SCALE           ((int) ztob(1)) /* # blocks in a zone */
 
 /* Global variables */
 bitchunk_t *imap_disk;			 /* imap from the disk */
@@ -177,11 +176,11 @@ void check_super_block(struct super_block *sb)
     printf("warning: expected %d zmap_block%s", n, "", "s");
     printf(" instead of %d\n", sb->s_zmap_blocks);
   }
-  if (sb->s_log_zone_size >= 8 * sizeof(block_nr))
+  if (sb->s_log_zone_size >= 8 * sizeof(block_t))
     fatal("log_zone_size too large");
   if (sb->s_log_zone_size > 8) printf("warning: large log_zone_size (%d)\n",
            sb->s_log_zone_size);
-  sb->s_firstdatazone = (BLK_ILIST + N_ILIST + SCALE - 1) >> sb->s_log_zone_size;
+  sb->s_firstdatazone = (BLK_ILIST + N_ILIST +  ((int)((block_t) (1) << sb->s_log_zone_size)) - 1) >> sb->s_log_zone_size;
   if (sb->s_firstdatazone_old != 0) {
     if (sb->s_firstdatazone_old >= sb->s_zones)
         fatal("first data zone too large");
