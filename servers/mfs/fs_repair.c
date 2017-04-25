@@ -153,20 +153,6 @@ void init_global()
 }
 
 /*===========================================================================*
- *              bitmapsize          *
- *===========================================================================*/
-static int bitmapsize(nr_bits, blk_size)
-bit_t nr_bits;
-size_t blk_size;
-{
-    block_t nr_blocks;
-    nr_blocks = nr_bits / FS_BITS_PER_BLOCK(blk_size);
-    if (nr_blocks * FS_BITS_PER_BLOCK(blk_size) < nr_bits)
-        ++nr_blocks;
-    return(nr_blocks);
-}
-
-/*===========================================================================*
  *              check_super_block          *
  *===========================================================================*/
 void check_super_block(sb)
