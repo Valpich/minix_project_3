@@ -569,7 +569,8 @@ int fs_recovery(void){
         free_bitmap(imap_disk);
         return -1;
     }
-    compare_bitmaps(zmap_disk,imap_disk);
+    int nblk = N_ZMAP > N_IMAP ? N_IMAP : N_ZMAP;
+    compare_bitmaps(zmap_disk, imap_disk, nblk, list);
     sleep(5);
     free_bitmap(zmap_disk);
     free_bitmap(imap_disk);
