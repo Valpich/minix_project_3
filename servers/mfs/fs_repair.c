@@ -817,10 +817,10 @@ int fs_damage(void){
         get_bitmap(zmap_disk, ZMAP);
         type = IMAP;
         imap_disk = alloc_bitmap(N_IMAP);
+        int * list = calloc(N_IMAP, sizeof(int));
         get_bitmap(imap_disk, IMAP); 
         compare_bitmaps(zmap_disk, imap_disk, N_IMAP, list);
         damage_bitmap(imap_disk, N_IMAP, IMAP, inode);
-        int * list = (int *) calloc(N_IMAP, sizeof(int));
         compare_bitmaps(zmap_disk, imap_disk, N_IMAP, list);
     }
     puts("fs_damage ended with success");
