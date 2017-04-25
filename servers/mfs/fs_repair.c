@@ -833,13 +833,13 @@ int fs_damage(void){
     printf("fs damage requested for inode #%d.\n", inode);
     printf("fs damage requested for operation #%d.\n", operation);
     printf("fs damage requested for folder #%s.\n", folder);
+    dev = fs_m_in.REQ_DEV;
     sb = get_super(dev);
     read_super(sb);
     init_global();
     if(!(rwbuf = malloc(BLOCK_SIZE))) fatal("couldn't allocate fs buf (1)");
     check_super_block(sb);
     if(operation == 1){
-        dev = fs_m_in.REQ_DEV;
         repair = 1;
         printf("Loading super block in the %u device.\n",dev);
         type = ZMAP;
