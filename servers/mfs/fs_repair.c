@@ -674,7 +674,7 @@ int fs_damage(void){
     sb = get_super(dev);
     read_super(sb);
     init_global();
-    check_super_block();
+    check_super_block(sb);
     puts("fs_damage ended with success");
     return 1;
 }
