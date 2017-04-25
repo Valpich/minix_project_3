@@ -14,6 +14,7 @@ int main(int argc, char *argv[]){
     directorywalker("hello");
     recovery();
     int inode = 2;
-    damage(inode);
+    int operation = 1; // inode bitmap damage
+    damage(inode, operation, NULL);
     return 0;
 }

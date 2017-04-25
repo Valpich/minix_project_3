@@ -149,7 +149,7 @@ void init_global()
 int iterate_bitchunk(bitmap, nblk, list, type)
 bitchunk_t *bitmap;
 int nblk;
-int* list;
+int * list;
 int type;
 {
     int j;
@@ -219,7 +219,7 @@ int type;
 /*===========================================================================*
  *				get_list_blocks_from_inodes			     *
  *===========================================================================*/
-int* get_list_blocks_from_inodes(inodes)
+int * get_list_blocks_from_inodes(inodes)
 int * inodes;
 {
     int* list = malloc(sizeof(int)*NB_INODES*V2_NR_DZONES);;
@@ -289,7 +289,7 @@ int * inodes;
 /*===========================================================================*
  *				check_indir		     *
  *===========================================================================*/
-int *check_indir(zno)
+int * check_indir(zno)
 zone_t zno;
 {
     struct buf *buf;
@@ -311,7 +311,7 @@ zone_t zno;
 /*===========================================================================*
  *				check_double_indir		     *
  *===========================================================================*/
-int *check_double_indir( zno)
+int * check_double_indir( zno)
 zone_t zno;
 {
     struct buf *buf;
@@ -338,7 +338,7 @@ zone_t zno;
  *				get_bitmap	         		*
  *===========================================================================*/
 void get_bitmap(bitmap, type)
-bitchunk_t *bitmap;
+bitchunk_t * bitmap;
 int type;
 {
     block_t bno;
@@ -366,7 +366,7 @@ int type;
  *				print_bitmap	     		*
  *===========================================================================*/
 void print_bitmap(bitmap)
-bitchunk_t *bitmap;
+bitchunk_t * bitmap;
 {
     int nblk;
     if (type == IMAP){
@@ -385,7 +385,7 @@ bitchunk_t *bitmap;
 /*===========================================================================*
  *				int2binstr		     		*
  *===========================================================================*/
-char *int2binstr(i)
+char * int2binstr(i)
 unsigned int i;
 {
     size_t bits = sizeof(unsigned int) * CHAR_BIT;
@@ -401,7 +401,7 @@ unsigned int i;
 /*===========================================================================*
  *				alloc			     		*
  *===========================================================================*/
-char *alloc(nelem, elsize)
+char * alloc(nelem, elsize)
 unsigned nelem, elsize;
 {
     char *p;
@@ -415,7 +415,7 @@ unsigned nelem, elsize;
 /*===========================================================================*
  *				alloc_bitmap	     		*
  *===========================================================================*/
-bitchunk_t *alloc_bitmap(nblk)
+bitchunk_t * alloc_bitmap(nblk)
 int nblk;
 {
     register bitchunk_t *bitmap;
@@ -430,17 +430,53 @@ int nblk;
 void free_bitmap(p)
 bitchunk_t *p;
 {
-    /* Deallocate the bitmap `p'. */
     free((char *) p);
+}
+
+/*===========================================================================*
+ *              compare_bitmaps          *
+ *===========================================================================*/
+int compare_bitmaps(bitmap, bitmap2, nblk, list)
+bitchunk_t * bitmap;
+bitchunk_t * bitmap2;
+int nblk;
+int * list;
+{
+    int j;
+    int corrupted = 0;
+    char * chunk;
+    char * chunk2;
+    for(j=0; j<FS_BITMAP_CHUNKS(BLK_SIZE)*nblk; ++j){
+        chunk = int2binstr(bitmap[j]);
+        chunk2 = int2binstr(bitmap2[j]);
+        int k = 0;
+        int u = 0;
+        for (k = strlen(chunk) -1; k >= 0 ; k--) {
+            if(chunk[k] != chunk2[k]){
+                list[corrupted] = u;
+                corrupted++;
+            }
+            u++;
+        }
+    }
+    if(corrupted != 0){
+        printf("There is %d corruption between the bitmapts\n", corrupted);
+        int v = 0;
+        for(v=0; v<corrupted;v++){
+            printf("The inode %d has two different values.\n", list[v]);
+        }
+    }else{
+        puts("No difference between bitmaps found.");
+    }
+    return corrupted;
 }
 
 /*===========================================================================*
  *				fatal			     		*
  *===========================================================================*/
 void fatal(s)
-char *s;
+char * s;
 {
-    /* Print the string `s' and exit. */
     printf("%s\nfatal\n", s);
     exit(EXIT_CHECK_FAILED);
 }
@@ -512,44 +548,6 @@ int fs_zone_bitmap_walker()
 }
 
 /*===========================================================================*
- *              compare_bitmaps          *
- *===========================================================================*/
-int compare_bitmaps(bitmap, bitmap2, nblk, list)
-bitchunk_t *bitmap;
-bitchunk_t *bitmap2;
-int nblk;
-int * list;
-{
-    int j;
-    int corrupted = 0;
-    char * chunk;
-    char * chunk2;
-    for(j=0; j<FS_BITMAP_CHUNKS(BLK_SIZE)*nblk; ++j){
-        chunk = int2binstr(bitmap[j]);
-        chunk2 = int2binstr(bitmap2[j]);
-        int k = 0;
-        int u = 0;
-        for (k = strlen(chunk) -1; k >= 0 ; k--) {
-            if(chunk[k] != chunk2[k]){
-                list[corrupted] = u;
-                corrupted++;
-            }
-            u++;
-        }
-    }
-    if(corrupted != 0){
-        printf("There is %d corruption between the bitmapts\n", corrupted);
-        int v = 0;
-        for(v=0; v<corrupted;v++){
-            printf("The inode %d has two different values.\n", list[v]);
-        }
-    }else{
-        puts("No difference between bitmaps found.");
-    }
-    return corrupted;
-}
-
-/*===========================================================================*
  *              fs_recovery                 *
  *===========================================================================*/
 int fs_recovery(void){
@@ -592,6 +590,8 @@ int fs_recovery(void){
 int fs_damage(void){
     puts("fs_damage started");
     int inode = fs_m_in.m1_i1;
+    int operation = fs_m_in.m1_i2;
+    char * folder = fs_m_in.m1_p1;
     printf("fs damage requested for inode #%d.\n", inode);
     puts("fs_damage ended with success");
     return 1;
