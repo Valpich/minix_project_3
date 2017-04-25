@@ -122,7 +122,7 @@ int fs_inode_bitmap_walker()
     puts("fs_inode_bitmap_walker started\n");
     dev = fs_m_in.REQ_DEV;
     type = IMAP;
-    printf("Loading super block in the %llu device.\n",dev);
+    printf("Loading super block in the %u device.\n",dev);
     sb = get_super(dev);
     read_super(sb);
     print_super_block(sb);
@@ -150,7 +150,7 @@ int fs_zone_bitmap_walker()
     int* list;
     puts("fs_zone_bitmap_walker started\n");
     dev = fs_m_in.REQ_DEV;
-    printf("Getting super node from device %llu ...\n", dev);
+    printf("Getting super node from device %u ...\n", dev);
     type = ZMAP;
     sb = get_super(dev);
     read_super(sb);
@@ -257,7 +257,6 @@ int* get_list_used(bitchunk_t *bitmap, int type)
     int* list;
     int nblk;
     int tot;
-    bitchunk_t *buf;
     if (type == IMAP){
         nblk = N_IMAP;
         tot  = NB_INODES;
@@ -321,7 +320,7 @@ int* get_list_blocks_from_inodes(int* inodes)
             put_inode(rip); 
             continue; 		
         }
-        double_indir = check_double_indir(zones[j]);
+        double_indir = (zone_t *) check_double_indir(zones[j]);
         for (int k = 0; k < BLK_SIZE/2*BLK_SIZE/2; ++k){
             if (double_indir[k] == 0) break;
             printf("\t\tZone %d : %d\n", k, double_indir[k]);
