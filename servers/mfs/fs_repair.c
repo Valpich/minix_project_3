@@ -577,12 +577,12 @@ int * list;
  *              devio          *
  *===========================================================================*/
 void devio(bno, dir)
-block_nr bno;
+block_t bno;
 int dir;
 {
   int r;
 
-  if(!block_size) fatal("devio() with unknown block size");
+  if(!BLOCK_SIZE) fatal("devio() with unknown block size");
   if (dir == READING && bno == thisblk) return;
   thisblk = bno;
 
@@ -593,10 +593,10 @@ printf("%s at block %5d\n", dir == READING ? "reading " : "writing", bno);
   if (r != 0)
     fatal("lseek64 failed");
   if (dir == READING) {
-    if (read(dev, rwbuf, block_size) == block_size)
+    if (read(dev, rwbuf, BLOCK_SIZE) == BLOCK_SIZE)
         return;
   } else {
-    if (write(dev, rwbuf, block_size) == block_size)
+    if (write(dev, rwbuf, BLOCK_SIZE) == BLOCK_SIZE)
         return;
   }
 
@@ -604,7 +604,7 @@ printf("%s at block %5d\n", dir == READING ? "reading " : "writing", bno);
          dir == READING ? "read" : "write", (long) bno, errno);
   if (dir == READING) {
     printf("Continuing with a zero-filled block.\n");
-    memset(rwbuf, 0, block_size);
+    memset(rwbuf, 0, BLOCK_SIZE);
     return;
   }
   fatal("");
