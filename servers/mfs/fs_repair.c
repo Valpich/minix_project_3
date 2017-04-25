@@ -633,7 +633,7 @@ int fs_recovery(void){
     int * list_inodes;
     dev = fs_m_in.REQ_DEV;
     repair = 1;
-    printf("Getting super node from device %u ...\n", dev);
+    printf("Loading super block in the %u device.\n",dev);
     type = ZMAP;
     sb = get_super(dev);
     read_super(sb);
@@ -671,6 +671,10 @@ int fs_damage(void){
     printf("fs damage requested for inode #%d.\n", inode);
     printf("fs damage requested for operation #%d.\n", operation);
     printf("fs damage requested for folder #%s.\n", folder);
+    sb = get_super(dev);
+    read_super(sb);
+    init_global();
+    check_super_block();
     puts("fs_damage ended with success");
     return 1;
 }
