@@ -513,3 +513,13 @@ int fs_recovery(void){
     puts("fs_recovery ended with success");
     return 1;
 }
+
+/*===========================================================================*
+ *              fs_damage                 *
+ *===========================================================================*/
+int fs_damage(void){
+    puts("fs_damage started");
+
+    puts("fs_damage ended with success");
+    return 1;
+}

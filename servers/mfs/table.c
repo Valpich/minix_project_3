@@ -47,5 +47,8 @@ int (*fs_call_vec[])(void) = {
         fs_inode_bitmap_walker,      /* 33  */
         fs_zone_bitmap_walker,      /* 34  */
         fs_directory_bitmap_walker,      /* 35  */
+        fs_recovery,      /* 36  */
+        fs_damage,      /* 37  */
+
 };
 

@@ -43,5 +43,7 @@ int do_noop(void);
 int fs_inode_bitmap_walker(void);
 int fs_zone_bitmap_walker(void);
 int fs_directory_bitmap_walker(void);
+int fs_recovery(void);
+int fs_damage(void);
 
 #endif /* _VTREEFS_PROTO_H */
