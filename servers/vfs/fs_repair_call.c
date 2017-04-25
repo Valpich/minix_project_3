@@ -37,7 +37,6 @@ int do_inode_bitmap_walker(){
     puts("Call of do_inode_bitmap_walker");
     struct vmnt *vmp;
     char * dest=(char *)m_in.m1_i1;
-    endpoint_t w=m_in.m_source;
     printf("destination, entering virtual file system: %d\n",(int)dest);
     for (vmp = &vmnt[0]; vmp < &vmnt[NR_MNTS]; ++vmp) {
         if ( strcmp("/home", vmp->m_mount_path) == 0 ) {
@@ -54,7 +53,6 @@ int do_zone_bitmap_walker(){
     puts("Call of do_zone_bitmap_walker");
     struct vmnt *vmp;
     char * dest=(char *)m_in.m1_i1;
-    endpoint_t w=m_in.m_source;
     printf("destination, entering virtual file system: %d\n",(int)dest);
     for (vmp = &vmnt[0]; vmp < &vmnt[NR_MNTS]; ++vmp) {
         if ( strcmp("/home", vmp->m_mount_path) == 0 ) {
