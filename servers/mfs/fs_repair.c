@@ -297,7 +297,7 @@ int* get_list_blocks_from_inodes(int* inodes)
         if (rip->i_nlinks == NO_LINK){
             continue;
         }
-        zones = rip->i_zone;        
+        zones = (int *) rip->i_zone;        
         for (j = 0; j < V2_NR_DZONES; ++j){
             if (zones[j] == 0) break;
             list[used_zones] = zones[j];
