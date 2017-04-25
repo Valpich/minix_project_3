@@ -838,6 +838,8 @@ char *type;
 	phys += 8 * sizeof(bitchunk_t);
   } while (--w > 0);
 
+  printf("blkno %d, nblk%d.\n",blkno, nblk);
+  sleep(5);
   if ((!repair || automatic) && !report) printf("etc. ");
   if (nerr > MAXPRINT || nerr > 10) printf("%d errors found. ", nerr);
   if (nerr != 0 && yes("install a new map")) dumpbitmap(cmap, blkno, nblk);
