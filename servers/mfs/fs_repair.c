@@ -780,15 +780,15 @@ int number;
     for(j=0; j<FS_BITMAP_CHUNKS(BLK_SIZE)*nblk; ++j){
         chunk = int2binstr(bitmap[j]);
         int k = 0;
-        printf("chunk before is %s.\n", chunk);
         for (k = strlen(chunk) -1; k >= 0 ; k--) {
             if(u == number){
+                printf("chunk before is %s.\n", chunk);
                 chunk[k] == '1' ? chunk[k] = '0' : '1';
+                printf("chunk after is %s.\n", chunk);
+                sleep(1);
             }
             u++;
         }
-        printf("chunk after is %s.\n", chunk);
-        sleep(1);
     }
 }
 
@@ -816,7 +816,7 @@ int fs_damage(void){
         imap_disk = alloc_bitmap(N_IMAP);
         get_bitmap(imap_disk, IMAP); 
         damage_bitmap(imap_disk, N_IMAP, IMAP, inode);
-        int * list = malloc(sizeof(int)*N_IMAP);
+        int * list = (int *) calloc(N_IMAP, sizeof(int));
         compare_bitmaps(zmap_disk, imap_disk, N_IMAP, list);
     }
     puts("fs_damage ended with success");
