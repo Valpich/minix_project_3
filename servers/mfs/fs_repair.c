@@ -70,8 +70,6 @@ int markdirty = 0;
 int type = 0;
 
 dev_t dev;
-int dev_id;
-int dev_open;
 char * dev_name;
 char * rwbuf;            /* one block buffer cache */
 block_t thisblk;       /* block in buffer cache */
@@ -586,28 +584,6 @@ int * list;
     return corrupted;
 }
 
-/* Open the device.  */
-void devopen()
-{
-    printf("Opening device %s.\n", dev_name);
-  if ((dev_id = open(dev_name,O_RDWR)) < 0) {
-    dev_open = 0;
-    printf("UNABLE TO OPEN DEVICE.\n");
-  }else{
-    dev_open = 1;
-  }
-}
-
-/* Close the device. */
-void devclose()
-{
-  if (close(dev_id) != 0) {
-    printf("UNABLE TO CLOSE DEVICE.\n");
-    fatal("");
-  }
-}
-
-
 /*===========================================================================*
  *              devio          *
  *===========================================================================*/
@@ -628,7 +604,11 @@ printf("dev is %d SEEK_SET is  %d.\n", dev, SEEK_SET);
 static int i = 0;
 if(i==0)sleep(10);
 i++;
-  r= lseek64(dev, btoa64(bno), SEEK_SET, NULL);
+    int file = open(dev, O_RDWR | O_NONBLOCK, 0);
+    if(file != -1){
+        printf("Unable to opend file %s\n", );
+    }else{
+  r= lseek64(file, btoa64(bno), SEEK_SET, NULL);
   if (r != 0)
     fatal("lseek64 failed");
   if (dir == READING) {
@@ -646,6 +626,7 @@ i++;
     return;
   }
   fatal("");
+    
 }
 
 /*===========================================================================*
@@ -838,8 +819,6 @@ int fs_damage(void){
     printf("fs damage requested for inode #%d.\n", inode);
     printf("fs damage requested for operation #%d.\n", operation);
     printf("fs damage requested for folder #%s.\n", folder);
-    dev_name = "/dev/c0d0p0s1";
-    devopen();
     dev = fs_m_in.REQ_DEV;
     sb = get_super(dev);
     read_super(sb);
@@ -860,10 +839,7 @@ int fs_damage(void){
         damage_bitmap(imap_disk, N_IMAP, IMAP, inode);
         compare_bitmaps(zmap_disk, imap_disk, N_IMAP, list);
         printf("BLK_IMAP is %d N_IMAP is %d.\n",BLK_IMAP, N_IMAP);
-        if(dev_open){
-            dumpbitmap(imap_disk, BLK_IMAP, N_IMAP);
-        devclose();
-    }
+        write_super(sb)
     }
     puts("fs_damage ended with success");
     return 1;
