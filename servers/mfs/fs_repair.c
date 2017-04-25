@@ -288,7 +288,6 @@ int* get_list_blocks_from_inodes(int* inodes)
     register struct inode *rip;
     int* zones;
     zone_t *indir, *double_indir;
-    struct buf *buf;
     int i, j, k = 0;    
     for (i = 0; i != NB_INODES_USED; ++i){
         if ((rip = get_inode(dev, inodes[i])) == NULL){
@@ -336,9 +335,7 @@ int* get_list_blocks_from_inodes(int* inodes)
     puts("Printing the used zones");
     sleep(2);
     for (int k = 0; k < used_zones; ++k){
-        if (list[k]!= NULL){
             printf("zone # is %d, ", list[k]);
-        }
     }
     printf("Number of used zones:            %d\n", used_zones);
     printf("Number of indirect zones:        %d\n", indirect_zones);
@@ -382,7 +379,7 @@ int *check_double_indir(zone_t zno)
     double_indir = b_v2_ind(buf);    
     for (int i = 0; i < BLK_SIZE/2; ++i){
         if (double_indir[i] == 0) break;
-        indir = check_indir(double_indir[i]);
+        indir = (zone_t) check_indir(double_indir[i]);
         if (indir == NULL) return NULL;
         for (int j = 0; j < BLK_SIZE/2; ++j){
             list[used_zones] = indir[j];
@@ -428,7 +425,6 @@ int type;
 void print_bitmap(bitmap)
 bitchunk_t *bitmap;
 {
-    bitchunk_t *bf;
     int nblk;
     if (type == IMAP){
         nblk = N_IMAP;
