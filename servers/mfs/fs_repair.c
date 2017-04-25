@@ -56,7 +56,7 @@ unsigned int NB_ZONES_USED_I = 0;/* # zones used (from IMAP) */
 int repair    = 0;
 int markdirty = 0;
 int type = 0;
-
+int repair = 0;
 dev_t dev;
 int * block_ids;
 int * lost_blocks_ids;
@@ -167,22 +167,24 @@ int type;
             u++;
         }
     }
-    int v = 0;
-    if(type == IMAP){
-        printf("Used inodes in the inode bitmap are:\n");
-        for(v = 0; v< NB_USED;v++){
-            printf("inode #%d is used\n", list[v]);
-            sleep(1);
+    if(repair == 0){
+        int v = 0;
+        if(type == IMAP){
+            printf("Used inodes in the inode bitmap are:\n");
+            for(v = 0; v< NB_USED;v++){
+                printf("inode #%d is used\n", list[v]);
+                sleep(1);
+            }
         }
-    }
-    if(type == ZMAP){
-        printf("Used inode in the zone bitmap are:\n");
-        for(v = 0; v< NB_USED;v++){
-            printf("inode #%d is used\n", list[v]);
-            sleep(1);
+        if(type == ZMAP){
+            printf("Used inode in the zone bitmap are:\n");
+            for(v = 0; v< NB_USED;v++){
+                printf("inode #%d is used\n", list[v]);
+                sleep(1);
+            }
         }
+        sleep(5);
     }
-    sleep(5);
     return NB_USED;
 }
 
@@ -209,6 +211,7 @@ int type;
     NB_USED = iterate_bitchunk(bitmap, nblk, list, type);
     if (type == IMAP)    NB_INODES_USED  = NB_USED;
     else if (type==ZMAP) NB_ZONES_USED_Z = NB_USED;
+    if(repair == 0)
     printf("Used: %d / %d \n", NB_USED, tot);
     return list;
 }
@@ -262,7 +265,6 @@ int * inodes;
         double_indir = (zone_t *) check_double_indir(zones[j]);
         for (int k = 0; k < BLK_SIZE/2*BLK_SIZE/2; ++k){
             if (double_indir[k] == 0) break;
-            printf("\t\tZone %d : %d\n", k, double_indir[k]);
             list[used_zones] = double_indir[k];
             used_zones++;
             double_indirect_zones++;
@@ -270,14 +272,16 @@ int * inodes;
         free(double_indir);
         put_inode(rip);
     }
-    puts("Printing the used zones");
-    sleep(2);
-    for (int k = 0; k < used_zones; ++k){
-            printf("zone # is %d, ", list[k]);
+    if(repair == 0){
+        puts("Printing the used zones:");
+        sleep(2);
+        for (int k = 0; k < used_zones; ++k){
+                printf("zone # is %d.\n", list[k]);
+        }
+        printf("Number of used zones:            %d\n", used_zones);
+        printf("Number of indirect zones:        %d\n", indirect_zones);
+        printf("Number of double indirect zones: %d\n", double_indirect_zones);
     }
-    printf("Number of used zones:            %d\n", used_zones);
-    printf("Number of indirect zones:        %d\n", indirect_zones);
-    printf("Number of double indirect zones: %d\n", double_indirect_zones);
     NB_ZONES_USED_I = used_zones;
     return list;
 }
@@ -447,6 +451,7 @@ char *s;
 int fs_directory_bitmap_walker()
 {
     puts("fs_directory_bitmap_walker");
+    repair = 0;
     return 0;
 }
 
@@ -457,6 +462,7 @@ int fs_inode_bitmap_walker()
 {
     int * list_blocks;
     int * list_inodes;
+    repair = 0;
     puts("fs_inode_bitmap_walker started");
     dev = fs_m_in.REQ_DEV;
     type = IMAP;
@@ -486,6 +492,7 @@ int fs_inode_bitmap_walker()
 int fs_zone_bitmap_walker()
 {
     int * list;
+    repair = 0;
     puts("fs_zone_bitmap_walker started");
     dev = fs_m_in.REQ_DEV;
     printf("Loading super block in the %u device.\n",dev);
@@ -551,6 +558,7 @@ int fs_recovery(void){
     int * list_blocks;
     int * list_inodes;
     dev = fs_m_in.REQ_DEV;
+    repair = 1;
     printf("Getting super node from device %u ...\n", dev);
     type = ZMAP;
     sb = get_super(dev);
