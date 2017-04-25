@@ -587,10 +587,8 @@ int * list;
 /* Open the device.  */
 void devopen()
 {
-  if ((dev = open(dev_name,
-    repair ? O_RDWR : O_RDONLY)) < 0) {
-    perror(fsck_device);
-    fatal("couldn't open device to fsck");
+  if (dev = open(dev_name,O_RDWR) < 0) {
+    printf("UNABLE TO OPEN DEVICE.\n");
   }
 }
 
@@ -598,7 +596,7 @@ void devopen()
 void devclose()
 {
   if (close(dev) != 0) {
-    perror("close");
+    printf("UNABLE TO CLOSE DEVICE.\n");
     fatal("");
   }
 }
