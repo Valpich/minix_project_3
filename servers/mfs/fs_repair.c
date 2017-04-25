@@ -277,14 +277,12 @@ int type;
             printf("Used inodes in the inode bitmap are:\n");
             for(v = 0; v< NB_USED;v++){
                 printf("inode #%d is used\n", list[v]);
-                sleep(1);
             }
         }
         if(type == ZMAP){
             printf("Used inode in the zone bitmap are:\n");
             for(v = 0; v< NB_USED;v++){
                 printf("inode #%d is used\n", list[v]);
-                sleep(1);
             }
         }
         sleep(5);
@@ -573,6 +571,21 @@ int * list;
         puts("No difference between bitmaps found.");
     }
     return corrupted;
+}
+
+/*===========================================================================*
+ *              dumpbitmap          *
+ *===========================================================================*/
+void dumpbitmap(bitmap, bno, nblk)
+bitchunk_t *bitmap;
+block_t bno;
+int nblk;
+{
+  register int i;
+  register bitchunk_t *p = bitmap;
+
+  for (i = 0; i < nblk; i++, bno++, p += WORDS_PER_BLOCK)
+    devwrite(bno, 0, (char *) p, block_size);
 }
 
 /*===========================================================================*
