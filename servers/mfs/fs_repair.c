@@ -144,6 +144,63 @@ void init_global()
 }
 
 /*===========================================================================*
+ *              init_global          *
+ *===========================================================================*/
+void check_super_block(struct super_block *sb)
+{
+  register int n;
+  register off_t maxsize;
+  n = bitmapsize((bit_t) sb->s_ninodes + 1, block_size);
+  if (sb->s_magic != SUPER_V2 && sb->s_magic != SUPER_V3)
+    fatal("bad magic number in super block");
+  if (sb->s_imap_blocks < n) {
+    printf("need %d bocks for inode bitmap; only have %d\n",
+        n, sb->s_imap_blocks);
+    fatal("too few imap blocks");
+  }
+  if (sb->s_imap_blocks != n) {
+    pr("warning: expected %d imap_block%s", n, "", "s");
+    printf(" instead of %d\n", sb->s_imap_blocks);
+  }
+  n = bitmapsize((bit_t) sb->s_zones, block_size);
+  if (sb->s_zmap_blocks < n) fatal("too few zmap blocks");
+  if (sb->s_zmap_blocks != n) {
+    pr("warning: expected %d zmap_block%s", n, "", "s");
+    printf(" instead of %d\n", sb->s_zmap_blocks);
+  }
+  if (sb->s_log_zone_size >= 8 * sizeof(block_nr))
+    fatal("log_zone_size too large");
+  if (sb->s_log_zone_size > 8) printf("warning: large log_zone_size (%d)\n",
+           sb->s_log_zone_size);
+  sb->s_firstdatazone = (BLK_ILIST + N_ILIST + SCALE - 1) >> sb->s_log_zone_size;
+  if (sb->s_firstdatazone_old != 0) {
+    if (sb->s_firstdatazone_old >= sb->s_zones)
+        fatal("first data zone too large");
+    if (sb->s_firstdatazone_old < sb->s_firstdatazone)
+        fatal("first data zone too small");
+    if (sb->s_firstdatazone_old != sb->s_firstdatazone) {
+        printf("warning: expected first data zone to be %u ",
+            sb->s_firstdatazone);
+        printf("instead of %u\n", sb->s_firstdatazone_old);
+        sb->s_firstdatazone = sb->s_firstdatazone_old;
+    }
+  }
+  maxsize = MAX_FILE_POS;
+  if (((maxsize - 1) >> sb->s_log_zone_size) / block_size >= MAX_ZONES)
+    maxsize = ((long) MAX_ZONES * block_size) << sb->s_log_zone_size;
+  if(maxsize <= 0)
+    maxsize = LONG_MAX;
+  if (sb->s_max_size != maxsize) {
+    printf("warning: expected max size to be %d ", maxsize);
+    printf("instead of %d\n", sb->s_max_size);
+  }
+
+  if(sb->s_flags & MFSFLAG_MANDATORY_MASK) {
+    fatal("unsupported feature bits - newer fsck needed");
+  }
+}
+
+/*===========================================================================*
  *              iterate_bitchunk          *
  *===========================================================================*/
 int iterate_bitchunk(bitmap, nblk, list, type)
