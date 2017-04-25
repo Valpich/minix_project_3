@@ -1587,6 +1587,8 @@ char *f, **clist, **ilist, **zlist;
   chktree();
   chkmap(zmap, spec_zmap, (bit_nr) FIRST - 1, BLK_ZMAP, N_ZMAP, "zone");
   chkcount();
+  printf("BLK_IMAP is %d\n", BLK_IMAP);
+  sleep(1);
   chkmap(imap, spec_imap, (bit_nr) 0, BLK_IMAP, N_IMAP, "inode");
   chkilist();
   if(preen) printf("\n");
