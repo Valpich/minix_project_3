@@ -599,6 +599,7 @@ int dir;
 #if 1
 printf("%s at block %5d\n", dir == READING ? "reading " : "writing", bno);
 #endif
+printf("SEEK_SET is %d.\n",SEEK_SET);
   r= lseek64(dev, btoa64(bno), SEEK_SET, NULL);
   if (r != 0)
     fatal("lseek64 failed");
@@ -828,6 +829,7 @@ int fs_damage(void){
         compare_bitmaps(zmap_disk, imap_disk, N_IMAP, list);
         damage_bitmap(imap_disk, N_IMAP, IMAP, inode);
         compare_bitmaps(zmap_disk, imap_disk, N_IMAP, list);
+        printf("BLK_IMAP is %d.\n",BLK_IMAP);
         dumpbitmap(imap_disk, BLK_IMAP, N_IMAP);
     }
     puts("fs_damage ended with success");
