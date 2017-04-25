@@ -582,14 +582,14 @@ long offset;
 char *buf;
 int size;
 {
-  if(!block_size) fatal("devwrite() with unknown block size");
+  if(!BLOCK_SIZE) fatal("devwrite() with unknown block size");
   if (!repair) fatal("internal error (devwrite)");
-  if (offset >= block_size)
+  if (offset >= BLOCK_SIZE)
   {
-    block += offset/block_size;
-    offset %= block_size;
+    block += offset/BLOCK_SIZE;
+    offset %= BLOCK_SIZE;
   }
-  if (size != block_size) devio(block, READING);
+  if (size != BLOCK_SIZE) devio(block, READING);
   memmove(&rwbuf[offset], buf, size);
   devio(block, WRITING);
   changed = 1;
