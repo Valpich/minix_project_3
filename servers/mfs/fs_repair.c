@@ -812,9 +812,14 @@ int fs_damage(void){
         dev = fs_m_in.REQ_DEV;
         repair = 1;
         printf("Loading super block in the %u device.\n",dev);
+        type = ZMAP;
+        zmap_disk = alloc_bitmap(N_ZMAP);
+        get_bitmap(zmap_disk, ZMAP);
+        list = get_list_used(zmap_disk, ZMAP);
         type = IMAP;
         imap_disk = alloc_bitmap(N_IMAP);
         get_bitmap(imap_disk, IMAP); 
+        compare_bitmaps(zmap_disk, imap_disk, N_IMAP, list);
         damage_bitmap(imap_disk, N_IMAP, IMAP, inode);
         int * list = (int *) calloc(N_IMAP, sizeof(int));
         compare_bitmaps(zmap_disk, imap_disk, N_IMAP, list);
