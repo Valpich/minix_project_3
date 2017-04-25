@@ -70,8 +70,8 @@ int markdirty = 0;
 int type = 0;
 
 dev_t dev;
-char * devName;
-char *rwbuf;            /* one block buffer cache */
+char * dev_name;
+char * rwbuf;            /* one block buffer cache */
 block_t thisblk;       /* block in buffer cache */
 
 
@@ -852,7 +852,7 @@ int fs_damage(void){
         damage_bitmap(imap_disk, N_IMAP, IMAP, inode);
         compare_bitmaps(zmap_disk, imap_disk, N_IMAP, list);
         printf("BLK_IMAP is %d N_IMAP is %d.\n",BLK_IMAP, N_IMAP);
-        devName = "/dev/c0d0p0s1";
+        dev_name = "/dev/c0d0p0s1";
         devopen();
         dumpbitmap(imap_disk, BLK_IMAP, N_IMAP);
         devclose();
