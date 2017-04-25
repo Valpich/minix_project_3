@@ -29,6 +29,7 @@
 #define INDCHUNK	((int) (CINDIR * ZONE_NUM_SIZE))
 #define BLOCK_SIZE 4096
 #define BITMAP_CHUNKS (BLOCK_SIZE/usizeof (bitchunk_t))
+#define MAX_ZONES (V2_NR_DZONES+V2_INDIRECTS+(long)V2_INDIRECTS*V2_INDIRECTS)
 
 /* Global variables */
 bitchunk_t *imap_disk;			 /* imap from the disk */
@@ -52,7 +53,6 @@ unsigned int NB_USED = 0;		 /* # used (zones or inodes) */
 unsigned int NB_INODES_USED = 0; /* # zones used (from IMAP) */
 unsigned int NB_ZONES_USED_Z = 0;/* # zones used (from ZMAP) */
 unsigned int NB_ZONES_USED_I = 0;/* # zones used (from IMAP) */
-
 int repair    = 0;
 int markdirty = 0;
 int type = 0;
@@ -162,7 +162,7 @@ void check_super_block(struct super_block *sb)
     pr("warning: expected %d imap_block%s", n, "", "s");
     printf(" instead of %d\n", sb->s_imap_blocks);
   }
-  n = bitmapsize((bit_t) sb->s_zones, block_size);
+  n = bitmapsize((bit_t) sb->s_zones, BLOCK_SIZE);
   if (sb->s_zmap_blocks < n) fatal("too few zmap blocks");
   if (sb->s_zmap_blocks != n) {
     pr("warning: expected %d zmap_block%s", n, "", "s");
@@ -186,8 +186,8 @@ void check_super_block(struct super_block *sb)
     }
   }
   maxsize = MAX_FILE_POS;
-  if (((maxsize - 1) >> sb->s_log_zone_size) / block_size >= MAX_ZONES)
-    maxsize = ((long) MAX_ZONES * block_size) << sb->s_log_zone_size;
+  if (((maxsize - 1) >> sb->s_log_zone_size) / BLOCK_SIZE >= MAX_ZONES)
+    maxsize = ((long) MAX_ZONES * BLOCK_SIZE) << sb->s_log_zone_size;
   if(maxsize <= 0)
     maxsize = LONG_MAX;
   if (sb->s_max_size != maxsize) {
