@@ -7,14 +7,13 @@
  *				main                                         *
  *===========================================================================*/
 int main(int argc, char *argv[]){
-    int * r=calloc(1017088,sizeof(long));
     
-    int x=inodewalker(r);
+    int x=inodewalker();
     
-    int z=zonewalker(r);
+    int z=zonewalker();
     directorywalker("hello");
-    recovery(r);
+    recovery();
     int inode = 2;
-    damage(r,&inode);
+    damage(inode);
     return 0;
 }

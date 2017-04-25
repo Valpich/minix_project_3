@@ -36,8 +36,6 @@ int RC_CODE;
 int do_inode_bitmap_walker(){
     puts("Call of do_inode_bitmap_walker");
     struct vmnt *vmp;
-    char * dest=(char *)m_in.m1_i1;
-    printf("destination, entering virtual file system: %d\n",(int)dest);
     for (vmp = &vmnt[0]; vmp < &vmnt[NR_MNTS]; ++vmp) {
         if ( strcmp("/home", vmp->m_mount_path) == 0 ) {
             message m;
@@ -52,8 +50,6 @@ int do_inode_bitmap_walker(){
 int do_zone_bitmap_walker(){
     puts("Call of do_zone_bitmap_walker");
     struct vmnt *vmp;
-    char * dest=(char *)m_in.m1_i1;
-    printf("destination, entering virtual file system: %d\n",(int)dest);
     for (vmp = &vmnt[0]; vmp < &vmnt[NR_MNTS]; ++vmp) {
         if ( strcmp("/home", vmp->m_mount_path) == 0 ) {
             message m;
@@ -68,8 +64,6 @@ int do_zone_bitmap_walker(){
 int do_directory_bitmap_walker(){
     puts("Call of do_directory_bitmap_walker");
     struct vmnt *vmp;
-    char * dest=(char *)m_in.m1_i1;
-    printf("destination, entering virtual file system: %d\n",(int)dest);
     for (vmp = &vmnt[0]; vmp < &vmnt[NR_MNTS]; ++vmp) {
         if ( strcmp("/home", vmp->m_mount_path) == 0 ) {
             message m;
@@ -84,8 +78,6 @@ int do_directory_bitmap_walker(){
 int do_recovery(){
     puts("Call of do_recovery");
     struct vmnt *vmp;
-    char * dest=(char *)m_in.m1_i1;
-    printf("destination, entering virtual file system: %d\n",(int)dest);
     for (vmp = &vmnt[0]; vmp < &vmnt[NR_MNTS]; ++vmp) {
         if ( strcmp("/home", vmp->m_mount_path) == 0 ) {
             message m;
@@ -100,8 +92,8 @@ int do_recovery(){
 int do_damage(){
     puts("Call of do_damage");
     struct vmnt *vmp;
-    char * dest=(char *)m_in.m1_i1;
-    printf("destination, entering virtual file system: %d\n",(int)dest);
+    int inode = m_in.m1_i1;
+    printf("inode received is %d",inode);
     for (vmp = &vmnt[0]; vmp < &vmnt[NR_MNTS]; ++vmp) {
         if ( strcmp("/home", vmp->m_mount_path) == 0 ) {
             message m;
