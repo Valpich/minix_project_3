@@ -444,4 +444,7 @@ __END_DECLS
 #include <sys/reboot.h>
 #endif
 
+int hibitch(){
+	return 0;
+}
 #endif /* !_UNISTD_H_ */
