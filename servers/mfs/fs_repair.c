@@ -20,8 +20,6 @@
 #include <a.out.h>
 #include <dirent.h>
 
-#include "exitvalues.h"
-
 /* Defines */
 #define EXIT_OK                    0
 #define EXIT_USAGE                 1
