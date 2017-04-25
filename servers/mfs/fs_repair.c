@@ -64,8 +64,7 @@ int type = 0;
 
 dev_t dev;
 char *rwbuf;            /* one block buffer cache */
-block_t 
-;       /* block in buffer cache */
+block_t thisblk;       /* block in buffer cache */
 
 
 /*===========================================================================*
