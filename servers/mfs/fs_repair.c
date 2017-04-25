@@ -1,3 +1,5 @@
+
+#define __minix 1;
 #include "fs.h"
 #include <sys/types.h>
 #include <ctype.h>
