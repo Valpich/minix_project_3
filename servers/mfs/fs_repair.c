@@ -147,6 +147,17 @@ void init_global()
     WORDS_PER_BLOCK = BLOCK_SIZE / (int)sizeof(bitchunk_t);
 }
 
+static int
+bitmapsize(bit_t nr_bits, size_t blk_size)
+ {
+   block_t nr_blocks;
+ 
+   nr_blocks = nr_bits / FS_BITS_PER_BLOCK(blk_size);
+   if (nr_blocks * FS_BITS_PER_BLOCK(blk_size) < nr_bits)
+     ++nr_blocks;
+  return(nr_blocks);
+ }
+
 /*===========================================================================*
  *              init_global          *
  *===========================================================================*/
