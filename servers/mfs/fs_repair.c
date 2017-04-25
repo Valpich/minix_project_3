@@ -589,7 +589,6 @@ void devopen()
 {
   if ((dev_open = open(dev,
     repair ? O_RDWR : O_RDONLY)) < 0) {
-    perror(fsck_device);
     fatal("couldn't open device to fsck");
   }
 }
@@ -598,7 +597,6 @@ void devopen()
 void devclose()
 {
   if (close(dev_open) != 0) {
-    perror("close");
     fatal("");
   }
 }
