@@ -18,7 +18,6 @@
 #include "buf.h"
 #include <sys/stat.h>
 #include <dirent.h>
-#include "../../fs/const.h"
 
 /* Defines */
 #define EXIT_OK                    0
@@ -29,8 +28,16 @@
 #define EXIT_SIGNALED             12
 #define INDCHUNK	((int) (CINDIR * ZONE_NUM_SIZE))
 #define BLOCK_SIZE 4096
+#define V1_NR_DZONES       7    /* # direct zone numbers in a V1 inode */
+#define V1_NR_TZONES       9    /* total # zone numbers in a V1 inode */
+#define V2_NR_DZONES       7    /* # direct zone numbers in a V2 inode */
+#define V2_NR_TZONES      10    /* total # zone numbers in a V2 inode */
 #define BITMAP_CHUNKS (BLOCK_SIZE/usizeof (bitchunk_t))
-
+#define MAX_ZONES (V2_NR_DZONES+V2_INDIRECTS+(long)V2_INDIRECTS*V2_INDIRECTS)
+#define V1_ZONE_NUM_SIZE           usizeof (zone1_t)  /* # bytes in V1 zone  */
+#define V1_INDIRECTS   (BLOCK_SIZE/V1_ZONE_NUM_SIZE)  /* # zones/indir block */
+#define V2_ZONE_NUM_SIZE            usizeof (zone_t)  /* # bytes in V2 zone  */
+#define V2_INDIRECTS   (BLOCK_SIZE/V2_ZONE_NUM_SIZE)  /* # zones/indir block */
 /* Global variables */
 bitchunk_t *imap_disk;			 /* imap from the disk */
 bitchunk_t *zmap_disk;			 /* zmap from the disk */
