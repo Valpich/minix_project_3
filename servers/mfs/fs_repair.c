@@ -574,6 +574,28 @@ int * list;
 }
 
 /*===========================================================================*
+ *              devwrite          *
+ *===========================================================================*/
+void devwrite(block, offset, buf, size)
+long block;
+long offset;
+char *buf;
+int size;
+{
+  if(!block_size) fatal("devwrite() with unknown block size");
+  if (!repair) fatal("internal error (devwrite)");
+  if (offset >= block_size)
+  {
+    block += offset/block_size;
+    offset %= block_size;
+  }
+  if (size != block_size) devio(block, READING);
+  memmove(&rwbuf[offset], buf, size);
+  devio(block, WRITING);
+  changed = 1;
+}
+
+/*===========================================================================*
  *              dumpbitmap          *
  *===========================================================================*/
 void dumpbitmap(bitmap, bno, nblk)
@@ -585,7 +607,7 @@ int nblk;
   register bitchunk_t *p = bitmap;
 
   for (i = 0; i < nblk; i++, bno++, p += WORDS_PER_BLOCK)
-    devwrite(bno, 0, (char *) p, block_size);
+    devwrite(bno, 0, (char *) p, BLOCK_SIZE);
 }
 
 /*===========================================================================*
