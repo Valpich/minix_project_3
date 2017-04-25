@@ -308,7 +308,7 @@ int* get_list_blocks_from_inodes(int* inodes)
             put_inode(rip); 
             continue;
         }
-        indir = check_indir(zones[j]);
+        indir = (zone_t *) check_indir(zones[j]);
         for (k = 0; k < BLK_SIZE/2; ++k){
             if (indir[k] == 0) break;
             list[used_zones] = indir[k];
@@ -379,7 +379,7 @@ int *check_double_indir(zone_t zno)
     double_indir = b_v2_ind(buf);    
     for (int i = 0; i < BLK_SIZE/2; ++i){
         if (double_indir[i] == 0) break;
-        indir = (zone_t) check_indir(double_indir[i]);
+        indir = (zone_t *) check_indir(double_indir[i]);
         if (indir == NULL) return NULL;
         for (int j = 0; j < BLK_SIZE/2; ++j){
             list[used_zones] = indir[j];
