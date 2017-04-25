@@ -838,7 +838,7 @@ int fs_damage(void){
     printf("fs damage requested for inode #%d.\n", inode);
     printf("fs damage requested for operation #%d.\n", operation);
     printf("fs damage requested for folder #%s.\n", folder);
-    dev_name = "/home";
+    dev_name = "/dev/c0d0p0s1";
     devopen();
     dev = fs_m_in.REQ_DEV;
     sb = get_super(dev);

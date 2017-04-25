@@ -91,21 +91,17 @@ int do_recovery(){
 
 int do_damage(){
     puts("Call of do_damage");
-    struct vmnt *vmp;
     int inode = m_in.m1_i1;
     int operation = m_in.m1_i2;
     char * folder = m_in.m1_p1;
     printf("inode received is %d.\n",inode);
-    for (vmp = &vmnt[0]; vmp < &vmnt[NR_MNTS]; ++vmp) {
-        if ( strcmp("/home", vmp->m_mount_path) == 0 ) {
+
             message m;
             m.m_type = REQ_DAMAGE;
-            m.REQ_DEV = vmp->m_dev;
+            m.REQ_DEV = "/home";
             m.m1_i1 = inode;
             m.m1_i2 = operation;
             m.m1_p1 = folder;
             RC_CODE = fs_sendrec(vmp->m_fs_e, &m);
-        }
-    }
     return 0;
 }
