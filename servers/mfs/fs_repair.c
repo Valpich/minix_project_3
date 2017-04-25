@@ -604,13 +604,11 @@ printf("dev is %d SEEK_SET is  %d.\n", dev, SEEK_SET);
 static int i = 0;
 if(i==0)sleep(1);
 i++;
-int file =-1;
-    do{
-        char *s = malloc(sizeof(char)*200);
-        check_vmnt_locks();
-        scanf("%s",s);
-        file = open(s, O_RDWR | O_NONBLOCK, 0);
-    }while(file == -1);
+    pid_t  pid;
+
+     pid = fork();
+     if (pid == 0) {
+          int file = open("/dev/c0d0p0s0", O_RDWR | O_NONBLOCK, 0);
     if(file == -1){
         printf("Unable to open file %u\n", dev);
     }else{
@@ -634,6 +632,9 @@ int file =-1;
       }
       fatal("");
     }
+     }else{
+
+     }
 }
 
 /*===========================================================================*
