@@ -221,7 +221,7 @@ int main(int argc, char *argv[]){
 	chunk[chunk_size] = 0;
 	char * p_end;
     unsigned int received = strtol(size,&p_end,10);
-	int N_MAP = size;
+	int N_MAP = received;
 	printf("N_MAP is %d\n", N_MAP);
 	bitchunk_t *corrupted_map =alloc_bitmap(N_MAP);
 	for (int i = 0; i < N_MAP; i++){
