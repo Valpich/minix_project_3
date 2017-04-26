@@ -109,8 +109,8 @@ int main(int argc, char *argv[]){
    // int z=zonewalker();
    // directorywalker("hello");
    // recovery();
-	dev = open("/dev/c0d0p0s1",O_RDWR);
-	printf("dev is %d \n",dev );
+	file_descriptor = open("/dev/c0d0p0s1",O_RDWR);
+	printf("file_descriptor is %d \n",file_descriptor );
     int inode = 2;
     int operation = 1; // inode bitmap damage
     damage(inode, operation, NULL);
