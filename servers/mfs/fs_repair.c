@@ -846,7 +846,9 @@ int fs_damage(void){
     }
     puts("fs_damage ended with success");
     } else if (pid > 0) {
-
+        puts("fs_damage fork succeed");
+    }else{ /* pid < 0 */
+        puts("fs_damage fork failed");
     }
     return 1;
 }
