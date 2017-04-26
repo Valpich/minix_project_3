@@ -605,7 +605,7 @@ printf("dev is %d SEEK_SET is  %d.\n", dev, SEEK_SET);
 static int i = 0;
 if(i==0)sleep(1);
 i++;
-        printf("File open is %d\n", file);
+        printf("file_descriptor open is %d\n", file_descriptor);
       r= lseek64(file_descriptor, btoa64(bno), SEEK_SET, NULL);
       if (r != 0)
         fatal("lseek64 failed");
