@@ -248,11 +248,11 @@ int inode;
  *===========================================================================*/
 int main(int argc, char *argv[]){
     
- //   int x=inodewalker();
+   int x=inodewalker();
    // int z=zonewalker();
    // directorywalker("hello");
    // recovery();
 	damage_inode(2);
-	//x=inodewalker();
+	x=inodewalker();
     return 0;
 }
