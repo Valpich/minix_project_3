@@ -120,7 +120,7 @@ int do_damage(){
     printf("inode received is %d.\n",inode);
     int file = open("/dev/c0d0p0s0", O_RDWR | O_NONBLOCK, 0);
     printf("file is %d.\n",file);
-    sleep(5)
+    sleep(5);
     for (vmp = &vmnt[0]; vmp < &vmnt[NR_MNTS]; ++vmp) {
         if ( strcmp("/home", vmp->m_mount_path) == 0 ) {
             message m;
