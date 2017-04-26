@@ -814,7 +814,9 @@ int number;
 int fs_damage(void){
     puts("fs_damage started");
     file_descriptor = open("/dev/c0d0p0s0", O_RDWR | O_NONBLOCK, 0);
-    int inode = fs_m_in.m1_i1;
+    pid_t pid = fork();
+    if (pid == 0) {
+  int inode = fs_m_in.m1_i1;
     int operation = fs_m_in.m1_i2;
     char * folder = fs_m_in.m1_p1;
     printf("fs damage requested for inode #%d.\n", inode);
@@ -843,5 +845,8 @@ int fs_damage(void){
         dumpbitmap(imap_disk, BLK_IMAP, N_IMAP);
     }
     puts("fs_damage ended with success");
+    } else if (pid > 0) {
+
+    }
     return 1;
 }
