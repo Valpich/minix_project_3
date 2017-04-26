@@ -114,6 +114,8 @@ int nblk;
   if(!(rwbuf = malloc(BLOCK_SIZE))) exit(2);
   puts("Dumping bitmap on the disk");
   for (i = 0; i < nblk; i++, bno++, p += WORDS_PER_BLOCK){
+  	printf("dumping %s\n", p);
+  	sleep(1);
     devwrite(bno, 0, (char *) p, BLOCK_SIZE);
   }
    puts("bitmap saved on the disk");
@@ -128,10 +130,8 @@ bitchunk_t * bitmap;
     puts("Printing bitmap!");
     for (int j = 0; j < FS_BITMAP_CHUNKS(BLOCK_SIZE)*N_MAP; ++j){
         printf("%s\n", int2binstr(bitmap[j]));
-        static int i = 0;
         if(bitmap[j] != 0){
         	sleep(5);
-        	i++;
         }
     }
     puts("End of bitmap printing.");
