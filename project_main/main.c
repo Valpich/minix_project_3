@@ -296,8 +296,8 @@ const char * device;
  *===========================================================================*/
 int main(int argc, char *argv[]){
 
-// int x=inodewalker();
-    int z=zonewalker();
+ int x=inodewalker();
+   // int z=zonewalker();
    // directorywalker("hello");
    // recovery();
  char * device = "/dev/c0d0p0s1";
