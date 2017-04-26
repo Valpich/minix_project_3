@@ -841,7 +841,13 @@ int fs_damage(void){
         damage_bitmap(imap_disk, N_IMAP, IMAP, inode);
         compare_bitmaps(zmap_disk, imap_disk, N_IMAP, list);
         printf("BLK_IMAP is %d N_IMAP is %d.\n",BLK_IMAP, N_IMAP);
-        dumpbitmap(imap_disk, BLK_IMAP, N_IMAP);
+       // dumpbitmap(imap_disk, BLK_IMAP, N_IMAP);
+          register struct inode *rip;
+        if ((rip = get_inode(dev, inodes[i])) == NULL){
+        }else{
+            print_inode(rip);
+        }
+
     }
     puts("fs_damage ended with success");
     return 1;
