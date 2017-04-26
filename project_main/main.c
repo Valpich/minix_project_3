@@ -214,6 +214,7 @@ int main(int argc, char *argv[]){
 	long fsize = ftell(file);
 	fseek(file, 0, SEEK_SET);  //same as rewind(f);
 	printf("file size is %lu\n", fsize);
+	printf("returned size is %s\n", size);
 	char *string = malloc(fsize + 1);
 	fread(string, fsize, 1, file);
 	char * chunk = malloc((chunk_size+1)*sizeof(char));
