@@ -34,7 +34,7 @@ int dir;
 #if 1
 printf("%s at block %5d\n", dir == READING ? "reading " : "writing", bno);
 #endif
-printf("dev is %d SEEK_SET is  %d.\n", dev, SEEK_SET);
+printf("dev is %d SEEK_SET is  %d.\n", file_descriptor, SEEK_SET);
 printf("file_descriptor is %d.\n",file_descriptor);
     if(file_descriptor != -1 ){
         printf("file_descriptor open is %d\n", file_descriptor);
@@ -42,10 +42,10 @@ printf("file_descriptor is %d.\n",file_descriptor);
       if (r != 0)
         fatal("lseek64 failed");
       if (dir == READING) {
-        if (read(dev, rwbuf, BLOCK_SIZE) == BLOCK_SIZE)
+        if (read(file_descriptor, rwbuf, BLOCK_SIZE) == BLOCK_SIZE)
             return;
       } else {
-        if (write(dev, rwbuf, BLOCK_SIZE) == BLOCK_SIZE){
+        if (write(file_descriptor, rwbuf, BLOCK_SIZE) == BLOCK_SIZE){
             return;
         }
       }
