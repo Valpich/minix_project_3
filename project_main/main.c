@@ -12,10 +12,10 @@
 #include <minix/const.h>
 #include <minix/type.h>
 #include <minix/u64.h>
-#include "../mfs/const.h"
-#include "../mfs/inode.h"
-#include "../mfs/type.h"
-#include "../mfs/mfsdir.h"
+#include "../servers/mfs/const.h"
+#include "../servers/mfs/inode.h"
+#include "../servers/mfs/type.h"
+#include "../servers/mfs/mfsdir.h"
 #include <minix/fslib.h>
 #include <stdio.h>
 #include <sys/stat.h>
