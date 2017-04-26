@@ -1,4 +1,5 @@
 #include "fs.h"
+#include "fs_repair.h"
 #include <assert.h>
 #include <minix/callnr.h>
 #include <signal.h>
