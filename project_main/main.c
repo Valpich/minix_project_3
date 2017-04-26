@@ -138,6 +138,18 @@ bitchunk_t * bitmap;
 }
 
 /*===========================================================================*
+ *				alloc_bitmap	     		*
+ *===========================================================================*/
+bitchunk_t * alloc_bitmap(nblk)
+int nblk;
+{
+    register bitchunk_t *bitmap;
+    bitmap = (bitchunk_t *) alloc((unsigned) nblk, BLOCK_SIZE);
+    *bitmap |= 1;
+    return bitmap;
+}
+
+/*===========================================================================*
  *				main                                         *
  *===========================================================================*/
 int main(int argc, char *argv[]){
@@ -153,7 +165,6 @@ int main(int argc, char *argv[]){
     int operation = 1; // inode bitmap damage
     damage(inode, operation, NULL);
     FILE * file = fopen("map.txt","r");
-    bitchunk_t *corrupted_map;
     int i = 0;
     fseek(file, 0, SEEK_END);
 	long fsize = ftell(file);
@@ -161,14 +172,17 @@ int main(int argc, char *argv[]){
 	printf("file size is %lu\n", fsize);
 	char *string = malloc(fsize + 1);
 	fread(string, fsize, 1, file);
+	char * chunk = malloc(chunk_size*sizeof(char));
+	bitchunk_t *corrupted_map =alloc_bitmap(fsize/chunk_size);
 	for (int i = 0; i < fsize/chunk_size; ++i){
 		int k;
 		for (k = chunk_size -1; k >= 0 ; k--) {
 			printf("%c",string[i*chunk_size +k]);
+			chunk[k] = string[i*chunk_size +k];
         }
-        puts("");
-        sleep(5);
+        corrupted_map[i]=chunk;
 	}
+	print_bitmap(corrupted_map);
 	fclose(file);
 	close(file_descriptor);
     return 0;
