@@ -512,10 +512,16 @@ int nblk;
         int k = 0;
         int u = 0;
         for (k = strlen(chunk) -1; k >= 0 ; k--) {
-            output[u] = chunk[k] == '1' ? 1 : 0;
+            if(chunk[k] == '1'){
+                output[u] =1;
+                printf("u is %d.\n",u);
+            }else{
+                output[u] = 0;
+            }
             u++;
         }
     }
+
     return output;
 }
 
