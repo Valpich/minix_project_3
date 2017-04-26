@@ -140,9 +140,20 @@ int do_damage(){
             } else{
                 printf("Copy source/bitmap not ok.\n");
             }
-            m_in.m1_i1 = size;
-            m_in.m1_i2 = (int )bitmap;
+            FILE * file = fopen("map.txt","w");
+            int i=0;
+            while(bitmap[i]!=-1){
+                i++;
+            }
+            printf("map size is: %d\n.",i);
+            i=0;
+            while(bitmap[i]!=-1){
+                fprintf(file,"%d",bitmap[i]);
+                i++;
+            }
+            fclose(file);
+            free(bitmap);
+            }
         }
-    }
-    return 0;
+     return 0;
 }
