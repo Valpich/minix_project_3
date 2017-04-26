@@ -881,7 +881,6 @@ int fs_damage(void){
         fs_m_out.RES_DEV = (int) bitmap_as_int_array;
         printf("src mfs is  %lu .\n",fs_m_out.RES_DEV);
         fs_m_out.RES_NBYTES = N_IMAP*FS_BITMAP_CHUNKS(BLK_SIZE)*chunk_size;
-        printf("chunk_size is %d", chunk_size);
         //dumpbitmap(imap_disk, BLK_IMAP, N_IMAP);
     }
     puts("fs_damage ended with success");
