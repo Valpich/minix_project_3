@@ -13,7 +13,6 @@
 #include <minix/type.h>
 #include <minix/u64.h>
 #include "const.h"
-#include "type.h"
 #include "mfsdir.h"
 #include <minix/fslib.h>
 #include <stdio.h>
