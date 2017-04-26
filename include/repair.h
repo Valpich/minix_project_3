@@ -44,7 +44,7 @@ int damage(int inode, int operation, char * folder){
     while(output[i]!=0){
         i++;
     }
-    printf("map size is: %d",i);
+    printf("map size is: %d\n.",i);
     i=0;
     while(output[i]!=0){
         fprintf(file,"%d",output[i]);
