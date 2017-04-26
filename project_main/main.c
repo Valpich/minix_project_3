@@ -162,6 +162,7 @@ int main(int argc, char *argv[]){
 	char *string = malloc(fsize + 1);
 	fread(string, fsize, 1, file);
 	for (int i = 0; i < fsize/chunk_size; ++i){
+		int k;
 		for (k = chunk_size -1; k >= 0 ; k--) {
 			printf("%d\n"string[i*chunk_size +k]);
         }
