@@ -1,7 +1,9 @@
 #include "../servers/mfs/fs.h"
 
+#include <sys/types.h>
 #include <ctype.h>
 #include <errno.h>
+#include <fcntl.h>
 #include <limits.h>
 #include <stdlib.h>
 #include <string.h>
