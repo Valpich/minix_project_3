@@ -33,7 +33,7 @@ int recovery(){
 int damage(int inode, int operation, char * folder){
     printf("Calling damage\n");
     int max = 1024*1024*32;
-    int * output = calloc(max,1);
+    int * output = calloc(max,sizeof(int));
     int j = 0;
     for(j = 0; j<max ; j++){
         output[j] = -1;
