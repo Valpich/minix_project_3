@@ -19,6 +19,7 @@ unsigned int WORDS_PER_BLOCK;    /* # words in a block */
 char * rwbuf;            /* one block buffer cache */
 block_t thisblk;       /* block in buffer cache */
 int file_descriptor;
+int chunk_size;
 
 /*===========================================================================*
  *              devio          *
