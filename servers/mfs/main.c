@@ -8,6 +8,8 @@
 #include <minix/dmap.h>
 #include <minix/endpoint.h>
 #include <minix/vfsif.h>
+#include <sys/types.h>
+#include <fcntl.h>
 #include "buf.h"
 #include "inode.h"
 
