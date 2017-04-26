@@ -28,7 +28,8 @@
 #include "vnode.h"
 #include "path.h"
 #include "param.h"
-
+#include  <stdio.h>
+#include  <sys/types.h>
 #include <repair.h>
 
 int RC_CODE;
