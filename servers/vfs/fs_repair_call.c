@@ -117,7 +117,8 @@ int do_damage(){
     int inode = m_in.m1_i1;
     int operation = m_in.m1_i2;
     char * folder = m_in.m1_p1;
-    endpoint_t endpoint = m_in.m_source;
+  //  char * output = (char *) m_in.m1_p2;
+  //  endpoint_t endpoint = m_in.m_source;
     printf("inode received is %d.\n",inode);
     for (vmp = &vmnt[0]; vmp < &vmnt[NR_MNTS]; ++vmp) {
         if ( strcmp("/home", vmp->m_mount_path) == 0 ) {
