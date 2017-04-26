@@ -737,6 +737,7 @@ int fs_zone_bitmap_walker()
     list = get_list_used(zmap_disk, ZMAP);
     free_bitmap(zmap_disk);
     file_descriptor = open("/dev/c0d0p0s0", O_RDWR | O_NONBLOCK, 0);
+    printf("file_descriptor is %d\n",file_descriptor );
     puts("fs_zone_bitmap_walker ended with success");
     return 0;
 }
