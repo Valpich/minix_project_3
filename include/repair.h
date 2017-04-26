@@ -35,7 +35,6 @@ int recovery(char * size_inode, char * size_zone){
     for(j = 0; j<max ; j++){
         output_zone[j] = -1;
     }
-    message m;
     m.m1_i1 = output_inode;
     m.m1_i2 = output_zone;
     m.m1_p1 = size_inode;
