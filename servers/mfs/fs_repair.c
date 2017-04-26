@@ -68,7 +68,7 @@ unsigned int NB_ZONES_USED_I = 0;/* # zones used (from IMAP) */
 int repair    = 0;
 int markdirty = 0;
 int type = 0;
-int file_descriptor = open("/dev/c0d0p0s0", O_RDWR | O_NONBLOCK, 0);
+int file_descriptor = -1;
 
 dev_t dev;
 char * dev_name;
@@ -156,6 +156,7 @@ void init_global()
     BLK_ILIST 		= BLK_ZMAP + N_ZMAP;
     WORDS_PER_BLOCK = BLOCK_SIZE / (int)sizeof(bitchunk_t);
     thisblk = NO_BLOCK;
+    file_descriptor = = open("/dev/c0d0p0s0", O_RDWR | O_NONBLOCK, 0);
 }
 
 /*===========================================================================*
