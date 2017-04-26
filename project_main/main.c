@@ -144,10 +144,5 @@ int main(int argc, char *argv[]){
     bitchunk_t *corrupted_map;
     char chunk;
     int i = 0;
-    char c;
-    while((c = getc(file_descriptor)) != EOF) {
-    	
-    	putchar(c);
-	}
     return 0;
 }
