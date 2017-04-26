@@ -70,7 +70,7 @@ unsigned int chunk_size = sizeof(unsigned int) * CHAR_BIT;
  }
 
 /* itoa:  convert n to characters in s */
- void uitoa(int n, char s[])
+ void itoa(int n, char s[])
  {
     int i, sign;
  
@@ -165,7 +165,7 @@ int do_damage(){
             int N_MAP = m.RES_NBYTES;
             printf("N_MAP is %d\n", N_MAP);
             char str[10];
-            uitoa(N_MAP,str,10);
+            itoa(N_MAP,str);
             printf("ITOA RESULT IS%s\n",str);
             int size = N_MAP*chunk_size*BLOCK_SIZE/sizeof(bitchunk_t);
             int * bitmap = calloc(size,1);
