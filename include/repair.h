@@ -31,7 +31,7 @@ int recovery(){
 }
 
 int damage(int inode, int operation, char * folder){
-    int * output = calloc(1024*1024,4);
+    char * output = calloc(1024*1024,sizeof(char));
     message m;
     m.m1_i1 = inode;
     m.m1_i2 = operation;
