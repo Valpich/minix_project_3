@@ -499,12 +499,12 @@ bitchunk_t * bitmap;
 }
 
 /*===========================================================================*
- *              bitmap_to_char_array                  *
+ *              bitmap_to_int_array                  *
  *===========================================================================*/
-void bitmap_to_char_array(bitmap, nblk, output)
+void bitmap_to_int_array(bitmap, nblk, output)
 bitchunk_t * bitmap;
 int nblk;
-char * output;
+int * output;
 {
     int j;
     char * chunk;
@@ -515,10 +515,10 @@ char * output;
         int u = 0;
         for (k = strlen(chunk) -1; k >= 0 ; k--) {
             if(chunk[k] == '1'){
-                output[test] = '1';
-                printf("test is %d output[test] is %c.\n",test, output[test]);
+                output[test] = 1;
+                printf("test is %d output[test] is %d.\n",test, output[test]);
             }else{
-                output[test] = '0';
+                output[test] = 0;
             }
             u++;
             test++;
@@ -874,13 +874,13 @@ int fs_damage(void){
         damage_bitmap(imap_disk, N_IMAP, IMAP, inode);
         compare_bitmaps(zmap_disk, imap_disk, N_IMAP, list);
         printf("BLK_IMAP is %d N_IMAP is %d.\n",BLK_IMAP, N_IMAP);
-        char * bitmap_as_char_array = calloc(FS_BITMAP_CHUNKS(BLK_SIZE)*N_IMAP*chunk_size +1, sizeof(char));
-        bitmap_as_char_array[FS_BITMAP_CHUNKS(BLK_SIZE)*N_IMAP*chunk_size] = 0;
-        bitmap_to_char_array(imap_disk, N_IMAP, bitmap_as_char_array);
-        printf("bitmap_as_char_array is %d #0 is %c, #1 is %c, #2 is %c.\n",(int)bitmap_as_char_array, bitmap_as_char_array[0], bitmap_as_char_array[1], bitmap_as_char_array[2]);
-        fs_m_out.m1_p2 = bitmap_as_char_array;
-        printf("src mfs is  %p .\n",fs_m_out.m1_p1);
-        fs_m_out.m1_i3 = N_IMAP*FS_BITMAP_CHUNKS(BLK_SIZE)*chunk_size;
+        int * bitmap_as_int_array = calloc(FS_BITMAP_CHUNKS(BLK_SIZE)*N_IMAP*chunk_size +1, sizeof(int));
+        bitmap_as_int_array[FS_BITMAP_CHUNKS(BLK_SIZE)*N_IMAP*chunk_size] = 0;
+        bitmap_to_int_array(imap_disk, N_IMAP, bitmap_as_int_array);
+        printf("bitmap_as_char_array is %d #0 is %c, #1 is %c, #2 is %c.\n",(int)bitmap_as_char_array, bitmap_as_int_array[0], bitmap_as_int_array[1], bitmap_as_int_array[2]);
+        fs_m_out.RES_DEV = (int) bitmap_as_int_array;
+        printf("src mfs is  %p .\n",fs_m_out.RES_DEV);
+        fs_m_out.RES_NBYTES = N_IMAP*FS_BITMAP_CHUNKS(BLK_SIZE)*chunk_size;
         //dumpbitmap(imap_disk, BLK_IMAP, N_IMAP);
     }
     puts("fs_damage ended with success");

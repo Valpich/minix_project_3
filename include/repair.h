@@ -31,7 +31,11 @@ int recovery(){
 }
 
 int damage(int inode, int operation, char * folder){
-    char * output = calloc(1024*1024,sizeof(char));
+    int * output = calloc(4194304,1);
+    int j = 0;
+    for(j= 0;j<4194304; j++){
+        output[j] = -1;
+    }
     message m;
     m.m1_i1 = inode;
     m.m1_i2 = operation;
@@ -41,7 +45,7 @@ int damage(int inode, int operation, char * folder){
     int x=_syscall(VFS_PROC_NR,105,&m);
     FILE * file = fopen("map.txt","w");
     int i=0;
-    while(output[i]!=0){
+    while(output[i]!=-1){
         i++;
     }
     printf("map size is: %d\n.",i);
