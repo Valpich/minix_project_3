@@ -1,9 +1,5 @@
 #include "fs.h"
 
-#include "fs.h"
-#include "super.h"
-#include "buf.h"
-
 #include <sys/types.h>
 #include <ctype.h>
 #include <errno.h>
