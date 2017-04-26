@@ -139,7 +139,8 @@ int do_damage(){
             } else{
                 printf("Copy source/bitmap not ok.\n");
             }
-            printf("test copy1 %d  %d  %d\n",bitmap[0],bitmap[1],bitmap[2]);
+            printf("test copy1 %d  %d  %d %d\n",bitmap[0],bitmap[1],bitmap[2],bitmap[3]);
+            realloc(output, size);
             if(sys_datacopy(SELF, (vir_bytes)bitmap, endpoint , (vir_bytes)output, size)==OK){
                 printf("Copy bitmap/output ok.\n");
             }else{
