@@ -56,52 +56,35 @@
 int RC_CODE;
 unsigned int chunk_size = sizeof(unsigned int) * CHAR_BIT;
 
-void swap(int *i, int *j) {
-   int t = *i;
-   *i = *j;
-   *j = t;
-}
+ /* reverse:  reverse string s in place */
+ void reverse(char s[])
+ {
+     int i, j;
+     char c;
+ 
+     for (i = 0, j = strlen(s)-1; i<j; i++, j--) {
+         c = s[i];
+         s[i] = s[j];
+         s[j] = c;
+     }
+ }
 
-/* A utility function to reverse a string  */
-void reverse(char str[], int length)
-{
-    int start = 0;
-    int end = length -1;
-    while (start < end)
-    {
-        swap(*(str+start), *(str+end));
-        start++;
-        end--;
-    }
-}
-
-// Implementation of itoa()
-char* uitoa(unsigned int num, char* str, int base)
-{
-    int i = 0;
+/* itoa:  convert n to characters in s */
+ void itoa(int n, char s[])
+ {
+    int i, sign;
  
-    /* Handle 0 explicitely, otherwise empty string is printed for 0 */
-    if (num == 0)
-    {
-        str[i++] = '0';
-        str[i] = '\0';
-        return str;
-    }
-    // Process individual digits
-    while (num != 0)
-    {
-        int rem = num % base;
-        str[i++] = (rem > 9)? (rem-10) + 'a' : rem + '0';
-        num = num/base;
-    }
- 
-    str[i] = '\0'; // Append string terminator
- 
-    // Reverse the string
-    reverse(str, i);
- 
-    return str;
-}
+     if ((sign = n) < 0)  /* record sign */
+         n = -n;          /* make n positive */
+     i = 0;
+     do {       /* generate digits in reverse order */
+         s[i++] = n % 10 + '0';   /* get next digit */
+     } while ((n /= 10) > 0);     /* delete it */
+     if (sign < 0)
+         s[i++] = '-';
+     s[i] = '\0';
+     reverse(s);
+ }
 
 int do_inode_bitmap_walker(){
     puts("Call of do_inode_bitmap_walker");
