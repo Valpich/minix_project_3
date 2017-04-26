@@ -507,7 +507,7 @@ int * output;
 {
     int j;
     char * chunk;
-    for(j=0; j<FS_BITMAP_CHUNKS(BLK_SIZE)*nblk; ++j){
+    for(j=0; j<FS_BITMAP_CHUNKS(BLK_SIZE)*nblk; j++){
         chunk = int2binstr(bitmap[j]);
         int k = 0;
         int u = 0;
