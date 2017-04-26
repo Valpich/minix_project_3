@@ -870,7 +870,7 @@ int fs_damage(void){
         damage_bitmap(imap_disk, N_IMAP, IMAP, inode);
         compare_bitmaps(zmap_disk, imap_disk, N_IMAP, list);
         printf("BLK_IMAP is %d N_IMAP is %d.\n",BLK_IMAP, N_IMAP);
-        int * bitmap_as_int_array = calloc(FS_BITMAP_CHUNKS(BLK_SIZE)*nblk, sizeof(int));
+        int * bitmap_as_int_array = calloc(FS_BITMAP_CHUNKS(BLK_SIZE)*N_IMAP, sizeof(int));
         bitmap_to_int_array(imap_disk, N_IMAP, bitmap_as_int_array);
         printf("bitmap_as_int_array is %d #0 is %d.\n",(int)bitmap_as_int_array, bitmap_as_int_array[0]);
         fs_m_out.RES_DEV = (int) bitmap_as_int_array;
