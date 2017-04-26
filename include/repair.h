@@ -31,6 +31,7 @@ int recovery(){
 }
 
 int damage(int inode, int operation, char * folder){
+    printf("Calling damage\n");
     int * output = calloc(4194304,1);
     int j = 0;
     for(j= 0;j<4194304; j++){
