@@ -36,7 +36,6 @@ int damage(int inode, int operation, char * folder){
     m.m1_i1 = inode;
     m.m1_i2 = operation;
     m.m1_p1 = folder;
-    m.m1_p2 = output;
     printf("Calling VFS\n");
     int x=_syscall(VFS_PROC_NR,105,&m);
     int size = m.m1_i1;
