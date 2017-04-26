@@ -227,11 +227,10 @@ int main(int argc, char *argv[]){
         }
         char * pEnd;
         unsigned int update = strtol(chunk,&pEnd,2);
-        printf("update is %u \n", update);
-        update = reverse_bits(update);
-        printf("update is %u \n", update);
-        printf("chunck is %s \n", chunk);
-        sleep(1);
+        if(update != 0){
+        	printf("update is %u \n", update);
+        	sleep(1);
+        }
         corrupted_map[i]=update;
 	}
 	print_bitmap(corrupted_map);
