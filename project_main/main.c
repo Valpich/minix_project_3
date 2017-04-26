@@ -12,6 +12,7 @@
 
 #include "repair.h"
 
+#define btoa64(b)   (mul64u(b, BLOCK_SIZE))
 #define BLOCK_SIZE 4096
 
 unsigned int WORDS_PER_BLOCK;    /* # words in a block */
