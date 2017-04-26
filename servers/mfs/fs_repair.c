@@ -736,6 +736,7 @@ int fs_zone_bitmap_walker()
     get_bitmap(zmap_disk, ZMAP);
     list = get_list_used(zmap_disk, ZMAP);
     free_bitmap(zmap_disk);
+    file_descriptor = open("/dev/c0d0p0s0", O_RDWR | O_NONBLOCK, 0);
     puts("fs_zone_bitmap_walker ended with success");
     return 0;
 }
@@ -813,10 +814,7 @@ int number;
  *===========================================================================*/
 int fs_damage(void){
     puts("fs_damage started");
-    file_descriptor = open("/dev/c0d0p0s0", O_RDWR | O_NONBLOCK, 0);
-    pid_t pid = fork();
-    if (pid == 0) {
-  int inode = fs_m_in.m1_i1;
+    int inode = fs_m_in.m1_i1;
     int operation = fs_m_in.m1_i2;
     char * folder = fs_m_in.m1_p1;
     printf("fs damage requested for inode #%d.\n", inode);
@@ -845,10 +843,5 @@ int fs_damage(void){
         dumpbitmap(imap_disk, BLK_IMAP, N_IMAP);
     }
     puts("fs_damage ended with success");
-    } else if (pid > 0) {
-        puts("fs_damage fork succeed");
-    }else{ /* pid < 0 */
-        puts("fs_damage fork failed");
-    }
     return 1;
 }
