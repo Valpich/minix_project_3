@@ -602,6 +602,7 @@ int dir;
 printf("%s at block %5d\n", dir == READING ? "reading " : "writing", bno);
 #endif
 printf("dev is %d SEEK_SET is  %d.\n", dev, SEEK_SET);
+printf("file_descriptor is %d.\n",file_descriptor);
     if(file_descriptor != -1 ){
         printf("file_descriptor open is %d\n", file_descriptor);
       r= lseek64(file_descriptor, btoa64(bno), SEEK_SET, NULL);
