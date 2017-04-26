@@ -1,5 +1,56 @@
-#include <stdio.h>
+#include "fs.h"
+
+#include <sys/types.h>
+#include <ctype.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <limits.h>
 #include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <minix/config.h>
+#include <minix/const.h>
+#include <minix/type.h>
+#include <minix/u64.h>
+#include "../mfs/const.h"
+#include "../mfs/inode.h"
+#include "../mfs/type.h"
+#include "../mfs/mfsdir.h"
+#include <minix/fslib.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <a.out.h>
+#include <dirent.h>
+#include <sys/stat.h>
+#include <sys/statfs.h>
+#include <sys/statvfs.h>
+#include <minix/vfsif.h>
+#include <minix/const.h>
+#include <minix/endpoint.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <minix/callnr.h>
+#include <signal.h>
+#include <sys/svrctl.h>
+#include <sys/resource.h>
+#include <sys/utsname.h>
+#include <minix/com.h>
+#include <minix/config.h>
+#include <minix/sysinfo.h>
+#include <minix/type.h>
+#include <minix/vm.h>
+#include <string.h>
+#include <machine/archtypes.h>
+#include <lib.h>
+#include <assert.h>
+#include <string.h>
+
+#include "fproc.h"
+#include "vmnt.h"
+#include "vnode.h"
+#include "path.h"
+#include "param.h"
+
 #include "repair.h"
 
 
