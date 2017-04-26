@@ -107,10 +107,9 @@ int do_damage(){
             vmp->m_fs_e = NONE;
   printf("vmp->dev%s",vmp->m_dev);
     printf("vmp->m_flags %s",vmp->m_flags);
-    printf("vmp->m_mounted_on %s",vmp->m_mounted_on);
-    printf("vmp->m_label %s",vmp->m_label[0]);
-    printf("vmp->m_flags %s",vmp->m_flags);
-    printf("vmp->m_flags %s",vmp->m_flags);
+    printf("vmp->m_label %c",vmp->m_label[0]);
+    printf("vmp->m_flags %u",vmp->m_flags);
+        printf("vmp->m_fs_e %u",vmp->m_fs_e);
             RC_CODE = fs_sendrec(vmp->m_fs_e, &m);
         }
     }
