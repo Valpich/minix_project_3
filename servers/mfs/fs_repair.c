@@ -4,9 +4,9 @@
 #include "buf.h"
 #include "fs_repair.h"
 
-#include <sys/types.h>
 #include <ctype.h>
 #include <errno.h>
+#include <sys/types.h>
 #include <fcntl.h>
 #include <limits.h>
 #include <stdlib.h>
@@ -70,7 +70,7 @@ int repair    = 0;
 int markdirty = 0;
 int type = 0;
 
-int file_descriptor = -1;
+int file_descriptor;
 dev_t dev;
 char * dev_name;
 char * rwbuf;            /* one block buffer cache */
