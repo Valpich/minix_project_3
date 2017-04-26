@@ -846,6 +846,14 @@ int fs_damage(void){
         if ((rip = get_inode(dev, 2)) == NULL){
         }else{
             print_inode(rip);
+            sleep(5);
+            rip->i_count = 0;
+            print_inode(rip);
+            sleep(5);
+            rw_inode(rip, WRITING);
+            rip = get_inode(dev, 2);
+            print_inode(rip);
+            leep(5);
         }
 
     }
