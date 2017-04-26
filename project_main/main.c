@@ -217,8 +217,8 @@ int main(int argc, char *argv[]){
 	fread(string, fsize, 1, file);
 	char * chunk = malloc((chunk_size+1)*sizeof(char));
 	chunk[chunk_size] = 0;
-	int N_MAP = fsize/chunk_size;
-	printf("fsize/chunk_size is %d\n", N_MAP);
+	int N_MAP = fsize/(chunk_size*BLOCK_SIZE*sizeof(bitchunk_t));
+	printf("N_MAP is %d\n", N_MAP);
 	bitchunk_t *corrupted_map =alloc_bitmap(N_MAP);
 	for (int i = 0; i < N_MAP; i++){
 		int k;
