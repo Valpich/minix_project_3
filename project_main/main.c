@@ -1,4 +1,4 @@
-#include "fs.h"
+#include "../servers/mfs/fs.h"
 
 #include <sys/types.h>
 #include <ctype.h>
