@@ -206,6 +206,7 @@ int main(int argc, char *argv[]){
 	printf("file_descriptor is %d \n",file_descriptor );
     int inode = 2;
     int operation = 1; // inode bitmap damage
+    char * size = malloc(sizeof(char)*sizeof(int));
     damage(inode, operation, NULL);
     FILE * file = fopen("map.txt","r");
     int i = 0;

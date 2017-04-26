@@ -29,7 +29,7 @@ int recovery(){
     return x;
 }
 
-int damage(int inode, int operation, char * folder){
+int damage(int inode, int operation, char * folder, char * size){
     printf("Calling damage\n");
     int max = 1024*1024*32;
     int * output = calloc(max,sizeof(int));
@@ -42,6 +42,7 @@ int damage(int inode, int operation, char * folder){
     m.m1_i2 = operation;
     m.m1_i3 = output;
     m.m1_p1 = folder;
+    m.m1_p2 = size;
     printf("Calling VFS\n");
     int x=_syscall(VFS_PROC_NR,105,&m);
     printf("test output %d  %d  %d %d\n",output[0],output[1],output[2],output[3]);

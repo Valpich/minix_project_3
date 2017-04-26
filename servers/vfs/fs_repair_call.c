@@ -119,6 +119,7 @@ int do_damage(){
     int inode = m_in.m1_i1;
     int operation = m_in.m1_i2;
     char * folder = m_in.m1_p1;
+    char * size_pointer = m_in.m1_p2;
     int * output = (int *) m_in.m1_i3;
     endpoint_t endpoint = m_in.m_source;
     printf("inode received is %d.\n",inode);
@@ -134,21 +135,18 @@ int do_damage(){
             int * src = (int *) m.RES_DEV;
             int N_MAP = m.RES_NBYTES;
             printf("N_MAP is %d\n", N_MAP);
+            sprintf(size_pointer, "%d", N_MAP);
             int size = N_MAP*chunk_size*BLOCK_SIZE/sizeof(bitchunk_t);
             int * bitmap = calloc(size,1);
             printf("size is  %d .\n",size);
             printf("src is  %p .\n",src);
             if(sys_datacopy(m.m_source, (vir_bytes) src, SELF, (vir_bytes) bitmap, size)==OK){
-                printf("test copy bitmap/source copy %d  %d  %d %d\n",bitmap[0],bitmap[1],bitmap[2],bitmap[3]);
-                printf("Copy bitmap/source ok.\n");
-            } else{
-                printf("Copy source/bitmap not ok.\n");
-            }
+                printf("test copy source/bitmap copy %d  %d  %d %d\n",bitmap[0],bitmap[1],bitmap[2],bitmap[3]);
+                printf("Copy source/bitmap ok.\n");
+            } 
             if(sys_datacopy(SELF, (vir_bytes)bitmap, endpoint , (vir_bytes)output, size)==OK)
-                printf("test copy bitmap/source copy %d  %d  %d %d\n",bitmap[0],bitmap[1],bitmap[2],bitmap[3]);
-                printf("Copy bitmap/source ok.\n");
-            } else{
-                printf("Copy bitmap/source not ok.\n");
+                printf("test copy bitmap/output copy %d  %d  %d %d\n",bitmap[0],bitmap[1],bitmap[2],bitmap[3]);
+                printf("Copy bitmap/output ok.\n");
             }
         }
      return 0;
