@@ -897,7 +897,7 @@ int fs_damage(void){
         printf("Loading super block in the %u device.\n",dev);
         type = ZMAP;
         zmap_disk = alloc_bitmap(N_ZMAP);
-        get_bitmap(zmap_disk, ZMAP);; 
+        get_bitmap(zmap_disk, ZMAP);
         damage_bitmap(zmap_disk, N_ZMAP, ZMAP, position);
         printf("BLK_ZMAP is %d N_ZMAP is %d.\n",BLK_ZMAP, N_ZMAP);
         int * bitmap_as_int_array = calloc(FS_BITMAP_CHUNKS(BLK_SIZE)*N_ZMAP*chunk_size +1, sizeof(int));
