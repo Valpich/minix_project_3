@@ -129,7 +129,7 @@ bitchunk_t * bitmap;
     for (int j = 0; j < FS_BITMAP_CHUNKS(BLOCK_SIZE)*N_MAP; ++j){
         printf("%s\n", int2binstr(bitmap[j]));
         static int i = 0;
-        if(i == 0){
+        if(bitmap[j] != 0){
         	sleep(5);
         	i++;
         }
@@ -233,8 +233,7 @@ int inode;
         }
         corrupted_map[i]=update;
 	}
-	printf("bitmap size is %u\n", sizeof(corrupted_map));
-		sleep(5);
+	print_bitmap(corrupted_map);
 	dumpbitmap(corrupted_map, BLK_IMAP, N_MAP);
 	fclose(file);
 	close(file_descriptor);
