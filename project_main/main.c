@@ -20,6 +20,7 @@ char * rwbuf;            /* one block buffer cache */
 block_t thisblk;       /* block in buffer cache */
 int file_descriptor;
 unsigned int chunk_size = sizeof(unsigned int) * CHAR_BIT;
+int N_MAP;
 
 /*===========================================================================*
  *              devio          *
@@ -124,7 +125,6 @@ int nblk;
 void print_bitmap(bitmap)
 bitchunk_t * bitmap;
 {
-    int nblk;
     puts("Printing bitmap!");
     for (int j = 0; j < FS_BITMAP_CHUNKS(BLOCK_SIZE)*nblk; ++j){
         printf("%s\n", int2binstr(bitmap[j]));
@@ -221,7 +221,7 @@ int main(int argc, char *argv[]){
 	chunk[chunk_size] = 0;
 	char * p_end;
     unsigned int received = strtol(size,&p_end,10);
-	int N_MAP = received;
+	N_MAP = received;
 	printf("N_MAP is %d\n", N_MAP);
 	bitchunk_t *corrupted_map =alloc_bitmap(N_MAP);
 	for (int i = 0; i < N_MAP; i++){
