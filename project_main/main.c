@@ -207,7 +207,7 @@ int main(int argc, char *argv[]){
     int inode = 2;
     int operation = 1; // inode bitmap damage
     char * size = malloc(sizeof(char)*sizeof(int));
-    damage(inode, operation, NULL);
+    damage(inode, operation, NULL, size);
     FILE * file = fopen("map.txt","r");
     int i = 0;
     fseek(file, 0, SEEK_END);
