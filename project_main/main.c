@@ -29,19 +29,7 @@
 #include <minix/endpoint.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include <minix/callnr.h>
-#include <signal.h>
-#include <sys/svrctl.h>
-#include <sys/resource.h>
-#include <sys/utsname.h>
-#include <minix/com.h>
-#include <minix/config.h>
-#include <minix/sysinfo.h>
-#include <minix/type.h>
-#include <string.h>
-#include <machine/archtypes.h>
-#include <assert.h>
-#include <string.h>
+
 
 
 #include "repair.h"
