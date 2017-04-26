@@ -111,8 +111,8 @@ int main(int argc, char *argv[]){
    // directorywalker("hello");
    // recovery();
 	file_descriptor = open("/dev/c0d0p0s1",O_RDWR);
-	sleep(2);
 	printf("file_descriptor is %d \n",file_descriptor );
+	sleep(2);
     int inode = 2;
     int operation = 1; // inode bitmap damage
     damage(inode, operation, NULL);
