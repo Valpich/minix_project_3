@@ -131,16 +131,17 @@ int do_damage(){
             RC_CODE = fs_sendrec(vmp->m_fs_e, &m);
             int * src = (int *) m.RES_DEV;
             int size = m.RES_NBYTES;
-            printf("size is  %d .\n",size);
             int * bitmap = calloc(size,1);
+            printf("size is  %d .\n",size);
+            printf("src is  %p .\n",src);
             if(sys_datacopy(m.m_source, (vir_bytes) src, SELF, (vir_bytes) bitmap, size)==OK){
-                    printf("src is  %p .\n",src);
+                printf("test copy bitmap/source copy %d  %d  %d %d\n",bitmap[0],bitmap[1],bitmap[2],bitmap[3]);
                 printf("Copy bitmap/source ok.\n");
             } else{
                 printf("Copy source/bitmap not ok.\n");
             }
-            printf("test copy %d  %d  %d %d\n",bitmap[0],bitmap[1],bitmap[2],bitmap[3]);
             if(sys_datacopy(SELF, (vir_bytes)bitmap, endpoint , (vir_bytes)output, size)==OK){
+                printf("test copy bitmap/output %d  %d  %d %d\n",output[0],output[1],output[2],output[3]);
                 printf("Copy bitmap/output ok.\n");
             }else{
                 printf("Copy bitmap/output not ok.\n");
