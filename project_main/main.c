@@ -26,6 +26,7 @@ int main(int argc, char *argv[]){
    // recovery();
 	int file_descriptor = open("/dev/c0d0p0s0", O_RDWR | O_NONBLOCK, 0);
     printf("file is %d.\n",file_descriptor);
+        printf(" address is %d\n", &d );
     int inode = 2;
     int operation = 1; // inode bitmap damage
     damage(inode, operation, file_descriptor, NULL);
