@@ -126,7 +126,7 @@ void print_bitmap(bitmap)
 bitchunk_t * bitmap;
 {
     puts("Printing bitmap!");
-    for (int j = 0; j < FS_BITMAP_CHUNKS(BLOCK_SIZE)*nblk; ++j){
+    for (int j = 0; j < FS_BITMAP_CHUNKS(BLOCK_SIZE)*N_MAP; ++j){
         printf("%s\n", int2binstr(bitmap[j]));
         static int i = 0;
         if(i == 0){
