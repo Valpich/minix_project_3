@@ -156,5 +156,12 @@ int main(int argc, char *argv[]){
     bitchunk_t *corrupted_map;
     char chunk;
     int i = 0;
+    fseek(file_descriptor, 0, SEEK_END);
+	long fsize = ftell(file_descriptor);
+	fseek(file_descriptor, 0, SEEK_SET);  //same as rewind(f);
+
+	char *string = malloc(fsize + 1);
+	fread(string, fsize, 1, f);
+	close(f);
     return 0;
 }
