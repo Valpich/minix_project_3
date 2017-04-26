@@ -234,6 +234,7 @@ int inode;
         corrupted_map[i]=update;
 	}
 	printf("bitmap size is %u\n", sizeof(corrupted_map));
+		sleep(5);
 	dumpbitmap(corrupted_map, BLK_IMAP, N_MAP);
 	fclose(file);
 	close(file_descriptor);
