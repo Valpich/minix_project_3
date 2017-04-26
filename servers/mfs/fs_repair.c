@@ -605,12 +605,10 @@ static int i = 0;
 if(i==0)sleep(1);
 i++;
 
-          int file = open("/dev/c0d0p0s0", O_RDWR | O_NONBLOCK, 0);
     if(file == -1){
         printf("Unable to open file %u\n", dev);
     }else{
         printf("File open is %d\n", file);
-        sleep(22);
       r= lseek64(file, btoa64(bno), SEEK_SET, NULL);
       if (r != 0)
         fatal("lseek64 failed");
