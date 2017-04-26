@@ -838,6 +838,7 @@ int number;
         if(modified == 1){
             char * pEnd;
             unsigned int update = strtol(chunk,&pEnd,2);
+            printf("update is %d \n", update);
             bitmap[j] = update;
         }
     }
