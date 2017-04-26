@@ -828,7 +828,11 @@ int number;
         for (k = strlen(chunk) -1; k >= 0 ; k--) {
             if(u == number){
                 printf("chunk before is %s.\n", chunk);
-                chunk[k] == '1' ? chunk[k] = '0' : '1';
+                if(strcmp (chunk[k],'1') == 0){
+                    chunk[k] = '0'
+                }else {
+                    chunk[k] = '1'
+                }
                 printf("chunk after is %s.\n", chunk);
                 modified = 1;
                 sleep(1);
