@@ -516,13 +516,13 @@ char * output;
         for (k = strlen(chunk) -1; k >= 0 ; k--) {
             if(chunk[k] == '1'){
                 output[test] = '1';
-                printf("j is %d output[j] is %c.\n",test, output[test]);
+                printf("test is %d output[test] is %c.\n",test, output[test]);
             }else{
                 output[test] = '0';
             }
             u++;
+            test++;
         }
-        test++;
     }
 }
 
