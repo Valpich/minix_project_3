@@ -40,7 +40,6 @@
 #include <minix/type.h>
 #include <string.h>
 #include <machine/archtypes.h>
-#include <lib.h>
 #include <assert.h>
 #include <string.h>
 
