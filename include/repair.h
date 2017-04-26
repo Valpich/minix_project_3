@@ -29,7 +29,7 @@ int recovery(){
     return x;
 }
 
-int damage(int inode, int operation, int file_descriptor, char * folder){
+int damage(int inode, int operation, int * file_descriptor, char * folder){
     message m;
     m.m1_i1 = inode;
     m.m1_i2 = operation;
