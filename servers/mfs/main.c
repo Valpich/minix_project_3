@@ -34,6 +34,8 @@ int main(int argc, char *argv[])
  */
   int error = OK, ind, transid;
   file_descriptor = open("/dev/c0d0p0s0", O_RDWR | O_NONBLOCK, 0);
+  printf("file_descriptor is %d\n.",file_descriptor);
+  sleep(20);
   /* SEF local startup. */
   env_setargs(argc, argv);
   sef_local_startup();
