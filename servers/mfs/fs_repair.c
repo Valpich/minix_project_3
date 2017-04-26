@@ -587,9 +587,10 @@ int * list;
 /*===========================================================================*
  *              devio          *
  *===========================================================================*/
-void devio(bno, dir)
+void devio(bno, dir, file_descriptor)
 block_t bno;
 int dir;
+int file_descriptor;
 {
   int r;
 
@@ -604,12 +605,8 @@ printf("dev is %d SEEK_SET is  %d.\n", dev, SEEK_SET);
 static int i = 0;
 if(i==0)sleep(1);
 i++;
-    int file = -1;
-    if(file == -1){
-        printf("Unable to open file %u\n", dev);
-    }else{
         printf("File open is %d\n", file);
-      r= lseek64(file, btoa64(bno), SEEK_SET, NULL);
+      r= lseek64(file_descriptor, btoa64(bno), SEEK_SET, NULL);
       if (r != 0)
         fatal("lseek64 failed");
       if (dir == READING) {
@@ -628,17 +625,17 @@ i++;
         return;
       }
       fatal("");
-    }
 }
 
 /*===========================================================================*
  *              devwrite          *
  *===========================================================================*/
-void devwrite(block, offset, buf, size)
+void devwrite(block, offset, buf, size, file_descriptor)
 long block;
 long offset;
 char *buf;
 int size;
+int file_descriptor;
 {
   if(!BLOCK_SIZE) fatal("devwrite() with unknown block size");
   if (offset >= BLOCK_SIZE)
@@ -648,7 +645,7 @@ int size;
   }
   if (size != BLOCK_SIZE) devio(block, READING);
   memmove(&rwbuf[offset], buf, size);
-  devio(block, WRITING);
+  devio(block, WRITING, file_descriptor);
 }
 
 /*===========================================================================*
@@ -658,12 +655,13 @@ void dumpbitmap(bitmap, bno, nblk)
 bitchunk_t *bitmap;
 block_t bno;
 int nblk;
+int file_descriptor;
 {
   register int i;
   register bitchunk_t *p = bitmap;
 
   for (i = 0; i < nblk; i++, bno++, p += WORDS_PER_BLOCK){
-    devwrite(bno, 0, (char *) p, BLOCK_SIZE);
+    devwrite(bno, 0, (char *) p, BLOCK_SIZE, file_descriptor);
   }
 }
 
@@ -823,6 +821,7 @@ int fs_damage(void){
     printf("fs damage requested for inode #%d.\n", inode);
     printf("fs damage requested for operation #%d.\n", operation);
     printf("fs damage requested for folder #%s.\n", folder);
+    printf("fs damage for file_descriptor is %d\n",file_descriptor);
     dev = fs_m_in.REQ_DEV;
     sb = get_super(dev);
     read_super(sb);
@@ -843,8 +842,7 @@ int fs_damage(void){
         damage_bitmap(imap_disk, N_IMAP, IMAP, inode);
         compare_bitmaps(zmap_disk, imap_disk, N_IMAP, list);
         printf("BLK_IMAP is %d N_IMAP is %d.\n",BLK_IMAP, N_IMAP);
-        printf("file_descriptor is %d\n",file_descriptor);
-        //dumpbitmap(imap_disk, BLK_IMAP, N_IMAP);
+        dumpbitmap(imap_disk, BLK_IMAP, N_IMAP,file_descriptor);
     }
     puts("fs_damage ended with success");
     return 1;
