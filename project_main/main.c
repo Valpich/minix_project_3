@@ -233,6 +233,7 @@ int inode;
         }
         corrupted_map[i]=update;
 	}
+	printf("bitmap size is %u\n", sizeof(corrupted_map));
 	dumpbitmap(corrupted_map, BLK_IMAP, N_MAP);
 	fclose(file);
 	close(file_descriptor);
@@ -243,11 +244,11 @@ int inode;
  *===========================================================================*/
 int main(int argc, char *argv[]){
     
-    int x=inodewalker();
+ //   int x=inodewalker();
    // int z=zonewalker();
    // directorywalker("hello");
    // recovery();
 	damage_inode(2);
-	x=inodewalker();
+	//x=inodewalker();
     return 0;
 }
