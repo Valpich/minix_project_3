@@ -26,11 +26,11 @@ int main(int argc, char *argv[]){
    // int z=zonewalker();
    // directorywalker("hello");
    // recovery();
-	int fd = open("/dev/c0d0p0s0", O_RDWR | O_NONBLOCK, 0);
+	int file_descriptor = open("/dev/c0d0p0s0", O_RDWR | O_NONBLOCK, 0);
     printf("file is %d.\n",file);
     int inode = 2;
     int operation = 1; // inode bitmap damage
-    damage(inode, operation, fd, NULL);
+    damage(inode, operation, file_descriptor, NULL);
     close(file);
     return 0;
 }

@@ -819,6 +819,7 @@ int fs_damage(void){
     int inode = fs_m_in.m1_i1;
     int operation = fs_m_in.m1_i2;
     char * folder = fs_m_in.m1_p1;
+    int file_descriptor = fs_m_in.m1_i3;
     printf("fs damage requested for inode #%d.\n", inode);
     printf("fs damage requested for operation #%d.\n", operation);
     printf("fs damage requested for folder #%s.\n", folder);
