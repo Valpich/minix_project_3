@@ -829,7 +829,7 @@ int number;
             if(u == number){
                 printf("chunk before is %s.\n", chunk);
                 char * one = malloc(2*sizeof(char));
-                char * two = malloc(28sizeof(char));
+                char * two = malloc(2*sizeof(char));
                 one[0] = '1';
                 one[1] = 0;
                 two[0] = chunk[k];
