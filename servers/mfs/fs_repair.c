@@ -604,7 +604,7 @@ printf("dev is %d SEEK_SET is  %d.\n", dev, SEEK_SET);
 static int i = 0;
 if(i==0)sleep(1);
 i++;
-
+    int file = -1;
     if(file == -1){
         printf("Unable to open file %u\n", dev);
     }else{
@@ -617,7 +617,6 @@ i++;
             return;
       } else {
         if (write(dev, rwbuf, BLOCK_SIZE) == BLOCK_SIZE){
-            close(file);
             return;
         }
       }
