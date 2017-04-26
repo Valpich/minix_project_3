@@ -513,10 +513,10 @@ int * output;
         int u = 0;
         for (k = strlen(chunk) -1; k >= 0 ; k--) {
             if(chunk[k] == '1'){
-                output[u] = 1;
-                printf("u is %d.\n",u);
+                output[j] = 1;
+                printf("j is %d output[j] is %d.\n",u, output[j]);
             }else{
-                output[u] = 0;
+                output[j] = 0;
             }
             u++;
         }
