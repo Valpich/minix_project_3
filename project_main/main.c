@@ -28,7 +28,7 @@ int dir;
 {
   int r;
 
-  if(!BLOCK_SIZE) fatal("devio() with unknown block size");
+  if(!BLOCK_SIZE) exit(3);
   if (dir == READING && bno == thisblk) return;
   thisblk = bno;
 
@@ -41,7 +41,7 @@ printf("file_descriptor is %d.\n",file_descriptor);
         printf("file_descriptor open is %d\n", file_descriptor);
       r= lseek64(file_descriptor, btoa64(bno), SEEK_SET, NULL);
       if (r != 0)
-        fatal("lseek64 failed");
+        printf("lseek64 failed");
       if (dir == READING) {
         if (read(file_descriptor, rwbuf, BLOCK_SIZE) == BLOCK_SIZE)
             return;
@@ -57,7 +57,7 @@ printf("file_descriptor is %d.\n",file_descriptor);
         memset(rwbuf, 0, BLOCK_SIZE);
         return;
       }
-      fatal("");
+      printf("");
   }else{
         printf("file_descriptor is not open.\n");
   }
@@ -72,7 +72,7 @@ long offset;
 char *buf;
 int size;
 {
-  if(!BLOCK_SIZE) fatal("devwrite() with unknown block size");
+  if(!BLOCK_SIZE) exit(4);
   if (offset >= BLOCK_SIZE)
   {
     block += offset/BLOCK_SIZE;
