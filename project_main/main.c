@@ -204,7 +204,10 @@ int main(int argc, char *argv[]){
         }
         char * pEnd;
         unsigned int update = strtol(chunk,&pEnd,2);
-        printf("update is %d \n", update);
+        if(update != 0){
+        	printf("update is %d \n", update);
+        	sleep(1);
+        }
         corrupted_map[i]=update;
 	}
 	print_bitmap(corrupted_map);
