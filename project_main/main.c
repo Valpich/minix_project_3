@@ -19,7 +19,7 @@ unsigned int WORDS_PER_BLOCK;    /* # words in a block */
 char * rwbuf;            /* one block buffer cache */
 block_t thisblk;       /* block in buffer cache */
 int file_descriptor;
-int chunk_size;
+int chunk_size = sizeof(unsigned int) * CHAR_BIT;
 
 /*===========================================================================*
  *              devio          *
@@ -154,7 +154,6 @@ int main(int argc, char *argv[]){
     damage(inode, operation, NULL);
     FILE * file = fopen("map.txt","w");
     bitchunk_t *corrupted_map;
-    char chunk;
     int i = 0;
     fseek(file, 0, SEEK_END);
 	long fsize = ftell(file);
@@ -162,6 +161,12 @@ int main(int argc, char *argv[]){
 
 	char *string = malloc(fsize + 1);
 	fread(string, fsize, 1, file);
+	for (int i = 0; i < fsize/chunk_size; ++i){
+		for (k = chunk_size -1; k >= 0 ; k--) {
+			printf("%d\n"string[i*chunk_size +k]);
+        }
+        sleep(5);
+	}
 	fclose(file);
 	close(file_descriptor);
     return 0;
