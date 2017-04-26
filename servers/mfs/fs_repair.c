@@ -829,7 +829,8 @@ int number;
             if(u == number){
                 printf("chunk before is %s.\n", chunk);
                 char * one = "1";
-                char * two = strcpy(two, chunk[k]);
+                char * two = malloc(sizeof(char));
+                two[0] = chunk[k];
                 if(strcmp (one, two) == 0){
                     chunk[k] = '0';
                 }else {
