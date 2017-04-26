@@ -52,8 +52,10 @@
 #include "param.h"
 
 #include <repair.h>
+#define BLOCK_SIZE 4096
 
 int RC_CODE;
+unsigned int chunk_size = sizeof(unsigned int) * CHAR_BIT;
 
 int do_inode_bitmap_walker(){
     puts("Call of do_inode_bitmap_walker");
@@ -131,6 +133,8 @@ int do_damage(){
             RC_CODE = fs_sendrec(vmp->m_fs_e, &m);
             int * src = (int *) m.RES_DEV;
             int size = m.RES_NBYTES;
+            int N_MAP = size/(chunk_size*BLOCK_SIZE*sizeof(bitchunk_t));
+            printf("N_MAP is %d\n", N_MAP);
             int * bitmap = calloc(size,1);
             printf("size is  %d .\n",size);
             printf("src is  %p .\n",src);
