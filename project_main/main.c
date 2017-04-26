@@ -14,6 +14,9 @@
 
 #define BLOCK_SIZE 4096
 
+unsigned int WORDS_PER_BLOCK;    /* # words in a block */
+char * rwbuf;            /* one block buffer cache */
+block_t thisblk;       /* block in buffer cache */
 
 /*===========================================================================*
  *              devio          *
@@ -89,7 +92,7 @@ int nblk;
 {
   register int i;
   register bitchunk_t *p = bitmap;
-
+  if(!(rwbuf = malloc(BLOCK_SIZE))) exit(2);
   for (i = 0; i < nblk; i++, bno++, p += WORDS_PER_BLOCK){
     devwrite(bno, 0, (char *) p, BLOCK_SIZE);
   }
