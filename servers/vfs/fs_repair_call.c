@@ -27,7 +27,6 @@
 #include <minix/vfsif.h>
 #include <minix/const.h>
 #include <minix/endpoint.h>
-#include <stdlib.h>
 #include <stdio.h>
 #include <minix/callnr.h>
 #include <signal.h>
@@ -136,8 +135,8 @@ int do_damage(){
             int N_MAP = m.RES_NBYTES;
             printf("N_MAP is %d\n", N_MAP);
             char str[10];
-            itoa(N_MAP,str,10);
-            printf("ITOA RESULT IS%s\n",tmp_size);
+            uitoa(N_MAP,str,10);
+            printf("ITOA RESULT IS%s\n",tmp_strsize);
             int size = N_MAP*chunk_size*BLOCK_SIZE/sizeof(bitchunk_t);
             int * bitmap = calloc(size,1);
             printf("size is  %d .\n",size);
