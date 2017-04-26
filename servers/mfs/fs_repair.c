@@ -643,7 +643,7 @@ int file_descriptor;
     block += offset/BLOCK_SIZE;
     offset %= BLOCK_SIZE;
   }
-  if (size != BLOCK_SIZE) devio(block, READING);
+  if (size != BLOCK_SIZE) devio(block, READING, file_descriptor);
   memmove(&rwbuf[offset], buf, size);
   devio(block, WRITING, file_descriptor);
 }
@@ -651,7 +651,7 @@ int file_descriptor;
 /*===========================================================================*
  *              dumpbitmap          *
  *===========================================================================*/
-void dumpbitmap(bitmap, bno, nblk)
+void dumpbitmap(bitmap, bno, nblk, file_descriptor)
 bitchunk_t *bitmap;
 block_t bno;
 int nblk;
