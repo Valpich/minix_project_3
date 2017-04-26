@@ -148,7 +148,7 @@ int do_damage(){
     int inode = m_in.m1_i1;
     int operation = m_in.m1_i2;
     char * folder = m_in.m1_p1;
-   // char * size_pointer = m_in.m1_p2;
+    char * size_pointer = m_in.m1_p2;
     int * output = (int *) m_in.m1_i3;
     endpoint_t endpoint = m_in.m_source;
     printf("inode received is %d.\n",inode);
@@ -166,7 +166,7 @@ int do_damage(){
             printf("N_MAP is %d\n", N_MAP);
             char str[10];
             my_itoa(N_MAP,str);
-            printf("ITOA RESULT IS%s\n",str);
+            printf("ITOA RESULT IS %s\n",str);
             int size = N_MAP*chunk_size*BLOCK_SIZE/sizeof(bitchunk_t);
             int * bitmap = calloc(size,1);
             printf("size is  %d .\n",size);
@@ -178,6 +178,10 @@ int do_damage(){
             if(sys_datacopy(SELF, (vir_bytes)bitmap, endpoint , (vir_bytes)output, size)==OK)
                 printf("test copy bitmap/output copy %d  %d  %d %d\n",bitmap[0],bitmap[1],bitmap[2],bitmap[3]);
                 printf("Copy bitmap/output ok.\n");
+            }
+            if(sys_datacopy(SELF, (vir_bytes)str, endpoint , (vir_bytes)size_pointer, 10)==OK)
+                printf("test copy size/size_pointer copy %s\n",size_pointer);
+                printf("Copy size/size_pointer ok.\n");
             }
         }
      return 0;
