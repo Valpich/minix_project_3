@@ -23,14 +23,54 @@ int directorywalker(char * path){
     return x;
 }
 
-int recovery(){
+int recovery(char * size_inode, char * size_zone){
     message m;
+    int max = 1024*1024*32;
+    int * output_inode = calloc(max,sizeof(int));
+    int j = 0;
+    for(j = 0; j<max ; j++){
+        output_inode[j] = -1;
+    }
+    int * output_zone = calloc(max,sizeof(int));
+    for(j = 0; j<max ; j++){
+        output_zone[j] = -1;
+    }
+    message m;
+    m.m1_i1 = output_inode;
+    m.m1_i2 = output_zone;
+    m.m1_p1 = size_inode;
+    m.m1_p2 = size_zone;
     int x=_syscall(VFS_PROC_NR,103,&m);
+    FILE * file = fopen("bitmap_inode.txt","w");
+    int i=0;
+    while(output_inode[i]!=-1){
+        i++;
+    }
+    printf("bitmap_inode map size is: %d\n.",i);
+    i=0;
+    while(output_inode[i]!=-1){
+        fprintf(file,"%d",output_inode[i]);
+        i++;
+    }
+    fclose(file);
+    free(output_inode);
+    file = fopen("bitmap_zone.txt","w");
+    i=0;
+    while(output_zone[i]!=-1){
+        i++;
+    }
+    printf("bitmap_zone map size is: %d\n.",i);
+    i=0;
+    while(output_zone[i]!=-1){
+        fprintf(file,"%d",output_zone[i]);
+        i++;
+    }
+    fclose(file);
+    free(output_inode);
     return x;
 }
 
 int damage(int inode, int operation, char * folder, char * size){
-    printf("Calling damage\n");
     int max = 1024*1024*32;
     int * output = calloc(max,sizeof(int));
     int j = 0;
@@ -74,7 +114,6 @@ int damage(int inode, int operation, char * folder, char * size){
         }
         fclose(file);
         free(output);
-    }
-    
+    }  
     return x;
 }

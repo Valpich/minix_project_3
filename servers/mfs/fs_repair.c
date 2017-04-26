@@ -800,6 +800,18 @@ int fs_recovery(void){
     int nblk = N_ZMAP > N_IMAP ? N_IMAP : N_ZMAP;
     compare_bitmaps(zmap_disk, imap_disk, nblk, list);
     sleep(5);
+    int * inode_bitmap_as_int_array = calloc(FS_BITMAP_CHUNKS(BLK_SIZE)*N_IMAP*chunk_size +1, sizeof(int));
+    inode_bitmap_as_int_array[FS_BITMAP_CHUNKS(BLK_SIZE)*N_IMAP*chunk_size] = 0;
+    inode_bitmap_as_int_array(imap_disk, N_ZMAP, inode_bitmap_as_int_array);
+    printf("inode_bitmap_as_int_array is %d #0 is %d, #1 is %d, #2 is %d.\n",(int)inode_bitmap_as_int_array, inode_bitmap_as_int_array[0], inode_bitmap_as_int_array[1], inode_bitmap_as_int_array[2]);
+    int * zone_bitmap_as_int_array = calloc(FS_BITMAP_CHUNKS(BLK_SIZE)*N_ZMAP*chunk_size +1, sizeof(int));
+    zone_bitmap_as_int_array[FS_BITMAP_CHUNKS(BLK_SIZE)*N_ZMAP*chunk_size] = 0;
+    zone_bitmap_as_int_array(imap_disk, N_ZMAP, zone_bitmap_as_int_array);
+    printf("zone_bitmap_as_int_array is %d #0 is %d, #1 is %d, #2 is %d.\n",(int)zone_bitmap_as_int_array, zone_bitmap_as_int_array[0], zone_bitmap_as_int_array[1], zone_bitmap_as_int_array[2]);
+    fs_m_out.RES_DEV = (int) inode_bitmap_as_int_array;
+    fs_m_out.RES_FILE_SIZE_HI = (int) zone_bitmap_as_int_array;
+    fs_m_out.RES_NBYTES = N_IMAP;
+    fs_m_out.RES_FILE_SIZE_LO = N_ZMAP;
     free_bitmap(zmap_disk);
     free_bitmap(imap_disk);
     puts("fs_recovery ended with success");

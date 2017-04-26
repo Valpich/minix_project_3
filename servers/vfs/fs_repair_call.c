@@ -131,12 +131,51 @@ int do_directory_bitmap_walker(){
 int do_recovery(){
     puts("Call of do_recovery");
     struct vmnt *vmp;
+    int * output_inode = (int *) m_in.m1_i1;
+    int * output_zone = (int *) m_in.m1_i2;
+    char * size_inode = m_in.m1_p1;
+    char * size_zone = m_in.m1_p2;
+    char str[10];
+    char str2[10];
+    endpoint_t endpoint = m_in.m_source;
     for (vmp = &vmnt[0]; vmp < &vmnt[NR_MNTS]; ++vmp) {
         if ( strcmp("/home", vmp->m_mount_path) == 0 ) {
             message m;
             m.m_type = REQ_RECOVERY;
             m.REQ_DEV = vmp->m_dev;
             RC_CODE = fs_sendrec(vmp->m_fs_e, &m);
+            int * bit_inode_src = (int *) m.RES_DEV;
+            int N_IMAP = m.RES_NBYTES;
+            int * bit_zone_src = (int *) m.RES_FILE_SIZE_HI;
+            int N_ZMAP = m.RES_FILE_SIZE_LO;
+            int size_imap = N_IMAP*chunk_size*BLOCK_SIZE/sizeof(bitchunk_t);
+            int * bitmap_imap = calloc(size,1);
+            int size_zmap = N_ZMAP*chunk_size*BLOCK_SIZE/sizeof(bitchunk_t);
+            int * bitmap_zmap = calloc(size,1);
+            my_itoa(N_IMAP,str);
+            my_itoa(N_ZMAP,str2);
+            if(sys_datacopy(m.m_source, (vir_bytes) src, SELF, (vir_bytes) bitmap_imap, size_imap)==OK){
+                printf("test copy source/bitmap copy %d  %d  %d %d\n",bitmap_imap[0],bitmap_imap[1],bitmap_imap[2],bitmap_imap[3]);
+                printf("Copy source/bitmap ok.\n");
+            } 
+            if(sys_datacopy(SELF, (vir_bytes)bitmap_imap, endpoint , (vir_bytes)output_inode, size_imap)==OK){
+                printf("Copy bitmap_imap/output_inode ok.\n");
+            }
+            if(sys_datacopy(SELF, (vir_bytes)str, endpoint , (vir_bytes)size_inode, 10)==OK){
+                printf("test copy size/size_inode copy %s\n",size_inode);
+                printf("Copy size_inode/size_inode ok.\n");
+            }
+            if(sys_datacopy(m.m_source, (vir_bytes) src, SELF, (vir_bytes) bitmap_zmap, size_zone)==OK){
+                printf("test copy source/bitmap_zmap copy %d  %d  %d %d\n",bitmap_zmap[0],bitmap_zmap[1],bitmap_zmap[2],bitmap_zmap[3]);
+                printf("Copy source/bitmap_zmap ok.\n");
+            } 
+            if(sys_datacopy(SELF, (vir_bytes)bitmap_zmap, endpoint , (vir_bytes)output_zone, size_zone)==OK){
+                printf("Copy bitmap_zmap/output_zone ok.\n");
+            }
+            if(sys_datacopy(SELF, (vir_bytes)str2, endpoint , (vir_bytes)size_zone, 10)==OK){
+                printf("test copy size/size_zone copy %s\n",size_zone);
+                printf("Copy size/size_zone ok.\n");
+            }
         }
     }
     return 0;
@@ -164,9 +203,7 @@ int do_damage(){
             RC_CODE = fs_sendrec(vmp->m_fs_e, &m);
             int * src = (int *) m.RES_DEV;
             int N_MAP = m.RES_NBYTES;
-            printf("N_MAP is %d\n", N_MAP);
             my_itoa(N_MAP,str);
-            printf("ITOA RESULT IS %s\n",str);
             int size = N_MAP*chunk_size*BLOCK_SIZE/sizeof(bitchunk_t);
             int * bitmap = calloc(size,1);
             printf("size is  %d .\n",size);
@@ -175,13 +212,13 @@ int do_damage(){
                 printf("test copy source/bitmap copy %d  %d  %d %d\n",bitmap[0],bitmap[1],bitmap[2],bitmap[3]);
                 printf("Copy source/bitmap ok.\n");
             } 
-            if(sys_datacopy(SELF, (vir_bytes)bitmap, endpoint , (vir_bytes)output, size)==OK)
-                printf("test copy bitmap/output copy %d  %d  %d %d\n",bitmap[0],bitmap[1],bitmap[2],bitmap[3]);
-            printf("Copy bitmap/output ok.\n");
-        }
-        if(sys_datacopy(SELF, (vir_bytes)str, endpoint , (vir_bytes)size_pointer, 10)==OK){
-            printf("test copy size/size_pointer copy %s\n",size_pointer);
-            printf("Copy size/size_pointer ok.\n");
+            if(sys_datacopy(SELF, (vir_bytes)bitmap, endpoint , (vir_bytes)output, size)==OK){
+                printf("Copy bitmap/output ok.\n");
+            }
+            if(sys_datacopy(SELF, (vir_bytes)str, endpoint , (vir_bytes)size_pointer, 10)==OK){
+                printf("test copy size/size_pointer copy %s\n",size_pointer);
+                printf("Copy size/size_pointer ok.\n");
+            }
         }
     }
     return 0;
