@@ -132,9 +132,9 @@ int do_damage(){
             m.m1_p1 = folder;
             RC_CODE = fs_sendrec(vmp->m_fs_e, &m);
             int * src = (int *) m.RES_DEV;
-            int size = m.RES_NBYTES;
-            int N_MAP = size/(chunk_size*BLOCK_SIZE*sizeof(bitchunk_t));
+            int N_MAP = m.RES_NBYTES;
             printf("N_MAP is %d\n", N_MAP);
+            int size = N_MAP*chunk_size*BLOCK_SIZE/sizeof(bitchunk_t);
             int * bitmap = calloc(size,1);
             printf("size is  %d .\n",size);
             printf("src is  %p .\n",src);
