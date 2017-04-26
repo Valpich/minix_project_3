@@ -828,7 +828,9 @@ int number;
         for (k = strlen(chunk) -1; k >= 0 ; k--) {
             if(u == number){
                 printf("chunk before is %s.\n", chunk);
-                if(strcmp (chunk[k],"1") == 0){
+                char * one = "1";
+                char * two = strcpy(two, chunk[k]);
+                if(strcmp (one, two) == 0){
                     chunk[k] = '0';
                 }else {
                     chunk[k] = '1';
