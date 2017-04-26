@@ -75,6 +75,7 @@ dev_t dev;
 char * dev_name;
 char * rwbuf;            /* one block buffer cache */
 block_t thisblk;       /* block in buffer cache */
+unsigned int chunk_size = -1;
 
 
 /*===========================================================================*
@@ -498,23 +499,23 @@ bitchunk_t * bitmap;
 }
 
 /*===========================================================================*
- *              bitmap_to_int_array                  *
+ *              bitmap_to_char_array                  *
  *===========================================================================*/
-void bitmap_to_int_array(bitmap, nblk, output)
+void bitmap_to_char_array(bitmap, nblk, output)
 bitchunk_t * bitmap;
 int nblk;
 char * output;
 {
     int j;
     char * chunk;
-    for(j=0; j<FS_BITMAP_CHUNKS(BLK_SIZE)*nblk; j++){
+    for(j=0; j<FS_BITMAP_CHUNKS(BLK_SIZE)*nblk; ++j){
         chunk = int2binstr(bitmap[j]);
         int k = 0;
         int u = 0;
         for (k = strlen(chunk) -1; k >= 0 ; k--) {
             if(chunk[k] == '1'){
                 output[j] = '1';
-                printf("j is %d output[j] is %c.\n",u, output[j]);
+                printf("j is %d output[j] is %d.\n",u, output[j]);
             }else{
                 output[j] = '0';
             }
@@ -533,6 +534,7 @@ unsigned int i;
     char * str = malloc(bits + 1);
     if(!str) return NULL;
     str[bits] = 0; 
+    chunk_size = bits;
     unsigned u = *(unsigned *)&i;
     for(; bits--; u >>= 1)
         str[bits] = u & 1 ? '1' : '0';  
@@ -870,9 +872,10 @@ int fs_damage(void){
         damage_bitmap(imap_disk, N_IMAP, IMAP, inode);
         compare_bitmaps(zmap_disk, imap_disk, N_IMAP, list);
         printf("BLK_IMAP is %d N_IMAP is %d.\n",BLK_IMAP, N_IMAP);
-        char bitmap_as_int_array[FS_BITMAP_CHUNKS(BLK_SIZE)*N_IMAP];
-        bitmap_to_int_array(imap_disk, N_IMAP, bitmap_as_int_array);
-        printf("bitmap_as_int_array is %d #0 is %c #1 is %c #2 is %c.\n",(int)bitmap_as_int_array, bitmap_as_int_array[0], bitmap_as_int_array[1], bitmap_as_int_array[2]);
+        char * bitmap_as_char_array = calloc(FS_BITMAP_CHUNKS(BLK_SIZE)*N_IMAP*chunk_size +1, sizeof(char));
+        bitmap_as_char_array[FS_BITMAP_CHUNKS(BLK_SIZE)*N_IMAP*chunk_size] = 0;
+        bitmap_to_char_array(imap_disk, N_IMAP, bitmap_as_char_array);
+        printf("bitmap_as_int_array is %d #0 is %c, #1 is %c.\n",(int)bitmap_as_char_array, bitmap_as_char_array[0], bitmap_as_char_array[1]);
         fs_m_out.RES_DEV = (int) bitmap_as_int_array;
         fs_m_out.RES_NBYTES = N_IMAP*FS_BITMAP_CHUNKS(BLK_SIZE);
         //dumpbitmap(imap_disk, BLK_IMAP, N_IMAP);
