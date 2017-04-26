@@ -144,7 +144,7 @@ int do_damage(){
                 printf("test copy bitmap/source copy %d  %d  %d %d\n",bitmap[0],bitmap[1],bitmap[2],bitmap[3]);
                 printf("Copy bitmap/source ok.\n");
             } else{
-                printf("Copy source/bitmap not ok.\n");
+                printf("Copy bitmap/source not ok.\n");
             }
         }
      return 0;
