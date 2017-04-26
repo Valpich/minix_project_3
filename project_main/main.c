@@ -144,7 +144,7 @@ char * alloc(nelem, elsize)
 unsigned nelem, elsize;
 {
     char *p;
-    if ((p = (char *)malloc((size_t)nelem * elsize)) == 0) {
+    if ((p = (char *)calloc((size_t)nelem , elsize)) == 0) {
         exit(6);
     }
     memset((void *) p, 0, (size_t)nelem * elsize);
@@ -213,7 +213,7 @@ int inode;
 	printf("returned size is %s\n", size);
 	char *string = malloc(fsize + 1);
 	fread(string, fsize, 1, file);
-	char * chunk = malloc((chunk_size+1)*sizeof(char));
+	char * chunk = calloc((chunk_size+1), sizeof(char));
 	chunk[chunk_size] = 0;
 	char * p_end;
     unsigned int received = strtol(size,&p_end,10);

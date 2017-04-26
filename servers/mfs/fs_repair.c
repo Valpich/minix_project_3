@@ -254,7 +254,7 @@ struct super_block *sb;
         puts("super block s_max_size is correct.");
     }
     if(sb->s_flags & MFSFLAG_MANDATORY_MASK) {
-        fatal("unsupported feature bits - newer fsck needed");
+        fatal("unsupported feature bits");
     }else{
         puts("super block s_flags is correct.");
     }
@@ -278,10 +278,8 @@ int type;
         int u = 0;
         for (k = strlen(chunk) -1; k >= 0 ; k--) {
             if(chunk[k] == '1'){
-                if(list[NB_USED] != 0){
-                    list[NB_USED] = u;
-                    NB_USED++;
-                }
+                list[NB_USED] = u;
+                NB_USED++;
             }
             u++;
         }
@@ -312,7 +310,7 @@ int * get_list_used(bitmap, type)
 bitchunk_t *bitmap;
 int type;
 {
-    int* list;
+    int * list;
     int nblk;
     int tot;
     if (type == IMAP){
@@ -625,17 +623,15 @@ void devio(bno, dir)
 block_t bno;
 int dir;
 {
-  int r;
-
-  if(!BLOCK_SIZE) fatal("devio() with unknown block size");
-  if (dir == READING && bno == thisblk) return;
-  thisblk = bno;
-
-#if 1
-printf("%s at block %5d\n", dir == READING ? "reading " : "writing", bno);
-#endif
-printf("dev is %d SEEK_SET is  %d.\n", dev, SEEK_SET);
-printf("file_descriptor is %d.\n",file_descriptor);
+    int r;
+    if(!BLOCK_SIZE) fatal("devio() with unknown block size");
+    if (dir == READING && bno == thisblk) return;
+    thisblk = bno;
+    #if 1
+    printf("%s at block %5d\n", dir == READING ? "reading " : "writing", bno);
+    #endif
+    printf("dev is %d SEEK_SET is  %d.\n", dev, SEEK_SET);
+    printf("file_descriptor is %d.\n",file_descriptor);
     if(file_descriptor != -1 ){
         printf("file_descriptor open is %d\n", file_descriptor);
       r= lseek64(file_descriptor, btoa64(bno), SEEK_SET, NULL);
@@ -649,7 +645,6 @@ printf("file_descriptor is %d.\n",file_descriptor);
             return;
         }
       }
-
       printf("%s: can't %s block %ld (error = 0x%x)\n", "fs_repair", dir == READING ? "read" : "write", (long) bno, errno);
       if (dir == READING) {
         printf("Continuing with a zero-filled block.\n");
