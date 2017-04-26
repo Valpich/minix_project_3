@@ -843,7 +843,7 @@ int fs_damage(void){
         printf("BLK_IMAP is %d N_IMAP is %d.\n",BLK_IMAP, N_IMAP);
        // dumpbitmap(imap_disk, BLK_IMAP, N_IMAP);
           register struct inode *rip;
-        if ((rip = get_inode(dev, inodes[i])) == NULL){
+        if ((rip = get_inode(dev, 2)) == NULL){
         }else{
             print_inode(rip);
         }
