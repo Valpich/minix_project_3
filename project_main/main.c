@@ -199,7 +199,7 @@ int main(int argc, char *argv[]){
 	int N_MAP = fsize/chunk_size;
 	printf("fsize/chunk_size is %d\n", N_MAP);
 	bitchunk_t *corrupted_map =alloc_bitmap(N_MAP);
-	for (int i = 0; i < N_MAP; ++i){
+	for (int i = 0; i < N_MAP; i++){
 		int k;
 		for (k = chunk_size -1; k >= 0 ; k--) {
 			chunk[k] = string[i*chunk_size +k];
