@@ -114,7 +114,7 @@ int nblk;
   if(!(rwbuf = malloc(BLOCK_SIZE))) exit(2);
   puts("Dumping bitmap on the disk");
   for (i = 0; i < nblk; i++, bno++, p += WORDS_PER_BLOCK){
-  	printf("dumping %s\n", int2binstr(p));
+  	printf("dumping %s\n", int2binstr(*p));
   	sleep(1);
     devwrite(bno, 0, (char *) p, BLOCK_SIZE);
   }
