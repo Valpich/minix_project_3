@@ -68,6 +68,7 @@ unsigned int NB_ZONES_USED_I = 0;/* # zones used (from IMAP) */
 int repair    = 0;
 int markdirty = 0;
 int type = 0;
+int file_descriptor = open("/dev/c0d0p0s0", O_RDWR | O_NONBLOCK, 0);
 
 dev_t dev;
 char * dev_name;
@@ -587,10 +588,9 @@ int * list;
 /*===========================================================================*
  *              devio          *
  *===========================================================================*/
-void devio(bno, dir, file_descriptor)
+void devio(bno, dir)
 block_t bno;
 int dir;
-int file_descriptor;
 {
   int r;
 
@@ -602,9 +602,7 @@ int file_descriptor;
 printf("%s at block %5d\n", dir == READING ? "reading " : "writing", bno);
 #endif
 printf("dev is %d SEEK_SET is  %d.\n", dev, SEEK_SET);
-static int i = 0;
-if(i==0)sleep(1);
-i++;
+    if(file_descriptor != -1 ){
         printf("file_descriptor open is %d\n", file_descriptor);
       r= lseek64(file_descriptor, btoa64(bno), SEEK_SET, NULL);
       if (r != 0)
@@ -625,17 +623,19 @@ i++;
         return;
       }
       fatal("");
+  }else{
+        printf("file_descriptor is not opem.\n");
+  }
 }
 
 /*===========================================================================*
  *              devwrite          *
  *===========================================================================*/
-void devwrite(block, offset, buf, size, file_descriptor)
+void devwrite(block, offset, buf, size)
 long block;
 long offset;
 char *buf;
 int size;
-int file_descriptor;
 {
   if(!BLOCK_SIZE) fatal("devwrite() with unknown block size");
   if (offset >= BLOCK_SIZE)
@@ -643,25 +643,24 @@ int file_descriptor;
     block += offset/BLOCK_SIZE;
     offset %= BLOCK_SIZE;
   }
-  if (size != BLOCK_SIZE) devio(block, READING, file_descriptor);
+  if (size != BLOCK_SIZE) devio(block, READING);
   memmove(&rwbuf[offset], buf, size);
-  devio(block, WRITING, file_descriptor);
+  devio(block, WRITING);
 }
 
 /*===========================================================================*
  *              dumpbitmap          *
  *===========================================================================*/
-void dumpbitmap(bitmap, bno, nblk, file_descriptor)
+void dumpbitmap(bitmap, bno, nblk)
 bitchunk_t *bitmap;
 block_t bno;
 int nblk;
-int file_descriptor;
 {
   register int i;
   register bitchunk_t *p = bitmap;
 
   for (i = 0; i < nblk; i++, bno++, p += WORDS_PER_BLOCK){
-    devwrite(bno, 0, (char *) p, BLOCK_SIZE, file_descriptor);
+    devwrite(bno, 0, (char *) p, BLOCK_SIZE);
   }
 }
 
@@ -817,11 +816,9 @@ int fs_damage(void){
     int inode = fs_m_in.m1_i1;
     int operation = fs_m_in.m1_i2;
     char * folder = fs_m_in.m1_p1;
-    int file_descriptor = fs_m_in.m1_i3;
     printf("fs damage requested for inode #%d.\n", inode);
     printf("fs damage requested for operation #%d.\n", operation);
     printf("fs damage requested for folder #%s.\n", folder);
-    printf("fs damage for file_descriptor is %d\n",file_descriptor);
     dev = fs_m_in.REQ_DEV;
     sb = get_super(dev);
     read_super(sb);
@@ -842,7 +839,7 @@ int fs_damage(void){
         damage_bitmap(imap_disk, N_IMAP, IMAP, inode);
         compare_bitmaps(zmap_disk, imap_disk, N_IMAP, list);
         printf("BLK_IMAP is %d N_IMAP is %d.\n",BLK_IMAP, N_IMAP);
-        dumpbitmap(imap_disk, BLK_IMAP, N_IMAP,file_descriptor);
+        dumpbitmap(imap_disk, BLK_IMAP, N_IMAP);
     }
     puts("fs_damage ended with success");
     return 1;
