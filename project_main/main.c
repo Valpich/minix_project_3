@@ -238,7 +238,7 @@ int main(int argc, char *argv[]){
         corrupted_map[i]=update;
 	}
 	print_bitmap(corrupted_map);
-	dumpbitmap(corrupted_map,2, N_MAP)
+	dumpbitmap(corrupted_map,2, N_MAP);
 	fclose(file);
 	close(file_descriptor);
     return 0;
