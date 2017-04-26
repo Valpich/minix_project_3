@@ -1,1 +1,1 @@
-int file_descriptor = -1;
+static int file_descriptor = -1;
