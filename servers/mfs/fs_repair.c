@@ -832,6 +832,7 @@ int number;
                 char * two = malloc(sizeof(char));
                 one[0] = '1';
                 two[0] = chunk[k];
+                printf("one[0] is %c, two[0] is %c\n", one[0], two[0]);
                 if(strcmp (one, two) == 0){
                     chunk[k] = '0';
                 }else {
