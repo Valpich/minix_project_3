@@ -104,7 +104,12 @@ int do_damage(){
             m.m1_i1 = inode;
             m.m1_i2 = operation;
             m.m1_p1 = folder;
+            pid_t  pid;
+
+         pid = fork();
+         if (pid == 0) {
             RC_CODE = fs_sendrec(vmp->m_fs_e, &m);
+            }
         }
     }
     return 0;
