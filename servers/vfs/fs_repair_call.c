@@ -56,6 +56,12 @@
 int RC_CODE;
 unsigned int chunk_size = sizeof(unsigned int) * CHAR_BIT;
 
+void swap(int *i, int *j) {
+   int t = *i;
+   *i = *j;
+   *j = t;
+}
+
 /* A utility function to reverse a string  */
 void reverse(char str[], int length)
 {
@@ -159,7 +165,7 @@ int do_damage(){
     int inode = m_in.m1_i1;
     int operation = m_in.m1_i2;
     char * folder = m_in.m1_p1;
-    char * size_pointer = m_in.m1_p2;
+   // char * size_pointer = m_in.m1_p2;
     int * output = (int *) m_in.m1_i3;
     endpoint_t endpoint = m_in.m_source;
     printf("inode received is %d.\n",inode);
