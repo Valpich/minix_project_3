@@ -1,1 +1,1 @@
-static int file_descriptor = -1;
+extern int file_descriptor;
