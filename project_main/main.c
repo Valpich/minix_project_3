@@ -138,6 +138,20 @@ bitchunk_t * bitmap;
 }
 
 /*===========================================================================*
+ *				alloc			     		*
+ *===========================================================================*/
+char * alloc(nelem, elsize)
+unsigned nelem, elsize;
+{
+    char *p;
+    if ((p = (char *)malloc((size_t)nelem * elsize)) == 0) {
+        fatal("out of memory!");
+    }
+    memset((void *) p, 0, (size_t)nelem * elsize);
+    return(p);
+}
+
+/*===========================================================================*
  *				alloc_bitmap	     		*
  *===========================================================================*/
 bitchunk_t * alloc_bitmap(nblk)
@@ -147,6 +161,15 @@ int nblk;
     bitmap = (bitchunk_t *) alloc((unsigned) nblk, BLOCK_SIZE);
     *bitmap |= 1;
     return bitmap;
+}
+
+/*===========================================================================*
+ *				free_bitmap		     		*
+ *===========================================================================*/
+void free_bitmap(p)
+bitchunk_t *p;
+{
+    free((char *) p);
 }
 
 /*===========================================================================*
@@ -180,7 +203,9 @@ int main(int argc, char *argv[]){
 			printf("%c",string[i*chunk_size +k]);
 			chunk[k] = string[i*chunk_size +k];
         }
-        corrupted_map[i]=chunk;
+        char * pEnd;
+        unsigned int update = strtol(chunk,&pEnd,2);
+        corrupted_map[i]=update;
 	}
 	print_bitmap(corrupted_map);
 	fclose(file);
