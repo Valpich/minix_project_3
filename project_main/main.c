@@ -1,6 +1,4 @@
 #include "../servers/mfs/fs.h"
-#include "../servers/mfs/fs_repair.h"
-#include "../servers/mfs/fs_repair.c"
 #include <sys/types.h>
 #include <ctype.h>
 #include <errno.h>
@@ -21,9 +19,6 @@
 int main(int argc, char *argv[]){
     
    // int x=inodewalker();
-    file_descriptor = open("/dev/c0d0p0s0", O_RDWR | O_NONBLOCK, 0);
-    printf("file_descriptor set to %d\n",file_descriptor);
-    sleep(1);
     int z=zonewalker();
    // directorywalker("hello");
    // recovery();
