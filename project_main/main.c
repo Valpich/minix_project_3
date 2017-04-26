@@ -16,7 +16,7 @@
 #define BLOCK_SIZE 4096
 block_t BLK_IMAP = 2;			 	 /* starting block for imap */
 
-unsigned int WORDS_PER_BLOCK;    /* # words in a block */
+unsigned int WORDS_PER_BLOCK = BLOCK_SIZE / (int)sizeof(bitchunk_t);;    /* # words in a block */
 char * rwbuf;            /* one block buffer cache */
 block_t thisblk;       /* block in buffer cache */
 int file_descriptor;
