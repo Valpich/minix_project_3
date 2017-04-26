@@ -19,14 +19,7 @@
 #include <minix/fslib.h>
 #include <stdio.h>
 #include <sys/stat.h>
-#include <a.out.h>
-#include <dirent.h>
-#include <sys/stat.h>
-#include <sys/statfs.h>
-#include <sys/statvfs.h>
-#include <minix/vfsif.h>
-#include <minix/const.h>
-#include <minix/endpoint.h>
+
 #include <stdlib.h>
 #include <stdio.h>
 
