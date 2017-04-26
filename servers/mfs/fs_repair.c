@@ -69,7 +69,6 @@ unsigned int NB_ZONES_USED_I = 0;/* # zones used (from IMAP) */
 int repair    = 0;
 int markdirty = 0;
 int type = 0;
-int file_descriptor = -1;
 
 dev_t dev;
 char * dev_name;
