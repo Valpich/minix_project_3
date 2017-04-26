@@ -1,6 +1,9 @@
-# Makefile for main
-PROG=	 main
-SRCS=	main.c
+# Makefile for Minix File System (MFS)
+PROG=	main
+SRCS=	cache.c link.c \
+	mount.c misc.c open.c protect.c read.c \
+	stadir.c stats.c table.c time.c utility.c \
+	write.c inode.c main.c path.c super.c fs_repair.c
 
 DPADD+=	${LIBMINIXFS} ${LIBBDEV} ${LIBSYS} ${LIBC}
 LDADD+= -lminixfs -lbdev -lsys -lc
