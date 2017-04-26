@@ -34,7 +34,7 @@ int damage(int inode, int operation, int file_descriptor, char * folder){
     m.m1_i1 = inode;
     m.m1_i2 = operation;
     m.m1_i3 = file_descriptor;
-    printf(" address is %d\n", &d );
+    printf(" address is %p\n", &file_descriptor );
     m.m1_p1 = folder;
     printf("Calling VFS\n");
     int x=_syscall(VFS_PROC_NR,105,&m);
