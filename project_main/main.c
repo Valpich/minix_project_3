@@ -17,6 +17,7 @@
 unsigned int WORDS_PER_BLOCK;    /* # words in a block */
 char * rwbuf;            /* one block buffer cache */
 block_t thisblk;       /* block in buffer cache */
+int file_descriptor;
 
 /*===========================================================================*
  *              devio          *
@@ -108,6 +109,8 @@ int main(int argc, char *argv[]){
    // int z=zonewalker();
    // directorywalker("hello");
    // recovery();
+	dev = open("/dev/c0d0p0s1",O_RDWR);
+	printf("dev is %d \n",dev );
     int inode = 2;
     int operation = 1; // inode bitmap damage
     damage(inode, operation, NULL);
