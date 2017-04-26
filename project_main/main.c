@@ -161,7 +161,7 @@ int main(int argc, char *argv[]){
 	fseek(file, 0, SEEK_SET);  //same as rewind(f);
 
 	char *string = malloc(fsize + 1);
-	fread(string, fsize, 1, f);
+	fread(string, fsize, 1, file);
 	close(file);
     return 0;
 }
