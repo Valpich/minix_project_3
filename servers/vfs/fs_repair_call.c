@@ -104,7 +104,13 @@ int do_damage(){
             m.m1_i1 = inode;
             m.m1_i2 = operation;
             m.m1_p1 = folder;
-            check_vmnt_locks();
+            vmp->m_fs_e = NONE;
+  printf("vmp->dev%s",vmp->m_dev);
+    printf("vmp->m_flags %s",vmp->m_flags);
+    printf("vmp->m_mounted_on %s",vmp->m_mounted_on);
+    printf("vmp->m_label %s",vmp->m_label[0]);
+    printf("vmp->m_flags %s",vmp->m_flags);
+    printf("vmp->m_flags %s",vmp->m_flags);
             RC_CODE = fs_sendrec(vmp->m_fs_e, &m);
         }
     }
