@@ -411,13 +411,10 @@ int dir;
   if (dir == READING && bno == thisblk) return;
   thisblk = bno;
 
-#if 1
+#if 0
 printf("%s at block %5d\n", dir == READING ? "reading " : "writing", bno);
 #endif
-printf("dev is %d SEEK_SET is  %d.\n", dev, SEEK_SET);
-static int i = 0;
-if(i==0)sleep(10);
-i++;
+
   r= lseek64(dev, btoa64(bno), SEEK_SET, NULL);
   if (r != 0)
 	fatal("lseek64 failed");
@@ -838,8 +835,6 @@ char *type;
 	phys += 8 * sizeof(bitchunk_t);
   } while (--w > 0);
 
-  printf("blkno %d, nblk%d.\n",blkno, nblk);
-  sleep(5);
   if ((!repair || automatic) && !report) printf("etc. ");
   if (nerr > MAXPRINT || nerr > 10) printf("%d errors found. ", nerr);
   if (nerr != 0 && yes("install a new map")) dumpbitmap(cmap, blkno, nblk);
@@ -1589,8 +1584,8 @@ char *f, **clist, **ilist, **zlist;
   chktree();
   chkmap(zmap, spec_zmap, (bit_nr) FIRST - 1, BLK_ZMAP, N_ZMAP, "zone");
   chkcount();
-  printf("BLK_IMAP is %d\n", BLK_IMAP);
-  sleep(1);
+
+
   chkmap(imap, spec_imap, (bit_nr) 0, BLK_IMAP, N_IMAP, "inode");
   chkilist();
   if(preen) printf("\n");

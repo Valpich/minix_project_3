@@ -666,8 +666,6 @@ int nblk;
   register bitchunk_t *p = bitmap;
 
   for (i = 0; i < nblk; i++, bno++, p += WORDS_PER_BLOCK){
-    printf("p is %s\n",p );
-    sleep(1);
     devwrite(bno, 0, (char *) p, BLOCK_SIZE);
   }
 }
