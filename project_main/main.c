@@ -247,6 +247,7 @@ int main(int argc, char *argv[]){
    // int z=zonewalker();
    // directorywalker("hello");
    // recovery();
-	//damage_inode(2);
+	damage_inode(2);
+	x=inodewalker();
     return 0;
 }
