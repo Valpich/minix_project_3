@@ -45,11 +45,6 @@
 #include <assert.h>
 #include <string.h>
 
-#include "fproc.h"
-#include "vmnt.h"
-#include "vnode.h"
-#include "path.h"
-#include "param.h"
 
 #include "repair.h"
 
