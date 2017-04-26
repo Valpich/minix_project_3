@@ -195,13 +195,14 @@ int main(int argc, char *argv[]){
 	printf("file size is %lu\n", fsize);
 	char *string = malloc(fsize + 1);
 	fread(string, fsize, 1, file);
-	char * chunk = malloc(chunk_size*sizeof(char));
+	char * chunk = malloc((chunk_size+1)*sizeof(char));
+	chunk[chunk_size] = 0;
 	int N_MAP = fsize/chunk_size;
 	printf("fsize/chunk_size is %d\n", N_MAP);
 	bitchunk_t *corrupted_map =alloc_bitmap(N_MAP);
 	for (int i = 0; i < N_MAP; i++){
 		int k;
-		for (k = chunk_size -1; k >= 0 ; k--) {
+		for (k = 0; k <= chunk_size -1 ; k++) {
 			chunk[k] = string[i*chunk_size +k];
         }
         char * pEnd;
