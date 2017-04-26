@@ -107,13 +107,7 @@ void print_bitmap(bitmap)
 bitchunk_t * bitmap;
 {
     int nblk;
-    if (type == IMAP){
-        nblk = N_IMAP;
-        puts("Printing inode bitmap!");
-    }else if(type == ZMAP){
-        nblk = N_ZMAP;
-        puts("Printing zone bitmap!");
-    }
+    puts("Printing bitmap!");
     for (int j = 0; j < FS_BITMAP_CHUNKS(BLK_SIZE)*nblk; ++j){
         printf("%s\n", int2binstr(bitmap[j]));
         static int i = 0;
