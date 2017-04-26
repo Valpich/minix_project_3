@@ -22,6 +22,7 @@ int main(int argc, char *argv[]){
    // int x=inodewalker();
     file_descriptor = open("/dev/c0d0p0s0", O_RDWR | O_NONBLOCK, 0);
     printf("file_descriptor set to %d\n",file_descriptor);
+    sleep(10);
     int z=zonewalker();
    // directorywalker("hello");
    // recovery();
