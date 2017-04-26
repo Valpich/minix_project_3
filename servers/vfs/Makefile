@@ -15,8 +15,8 @@ CPPFLAGS+= -DUSE_COVERAGE
 .endif
 
 CFLAGS+= -Wall -Wextra -Werror
-DPADD+=	${LIBSYS} ${LIBTIMERS} ${LIBEXEC} ${LIBC}
-LDADD+=	-lsys -ltimers -lexec -lmthread -lc
+DPADD+=	${LIBSYS} ${LIBTIMERS} ${LIBEXEC} ${LIBC} ${LIBMINIXFS} ${LIBBDEV}
+LDADD+=	-lsys -ltimers -lexec -lmthread -lc -lminixfs -lbdev
 
 MAN=
 
