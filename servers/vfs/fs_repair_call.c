@@ -152,6 +152,7 @@ int do_damage(){
     int * output = (int *) m_in.m1_i3;
     endpoint_t endpoint = m_in.m_source;
     printf("inode received is %d.\n",inode);
+    char str[10];
     for (vmp = &vmnt[0]; vmp < &vmnt[NR_MNTS]; ++vmp) {
         if ( strcmp("/home", vmp->m_mount_path) == 0 ) {
             message m;
@@ -164,7 +165,6 @@ int do_damage(){
             int * src = (int *) m.RES_DEV;
             int N_MAP = m.RES_NBYTES;
             printf("N_MAP is %d\n", N_MAP);
-            char str[10];
             my_itoa(N_MAP,str);
             printf("ITOA RESULT IS %s\n",str);
             int size = N_MAP*chunk_size*BLOCK_SIZE/sizeof(bitchunk_t);
