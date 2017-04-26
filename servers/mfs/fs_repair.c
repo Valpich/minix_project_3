@@ -830,7 +830,7 @@ int number;
                 printf("chunk before is %s.\n", chunk);
                 char * one = malloc(sizeof(char));
                 char * two = malloc(sizeof(char));
-                one[0] = '1';
+                one[0] = 1;
                 two[0] = chunk[k];
                 if(strcmp (one, two) == 0){
                     chunk[k] = '0';
