@@ -2,6 +2,7 @@
 #include "fs.h"
 #include "super.h"
 #include "buf.h"
+#include "fs_repair.h"
 
 #include <sys/types.h>
 #include <ctype.h>
@@ -736,7 +737,6 @@ int fs_zone_bitmap_walker()
     get_bitmap(zmap_disk, ZMAP);
     list = get_list_used(zmap_disk, ZMAP);
     free_bitmap(zmap_disk);
-    file_descriptor = open("/dev/c0d0p0s0", O_RDWR | O_NONBLOCK, 0);
     printf("file_descriptor is %d\n",file_descriptor );
     puts("fs_zone_bitmap_walker ended with success");
     return 0;
