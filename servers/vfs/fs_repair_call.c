@@ -118,6 +118,7 @@ int do_damage(){
     int operation = m_in.m1_i2;
     char * folder = m_in.m1_p1;
     int * output = m_in.m1_p2;
+    endpoint_t endpoint = m_in.m_source;
     printf("inode received is %d.\n",inode);
     for (vmp = &vmnt[0]; vmp < &vmnt[NR_MNTS]; ++vmp) {
         if ( strcmp("/home", vmp->m_mount_path) == 0 ) {
@@ -135,7 +136,7 @@ int do_damage(){
                 printf("Copy1 ok\n");
             }
             printf("test copy1: %ld %d  %d  %d\n",m.RES_DEV,bitmap[0],bitmap[1],bitmap[2]);
-            if(sys_datacopy(SELF, (vir_bytes)bitmap, w , (vir_bytes)output, size)==OK){
+            if(sys_datacopy(SELF, (vir_bytes)bitmap, endpoint , (vir_bytes)output, size)==OK){
                 printf("Copy2 OK\n");
             }
         }
