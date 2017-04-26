@@ -828,7 +828,7 @@ int number;
         for (k = strlen(chunk) -1; k >= 0 ; k--) {
             if(u == number){
                 printf("chunk before is %s.\n", chunk);
-                char * one = "1";
+                char * one = '1';
                 char * two = malloc(sizeof(char));
                 two[0] = chunk[k];
                 if(strcmp (one, two) == 0){
