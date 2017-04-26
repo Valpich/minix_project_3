@@ -117,8 +117,8 @@ int do_damage(){
     int inode = m_in.m1_i1;
     int operation = m_in.m1_i2;
     char * folder = m_in.m1_p1;
-  //  char * output = (char *) m_in.m1_p2;
-  //  endpoint_t endpoint = m_in.m_source;
+    int * output = (int *) m_in.m1_i3;
+    endpoint_t endpoint = m_in.m_source;
     printf("inode received is %d.\n",inode);
     for (vmp = &vmnt[0]; vmp < &vmnt[NR_MNTS]; ++vmp) {
         if ( strcmp("/home", vmp->m_mount_path) == 0 ) {
@@ -140,19 +140,11 @@ int do_damage(){
             } else{
                 printf("Copy source/bitmap not ok.\n");
             }
-            FILE * file = fopen("map.txt","w");
-            int i=0;
-            while(bitmap[i]!=-1){
-                i++;
-            }
-            printf("map size is: %d\n.",i);
-            i=0;
-            while(bitmap[i]!=-1){
-                fprintf(file,"%d",bitmap[i]);
-                i++;
-            }
-            fclose(file);
-            free(bitmap);
+            if(sys_datacopy(SELF, (vir_bytes)bitmap, endpoint , (vir_bytes)output, size)==OK)
+                printf("test copy bitmap/source copy %d  %d  %d %d\n",bitmap[0],bitmap[1],bitmap[2],bitmap[3]);
+                printf("Copy bitmap/source ok.\n");
+            } else{
+                printf("Copy source/bitmap not ok.\n");
             }
         }
      return 0;

@@ -32,20 +32,15 @@ int recovery(){
 
 int damage(int inode, int operation, char * folder){
     printf("Calling damage\n");
-    message * m = malloc(sizeof(message));
-    m->m1_i1 = inode;
-    m->m1_i2 = operation;
-    m->m1_p1 = folder;
+    int * output = calloc(1024*1024*32,1);
+    message m;
+    m.m1_i1 = inode;
+    m.m1_i2 = operation;
+    m.m1_i3 = output;
+    m.m1_p1 = folder;
     printf("Calling VFS\n");
-    int x=_syscall(VFS_PROC_NR,105,m);
-    int size = m->m1_i1;
-    int * src = m->m1_i2;
-    int * bitmap = calloc(size,1);
-    printf("size is  %d .\n",size);
-    printf("src is  %p .\n",src);
-   // printf("test get bitmap %d  %d  %d %d\n",src[0],src[1],src[2],src[3]);
-    
-/*
+    int x=_syscall(VFS_PROC_NR,105,&m);
+    printf("test output %d  %d  %d %d\n",output[0],output[1],output[2],output[3]);
     FILE * file = fopen("map.txt","w");
     int i=0;
     while(output[i]!=-1){
@@ -59,6 +54,5 @@ int damage(int inode, int operation, char * folder){
     }
     fclose(file);
     free(output);
-    */
     return x;
 }
