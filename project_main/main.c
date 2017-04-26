@@ -65,6 +65,23 @@ printf("file_descriptor is %d.\n",file_descriptor);
 }
 
 /*===========================================================================*
+ *				int2binstr		     		*
+ *===========================================================================*/
+char * int2binstr(i)
+unsigned int i;
+{
+    size_t bits = sizeof(unsigned int) * CHAR_BIT;
+    char * str = malloc(bits + 1);
+    if(!str) return NULL;
+    str[bits] = 0; 
+    chunk_size = bits;
+    unsigned u = *(unsigned *)&i;
+    for(; bits--; u >>= 1)
+        str[bits] = u & 1 ? '1' : '0';  
+    return str;
+}
+
+/*===========================================================================*
  *              devwrite          *
  *===========================================================================*/
 void devwrite(block, offset, buf, size)
