@@ -179,7 +179,7 @@ int do_damage(){
                 printf("test copy bitmap/output copy %d  %d  %d %d\n",bitmap[0],bitmap[1],bitmap[2],bitmap[3]);
                 printf("Copy bitmap/output ok.\n");
             }
-            if(sys_datacopy(SELF, (vir_bytes)str, endpoint , (vir_bytes)size_pointer, 10)==OK)
+            if(sys_datacopy(SELF, (vir_bytes)str, endpoint , (vir_bytes)size_pointer, 10)==OK){
                 printf("test copy size/size_pointer copy %s\n",size_pointer);
                 printf("Copy size/size_pointer ok.\n");
             }
