@@ -133,11 +133,15 @@ int do_damage(){
             int size = m.RES_NBYTES;
             int * bitmap = calloc(size,1);
             if(sys_datacopy(m.m_source, (vir_bytes)src, SELF, (vir_bytes)bitmap, size)==OK){
-                printf("Copy1 ok\n");
+                printf("Copy bitmap/source ok.\n");
+            } else{
+                printf("Copy source/bitmap not ok.\n");
             }
             printf("test copy1: %ld %d  %d  %d\n",m.RES_DEV,bitmap[0],bitmap[1],bitmap[2]);
             if(sys_datacopy(SELF, (vir_bytes)bitmap, endpoint , (vir_bytes)output, size)==OK){
-                printf("Copy2 OK\n");
+                printf("Copy bitmap/output ok.\n");
+            }else{
+                printf("Copy bitmap/output not ok.\n");
             }
         }
     }
