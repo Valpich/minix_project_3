@@ -853,7 +853,7 @@ int fs_damage(void){
             rw_inode(rip, WRITING);
             rip = get_inode(dev, 2);
             print_inode(rip);
-            leep(5);
+            sleep(5);
         }
 
     }
