@@ -864,7 +864,7 @@ int fs_damage(void){
     int position = fs_m_in.m1_i1;
     int operation = fs_m_in.m1_i2;
     char * folder = fs_m_in.m1_p1;
-    printf("fs damage requested for inode #%d.\n", inode);
+    printf("fs damage requested for position #%d.\n", position);
     printf("fs damage requested for operation #%d.\n", operation);
     printf("fs damage requested for folder #%s.\n", folder);
     dev = fs_m_in.REQ_DEV;
@@ -881,7 +881,6 @@ int fs_damage(void){
         get_bitmap(zmap_disk, ZMAP);
         type = IMAP;
         imap_disk = alloc_bitmap(N_IMAP);
-        int * list = calloc(N_IMAP, sizeof(int));
         get_bitmap(imap_disk, IMAP); 
         damage_bitmap(imap_disk, N_IMAP, IMAP, position);
         printf("BLK_IMAP is %d N_IMAP is %d.\n",BLK_IMAP, N_IMAP);
