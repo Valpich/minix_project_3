@@ -1,4 +1,30 @@
 #include "fs.h"
+
+#include "fs.h"
+#include "super.h"
+#include "buf.h"
+
+#include <sys/types.h>
+#include <ctype.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <limits.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <minix/config.h>
+#include <minix/const.h>
+#include <minix/type.h>
+#include <minix/u64.h>
+#include "const.h"
+#include "inode.h"
+#include "type.h"
+#include "mfsdir.h"
+#include <minix/fslib.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <a.out.h>
+#include <dirent.h>
 #include <sys/stat.h>
 #include <sys/statfs.h>
 #include <sys/statvfs.h>
