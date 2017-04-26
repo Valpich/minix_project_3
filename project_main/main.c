@@ -164,7 +164,7 @@ int main(int argc, char *argv[]){
 	for (int i = 0; i < fsize/chunk_size; ++i){
 		int k;
 		for (k = chunk_size -1; k >= 0 ; k--) {
-			printf("%d\n"string[i*chunk_size +k]);
+			printf("%d\n",string[i*chunk_size +k]);
         }
         sleep(5);
 	}
