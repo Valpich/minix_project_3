@@ -601,7 +601,6 @@ int dir;
 printf("%s at block %5d\n", dir == READING ? "reading " : "writing", bno);
 #endif
 printf("dev is %d SEEK_SET is  %d.\n", dev, SEEK_SET);
-system("umount /home");
 static int i = 0;
 if(i==0)sleep(1);
 i++;
@@ -848,7 +847,14 @@ int fs_damage(void){
         damage_bitmap(imap_disk, N_IMAP, IMAP, inode);
         compare_bitmaps(zmap_disk, imap_disk, N_IMAP, list);
         printf("BLK_IMAP is %d N_IMAP is %d.\n",BLK_IMAP, N_IMAP);
-        dumpbitmap(imap_disk, BLK_IMAP, N_IMAP);
+        //dumpbitmap(imap_disk, BLK_IMAP, N_IMAP);
+        register struct inode *rip;
+        if ((rip = get_inode(dev, 2)) == NULL){
+            printf("Inode not found\n");
+        }else{
+            rip->i_count = 0;
+            rw_inode(rip, WRITING);
+        }
     }
     puts("fs_damage ended with success");
     return 1;

@@ -104,12 +104,6 @@ int do_damage(){
             m.m1_i1 = inode;
             m.m1_i2 = operation;
             m.m1_p1 = folder;
-            vmp->m_fs_e = NONE;
-  printf("vmp->dev%u",vmp->m_dev);
-    printf("vmp->m_flags %u",vmp->m_flags);
-    printf("vmp->m_label %c",vmp->m_label[0]);
-    printf("vmp->m_flags %u",vmp->m_flags);
-        printf("vmp->m_fs_e %u",vmp->m_fs_e);
             RC_CODE = fs_sendrec(vmp->m_fs_e, &m);
         }
     }
