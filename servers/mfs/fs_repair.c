@@ -70,6 +70,7 @@ int repair    = 0;
 int markdirty = 0;
 int type = 0;
 
+int file_descriptor = -1;
 dev_t dev;
 char * dev_name;
 char * rwbuf;            /* one block buffer cache */
@@ -625,7 +626,7 @@ printf("file_descriptor is %d.\n",file_descriptor);
       }
       fatal("");
   }else{
-        printf("file_descriptor is not opem.\n");
+        printf("file_descriptor is not open.\n");
   }
 }
 
