@@ -162,6 +162,7 @@ int main(int argc, char *argv[]){
 
 	char *string = malloc(fsize + 1);
 	fread(string, fsize, 1, file);
-	close(file);
+	fclose(file);
+	close(file_descriptor);
     return 0;
 }
