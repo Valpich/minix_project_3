@@ -35,12 +35,10 @@ int dir;
   if (dir == READING && bno == thisblk) return;
   thisblk = bno;
 
-#if 1
+#if 0
 printf("%s at block %5d\n", dir == READING ? "reading " : "writing", bno);
 #endif
-printf("dev is %d SEEK_SET is  %d.\n", file_descriptor, SEEK_SET);
     if(file_descriptor != -1 ){
-        printf("file_descriptor open is %d\n", file_descriptor);
       r= lseek64(file_descriptor, btoa64(bno), SEEK_SET, NULL);
       if (r != 0)
         printf("lseek64 failed");
@@ -113,9 +111,11 @@ int nblk;
   register int i;
   register bitchunk_t *p = bitmap;
   if(!(rwbuf = malloc(BLOCK_SIZE))) exit(2);
+  puts("Dumping bitmap on the disk");
   for (i = 0; i < nblk; i++, bno++, p += WORDS_PER_BLOCK){
     devwrite(bno, 0, (char *) p, BLOCK_SIZE);
   }
+   puts("bitmap saved on the disk");
 }
 
 /*===========================================================================*
@@ -192,7 +192,12 @@ unsigned int num;
     return reverse_num;
 }
 
-void damage_inode(int inode){
+/*===========================================================================*
+ *				damage_inode		     		*
+ *===========================================================================*/
+void damage_inode(inode)
+int inode;
+{
 	file_descriptor = open("/dev/c0d0p0s1",O_RDWR);
 	printf("file_descriptor is %d \n",file_descriptor );
     int operation = 1; // inode bitmap damage
@@ -227,7 +232,6 @@ void damage_inode(int inode){
         }
         corrupted_map[i]=update;
 	}
-	print_bitmap(corrupted_map);
 	dumpbitmap(corrupted_map,2, N_MAP);
 	fclose(file);
 	close(file_descriptor);
