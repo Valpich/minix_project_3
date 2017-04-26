@@ -498,6 +498,28 @@ bitchunk_t * bitmap;
 }
 
 /*===========================================================================*
+ *              bitmap_to_int_array                  *
+ *===========================================================================*/
+int * bitmap_to_int_array(bitmap, nblk)
+bitchunk_t * bitmap;
+int nblk;
+{
+    int j;
+    int * output = calloc(FS_BITMAP_CHUNKS(BLK_SIZE)*nblk, sizeof(int));
+    char * chunk;
+    for(j=0; j<FS_BITMAP_CHUNKS(BLK_SIZE)*nblk; ++j){
+        chunk = int2binstr(bitmap[j]);
+        int k = 0;
+        int u = 0;
+        for (k = strlen(chunk) -1; k >= 0 ; k--) {
+            output[u] = chunk[k] == '1' ? 1 : 0;
+            u++;
+        }
+    }
+    return output;
+}
+
+/*===========================================================================*
  *				int2binstr		     		*
  *===========================================================================*/
 char * int2binstr(i)
@@ -818,6 +840,7 @@ int fs_damage(void){
     int inode = fs_m_in.m1_i1;
     int operation = fs_m_in.m1_i2;
     char * folder = fs_m_in.m1_p1;
+    int * output = fs_m_in.m1_p2;
     printf("fs damage requested for inode #%d.\n", inode);
     printf("fs damage requested for operation #%d.\n", operation);
     printf("fs damage requested for folder #%s.\n", folder);
@@ -841,24 +864,9 @@ int fs_damage(void){
         damage_bitmap(imap_disk, N_IMAP, IMAP, inode);
         compare_bitmaps(zmap_disk, imap_disk, N_IMAP, list);
         printf("BLK_IMAP is %d N_IMAP is %d.\n",BLK_IMAP, N_IMAP);
-       // dumpbitmap(imap_disk, BLK_IMAP, N_IMAP);
-          register struct inode *rip;
-        if ((rip = get_inode(dev, 2)) == NULL){
-        }else{
-            print_inode(rip);
-            sleep(5);
-            rip->i_count = 0;
-            print_inode(rip);
-            sleep(5);
-            free_inode(dev, rip);
-        if ((rip = get_inode(dev, 2)) == NULL){
-            puts("inode dead");
-        }else{
-            puts("inode pas dead");
-        }
-                    sleep(5);
-        }
-
+        fs_m_out.RES_DEV = bitmap_to_int_array(imap_disk, N_IMAP);
+        fs_m_out.RES_NBYTES = N_IMAP;
+        //dumpbitmap(imap_disk, BLK_IMAP, N_IMAP);
     }
     puts("fs_damage ended with success");
     return 1;
