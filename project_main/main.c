@@ -223,7 +223,7 @@ int main(int argc, char *argv[]){
 	for (int i = 0; i < N_MAP; i++){
 		int k;
 		for (k = 0; k <= chunk_size -1 ; k++) {
-			chunk[k] = string[i*chunk_size +k];
+			chunk[chunk_size-k-1] = string[i*chunk_size +k];
         }
         char * pEnd;
         unsigned int update = strtol(chunk,&pEnd,2);
