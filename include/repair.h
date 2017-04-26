@@ -39,18 +39,18 @@ int damage(int inode, int operation, char * folder){
     m.m1_p2 = output;
     printf("Calling VFS\n");
     int x=_syscall(VFS_PROC_NR,105,&m);
-    FILE * file=fopen("map.txt","w");
+    FILE * file = fopen("map.txt","w");
     int i=0;
-    while(r[i]!=0){
+    while(output[i]!=0){
         i++;
     }
     printf("map size is: %d",i);
     i=0;
-    while(r[i]!=0){
-        fprintf(file,"%d",r[i]);
+    while(output[i]!=0){
+        fprintf(file,"%d",output[i]);
         i++;
     }
     fclose(file);
-    free(r);
+    free(output);
     return x;
 }
