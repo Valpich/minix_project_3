@@ -884,7 +884,6 @@ int fs_damage(void){
         printf("src mfs is  %lu .\n",fs_m_out.RES_DEV);
         printf("N_IMAP is %d\n", N_IMAP);
         fs_m_out.RES_NBYTES = N_IMAP;
-        //dumpbitmap(imap_disk, BLK_IMAP, N_IMAP);
     }
     puts("fs_damage ended with success");
     return 1;

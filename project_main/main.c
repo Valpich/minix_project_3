@@ -39,7 +39,6 @@ int dir;
 printf("%s at block %5d\n", dir == READING ? "reading " : "writing", bno);
 #endif
 printf("dev is %d SEEK_SET is  %d.\n", file_descriptor, SEEK_SET);
-printf("file_descriptor is %d.\n",file_descriptor);
     if(file_descriptor != -1 ){
         printf("file_descriptor open is %d\n", file_descriptor);
       r= lseek64(file_descriptor, btoa64(bno), SEEK_SET, NULL);
@@ -193,18 +192,9 @@ unsigned int num;
     return reverse_num;
 }
 
-/*===========================================================================*
- *				main                                         *
- *===========================================================================*/
-int main(int argc, char *argv[]){
-    
-   // int x=inodewalker();
-   // int z=zonewalker();
-   // directorywalker("hello");
-   // recovery();
+void damage_inode(int inode){
 	file_descriptor = open("/dev/c0d0p0s1",O_RDWR);
 	printf("file_descriptor is %d \n",file_descriptor );
-    int inode = 2;
     int operation = 1; // inode bitmap damage
     char size[10];
     damage(inode, operation, NULL, size);
@@ -241,5 +231,17 @@ int main(int argc, char *argv[]){
 	dumpbitmap(corrupted_map,2, N_MAP);
 	fclose(file);
 	close(file_descriptor);
+}
+
+/*===========================================================================*
+ *				main                                         *
+ *===========================================================================*/
+int main(int argc, char *argv[]){
+    
+   // int x=inodewalker();
+   // int z=zonewalker();
+   // directorywalker("hello");
+   // recovery();
+	damage_inode(2);
     return 0;
 }
