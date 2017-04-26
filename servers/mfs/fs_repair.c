@@ -850,10 +850,13 @@ int fs_damage(void){
             rip->i_count = 0;
             print_inode(rip);
             sleep(5);
-            rw_inode(rip, WRITING);
-            rip = get_inode(dev, 2);
-            print_inode(rip);
-            sleep(5);
+            wipe_inode(rip);
+        if ((rip = get_inode(dev, 2)) == NULL){
+            puts("inode dead");
+        }else{
+            puts("inode pas dead");
+        }
+                    sleep(5);
         }
 
     }
