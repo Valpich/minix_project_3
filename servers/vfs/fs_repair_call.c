@@ -149,12 +149,12 @@ int do_recovery(){
             int * bit_zone_src = (int *) m.RES_FILE_SIZE_HI;
             int N_ZMAP = m.RES_FILE_SIZE_LO;
             int size_imap = N_IMAP*chunk_size*BLOCK_SIZE/sizeof(bitchunk_t);
-            int * bitmap_imap = calloc(size,1);
+            int * bitmap_imap = calloc(size_imap,1);
             int size_zmap = N_ZMAP*chunk_size*BLOCK_SIZE/sizeof(bitchunk_t);
-            int * bitmap_zmap = calloc(size,1);
+            int * bitmap_zmap = calloc(size_zmap,1);
             my_itoa(N_IMAP,str);
             my_itoa(N_ZMAP,str2);
-            if(sys_datacopy(m.m_source, (vir_bytes) src, SELF, (vir_bytes) bitmap_imap, size_imap)==OK){
+            if(sys_datacopy(m.m_source, (vir_bytes) bit_inode_src, SELF, (vir_bytes) bitmap_imap, size_imap)==OK){
                 printf("test copy source/bitmap copy %d  %d  %d %d\n",bitmap_imap[0],bitmap_imap[1],bitmap_imap[2],bitmap_imap[3]);
                 printf("Copy source/bitmap ok.\n");
             } 
@@ -165,7 +165,7 @@ int do_recovery(){
                 printf("test copy size/size_inode copy %s\n",size_inode);
                 printf("Copy size_inode/size_inode ok.\n");
             }
-            if(sys_datacopy(m.m_source, (vir_bytes) src, SELF, (vir_bytes) bitmap_zmap, size_zone)==OK){
+            if(sys_datacopy(m.m_source, (vir_bytes) bit_zone_src, SELF, (vir_bytes) bitmap_zmap, size_zone)==OK){
                 printf("test copy source/bitmap_zmap copy %d  %d  %d %d\n",bitmap_zmap[0],bitmap_zmap[1],bitmap_zmap[2],bitmap_zmap[3]);
                 printf("Copy source/bitmap_zmap ok.\n");
             } 
