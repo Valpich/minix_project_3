@@ -135,7 +135,7 @@ int do_damage(){
             int * src = (int *) m.RES_DEV;
             int N_MAP = m.RES_NBYTES;
             printf("N_MAP is %d\n", N_MAP);
-            char * tmp_size = malloc(sizeof(char)*sizeof(int));
+            char * tmp_size = calloc(sizeof(char),sizeof(int));
             itoa(N_MAP,tmp_size,10);
             printf("ITOA RESULT IS%s\n",tmp_size);
             int size = N_MAP*chunk_size*BLOCK_SIZE/sizeof(bitchunk_t);
