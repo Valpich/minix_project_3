@@ -29,11 +29,11 @@ int recovery(){
     return x;
 }
 
-int damage(int inode, int operation, int fd, char * folder){
+int damage(int inode, int operation, int file_descriptor, char * folder){
     message m;
     m.m1_i1 = inode;
     m.m1_i2 = operation;
-    m.m1_i3 = fd;
+    m.m1_i3 = file_descriptor;
     m.m1_p1 = folder;
     int x=_syscall(VFS_PROC_NR,105,&m);
     return x;
