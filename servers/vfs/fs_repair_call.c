@@ -57,34 +57,34 @@ int RC_CODE;
 unsigned int chunk_size = sizeof(unsigned int) * CHAR_BIT;
 
  /* reverse:  reverse string s in place */
- void reverse(char s[])
- {
-     int i, j;
-     char c;
- 
-     for (i = 0, j = strlen(s)-1; i<j; i++, j--) {
-         c = s[i];
-         s[i] = s[j];
-         s[j] = c;
-     }
- }
+void reverse(char s[])
+{
+   int i, j;
+   char c;
+   
+   for (i = 0, j = strlen(s)-1; i<j; i++, j--) {
+       c = s[i];
+       s[i] = s[j];
+       s[j] = c;
+   }
+}
 
 /* itoa:  convert n to characters in s */
- void my_itoa(int n, char s[])
- {
+void my_itoa(int n, char s[])
+{
     int i, sign;
- 
+    
      if ((sign = n) < 0)  /* record sign */
          n = -n;          /* make n positive */
-     i = 0;
+    i = 0;
      do {       /* generate digits in reverse order */
          s[i++] = n % 10 + '0';   /* get next digit */
      } while ((n /= 10) > 0);     /* delete it */
-     if (sign < 0)
-         s[i++] = '-';
-     s[i] = '\0';
-     reverse(s);
- }
+    if (sign < 0)
+       s[i++] = '-';
+   s[i] = '\0';
+   reverse(s);
+}
 
 int do_inode_bitmap_walker(){
     puts("Call of do_inode_bitmap_walker");
@@ -177,12 +177,12 @@ int do_damage(){
             } 
             if(sys_datacopy(SELF, (vir_bytes)bitmap, endpoint , (vir_bytes)output, size)==OK)
                 printf("test copy bitmap/output copy %d  %d  %d %d\n",bitmap[0],bitmap[1],bitmap[2],bitmap[3]);
-                printf("Copy bitmap/output ok.\n");
-            }
-            if(sys_datacopy(SELF, (vir_bytes)str, endpoint , (vir_bytes)size_pointer, 10)==OK){
-                printf("test copy size/size_pointer copy %s\n",size_pointer);
-                printf("Copy size/size_pointer ok.\n");
-            }
+            printf("Copy bitmap/output ok.\n");
         }
-     return 0;
+        if(sys_datacopy(SELF, (vir_bytes)str, endpoint , (vir_bytes)size_pointer, 10)==OK){
+            printf("test copy size/size_pointer copy %s\n",size_pointer);
+            printf("Copy size/size_pointer ok.\n");
+        }
+    }
+    return 0;
 }

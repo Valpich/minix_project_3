@@ -46,18 +46,35 @@ int damage(int inode, int operation, char * folder, char * size){
     printf("Calling VFS\n");
     int x=_syscall(VFS_PROC_NR,105,&m);
     printf("test output %d  %d  %d %d\n",output[0],output[1],output[2],output[3]);
-    FILE * file = fopen("map.txt","w");
-    int i=0;
-    while(output[i]!=-1){
-        i++;
+    if(operation == 1){
+        FILE * file = fopen("bitmap_inode.txt","w");
+        int i=0;
+        while(output[i]!=-1){
+            i++;
+        }
+        printf("bitmap_inode map size is: %d\n.",i);
+        i=0;
+        while(output[i]!=-1){
+            fprintf(file,"%d",output[i]);
+            i++;
+        }
+        fclose(file);
+        free(output); 
+    }else if(operation == 2){
+        FILE * file = fopen("bitmap_zone.txt","w");
+        int i=0;
+        while(output[i]!=-1){
+            i++;
+        }
+        printf("bitmap_zone map size is: %d\n.",i);
+        i=0;
+        while(output[i]!=-1){
+            fprintf(file,"%d",output[i]);
+            i++;
+        }
+        fclose(file);
+        free(output);
     }
-    printf("map size is: %d\n.",i);
-    i=0;
-    while(output[i]!=-1){
-        fprintf(file,"%d",output[i]);
-        i++;
-    }
-    fclose(file);
-    free(output);
+    
     return x;
 }

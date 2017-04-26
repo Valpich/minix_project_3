@@ -207,8 +207,8 @@ struct super_block *sb;
         puts("super block s_zmap_blocks size is correct.");
     }
     if (sb->s_zmap_blocks != n) {
-    printf("warning: expected %d zmap_block%s", n, "s");
-    printf(" instead of %d\n", sb->s_zmap_blocks);
+        printf("warning: expected %d zmap_block%s", n, "s");
+        printf(" instead of %d\n", sb->s_zmap_blocks);
     }
     if (sb->s_log_zone_size >= 8 * sizeof(block_t)){
         fatal("log_zone_size too large");
@@ -327,7 +327,7 @@ int type;
     if (type == IMAP)    NB_INODES_USED  = NB_USED;
     else if (type==ZMAP) NB_ZONES_USED_Z = NB_USED;
     if(repair == 0)
-    printf("Used: %d / %d \n", NB_USED, tot);
+        printf("Used: %d / %d \n", NB_USED, tot);
     return list;
 }
 
@@ -391,7 +391,7 @@ int * inodes;
         puts("Printing the used zones:");
         sleep(2);
         for (int k = 0; k < used_zones; ++k){
-                printf("zone # is %d.\n", list[k]);
+            printf("zone # is %d.\n", list[k]);
         }
         printf("Number of used zones:            %d\n", used_zones);
         printf("Number of indirect zones:        %d\n", indirect_zones);
@@ -634,27 +634,27 @@ int dir;
     printf("file_descriptor is %d.\n",file_descriptor);
     if(file_descriptor != -1 ){
         printf("file_descriptor open is %d\n", file_descriptor);
-      r= lseek64(file_descriptor, btoa64(bno), SEEK_SET, NULL);
-      if (r != 0)
-        fatal("lseek64 failed");
-      if (dir == READING) {
-        if (read(dev, rwbuf, BLOCK_SIZE) == BLOCK_SIZE)
-            return;
-      } else {
-        if (write(dev, rwbuf, BLOCK_SIZE) == BLOCK_SIZE){
+        r= lseek64(file_descriptor, btoa64(bno), SEEK_SET, NULL);
+        if (r != 0)
+            fatal("lseek64 failed");
+        if (dir == READING) {
+            if (read(dev, rwbuf, BLOCK_SIZE) == BLOCK_SIZE)
+                return;
+        } else {
+            if (write(dev, rwbuf, BLOCK_SIZE) == BLOCK_SIZE){
+                return;
+            }
+        }
+        printf("%s: can't %s block %ld (error = 0x%x)\n", "fs_repair", dir == READING ? "read" : "write", (long) bno, errno);
+        if (dir == READING) {
+            printf("Continuing with a zero-filled block.\n");
+            memset(rwbuf, 0, BLOCK_SIZE);
             return;
         }
-      }
-      printf("%s: can't %s block %ld (error = 0x%x)\n", "fs_repair", dir == READING ? "read" : "write", (long) bno, errno);
-      if (dir == READING) {
-        printf("Continuing with a zero-filled block.\n");
-        memset(rwbuf, 0, BLOCK_SIZE);
-        return;
-      }
-      fatal("");
-  }else{
+        fatal("");
+    }else{
         printf("file_descriptor is not open.\n");
-  }
+    }
 }
 
 /*===========================================================================*
@@ -671,10 +671,10 @@ int size;
   {
     block += offset/BLOCK_SIZE;
     offset %= BLOCK_SIZE;
-  }
-  if (size != BLOCK_SIZE) devio(block, READING);
-  memmove(&rwbuf[offset], buf, size);
-  devio(block, WRITING);
+}
+if (size != BLOCK_SIZE) devio(block, READING);
+memmove(&rwbuf[offset], buf, size);
+devio(block, WRITING);
 }
 
 /*===========================================================================*
@@ -690,7 +690,7 @@ int nblk;
 
   for (i = 0; i < nblk; i++, bno++, p += WORDS_PER_BLOCK){
     devwrite(bno, 0, (char *) p, BLOCK_SIZE);
-  }
+}
 }
 
 /*===========================================================================*
@@ -815,45 +815,45 @@ int nblk;
 int type;
 int number;
 {
- int j;
-    char * chunk;
-    int u = 0;
-    for(j=0; j<FS_BITMAP_CHUNKS(BLK_SIZE)*nblk; ++j){
-        chunk = int2binstr(bitmap[j]);
-        int modified = 0;
-        int k = 0;
-        for (k = strlen(chunk) -1; k >= 0 ; k--) {
-            if(u == number){
-                printf("chunk before is %s.\n", chunk);
-                char * one = malloc(2*sizeof(char));
-                char * two = malloc(2*sizeof(char));
-                one[0] = '1';
-                one[1] = 0;
-                two[0] = chunk[k];
-                two[1] = 0;
-                if(strcmp (one, two) == 0){
-                    chunk[k] = '0';
-                    puts("set to 0");
-                }else {
-                    chunk[k] = '1';
-                    puts("set to 1");
-                }
-                free(one);
-                free(two);
-                printf("chunk after is %s.\n", chunk);
-                modified = 1;
-                sleep(1);
+   int j;
+   char * chunk;
+   int u = 0;
+   for(j=0; j<FS_BITMAP_CHUNKS(BLK_SIZE)*nblk; ++j){
+    chunk = int2binstr(bitmap[j]);
+    int modified = 0;
+    int k = 0;
+    for (k = strlen(chunk) -1; k >= 0 ; k--) {
+        if(u == number){
+            printf("chunk before is %s.\n", chunk);
+            char * one = malloc(2*sizeof(char));
+            char * two = malloc(2*sizeof(char));
+            one[0] = '1';
+            one[1] = 0;
+            two[0] = chunk[k];
+            two[1] = 0;
+            if(strcmp (one, two) == 0){
+                chunk[k] = '0';
+                puts("set to 0");
+            }else {
+                chunk[k] = '1';
+                puts("set to 1");
             }
-            u++;
-        }
-        if(modified == 1){
-            char * pEnd;
-            unsigned int update = strtol(chunk,&pEnd,2);
-            printf("update is %d \n", update);
+            free(one);
+            free(two);
+            printf("chunk after is %s.\n", chunk);
+            modified = 1;
             sleep(1);
-            bitmap[j] = update;
         }
+        u++;
     }
+    if(modified == 1){
+        char * pEnd;
+        unsigned int update = strtol(chunk,&pEnd,2);
+        printf("update is %d \n", update);
+        sleep(1);
+        bitmap[j] = update;
+    }
+}
 }
 
 /*===========================================================================*
@@ -861,7 +861,7 @@ int number;
  *===========================================================================*/
 int fs_damage(void){
     puts("fs_damage started");
-    int inode = fs_m_in.m1_i1;
+    int position = fs_m_in.m1_i1;
     int operation = fs_m_in.m1_i2;
     char * folder = fs_m_in.m1_p1;
     printf("fs damage requested for inode #%d.\n", inode);
@@ -883,9 +883,7 @@ int fs_damage(void){
         imap_disk = alloc_bitmap(N_IMAP);
         int * list = calloc(N_IMAP, sizeof(int));
         get_bitmap(imap_disk, IMAP); 
-        compare_bitmaps(zmap_disk, imap_disk, N_IMAP, list);
-        damage_bitmap(imap_disk, N_IMAP, IMAP, inode);
-        compare_bitmaps(zmap_disk, imap_disk, N_IMAP, list);
+        damage_bitmap(imap_disk, N_IMAP, IMAP, position);
         printf("BLK_IMAP is %d N_IMAP is %d.\n",BLK_IMAP, N_IMAP);
         int * bitmap_as_int_array = calloc(FS_BITMAP_CHUNKS(BLK_SIZE)*N_IMAP*chunk_size +1, sizeof(int));
         bitmap_as_int_array[FS_BITMAP_CHUNKS(BLK_SIZE)*N_IMAP*chunk_size] = 0;
@@ -895,6 +893,22 @@ int fs_damage(void){
         printf("src mfs is  %lu .\n",fs_m_out.RES_DEV);
         printf("N_IMAP is %d\n", N_IMAP);
         fs_m_out.RES_NBYTES = N_IMAP;
+    }else if(operation == 2){
+        repair = 1;
+        printf("Loading super block in the %u device.\n",dev);
+        type = ZMAP;
+        zmap_disk = alloc_bitmap(N_ZMAP);
+        get_bitmap(zmap_disk, ZMAP);; 
+        damage_bitmap(zmap_disk, N_ZMAP, ZMAP, position);
+        printf("BLK_ZMAP is %d N_ZMAP is %d.\n",BLK_ZMAP, N_ZMAP);
+        int * bitmap_as_int_array = calloc(FS_BITMAP_CHUNKS(BLK_SIZE)*N_ZMAP*chunk_size +1, sizeof(int));
+        bitmap_as_int_array[FS_BITMAP_CHUNKS(BLK_SIZE)*N_ZMAP*chunk_size] = 0;
+        bitmap_to_int_array(zmap_disk, N_ZMAP, bitmap_as_int_array);
+        printf("bitmap_as_int_array is %d #0 is %d, #1 is %d, #2 is %d.\n",(int)bitmap_as_int_array, bitmap_as_int_array[0], bitmap_as_int_array[1], bitmap_as_int_array[2]);
+        fs_m_out.RES_DEV = (int) bitmap_as_int_array;
+        printf("src mfs is  %lu .\n",fs_m_out.RES_DEV);
+        printf("N_IMAP is %d\n", N_ZMAP);
+        fs_m_out.RES_NBYTES = N_ZMAP;
     }
     puts("fs_damage ended with success");
     return 1;
