@@ -38,7 +38,6 @@
 #include <minix/config.h>
 #include <minix/sysinfo.h>
 #include <minix/type.h>
-#include <minix/vm.h>
 #include <string.h>
 #include <machine/archtypes.h>
 #include <lib.h>
