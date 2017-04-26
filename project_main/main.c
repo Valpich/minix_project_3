@@ -18,10 +18,6 @@
 #include "../servers/mfs/mfsdir.h"
 #include <minix/fslib.h>
 #include <stdio.h>
-#include <sys/stat.h>
-
-#include <stdlib.h>
-#include <stdio.h>
 
 
 
