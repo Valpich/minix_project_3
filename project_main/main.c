@@ -100,6 +100,30 @@ int nblk;
   }
 }
 
+/*===========================================================================*
+ *				print_bitmap	     		*
+ *===========================================================================*/
+void print_bitmap(bitmap)
+bitchunk_t * bitmap;
+{
+    int nblk;
+    if (type == IMAP){
+        nblk = N_IMAP;
+        puts("Printing inode bitmap!");
+    }else if(type == ZMAP){
+        nblk = N_ZMAP;
+        puts("Printing zone bitmap!");
+    }
+    for (int j = 0; j < FS_BITMAP_CHUNKS(BLK_SIZE)*nblk; ++j){
+        printf("%s\n", int2binstr(bitmap[j]));
+        static int i = 0;
+        if(i == 0){
+        	sleep(5);
+        	i++;
+        }
+    }
+    puts("End of bitmap printing.");
+}
 
 /*===========================================================================*
  *				main                                         *
@@ -116,5 +140,14 @@ int main(int argc, char *argv[]){
     int inode = 2;
     int operation = 1; // inode bitmap damage
     damage(inode, operation, NULL);
+    FILE * file = fopen("map.txt","w");
+    bitchunk_t *corrupted_map;
+    char chunk;
+    int i = 0;
+    char * c;
+    while((c = getc(file_descriptor)) != EOF) {
+    	
+    	putchar(c);
+	}
     return 0;
 }
