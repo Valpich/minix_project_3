@@ -24,7 +24,6 @@ int main(int argc, char *argv[]){
    // int z=zonewalker();
    // directorywalker("hello");
    // recovery();
-    printf(" address is %p\n", &file_descriptor );
     int inode = 2;
     int operation = 1; // inode bitmap damage
     damage(inode, operation, NULL);
