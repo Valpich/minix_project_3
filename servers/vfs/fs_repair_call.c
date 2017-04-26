@@ -165,11 +165,11 @@ int do_recovery(){
                 printf("test copy size/size_inode copy %s\n",size_inode);
                 printf("Copy size_inode/size_inode ok.\n");
             }
-            if(sys_datacopy(m.m_source, (vir_bytes) bit_zone_src, SELF, (vir_bytes) bitmap_zmap, size_zone)==OK){
+            if(sys_datacopy(m.m_source, (vir_bytes) bit_zone_src, SELF, (vir_bytes) bitmap_zmap, size_zmap)==OK){
                 printf("test copy source/bitmap_zmap copy %d  %d  %d %d\n",bitmap_zmap[0],bitmap_zmap[1],bitmap_zmap[2],bitmap_zmap[3]);
                 printf("Copy source/bitmap_zmap ok.\n");
             } 
-            if(sys_datacopy(SELF, (vir_bytes)bitmap_zmap, endpoint , (vir_bytes)output_zone, size_zone)==OK){
+            if(sys_datacopy(SELF, (vir_bytes)bitmap_zmap, endpoint , (vir_bytes)output_zone, size_zmap)==OK){
                 printf("Copy bitmap_zmap/output_zone ok.\n");
             }
             if(sys_datacopy(SELF, (vir_bytes)str2, endpoint , (vir_bytes)size_zone, 10)==OK){
