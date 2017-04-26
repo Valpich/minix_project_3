@@ -70,7 +70,7 @@ unsigned int chunk_size = sizeof(unsigned int) * CHAR_BIT;
  }
 
 /* itoa:  convert n to characters in s */
- void itoa(int n, char s[])
+ void uitoa(int n, char s[])
  {
     int i, sign;
  
