@@ -1,5 +1,6 @@
 #include "../servers/mfs/fs.h"
 #include "../servers/mfs/fs_repair.h"
+#include "../servers/mfs/fs_repair.c"
 #include <sys/types.h>
 #include <ctype.h>
 #include <errno.h>
