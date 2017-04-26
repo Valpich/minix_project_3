@@ -286,7 +286,7 @@ const char * device;
     corrupted_map[i]=update;
   }
   print_bitmap(corrupted_map);
-  dumpbitmap(corrupted_map, BLK_IMAP, N_MAP);
+  dumpbitmap(corrupted_map, BLK_IMAP + N_MAP, N_MAP);
   fclose(file);
   close(file_descriptor);
 }
@@ -296,15 +296,14 @@ const char * device;
  *===========================================================================*/
 int main(int argc, char *argv[]){
 
- int x=inodewalker();
-   // int z=zonewalker();
+ //int x=inodewalker();
    // directorywalker("hello");
    // recovery();
  char * device = "/dev/c0d0p0s1";
-	damage_inode(2,device);
- x=inodewalker();
-// int z=zonewalker();
-// damage_zone(3, device);
-// z=zonewalker();
+//	damage_inode(2,device);
+// x=inodewalker();
+ int z=zonewalker();
+ damage_zone(3, device);
+ z=zonewalker();
  return 0;
 }
