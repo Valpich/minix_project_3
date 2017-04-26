@@ -145,7 +145,7 @@ unsigned nelem, elsize;
 {
     char *p;
     if ((p = (char *)malloc((size_t)nelem * elsize)) == 0) {
-        fatal("out of memory!");
+        exit(6);
     }
     memset((void *) p, 0, (size_t)nelem * elsize);
     return(p);
