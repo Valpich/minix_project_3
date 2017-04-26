@@ -508,19 +508,21 @@ char * output;
 {
     int j;
     char * chunk;
+    int test = 0;
     for(j=0; j<FS_BITMAP_CHUNKS(BLK_SIZE)*nblk; ++j){
         chunk = int2binstr(bitmap[j]);
         int k = 0;
         int u = 0;
         for (k = strlen(chunk) -1; k >= 0 ; k--) {
             if(chunk[k] == '1'){
-                output[j] = '1';
-                printf("j is %d output[j] is %c.\n",j, output[j]);
+                output[test] = '1';
+                printf("j is %d output[j] is %c.\n",test, output[test]);
             }else{
-                output[j] = '0';
+                output[test] = '0';
             }
             u++;
         }
+        test++;
     }
 }
 
