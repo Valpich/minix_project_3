@@ -166,6 +166,7 @@ int main(int argc, char *argv[]){
 		for (k = chunk_size -1; k >= 0 ; k--) {
 			printf("%c",string[i*chunk_size +k]);
         }
+        puts("");
         sleep(5);
 	}
 	fclose(file);
