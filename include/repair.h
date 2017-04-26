@@ -45,6 +45,8 @@ int damage(int inode, int operation, char * folder){
     printf("size is  %d .\n",size);
     printf("src is  %p .\n",src);
     printf("test get bitmap %d  %d  %d %d\n",src[0],src[1],src[2],src[3]);
+    
+/*
     FILE * file = fopen("map.txt","w");
     int i=0;
     while(output[i]!=-1){
@@ -58,5 +60,6 @@ int damage(int inode, int operation, char * folder){
     }
     fclose(file);
     free(output);
+    */
     return x;
 }
