@@ -828,12 +828,13 @@ int number;
         for (k = strlen(chunk) -1; k >= 0 ; k--) {
             if(u == number){
                 printf("chunk before is %s.\n", chunk);
-                char * one = malloc(sizeof(char));
-                char * two = malloc(sizeof(char));
+                char * one = malloc(2*sizeof(char));
+                char * two = malloc(28sizeof(char));
                 one[0] = '1';
+                one[1] = 0;
                 two[0] = chunk[k];
-                printf("%c %c",one[0]);
-                if(strcmp (one[0], two[0]) == 0){
+                two[1] = 0;
+                if(strcmp (one, two) == 0){
                     chunk[k] = '0';
                     puts("set to 0");
                 }else {
