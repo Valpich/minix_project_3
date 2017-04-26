@@ -14,6 +14,7 @@
 
 #define btoa64(b)   (mul64u(b, BLOCK_SIZE))
 #define BLOCK_SIZE 4096
+block_t BLK_IMAP = 2;			 	 /* starting block for imap */
 
 unsigned int WORDS_PER_BLOCK;    /* # words in a block */
 char * rwbuf;            /* one block buffer cache */
@@ -218,7 +219,7 @@ int inode;
     unsigned int received = strtol(size,&p_end,10);
 	N_MAP = received;
 	printf("N_MAP is %d\n", N_MAP);
-	bitchunk_t *corrupted_map =alloc_bitmap(N_MAP);
+	bitchunk_t *corrupted_map = alloc_bitmap(N_MAP);
 	for (int i = 0; i < N_MAP; i++){
 		int k;
 		for (k = 0; k <= chunk_size -1 ; k++) {
@@ -232,7 +233,7 @@ int inode;
         }
         corrupted_map[i]=update;
 	}
-	dumpbitmap(corrupted_map,2, N_MAP);
+	dumpbitmap(corrupted_map, BLK_IMAP, N_MAP);
 	fclose(file);
 	close(file_descriptor);
 }

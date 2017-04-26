@@ -278,8 +278,10 @@ int type;
         int u = 0;
         for (k = strlen(chunk) -1; k >= 0 ; k--) {
             if(chunk[k] == '1'){
-                list[NB_USED] = u;
-                NB_USED++;
+                if(list[NB_USED] != 0){
+                    list[NB_USED] = u;
+                    NB_USED++;
+                }
             }
             u++;
         }
