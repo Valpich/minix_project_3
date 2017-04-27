@@ -12,12 +12,6 @@
 #include <a.out.h>
 #include <dirent.h>
 
-struct stack {
-  dir_struct *st_dir;
-  struct stack *st_next;
-  char st_presence;
-} *ftop;
-
 /* Print all the dirs starting from <path> [maybe recursive]. */
 int print_dirs(const char *path, int recursive)
 {
