@@ -110,14 +110,14 @@ if ((s.st_mode & S_IFMT) != S_IFDIR) {
 
 int main ()
 {
-    char * p = malloc(sizeof(char) * 128);
+    char p;
     printf("Enter you directory: ");
-    scanf("%126s",p);
+    scanf("%s",p);
 
-    char *total;
+    char total;
 
-    strlcat(total, "ls -i ", 200);
-    strlcat(total, p, 200);
+    strcat(total, "ls -i ");
+    strlcat(total, p);
 
     printf("%s\n", p);
 
