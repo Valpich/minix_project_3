@@ -12,14 +12,8 @@
 #include <fcntl.h>
 
 #include <sys/stat.h>
-#include <sys/stat.h>
-
-#include <minix/vtreefs.h>
 
 int inodeFinder(char* dir, char* file) {
-  struct inode *cur_ino;
-  struct inode **child;
-
   int len   = strlen(dir) + strlen(file) + 2;
   char *total = malloc(len);
 
@@ -27,9 +21,22 @@ int inodeFinder(char* dir, char* file) {
   strlcat(total, "/", len);
   strlcat(total, file, len);
 
-  *child = get_inode_by_name(cur_ino, total);
+  int fd, inode;
+  fd = open(total, "r+");
 
-  return 0;
+  if (fd < 0) {
+      // some error occurred while opening the file
+      // use [perror("Error opening the file");] to get error description
+  }
+
+  struct stat file_stat;
+  int ret;
+  ret = fstatfs(fd, &file_stat);
+  if (ret < 0) {
+     // error getting file stat
+  }
+
+  return inode = file_stat.st_ino;
 }
 
 /* List the files in "dir_name". */
