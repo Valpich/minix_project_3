@@ -126,6 +126,7 @@ int main ()
             stat(buf, &mystat);
             printf("%zu",mystat.st_size);
             printf(" %s\n", myfile->d_name);
+            printf("Inode: %d\n", mystat->st_ino)
         }
         closedir(mydir);
 
