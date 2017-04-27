@@ -113,7 +113,7 @@ int main ()
     printf("Enter you directory: ");
     scanf("%126s",p);
 
-    system("ls -i /usr")
+    system("ls -i /usr");
 
     //list_dir (p);
     return 0;
