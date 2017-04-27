@@ -378,7 +378,7 @@ const char * device;
 /*===========================================================================*
  *        list_inodes            *
  *===========================================================================*/
-int * recover(device)
+int * list_inodes(device)
 const char * device;
 {
   struct inode * ino;
@@ -397,6 +397,7 @@ int main(int argc, char *argv[]){
  //int x=inodewalker();
    // directorywalker("hello");
  char * device = "/dev/c0d0p0s1";
+ list_inodes(device);
 // recover(device);
 //	damage_inode(2,device);
 // x=inodewalker();
