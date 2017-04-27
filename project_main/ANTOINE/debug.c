@@ -105,15 +105,12 @@ int main ()
         mydir = opendir(p);
         while((myfile = readdir(mydir)) != NULL)
         {
-          if(opendir(myfile)){
             sprintf(buf, "%s/%s", p, myfile->d_name);
             stat(buf, &mystat);
             //printf("%zu",mystat.st_size);
             printf("DIR: %s\n\t", myfile->d_name);
-            printf("Inode: %d\n", mystat.st_ino);
-          }else{
-            printf("Not Directory\n");
-          }
+            printf("Inode: %d\n\t", mystat.st_ino);
+            printf("%d ", myfile->d_type);
 
         }
         closedir(mydir);
