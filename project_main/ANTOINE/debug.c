@@ -1,53 +1,142 @@
+/* We want POSIX.1-2008 + XSI, i.e. SuSv4, features */
+#define _XOPEN_SOURCE 700
+
 #include <stdlib.h>
+#include <unistd.h>
+#include <ftw.h>
+#include <time.h>
 #include <stdio.h>
-#include <sys/types.h>
 #include <string.h>
 #include <errno.h>
-#include <unistd.h> // for open
-/* "readdir" etc. are defined here. */
-#include <dirent.h>
-/* limits.h defines "PATH_MAX". */
-#include <limits.h>
-
-#include <fcntl.h>
-
-#include <sys/stat.h>
 
 
-/* List the files in "dir_name". */
-static void list_dir (const char * dir_name) {
+/* POSIX.1 says each process has at least 20 file descriptors.
+ * Three of those belong to the standard streams.
+ * Here, we use a conservative estimate of 15 available;
+ * assuming we use at most two for other uses in this program,
+ * we should never run into any problems.
+ * Most trees are shallower than that, so it is efficient.
+ * Deeper trees are traversed fine, just a bit slower.
+ * (Linux allows typically hundreds to thousands of open files,
+ *  so you'll probably never see any issues even if you used
+ *  a much higher value, say a couple of hundred, but
+ *  15 is a safe, reasonable value.)
+*/
+#ifndef USE_FDS
+#define USE_FDS 15
+#endif
 
-  DIR *mydir;
-  struct dirent *myfile;
-  struct stat mystat;
+int print_entry(const char *filepath, const struct stat *info,
+                const int typeflag, struct FTW *pathinfo)
+{
+    /* const char *const filename = filepath + pathinfo->base; */
+    const double bytes = (double)info->st_size; /* Not exact if large! */
+    struct tm mtime;
 
-  char buf[512];
-  mydir = opendir(dir_name);
-  while((myfile = readdir(mydir)) != NULL) {
-      sprintf(buf, "%s/%s", dir_name, myfile->d_name);
-      stat(buf, &mystat);
-      //printf("%zu",mystat.st_size);
-      printf("DIR: %s\n\t", myfile->d_name);
-      printf("Inode: %d\n\t", mystat.st_ino);
-      if ((mystat.st_mode & S_IFMT) != S_IFDIR) {
-        printf("NO DIR\n");
-      }else{
-        printf("DIR\n");
-        list_dir(myfile->d_name);
-      }
-  }
+    localtime_r(&(info->st_mtime), &mtime);
 
-  closedir(mydir);
+    printf("%04d-%02d-%02d %02d:%02d:%02d",
+           mtime.tm_year+1900, mtime.tm_mon+1, mtime.tm_mday,
+           mtime.tm_hour, mtime.tm_min, mtime.tm_sec);
+
+    if (bytes >= 1099511627776.0)
+        printf(" %9.3f TiB", bytes / 1099511627776.0);
+    else
+    if (bytes >= 1073741824.0)
+        printf(" %9.3f GiB", bytes / 1073741824.0);
+    else
+    if (bytes >= 1048576.0)
+        printf(" %9.3f MiB", bytes / 1048576.0);
+    else
+    if (bytes >= 1024.0)
+        printf(" %9.3f KiB", bytes / 1024.0);
+    else
+        printf(" %9.0f B  ", bytes);
+
+        if (typeflag == FTW_SL) {
+        char   *target;
+        size_t  maxlen = 1023;
+        ssize_t len;
+
+        while (1) {
+
+            target = malloc(maxlen + 1);
+            if (target == NULL)
+                return ENOMEM;
+
+            len = readlink(filepath, target, maxlen);
+            if (len == (ssize_t)-1) {
+                const int saved_errno = errno;
+                free(target);
+                return saved_errno;
+            }
+            if (len >= (ssize_t)maxlen) {
+                free(target);
+                maxlen += 1024;
+                continue;
+            }
+
+            target[len] = '\0';
+            break;
+        }
+
+        printf(" %s -> %s\n", filepath, target);
+        free(target);
+
+      } else
+  if (typeflag == FTW_SLN)
+      printf(" %s (dangling symlink)\n", filepath);
+  else
+  if (typeflag == FTW_F)
+      printf(" %s\n", filepath);
+  else
+  if (typeflag == FTW_D || typeflag == FTW_DP)
+      printf(" %s/\n", filepath);
+  else
+  if (typeflag == FTW_DNR)
+      printf(" %s/ (unreadable)\n", filepath);
+  else
+      printf(" %s (unknown)\n", filepath);
+
+  return 0;
 }
 
-
-
-int main ()
+int print_directory_tree(const char *const dirpath)
 {
-    char * p = malloc(sizeof(char) * 128);
-    printf("Enter you directory: ");
-    scanf("%126s",p);
+    int result;
 
-    list_dir (p);
-    return 0;
+    /* Invalid directory path? */
+    if (dirpath == NULL || *dirpath == '\0')
+        return errno = EINVAL;
+
+    result = nftw(dirpath, print_entry, USE_FDS, FTW_PHYS);
+    if (result >= 0)
+        errno = result;
+
+    return errno;
+}
+
+int main(int argc, char *argv[])
+{
+    int arg;
+
+    if (argc < 2) {
+
+        if (print_directory_tree(".")) {
+            fprintf(stderr, "%s.\n", strerror(errno));
+            return EXIT_FAILURE;
+        }
+
+    } else {
+
+        for (arg = 1; arg < argc; arg++) {
+            if (print_directory_tree(argv[arg])) {
+                fprintf(stderr, "%s.\n", strerror(errno));
+                return EXIT_FAILURE;
+            }
+        }
+
+    }
+
+    return EXIT_SUCCESS;
 }
