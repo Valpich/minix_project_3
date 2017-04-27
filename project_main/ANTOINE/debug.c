@@ -33,30 +33,17 @@ int print_entry(const char *filepath, const struct stat *info,
     const double bytes = (double)info->st_size; /* Not exact if large! */
     struct tm mtime;
 
-    localtime_r(&(info->st_mtime), &mtime);
+    DIR *mydir;
+    struct dirent *myfile;
+    struct stat mystat;
 
-    /*printf("%04d-%02d-%02d %02d:%02d:%02d",
-           mtime.tm_year+1900, mtime.tm_mon+1, mtime.tm_mday,
-           mtime.tm_hour, mtime.tm_min, mtime.tm_sec);*/
-    //lol
+    char buf[512];
+    mydir = opendir(filepath);
 
-    /*
+    sprintf(buf, "%s/%s", p, myfile->d_name);
+    stat(buf, &mystat);
 
-    if (bytes >= 1099511627776.0)
-        printf(" %9.3f TiB", bytes / 1099511627776.0);
-    else
-    if (bytes >= 1073741824.0)
-        printf(" %9.3f GiB", bytes / 1073741824.0);
-    else
-    if (bytes >= 1048576.0)
-        printf(" %9.3f MiB", bytes / 1048576.0);
-    else
-    if (bytes >= 1024.0)
-        printf(" %9.3f KiB", bytes / 1024.0);
-    else
-        printf(" %9.0f B  ", bytes);
-
-    */
+    int inode = mystat.st_ino;
 
         if (typeflag == FTW_SL) {
         char   *target;
@@ -93,10 +80,10 @@ int print_entry(const char *filepath, const struct stat *info,
       printf(" %s (dangling symlink)\n", filepath);
   else
   if (typeflag == FTW_F)
-      printf(" %s\n", filepath);
+      printf("Inode: %d %s", inode, filepath);
   else
   if (typeflag == FTW_D || typeflag == FTW_DP)
-      printf(" %s/\n", filepath);
+      printf("Inode: %d %s", inode, filepath);
   else
   if (typeflag == FTW_DNR)
       printf(" %s/ (unreadable)\n", filepath);
