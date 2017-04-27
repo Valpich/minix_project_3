@@ -200,28 +200,28 @@ bitchunk_t * bitmap;
 bitchunk_t * bitmap2;
 int block_size;
 {
-    int j;
-    int corrupted = 0;
-    char * chunk;
-    char * chunk2;
-    for(j=0; j<FS_BITMAP_CHUNKS(BLOCK_SIZE)*block_size; ++j){
-        chunk = int2binstr(bitmap[j]);
-        chunk2 = int2binstr(bitmap2[j]);
-        int k = 0;
-        int u = 0;
-        for (k = strlen(chunk) -1; k >= 0 ; k--) {
-            if(chunk[k] != chunk2[k]){
-                corrupted++;
-            }
-            u++;
-        }
+  int j;
+  int corrupted = 0;
+  char * chunk;
+  char * chunk2;
+  for(j=0; j<FS_BITMAP_CHUNKS(BLOCK_SIZE)*block_size; ++j){
+    chunk = int2binstr(bitmap[j]);
+    chunk2 = int2binstr(bitmap2[j]);
+    int k = 0;
+    int u = 0;
+    for (k = strlen(chunk) -1; k >= 0 ; k--) {
+      if(chunk[k] != chunk2[k]){
+        corrupted++;
+      }
+      u++;
     }
-    if(corrupted != 0){
-        printf("Found %d corrupted data between the two bitmap.\n", corrupted);
-    }else{
-        puts("No difference between bitmaps found.");
-    }
-    return corrupted;
+  }
+  if(corrupted != 0){
+    printf("Found %d corrupted data between the two bitmap.\n", corrupted);
+  }else{
+    puts("No difference between bitmaps found.");
+  }
+  return corrupted;
 }
 
 /*===========================================================================*
@@ -475,8 +475,8 @@ const char * device;
  *        clean_stdin                                         *
  *===========================================================================*/
 int clean_stdin(){
-    while (getchar()!='\n');
-    return 1;
+  while (getchar()!='\n');
+  return 1;
 }
 
 /*===========================================================================*
@@ -487,7 +487,8 @@ int main(int argc, char *argv[]){
   char directory_name[100];
   int to_damage = 0;
   char * device = "/dev/c0d0p0s1";
-do{
+  char c;
+  do{
     puts("----------- Welcome -----------");
     printf("My pid is: %d.\n",getpid());
     puts("1. DirectoryWalker");
@@ -499,39 +500,39 @@ do{
     puts("7. Exit");
     puts("");
     do{
-        puts("Enter your choice:");
+      puts("Enter your choice:");
     } while (((scanf("%d%c", &operationSelectedNumber, &c)!=2 || c!='\n') && clean_stdin()) || operationSelectedNumber<1 || operationSelectedNumber>9);;
     switch (operationSelectedNumber) {
       case 1:
-        puts("Enter directory name: ");
-        scanf("%[^\n]%*c", topicName);
-        directorywalker(directory_name);
+      puts("Enter directory name: ");
+      scanf("%[^\n]%*c", topicName);
+      directorywalker(directory_name);
       break;
       case 2:
-        inodewalker();
+      inodewalker();
       break;
       case 3:
-        zonewalker();
+      zonewalker();
       break;
       case 4:
-        puts("Enter the inode to damage:");
-        scanf("%[^\n]%*u", to_damage);
-        damage_inode(to_damage,device);
+      puts("Enter the inode to damage:");
+      scanf("%[^\n]%*u", to_damage);
+      damage_inode(to_damage,device);
       break;
       case 5:
-        puts("Enter the zone to damage:");
-        scanf("%[^\n]%*u", to_damage);
-        damage_inode(to_damage,device);
+      puts("Enter the zone to damage:");
+      scanf("%[^\n]%*u", to_damage);
+      damage_inode(to_damage,device);
       break;
       case 6:
-        recover(device);
+      recover(device);
       break;
       case 7:
-        exit(0);
+      exit(0);
       default:
-        puts("Default Operation selected");
-        break;
-      }
-    }while(1);
- return 0;
+      puts("Default Operation selected");
+      break;
+    }
+  }while(1);
+  return 0;
 }
