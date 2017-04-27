@@ -49,9 +49,11 @@ int print_entry(const char *filepath, const struct stat *info,
 
     if (S_ISREG (st_buf.st_mode)) {
         printf ("%s is a regular file.\n", filepath);
+        printf ("Inode: %d\n", st_buf.st_ino);
     }
     if (S_ISDIR (st_buf.st_mode)) {
         printf ("%s is a directory.\n", filepath);
+        printf ("Inode: %d\n", st_buf.st_ino);
     }
 
         if (typeflag == FTW_SL) {
