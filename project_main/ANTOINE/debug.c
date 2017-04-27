@@ -41,13 +41,16 @@ int print_entry(const char *filepath, const struct stat *info,
     char buf[512];
     mydir = opendir(filepath);
     myfile = readdir(mydir);
-    sprintf(buf, "%s/%s", filepath, myfile->d_name);
-    stat(buf, &mystat);
-    //printf("%zu",mystat.st_size);
-    printf("DIR: %s\n\t", myfile->d_name);
-    printf("Inode: %d\n\t", mystat.st_ino);
-    closedir(mydir);
 
+
+
+    if ((mystat.st_mode & S_IFMT) != S_IFDIR) {
+          printf("DIR\n");
+    }else{
+          printf("NO DIR\n");
+    }
+
+    closedir(mydir);
 
         if (typeflag == FTW_SL) {
         char   *target;
