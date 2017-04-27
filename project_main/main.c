@@ -376,6 +376,18 @@ const char * device;
 }
 
 /*===========================================================================*
+ *        list_inodes            *
+ *===========================================================================*/
+int * recover(device)
+const char * device;
+{
+  struct inode * ino;
+  if((ino = get_inode(device, 1))!= NULL){
+    puts("Inoud found!");
+  }
+}
+
+/*===========================================================================*
  *				main                                         *
  *===========================================================================*/
 int main(int argc, char *argv[]){
@@ -383,7 +395,7 @@ int main(int argc, char *argv[]){
  //int x=inodewalker();
    // directorywalker("hello");
  char * device = "/dev/c0d0p0s1";
- recover(device);
+// recover(device);
 //	damage_inode(2,device);
 // x=inodewalker();
 // int z=zonewalker();
