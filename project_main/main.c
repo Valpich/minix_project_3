@@ -1,4 +1,5 @@
 #include "../servers/mfs/fs.h"
+#include "../servers/mfs/inode.h"
 #include <sys/types.h>
 #include <ctype.h>
 #include <errno.h>
