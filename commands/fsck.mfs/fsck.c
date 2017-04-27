@@ -679,9 +679,6 @@ char **clist;
 
   if (clist == 0) return;
   while ((bit = getnumber(*clist++)) != NO_BIT) {
-    static int asd = 0 ;
-  if(asd < 15)printf("inode is %d", bit);
-  asd++;
 	setbit(spec_imap, bit);
 	ino = bit;
 	do {
@@ -1642,6 +1639,8 @@ char **argv;
 		    case 'a':	automatic ^= 1;	break;
 		    case 'c':
 			clist = getlist(&argv, "inode");
+      printf("inode list is %s\n", clist;
+        sleep(5);
 			break;
 		    case 'i':
 			ilist = getlist(&argv, "inode");
