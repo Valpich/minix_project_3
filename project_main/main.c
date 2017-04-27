@@ -337,7 +337,6 @@ const char * device;
   }
   dumpbitmap(corrupted_map, BLK_IMAP , N_IMAP);
   fclose(file);
-  close(file_descriptor);
   free(corrupted_map);
   file = fopen("bitmap_zone.txt","r");
   i = 0;
