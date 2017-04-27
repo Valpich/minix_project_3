@@ -1,6 +1,3 @@
-/* We want POSIX.1-2008 + XSI, i.e. SuSv4, features */
-#define _XOPEN_SOURCE 700
-
 #include <stdlib.h>
 #include <unistd.h>
 #include <ftw.h>
@@ -10,24 +7,8 @@
 #include <errno.h>
 #include <dirent.h>
 
-#include <fcntl.h>
-
-
-/* POSIX.1 says each process has at least 20 file descriptors.
- * Three of those belong to the standard streams.
- * Here, we use a conservative estimate of 15 available;
- * assuming we use at most two for other uses in this program,
- * we should never run into any problems.
- * Most trees are shallower than that, so it is efficient.
- * Deeper trees are traversed fine, just a bit slower.
- * (Linux allows typically hundreds to thousands of open files,
- *  so you'll probably never see any issues even if you used
- *  a much higher value, say a couple of hundred, but
- *  15 is a safe, reasonable value.)
-*/
-#ifndef USE_FDS
 #define USE_FDS 15
-#endif
+
 
 int print_entry(const char *filepath, const struct stat *info,
                 const int typeflag, struct FTW *pathinfo)
@@ -45,8 +26,6 @@ int print_entry(const char *filepath, const struct stat *info,
         printf ("Error, errno = %d\n", errno);
         return 1;
     }
-
-    find_inode(filepath);
 
 
         if (typeflag == FTW_SL) {
