@@ -122,7 +122,7 @@ int main ()
         mydir = opendir(p);
         while((myfile = readdir(mydir)) != NULL)
         {
-            sprintf(buf, "%s/%s", argv[1], myfile->d_name);
+            sprintf(buf, "%s/%s", p, myfile->d_name);
             stat(buf, &mystat);
             printf("%zu",mystat.st_size);
             printf(" %s\n", myfile->d_name);
