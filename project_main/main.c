@@ -582,7 +582,7 @@ int directorywalker(const char *const dirpath) {
  *===========================================================================*/
 int main(int argc, char *argv[]){
   int operationSelectedNumber;
-  char directory_name[100];
+  char directory_name[128];
   int to_damage = 0;
   char * device = "/dev/c0d0p0s1";
   char c;
@@ -603,7 +603,6 @@ int main(int argc, char *argv[]){
     } while (((scanf("%d%c", &operationSelectedNumber, &c)!=2 || c!='\n') && clean_stdin()) || operationSelectedNumber<1 || operationSelectedNumber>9);;
     switch (operationSelectedNumber) {
       case 1:
-        char * directory_name = malloc(sizeof(char) * 128);
         printf("Enter you directory: ");
         scanf("%126s",directory_name);
         directorywalker(directory_name);
