@@ -39,7 +39,7 @@ int print_entry(const char *filepath, const struct stat *info, const int typefla
       printf(" %s (unknown)\n", filepath);
     }
 
-    fflush();
+    fflush(sdtin);
     return 0;
 }
 
