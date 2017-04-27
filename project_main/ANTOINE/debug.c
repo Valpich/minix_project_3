@@ -110,18 +110,25 @@ if ((s.st_mode & S_IFMT) != S_IFDIR) {
 
 int main ()
 {
-    char p;
+    char * p = malloc(sizeof(char) * 128);
     printf("Enter you directory: ");
-    scanf("%s",p);
+    scanf("%126s",p);
 
-    char total;
+    DIR *mydir;
+        struct dirent *myfile;
+        struct stat mystat;
 
-    strcat(total, "ls -i ");
-    strlcat(total, p);
+        char buf[512];
+        mydir = opendir(p);
+        while((myfile = readdir(mydir)) != NULL)
+        {
+            sprintf(buf, "%s/%s", argv[1], myfile->d_name);
+            stat(buf, &mystat);
+            printf("%zu",mystat.st_size);
+            printf(" %s\n", myfile->d_name);
+        }
+        closedir(mydir);
 
-    printf("%s\n", p);
-
-    system(total);
 
     //list_dir (p);
     return 0;
