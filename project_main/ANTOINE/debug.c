@@ -38,14 +38,14 @@ static void list_dir (const char * dir_name) {
                out of the while loop. */
             break;
         }
-
+        sprintf(buf, "%s/%s", p, entry->d_name);
         stat(buf, &mystat);
         printf("DIR: %s\n\t", entry->d_name);
         printf("Inode: %d\n", mystat.st_ino);
 
         d_name = entry->d_name;
         /* Print the name of the file and directory. */
-	printf ("Inode: %d, Dir-Name: %s/%s\n", entry->d_ino, dir_name, d_name);
+	//printf ("Inode: %d, Dir-Name: %s/%s\n", entry->d_ino, dir_name, d_name);
 
 #if 0
 	/* If you don't want to print the directories, use the
