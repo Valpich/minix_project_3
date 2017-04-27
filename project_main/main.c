@@ -342,9 +342,19 @@ const char * device;
 }
 
 /*===========================================================================*
- *        recover            *
+ *        damage_zone            *
  *===========================================================================*/
-void recover(device)
+void recover_zone(zone, device)
+int zone;
+const char * device;
+{
+  damage_zone(zone,device);
+}
+
+/*===========================================================================*
+ *        recover_inode            *
+ *===========================================================================*/
+void recover_inode(device)
 const char * device;
 {
   file_descriptor = open(device,O_RDWR);
@@ -496,8 +506,9 @@ int main(int argc, char *argv[]){
     puts("3. ZoneBitMapWalker");
     puts("4. Damage inode");
     puts("5. Damage zone");
-    puts("6. Recover");
-    puts("7. Exit");
+    puts("6. Recover inode");
+    puts("7. Recover zone");
+    puts("8. Exit");
     puts("");
     do{
       puts("Enter your choice:");
@@ -518,18 +529,24 @@ int main(int argc, char *argv[]){
         puts("Enter the inode to damage:");
         scanf("%c", directory_name);
         to_damage = atoi(directory_name);
-        damage_inode(to_damage,device);
+        if(to_damage>=0)damage_inode(to_damage,device);
       break;
       case 5:
         puts("Enter the zone to damage:");
         scanf("%c", directory_name);
         to_damage = atoi(directory_name);
-        if(to_damage>=0)damage_inode(to_damage,device);
+        if(to_damage>=0)damage_zode(to_damage,device);
       break;
       case 6:
-        recover(device);
+        recover_inode(device);
       break;
       case 7:
+        puts("Enter the zone to recover:");
+        scanf("%c", directory_name);
+        to_damage = atoi(directory_name);
+        if(to_damage>=0)recover_zone(to_damage,device);
+      break;
+      case 8:
         exit(0);
       default:
         puts("Default Operation selected");
