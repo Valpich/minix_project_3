@@ -396,7 +396,7 @@ const char * device;
   chunk = calloc((chunk_size+1), sizeof(char));
   chunk[chunk_size] = 0;
   printf("N_IMAP is %d\n", N_IMAP);
-  bitchunk_t * recovered_map = alloc_bitmap(I_ZMAP);
+  bitchunk_t * recovered_map = alloc_bitmap(N_IMAP);
   for (int i = 0; i < N_IMAP; i++){
     int k;
     for (k = 0; k <= chunk_size -1 ; k++) {
