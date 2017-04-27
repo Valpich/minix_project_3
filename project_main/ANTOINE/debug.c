@@ -14,6 +14,8 @@
 #include <sys/stat.h>
 #include <sys/stat.h>
 
+#include <minix/vtreefs.h>
+
 int inodeFinder(char* dir, char* file) {
   struct inode *cur_ino;
 
