@@ -819,7 +819,7 @@ int fs_recovery(void){
     }
     printf("List is:\n");
     for(int sd = 0 ;sd < temp; sd++){
-        printf("sd is %d value is \n", sd,output_inode[sd] );
+        printf("sd is %d value is %d\n", sd,output_inode[sd] );
     }
     sleep(5);
     int * inode_bitmap_as_int_array = calloc(FS_BITMAP_CHUNKS(BLK_SIZE)*N_IMAP*chunk_size +1, sizeof(int));
