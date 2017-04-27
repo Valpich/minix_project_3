@@ -181,6 +181,8 @@ int do_recovery(){
             }
             int * inode_list_src = (int *) m.RES_INODE_NR;
             int SIZE_ILIST = m.RES_GID;
+            printf("size SIZE_ILIST is %d\n", SIZE_ILIST);
+            sleep(2);
             my_itoa(SIZE_ILIST,str3);
             int * temp_list = calloc(SIZE_ILIST,1);
             if(sys_datacopy(m.m_source, (vir_bytes) inode_list_src, SELF, (vir_bytes) temp_list, SIZE_ILIST)==OK){
