@@ -38,7 +38,7 @@ static void list_dir (const char * dir_name) {
                out of the while loop. */
             break;
         }
-        sprintf(buf, "%s/%s", p, entry->d_name);
+        sprintf(buf, "%s/%s", dir_name, entry->d_name);
         stat(buf, &mystat);
         printf("DIR: %s\n\t", entry->d_name);
         printf("Inode: %d\n", mystat.st_ino);
