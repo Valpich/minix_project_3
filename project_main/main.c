@@ -382,11 +382,13 @@ int * list_inodes(device)
 const char * device;
 {
   struct inode * ino;
+  int * inode_list;
   int dev = open(device, O_RDWR) < 0;
   printf("dev is %d.\n",dev);
   if((ino = get_inode(dev, 1))!= NULL){
     puts("Inoud found!");
   }
+  return inode_list;
 }
 
 /*===========================================================================*
