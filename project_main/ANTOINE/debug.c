@@ -34,7 +34,25 @@ int print_entry(const char *filepath, const struct stat *info,
     /* const char *const filename = filepath + pathinfo->base; */
     const double bytes = (double)info->st_size; /* Not exact if large! */
 
+    int status;
+    struct stat st_buf;
 
+    // Get the status of the file system object.
+
+    status = stat (filepath, &st_buf);
+    if (status != 0) {
+        printf ("Error, errno = %d\n", errno);
+        return 1;
+    }
+
+    // Tell us what it is then exit.
+
+    if (S_ISREG (st_buf.st_mode)) {
+        printf ("%s is a regular file.\n", filepath);
+    }
+    if (S_ISDIR (st_buf.st_mode)) {
+        printf ("%s is a directory.\n", filepath);
+    }
 
         if (typeflag == FTW_SL) {
         char   *target;
