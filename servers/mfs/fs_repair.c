@@ -806,8 +806,10 @@ int fs_recovery(void){
     for(int i = 0; i< (sb->s_ninodes);i++){
         if ((rip = get_inode(dev, i)) == NULL){
         }else{
-            printf("inode %d found\n",i);
-            sleep(1);
+            if(rip->i_count>0){
+                printf("inode %d found\n",i);
+                sleep(1);
+            }
         }
     }
     sleep(5);
