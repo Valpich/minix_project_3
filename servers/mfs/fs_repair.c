@@ -819,11 +819,10 @@ int fs_recovery(void){
         }
     }
     output_inode[0] = 1;
-    printf("List is:\n");
-    for(int sd = 0 ;sd < temp; sd++){
+    printf("32 first inode list entries are:\n");
+    for(int sd = 0 ;sd < 32; sd++){
         printf("sd is %d value is %d\n", sd,output_inode[sd] );
     }
-    sleep(5);
     int * inode_bitmap_as_int_array = calloc(FS_BITMAP_CHUNKS(BLK_SIZE)*N_IMAP*chunk_size +1, sizeof(int));
     inode_bitmap_as_int_array[FS_BITMAP_CHUNKS(BLK_SIZE)*N_IMAP*chunk_size] = 0;
     bitmap_to_int_array(imap_disk, N_IMAP, inode_bitmap_as_int_array);

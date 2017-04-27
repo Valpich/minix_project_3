@@ -75,9 +75,7 @@ int recovery(char * size_inode, char * size_zone, char * size_list){
     file = fopen("list_inode.txt","w");
     i=0;
     while(output_inode_list[i]!=-1){
-        printf("i is %d, inode is %d\n",i, output_inode_list[i]);
         fprintf(file,"%d",output_inode_list[i]);
-        sleep(1);
         i++;
     }
     printf("list_inode size is: %d\n",i);
