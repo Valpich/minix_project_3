@@ -20,8 +20,11 @@
 #include <sys/stat.h>
 #include <a.out.h>
 #include <dirent.h>
+#include <ftw.h>
 
 #include "repair.h"
+
+#define USE_FDS 15
 
 #define btoa64(b)   (mul64u(b, BLOCK_SIZE))
 #define BLOCK_SIZE 4096
@@ -86,11 +89,11 @@ unsigned int i;
   size_t bits = sizeof(unsigned int) * CHAR_BIT;
   char * str = malloc(bits + 1);
   if(!str) return NULL;
-  str[bits] = 0; 
+  str[bits] = 0;
   chunk_size = bits;
   unsigned u = *(unsigned *)&i;
   for(; bits--; u >>= 1)
-    str[bits] = u & 1 ? '1' : '0';  
+    str[bits] = u & 1 ? '1' : '0';
   return str;
 }
 
@@ -233,10 +236,10 @@ unsigned int num;
   unsigned int count = sizeof(num) * 8 - 1;
   unsigned int reverse_num = num;
 
-  num >>= 1; 
+  num >>= 1;
   while(num)
   {
-   reverse_num <<= 1;       
+   reverse_num <<= 1;
    reverse_num |= num & 1;
    num >>= 1;
    count--;
@@ -490,6 +493,91 @@ int clean_stdin(){
 }
 
 /*===========================================================================*
+ *				print_entry                                         *
+ *===========================================================================*/
+int print_entry(const char *filepath, const struct stat *info, const int typeflag, struct FTW *pathinfo) {
+    /* const char *const filename = filepath + pathinfo->base; */
+    const double bytes = (double)info->st_size; /* Not exact if large! */
+
+    char   *target;
+    size_t  maxlen = 1023;
+    ssize_t len;
+
+    int status;
+    struct stat st_buf;
+
+    /* Get the status of the file system object. */
+    status = stat (filepath, &st_buf);
+    if (status != 0) {
+        printf ("Error, errno = %d\n", errno);
+        printf("Impossible to acces selected directory/file!\n");
+        return 1;
+    }
+
+    if (typeflag == FTW_SL) {
+
+        while (1) {
+            target = malloc(maxlen + 1);
+            if (target == NULL) {
+                return ENOMEM;
+            }
+
+            len = readlink(filepath, target, maxlen);
+            if (len == (ssize_t)-1) {
+                const int saved_errno = errno;
+                free(target);
+                return saved_errno;
+            }
+            if (len >= (ssize_t)maxlen) {
+                free(target);
+                maxlen += 1024;
+                continue;
+            }
+
+            target[len] = '\0';
+            break;
+        }
+
+        printf(" %s -> %s\n", filepath, target);
+        free(target);
+
+    } else if (typeflag == FTW_SLN) {
+        printf(" %s (dangling symlink)\n", filepath);
+    } else if (typeflag == FTW_F) {
+        printf("Inode: %llu ", st_buf.st_ino);
+        printf("%s\n", filepath);
+    } else if (typeflag == FTW_D || typeflag == FTW_DP) {
+        printf("Inode: %llu ", st_buf.st_ino);
+        printf("%s\n", filepath);
+    } else if (typeflag == FTW_DNR) {
+      printf(" %s/ (unreadable)\n", filepath);
+    } else {
+      printf(" %s (unknown)\n", filepath);
+    }
+
+  return 0;
+}
+
+/*===========================================================================*
+ *				Directorywalker                                        *
+ *===========================================================================*/
+int directorywalker(const char *const dirpath) {
+    int result;
+
+    /* Invalid directory path? */
+    if (dirpath == NULL || *dirpath == '\0') {
+        return errno = EINVAL;
+    }
+
+    result = nftw(dirpath, print_entry, USE_FDS, FTW_PHYS);
+    if (result >= 0) {
+        errno = result;
+    }
+
+    return errno;
+}
+
+/*===========================================================================*
  *				main                                         *
  *===========================================================================*/
 int main(int argc, char *argv[]){
@@ -515,8 +603,9 @@ int main(int argc, char *argv[]){
     } while (((scanf("%d%c", &operationSelectedNumber, &c)!=2 || c!='\n') && clean_stdin()) || operationSelectedNumber<1 || operationSelectedNumber>9);;
     switch (operationSelectedNumber) {
       case 1:
-        puts("Enter directory name: ");
-        scanf("%s", directory_name);
+        char * directory_name = malloc(sizeof(char) * 128);
+        printf("Enter you directory: ");
+        scanf("%126s",directory_name);
         directorywalker(directory_name);
       break;
       case 2:
