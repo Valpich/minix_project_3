@@ -8,5 +8,3 @@ LDADD+=	-lvtreefs -lfsdriver -lsys
 CFLAGS+= -D_NETBSD_SOURCE=1
 
 MAN=
-
-BINDIR?= /service
