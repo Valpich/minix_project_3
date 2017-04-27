@@ -395,7 +395,6 @@ const char * device;
 {
   struct inode * ino;
   int * inode_list = NULL;
-  printf("dev is %d.\n",dev);
 
   return inode_list;
 }
