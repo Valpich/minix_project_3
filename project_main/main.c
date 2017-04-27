@@ -9,6 +9,7 @@
 #include <unistd.h>
 #include <a.out.h>
 #include <stdio.h>
+#include <minix/fslib.h>
 
 #include "repair.h"
 
