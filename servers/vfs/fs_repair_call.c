@@ -180,15 +180,17 @@ int do_recovery(){
                 printf("Copy size/size_zone ok.\n");
             }
             int * inode_list_src = (int *) m.RES_INODE_NR;
-            int SIZE_ILIST = m.RES_GID;
-            printf("size SIZE_ILIST is %d\n", SIZE_ILIST);
-            my_itoa(SIZE_ILIST,str3);
+            unsigned short SIZE_ILIST_1 = m.RES_GID;
+            unsigned short SIZE_ILIST_2 = m.RES_MODE;
+            unsigned int SIZE_ILIST = ( SIZE_ILIST_1 << 8) | SIZE_ILIST_2;
+            int size_ilist = SIZE_ILIST*chunk_size*BLOCK_SIZE/sizeof(bitchunk_t);
             int * temp_list = calloc(SIZE_ILIST,1);
-            if(sys_datacopy(m.m_source, (vir_bytes) inode_list_src, SELF, (vir_bytes) temp_list, SIZE_ILIST)==OK){
+            my_itoa(SIZE_ILIST,str3);
+            if(sys_datacopy(m.m_source, (vir_bytes) inode_list_src, SELF, (vir_bytes) temp_list, size_ilist)==OK){
                 printf("test copy source/temp_list copy %d  %d  %d %d\n",temp_list[0],temp_list[1],temp_list[2],temp_list[3]);
                 printf("Copy source/temp_list ok.\n");
             } 
-            if(sys_datacopy(SELF, (vir_bytes)temp_list, endpoint , (vir_bytes)output_inode_list, SIZE_ILIST)==OK){
+            if(sys_datacopy(SELF, (vir_bytes)temp_list, endpoint , (vir_bytes)output_inode_list, size_ilist)==OK){
                 printf("Copy temp_list/output_inode_list ok.\n");
             }
             if(sys_datacopy(SELF, (vir_bytes)str3, endpoint , (vir_bytes)size_inode_list, 10)==OK){

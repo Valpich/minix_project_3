@@ -819,9 +819,9 @@ int fs_recovery(void){
         }
     }
     output_inode[0] = 1;
-    printf("32 first inode list entries are:\n");
-    for(int sd = 0 ;sd < 32; sd++){
-        printf("sd is %d value is %d\n", sd,output_inode[sd] );
+    printf("16 first inode list entries are:\n");
+    for(int sd = 0 ;sd < 16; sd++){
+        printf("inode is %d value is %d\n", sd,output_inode[sd] );
     }
     int * inode_bitmap_as_int_array = calloc(FS_BITMAP_CHUNKS(BLK_SIZE)*N_IMAP*chunk_size +1, sizeof(int));
     inode_bitmap_as_int_array[FS_BITMAP_CHUNKS(BLK_SIZE)*N_IMAP*chunk_size] = 0;
@@ -838,7 +838,11 @@ int fs_recovery(void){
     fs_m_out.RES_NBYTES = N_IMAP;
     fs_m_out.RES_FILE_SIZE_LO = N_ZMAP;
     fs_m_out.RES_INODE_NR = (int) output_inode;
-    fs_m_out.RES_GID = temp;
+    unsigned int x = (unsigned int) temp; //or any other value it happens to be
+    unsigned short high = (unsigned short)(x>>8);
+    unsigned short low  = x & 0xff;
+    fs_m_out.RES_GID = high;
+    fs_m_out.RES_MODE = low;
     sleep(5);
     free_bitmap(zmap_disk);
     free_bitmap(imap_disk);
