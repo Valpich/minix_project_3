@@ -34,7 +34,7 @@ int print_entry(const char *filepath, const struct stat *info,
     /* const char *const filename = filepath + pathinfo->base; */
     const double bytes = (double)info->st_size; /* Not exact if large! */
 
-    
+
 
         if (typeflag == FTW_SL) {
         char   *target;
@@ -72,12 +72,12 @@ int print_entry(const char *filepath, const struct stat *info,
   else
   if (typeflag == FTW_F) {
       //printf("Inode: %d %s", inode, filepath);
-      printf("%s", filepath);
+      printf("%s\n", filepath);
   }
   else
   if (typeflag == FTW_D || typeflag == FTW_DP) {
       //printf("Inode: %d %s", inode, filepath);
-      printf("%s", filepath);
+      printf("%s\n", filepath);
   }
   else
   if (typeflag == FTW_DNR)
