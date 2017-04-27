@@ -411,7 +411,7 @@ int dir;
   if (dir == READING && bno == thisblk) return;
   thisblk = bno;
 
-#if 0
+#if 
 printf("%s at block %5d\n", dir == READING ? "reading " : "writing", bno);
 #endif
 
@@ -679,6 +679,9 @@ char **clist;
 
   if (clist == 0) return;
   while ((bit = getnumber(*clist++)) != NO_BIT) {
+    static int asd = 0 ;
+  if(asd < 15)printf("inode is %d", bit);
+  asd++;
 	setbit(spec_imap, bit);
 	ino = bit;
 	do {
