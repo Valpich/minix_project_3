@@ -78,12 +78,14 @@ int print_entry(const char *filepath, const struct stat *info,
   if (typeflag == FTW_SLN)
       printf(" %s (dangling symlink)\n", filepath);
   else
-  if (typeflag == FTW_F)
-      printf("Inode: %d %s", inode, filepath);
-  else
-  if (typeflag == FTW_D || typeflag == FTW_DP)
-      printf("Inode: %d %s", inode, filepath);
-  else
+  if (typeflag == FTW_F){
+  //printf("Inode: %llu ", st_buf.st_ino);
+  printf("%s\n", filepath);
+}else
+  if (typeflag == FTW_D || typeflag == FTW_DP) {
+  //printf("Inode: %llu ", st_buf.st_ino);
+  printf("%s\n", filepath);
+}else
   if (typeflag == FTW_DNR)
       printf(" %s/ (unreadable)\n", filepath);
   else
