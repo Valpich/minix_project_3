@@ -112,7 +112,7 @@ int main ()
             printf("DIR: %s\n\t", myfile->d_name);
             printf("Inode: %d\n", mystat.st_ino);
           }else{
-            printf("Not Directory\n", );
+            printf("Not Directory\n");
           }
 
         }
