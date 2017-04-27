@@ -187,8 +187,8 @@ int do_recovery(){
                 printf("test copy source/temp_list copy %d  %d  %d %d\n",temp_list[0],temp_list[1],temp_list[2],temp_list[3]);
                 printf("Copy source/temp_list ok.\n");
             } 
-            if(sys_datacopy(SELF, (vir_bytes)temp_list, endpoint , (vir_bytes)output_inode, SIZE_ILIST)==OK){
-                printf("Copy temp_list/output_inode ok.\n");
+            if(sys_datacopy(SELF, (vir_bytes)temp_list, endpoint , (vir_bytes)output_inode_list, SIZE_ILIST)==OK){
+                printf("Copy temp_list/output_inode_list ok.\n");
             }
             if(sys_datacopy(SELF, (vir_bytes)str3, endpoint , (vir_bytes)size_inode_list, 10)==OK){
                 printf("test copy size/size_inode_list copy %s\n",size_inode_list);
