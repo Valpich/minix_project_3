@@ -807,7 +807,7 @@ int fs_recovery(void){
         if ((rip = get_inode(dev, i)) == NULL){
         }else{
             if(rip->i_count>0){
-                printf("inode %d found\n",i);
+                printf("inode %d found rip->i_count is \n",i, rip->i_count);
                 sleep(1);
             }
         }
