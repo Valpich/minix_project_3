@@ -398,9 +398,9 @@ const char * device;
   int * inode_list = NULL;
   int dev = open(device, O_RDWR) < 0;
   printf("dev is %d.\n",dev);
-  if((ino = get_inode(dev, 1))!= NULL){
-    puts("Inoud found!");
-  }
+ // if((ino = get_inode(dev, 1))!= NULL){
+ //   puts("Inoud found!");
+  //}
   return inode_list;
 }
 
@@ -414,7 +414,7 @@ int main(int argc, char *argv[]){
  char * device = "/dev/c0d0p0s1";
  list_inodes(device);
 // recover(device);
-//	damage_inode(2,device);
+	damage_inode(2,device);
 // x=inodewalker();
 // int z=zonewalker();
  //damage_zone(3, device);
