@@ -1,5 +1,5 @@
-# Makefile for main
-PROG=	 main
+# Makefile for Mmain
+PROG=	main
 SRCS=	main.c
 
 DPADD+=	${LIBMINIXFS} ${LIBBDEV} ${LIBSYS} ${LIBC}
