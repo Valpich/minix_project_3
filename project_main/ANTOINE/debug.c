@@ -59,7 +59,11 @@ int print_directory_tree(const char *const dirpath)
     return errno;
 }
 
-int main(int argc, char *argv[]) {
+int main() {
+    char * p = malloc(sizeof(char) * 128);
+    printf("Enter you directory: ");
+    scanf("%126s",p);
+
     int arg;
 
     if (argc < 2) {
@@ -69,7 +73,7 @@ int main(int argc, char *argv[]) {
         }
     } else {
         for (arg = 1; arg < argc; arg++) {
-            if (print_directory_tree(argv[arg])) {
+            if (print_directory_tree(p)) {
                 fprintf(stderr, "%s.\n", strerror(errno));
                 return EXIT_FAILURE;
             }
