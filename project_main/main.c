@@ -194,9 +194,10 @@ bitchunk_t *p;
 /*===========================================================================*
  *              compare_bitmaps          *
  *===========================================================================*/
-int compare_bitmaps(bitmap, bitmap2)
+int compare_bitmaps(bitmap, bitmap2, block_size)
 bitchunk_t * bitmap;
 bitchunk_t * bitmap2;
+int block_size;
 {
     int j;
     int corrupted = 0;
@@ -216,10 +217,6 @@ bitchunk_t * bitmap2;
     }
     if(corrupted != 0){
         printf("Found %d corrupted data between the two bitmap.\n", corrupted);
-        int v = 0;
-        for(v=0; v<corrupted;v++){
-            printf("The inode %d has two different values.\n", list[v]);
-        }
     }else{
         puts("No difference between bitmaps found.");
     }
@@ -447,7 +444,7 @@ const char * device;
     }
     recovered_map[i]=update;
   }
-  if(!compare_bitmaps(recovered_map, inode_map, )){
+  if(!compare_bitmaps(recovered_map, inode_map, N_IMAP)){
     dumpbitmap(recovered_map, BLK_IMAP, N_IMAP);
     puts("INODE DAMAGE FIXED");
   }else{
