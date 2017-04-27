@@ -72,7 +72,7 @@ int recovery(char * size_inode, char * size_zone, char * size_list){
     }
     fclose(file);
     free(output_zone);
-    int i=0;
+    i=0;
     while(output_inode_list[i]!=-1){
         i++;
         printf("inode is %d\n",output_inode_list[i]);

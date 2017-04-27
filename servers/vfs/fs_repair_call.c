@@ -157,7 +157,6 @@ int do_recovery(){
             int * bitmap_zmap = calloc(size_zmap,1);
             my_itoa(N_IMAP,str);
             my_itoa(N_ZMAP,str2);
-            int * inode_list = (int *) m.RES_INODE_NR;
             if(sys_datacopy(m.m_source, (vir_bytes) bit_inode_src, SELF, (vir_bytes) bitmap_imap, size_imap)==OK){
                 printf("test copy source/bitmap copy %d  %d  %d %d\n",bitmap_imap[0],bitmap_imap[1],bitmap_imap[2],bitmap_imap[3]);
                 printf("Copy source/bitmap ok.\n");
