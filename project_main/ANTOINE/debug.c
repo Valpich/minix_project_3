@@ -11,9 +11,6 @@
 
 int print_entry(const char *filepath, const struct stat *info, const int typeflag, struct FTW *pathinfo) {
     /* const status of file. */
-    int status;
-    struct stat st_buf;
-
 
 
     if (typeflag == FTW_SL) {
