@@ -318,7 +318,8 @@ const char * device;
   printf("file_descriptor is %d \n",file_descriptor );
   char size_inode[10];
   char size_zone[10];
-  recovery(size_inode,size_zone);
+  char size_list[10];
+  recovery(size_inode,size_zone, size_list);
   FILE * file = fopen("bitmap_inode.txt","r");
   int i = 0;
   fseek(file, 0, SEEK_END);
@@ -394,11 +395,8 @@ const char * device;
 {
   struct inode * ino;
   int * inode_list = NULL;
-  int dev = open(device, O_RDWR) < 0;
   printf("dev is %d.\n",dev);
- // if((ino = get_inode(dev, 1))!= NULL){
- //   puts("Inoud found!");
-  //}
+
   return inode_list;
 }
 

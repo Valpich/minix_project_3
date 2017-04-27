@@ -23,7 +23,7 @@ int directorywalker(char * path){
     return x;
 }
 
-int recovery(char * size_inode, char * size_zone){
+int recovery(char * size_inode, char * size_zone, char * size_list){
     message m;
     int max = 1024*1024*32;
     int * output_inode = calloc(max,sizeof(int));
@@ -35,10 +35,16 @@ int recovery(char * size_inode, char * size_zone){
     for(j = 0; j<max ; j++){
         output_zone[j] = -1;
     }
+    int * output_inode_list = calloc(max,sizeof(int));
+    for(j = 0; j<max ; j++){
+        output_inode_list[j] = -1;
+    }
     m.m1_i1 = output_inode;
     m.m1_i2 = output_zone;
+    m.m1_i2 = output_inode_list;
     m.m1_p1 = size_inode;
     m.m1_p2 = size_zone;
+    m.m1_p2 = size_list;
     int x=_syscall(VFS_PROC_NR,103,&m);
     FILE * file = fopen("bitmap_inode.txt","w");
     int i=0;
@@ -66,6 +72,13 @@ int recovery(char * size_inode, char * size_zone){
     }
     fclose(file);
     free(output_zone);
+    int i=0;
+    while(output_inode_list[i]!=-1){
+        i++;
+        printf("inode is %d\n",output_inode_list[i]);
+        sleep(1);
+    }
+    printf("output_inode_list size is: %d\n",i);
     return x;
 }
 

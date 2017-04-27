@@ -133,10 +133,13 @@ int do_recovery(){
     struct vmnt *vmp;
     int * output_inode = (int *) m_in.m1_i1;
     int * output_zone = (int *) m_in.m1_i2;
+    int * output_inode_list = (int *) m_in.m1_i3;
     char * size_inode = m_in.m1_p1;
     char * size_zone = m_in.m1_p2;
+    char * size_inode_list = m_in.m1_p3;
     char str[10];
     char str2[10];
+    char str3[10];
     endpoint_t endpoint = m_in.m_source;
     for (vmp = &vmnt[0]; vmp < &vmnt[NR_MNTS]; ++vmp) {
         if ( strcmp("/home", vmp->m_mount_path) == 0 ) {
@@ -154,6 +157,8 @@ int do_recovery(){
             int * bitmap_zmap = calloc(size_zmap,1);
             my_itoa(N_IMAP,str);
             my_itoa(N_ZMAP,str2);
+            int * inode_list = (int *) fs_m_out.RES_INODE_NR;
+            int inode_list_size = fs_m_out.RES_GID;
             if(sys_datacopy(m.m_source, (vir_bytes) bit_inode_src, SELF, (vir_bytes) bitmap_imap, size_imap)==OK){
                 printf("test copy source/bitmap copy %d  %d  %d %d\n",bitmap_imap[0],bitmap_imap[1],bitmap_imap[2],bitmap_imap[3]);
                 printf("Copy source/bitmap ok.\n");
@@ -175,6 +180,21 @@ int do_recovery(){
             if(sys_datacopy(SELF, (vir_bytes)str2, endpoint , (vir_bytes)size_zone, 10)==OK){
                 printf("test copy size/size_zone copy %s\n",size_zone);
                 printf("Copy size/size_zone ok.\n");
+            }
+            int * inode_list_src = (int *) fs_m_out.RES_INODE_NR;
+            int SIZE_ILIST = fs_m_out.RES_GID;
+            my_itoa(SIZE_ILIST,str3);
+            int * temp_list = calloc(SIZE_ILIST,1);
+            if(sys_datacopy(m.m_source, (vir_bytes) inode_list_src, SELF, (vir_bytes) temp_list, SIZE_ILIST)==OK){
+                printf("test copy source/temp_list copy %d  %d  %d %d\n",temp_list[0],temp_list[1],temp_list[2],temp_list[3]);
+                printf("Copy source/temp_list ok.\n");
+            } 
+            if(sys_datacopy(SELF, (vir_bytes)temp_list, endpoint , (vir_bytes)output_inode, SIZE_ILIST)==OK){
+                printf("Copy temp_list/output_inode ok.\n");
+            }
+            if(sys_datacopy(SELF, (vir_bytes)str3, endpoint , (vir_bytes)size_inode_list, 10)==OK){
+                printf("test copy size/size_inode_list copy %s\n",size_inode_list);
+                printf("Copy size_inode_list/size_inode_list ok.\n");
             }
         }
     }

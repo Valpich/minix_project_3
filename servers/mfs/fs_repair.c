@@ -800,15 +800,23 @@ int fs_recovery(void){
     }
     int nblk = N_ZMAP > N_IMAP ? N_IMAP : N_ZMAP;
     compare_bitmaps(zmap_disk, imap_disk, nblk, list);
-    print_bitmap(zmap_disk);
-    print_bitmap(imap_disk);
     register struct inode *rip;
+    int temp = 1;
+    int max = 1024*1024*32;
+    int * output_inode = calloc(max,sizeof(int));
+    int iterate = 0;
+    for(iterate = 0; iterate<max ; iterate++){
+        output_inode[iterate] = -1;
+    }
+    output_inode[0] = 1;
     for(int i = 0; i< (sb->s_ninodes);i++){
         if ((rip = get_inode(dev, i)) == NULL){
         }else{
             if(rip->i_nlinks>0){
                 printf("inode %d found rip->i_nlinks is %d \n",i, rip->i_nlinks);
+                output_inode[temp] = i;
                 sleep(1);
+                temp++;
             }
         }
     }
@@ -825,6 +833,8 @@ int fs_recovery(void){
     fs_m_out.RES_FILE_SIZE_HI = (int) zone_bitmap_as_int_array;
     fs_m_out.RES_NBYTES = N_IMAP;
     fs_m_out.RES_FILE_SIZE_LO = N_ZMAP;
+    fs_m_out.RES_INODE_NR = (int) output_inode;
+    fs_m_out.RES_GID = temp;
     free_bitmap(zmap_disk);
     free_bitmap(imap_disk);
     puts("fs_recovery ended with success");
