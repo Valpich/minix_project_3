@@ -382,7 +382,9 @@ int * recover(device)
 const char * device;
 {
   struct inode * ino;
-  if((ino = get_inode(device, 1))!= NULL){
+  int dev = open(device, O_RDWR) < 0;
+  printf("dev is %d.\n",dev);
+  if((ino = get_inode(dev, 1))!= NULL){
     puts("Inoud found!");
   }
 }
