@@ -114,8 +114,14 @@ int main ()
     printf("Enter you directory: ");
     scanf("%126s",p);
 
-    system("ls -i /usr");
+    int len   = strlen(p) + strlen("ls -i ") + 2;
+    char *total = malloc(len);
 
-    list_dir (p);
+    strlcat(total, "ls -i ", len);
+    strlcat(total, p, len);
+
+    system(total);
+
+    //list_dir (p);
     return 0;
 }
