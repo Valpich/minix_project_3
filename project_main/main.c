@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include "../servers/mfs/proto.h"
+#include <a.out.h>
 #include <stdio.h>
 
 #include "repair.h"
@@ -382,7 +382,7 @@ int * list_inodes(device)
 const char * device;
 {
   struct inode * ino;
-  int * inode_list;
+  int * inode_list = NULL;
   int dev = open(device, O_RDWR) < 0;
   printf("dev is %d.\n",dev);
   if((ino = get_inode(dev, 1))!= NULL){
