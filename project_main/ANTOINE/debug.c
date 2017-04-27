@@ -45,6 +45,8 @@ int print_entry(const char *filepath, const struct stat *info,
         return 1;
     }
 
+    find_inode(filepath);
+
 
         if (typeflag == FTW_SL) {
         char   *target;
