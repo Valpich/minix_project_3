@@ -799,6 +799,7 @@ int fs_recovery(void){
     }
     int nblk = N_ZMAP > N_IMAP ? N_IMAP : N_ZMAP;
     compare_bitmaps(zmap_disk, imap_disk, nblk, list);
+    print_bitmap(zmap_disk);
     sleep(5);
     int * inode_bitmap_as_int_array = calloc(FS_BITMAP_CHUNKS(BLK_SIZE)*N_IMAP*chunk_size +1, sizeof(int));
     inode_bitmap_as_int_array[FS_BITMAP_CHUNKS(BLK_SIZE)*N_IMAP*chunk_size] = 0;
