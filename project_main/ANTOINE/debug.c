@@ -37,7 +37,7 @@ long inodeFinder(char* dir, char* file) {
      // error getting file stat
   }
 
-  printf("File inode: \t\t%lu\n",fileStat.st_ino);
+  printf("File inode: \t\t%llu\n",fileStat.st_ino);
 
   return inode = file_stat.st_ino;
 }
