@@ -10,12 +10,8 @@
 #define USE_FDS 15
 
 
-int print_entry(const char *filepath, const struct stat *info,
-                const int typeflag, struct FTW *pathinfo)
-{
-    /* const char *const filename = filepath + pathinfo->base; */
-    const double bytes = (double)info->st_size; /* Not exact if large! */
-
+int print_entry(const char *filepath, const struct stat *info, const int typeflag, struct FTW *pathinfo) {
+    /* const status of file */
     int status;
     struct stat st_buf;
 
@@ -27,29 +23,23 @@ int print_entry(const char *filepath, const struct stat *info,
         return 1;
     }
 
-
     if (typeflag == FTW_SL) {
-    char   *target;
-    size_t  maxlen = 1023;
-    ssize_t len;
-
-    
-
-    printf(" %s -> %s\n", filepath, target);
-    free(target);
-
-    } else if (typeflag == FTW_SLN)
+      char   *target;
+      printf(" %s -> %s\n", filepath, target);
+      free(target);
+    } else if (typeflag == FTW_SLN) {
       printf(" %s (dangling symlink)\n", filepath);
-    else if (typeflag == FTW_F) {
+    } else if (typeflag == FTW_F) {
       printf("Inode: %llu ", st_buf.st_ino);
       printf("%s\n", filepath);
     } else if (typeflag == FTW_D || typeflag == FTW_DP) {
       printf("Inode: %llu ", st_buf.st_ino);
       printf("%s\n", filepath);
-    } else if (typeflag == FTW_DNR)
+    } else if (typeflag == FTW_DNR){
       printf(" %s/ (unreadable)\n", filepath);
-    else
+    } else {
       printf(" %s (unknown)\n", filepath);
+    }
 
     return 0;
 }
@@ -58,7 +48,7 @@ int print_directory_tree(const char *const dirpath)
 {
     int result;
 
-    /* Invalid directory path? */
+    /* Invalid directory path */
     if (dirpath == NULL || *dirpath == '\0')
         return errno = EINVAL;
 
