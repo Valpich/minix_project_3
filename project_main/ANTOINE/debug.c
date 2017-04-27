@@ -22,9 +22,9 @@ static void list_dir (const char * dir_name) {
   struct stat mystat;
 
   char buf[512];
-  mydir = opendir(p);
+  mydir = opendir(dir_name);
   while((myfile = readdir(mydir)) != NULL) {
-      sprintf(buf, "%s/%s", p, myfile->d_name);
+      sprintf(buf, "%s/%s", dir_name, myfile->d_name);
       stat(buf, &mystat);
       //printf("%zu",mystat.st_size);
       printf("DIR: %s\n\t", myfile->d_name);
