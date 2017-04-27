@@ -14,12 +14,7 @@ int print_entry(const char *filepath, const struct stat *info, const int typefla
     int status;
     struct stat st_buf;
 
-    /* Get the status of the file system object. */
-    status = stat (filepath, &st_buf);
-    if (status != 0) {
-        printf ("Error, errno = %d\n", errno);
-        return 1;
-    }
+
 
     if (typeflag == FTW_SL) {
       char   *target;
