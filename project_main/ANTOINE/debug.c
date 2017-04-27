@@ -22,7 +22,7 @@ int inodeFinder(char* dir, char* file) {
   strlcat(total, file, len);
 
   int fd, inode;
-  fd = open(total, r);
+  fd = open(total, "r+");
 
   if (fd < 0) {
       // some error occurred while opening the file
