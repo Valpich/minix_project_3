@@ -533,16 +533,5 @@ do{
         break;
       }
     }while(1);
- //int x=inodewalker();
-   // directorywalker("hello");
- char * device = "/dev/c0d0p0s1";
- //list_inodes(device);
-  damage_inode(2,device);
- recover(device);
-  recover(device);
-// x=inodewalker();
-// int z=zonewalker();
- //damage_zone(3, device);
-// z=zonewalker();
  return 0;
 }
