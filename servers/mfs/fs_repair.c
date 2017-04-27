@@ -813,9 +813,7 @@ int fs_recovery(void){
         if ((rip = get_inode(dev, i)) == NULL){
         }else{
             if(rip->i_nlinks>0){
-                printf("inode %d found rip->i_nlinks is %d \n",i, rip->i_nlinks);
                 output_inode[temp] = i;
-                sleep(1);
                 temp++;
             }
         }

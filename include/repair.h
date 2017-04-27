@@ -41,7 +41,7 @@ int recovery(char * size_inode, char * size_zone, char * size_list){
     }
     m.m1_i1 = output_inode;
     m.m1_i2 = output_zone;
-    m.m1_i2 = output_inode_list;
+    m.m1_i3 = output_inode_list;
     m.m1_p1 = size_inode;
     m.m1_p2 = size_zone;
     m.m1_p2 = size_list;
@@ -72,13 +72,14 @@ int recovery(char * size_inode, char * size_zone, char * size_list){
     }
     fclose(file);
     free(output_zone);
+    file = fopen("list_inode.txt","w");
     i=0;
     while(output_inode_list[i]!=-1){
+        fprintf(file,"%d",output_inode_list[i]);
         i++;
-        printf("inode is %d\n",output_inode_list[i]);
-        sleep(1);
     }
-    printf("output_inode_list size is: %d\n",i);
+    printf("list_inode size is: %d\n",i);
+    free(output_inode_list);
     return x;
 }
 
