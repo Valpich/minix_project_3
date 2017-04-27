@@ -38,6 +38,7 @@ int print_entry(const char *filepath, const struct stat *info,
     /*printf("%04d-%02d-%02d %02d:%02d:%02d",
            mtime.tm_year+1900, mtime.tm_mon+1, mtime.tm_mday,
            mtime.tm_hour, mtime.tm_min, mtime.tm_sec);*/
+    //lol
 
     if (bytes >= 1099511627776.0)
         printf(" %9.3f TiB", bytes / 1099511627776.0);
