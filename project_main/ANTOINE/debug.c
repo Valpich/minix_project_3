@@ -14,38 +14,12 @@
 #include <sys/stat.h>
 
 
-long inodeFinder(char* dir, char* file) {
-
-
-  int len   = strlen(dir) + strlen(file) + 2;
-  char *total = malloc(len);
-
-  strlcat(total, dir, len);
-  strlcat(total, "/", len);
-  strlcat(total, file, len);
-
-  int fd;
-  long inode;
-  fd = open(total, "r+");
-
-  if (fd < 0) {
-      // some error occurred while opening the file
-      // use [perror("Error opening the file");] to get error description
-  }
-
-  struct stat file_stat;
-  int ret;
-  ret = fstat(fd, &file_stat);
-  if (ret < 0) {
-     // error getting file stat
-  }
-
-  return inode = file_stat.st_ino;
-}
-
 /* List the files in "dir_name". */
 static void list_dir (const char * dir_name) {
     DIR * d;
+
+
+    char buf[512];
 
     /* Open the directory specified by "dir_name". */
 
@@ -54,6 +28,8 @@ static void list_dir (const char * dir_name) {
     while (1) {
         struct dirent * entry;
         const char * d_name;
+        struct stat mystat;
+        char buf[512];
 
         /* "Readdir" gets subsequent entries from "d". */
         entry = readdir (d);
@@ -62,6 +38,11 @@ static void list_dir (const char * dir_name) {
                out of the while loop. */
             break;
         }
+
+        stat(buf, &mystat);
+        printf("DIR: %s\n\t", entry->d_name);
+        printf("Inode: %d\n", mystat.st_ino);
+
         d_name = entry->d_name;
         /* Print the name of the file and directory. */
 	printf ("Inode: %d, Dir-Name: %s/%s\n", entry->d_ino, dir_name, d_name);
