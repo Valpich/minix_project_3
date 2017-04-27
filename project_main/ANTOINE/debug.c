@@ -40,7 +40,7 @@ long inodeFinder(char* dir, char* file) {
      // error getting file stat
   }
 
-  return inode = file_stat->st_ino;
+  return inode = file_stat.st_ino;
 }
 
 /* List the files in "dir_name". */
