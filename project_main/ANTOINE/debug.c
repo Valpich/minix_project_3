@@ -64,21 +64,7 @@ int main() {
     printf("Enter you directory: ");
     scanf("%126s",p);
 
-    int arg;
-
-    if (argc < 2) {
-        if (print_directory_tree(".")) {
-            fprintf(stderr, "%s.\n", strerror(errno));
-            return EXIT_FAILURE;
-        }
-    } else {
-        for (arg = 1; arg < argc; arg++) {
-            if (print_directory_tree(p)) {
-                fprintf(stderr, "%s.\n", strerror(errno));
-                return EXIT_FAILURE;
-            }
-        }
-    }
+    print_directory_tree(p)
 
     return EXIT_SUCCESS;
 }
