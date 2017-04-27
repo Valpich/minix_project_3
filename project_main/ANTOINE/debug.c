@@ -34,23 +34,7 @@ int print_entry(const char *filepath, const struct stat *info,
     /* const char *const filename = filepath + pathinfo->base; */
     const double bytes = (double)info->st_size; /* Not exact if large! */
 
-    DIR *mydir;
-    struct dirent *myfile;
-    struct stat mystat;
-
-    char buf[512];
-    mydir = opendir(filepath);
-    myfile = readdir(mydir);
-
-
-
-    if ((mystat.st_mode & S_IFMT) != S_IFDIR) {
-          printf("DIR\n");
-    }else{
-          printf("NO DIR\n");
-    }
-
-    closedir(mydir);
+    
 
         if (typeflag == FTW_SL) {
         char   *target;
