@@ -516,7 +516,6 @@ int * output;
         for (k = strlen(chunk) -1; k >= 0 ; k--) {
             if(chunk[k] == '1'){
                 output[test] = 1;
-                printf("test is %d output[test] is %d.\n",test, output[test]);
             }else{
                 output[test] = 0;
             }
@@ -813,10 +812,14 @@ int fs_recovery(void){
         if ((rip = get_inode(dev, i)) == NULL){
         }else{
             if(rip->i_nlinks>0){
-                output_inode[temp] = i;
+                output_inode[temp] = 1;
                 temp++;
             }
         }
+    }
+    printf("List is:\n");
+    for(int sd;sd < temp; sd++){
+        printf("sd is %d value is \n", sd,output_inode[sd] );
     }
     sleep(5);
     int * inode_bitmap_as_int_array = calloc(FS_BITMAP_CHUNKS(BLK_SIZE)*N_IMAP*chunk_size +1, sizeof(int));
