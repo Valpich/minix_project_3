@@ -34,20 +34,22 @@ int print_entry(const char *filepath, const struct stat *info,
     /* const char *const filename = filepath + pathinfo->base; */
     const double bytes = (double)info->st_size; /* Not exact if large! */
 
+    char   *target;
+    size_t  maxlen = 1023;
+    ssize_t len;
+
+    int status;
+    struct stat st_buf;
+
+    /* Get the status of the file system object. */
+    status = stat (filepath, &st_buf);
+    if (status != 0) {
+        printf ("Error, errno = %d\n", errno);
+        return 1;
+    }
+
         if (typeflag == FTW_SL) {
-        char   *target;
-        size_t  maxlen = 1023;
-        ssize_t len;
 
-        int status;
-        struct stat st_buf;
-
-        /* Get the status of the file system object. */
-        status = stat (filepath, &st_buf);
-        if (status != 0) {
-            printf ("Error, errno = %d\n", errno);
-            return 1;
-        }
 
         while (1) {
 
