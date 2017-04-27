@@ -818,7 +818,7 @@ int fs_recovery(void){
         }
     }
     printf("List is:\n");
-    for(int sd;sd < temp; sd++){
+    for(int sd = 0 ;sd < temp; sd++){
         printf("sd is %d value is \n", sd,output_inode[sd] );
     }
     sleep(5);
