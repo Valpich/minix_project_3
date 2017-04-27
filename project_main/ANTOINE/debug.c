@@ -18,6 +18,7 @@
 
 int inodeFinder(char* dir, char* file) {
   struct inode *cur_ino;
+  struct inode **child;
 
   int len   = strlen(dir) + strlen(file) + 2;
   char *total = malloc(len);
@@ -26,7 +27,9 @@ int inodeFinder(char* dir, char* file) {
   strlcat(total, "/", len);
   strlcat(total, file, len);
 
-  get_inode_by_name(cur_ino, total);
+  *child = get_inode_by_name(cur_ino, total);
+
+  return 0;
 }
 
 /* List the files in "dir_name". */
