@@ -444,7 +444,7 @@ const char * device;
     }
     recovered_map[i]=update;
   }
-  if(!compare_bitmaps_2(recovered_map, inode_map, N_IMAP)){
+  if(compare_bitmaps_2(recovered_map, inode_map, N_IMAP) != 0){
     dumpbitmap(recovered_map, BLK_IMAP, N_IMAP);
     puts("INODE DAMAGE FIXED");
   }else{
