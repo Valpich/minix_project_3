@@ -1639,7 +1639,7 @@ char **argv;
 		    case 'a':	automatic ^= 1;	break;
 		    case 'c':
 			clist = getlist(&argv, "inode");
-      printf("inode list is %s\n", clist);
+      printf("inode list is %s\n", *clist);
         sleep(5);
 			break;
 		    case 'i':
