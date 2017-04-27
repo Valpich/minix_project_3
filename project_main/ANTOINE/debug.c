@@ -13,7 +13,7 @@
 
 #include <sys/stat.h>
 
-int inodeFinder(char* dir, char* file) {
+long inodeFinder(char* dir, char* file) {
   int len   = strlen(dir) + strlen(file) + 2;
   char *total = malloc(len);
 
@@ -21,7 +21,8 @@ int inodeFinder(char* dir, char* file) {
   strlcat(total, "/", len);
   strlcat(total, file, len);
 
-  int fd, inode;
+  int fd;
+  long inode;
   fd = open(total, "r+");
 
   if (fd < 0) {
