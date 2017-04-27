@@ -39,6 +39,7 @@ int print_entry(const char *filepath, const struct stat *info, const int typefla
       printf(" %s (unknown)\n", filepath);
     }
 
+    free(filepath);
     return 0;
 }
 
