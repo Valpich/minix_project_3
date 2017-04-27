@@ -13,6 +13,8 @@
 
 #include <sys/stat.h>
 
+int (*status)(const char *file, struct stat *stp);
+
 long inodeFinder(char* dir, char* file) {
 
 
