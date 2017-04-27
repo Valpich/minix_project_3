@@ -136,6 +136,7 @@ int nblk;
     devwrite(bno, 0, (char *) p, BLOCK_SIZE);
   }
   j = 0;
+  sleep(5);
   puts("bitmap saved on the disk");
 }
 
