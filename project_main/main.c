@@ -192,6 +192,41 @@ bitchunk_t *p;
 }
 
 /*===========================================================================*
+ *              compare_bitmaps          *
+ *===========================================================================*/
+int compare_bitmaps(bitmap, bitmap2)
+bitchunk_t * bitmap;
+bitchunk_t * bitmap2;
+{
+    int j;
+    int corrupted = 0;
+    char * chunk;
+    char * chunk2;
+    for(j=0; j<FS_BITMAP_CHUNKS(BLOCK_SIZE)*block_size; ++j){
+        chunk = int2binstr(bitmap[j]);
+        chunk2 = int2binstr(bitmap2[j]);
+        int k = 0;
+        int u = 0;
+        for (k = strlen(chunk) -1; k >= 0 ; k--) {
+            if(chunk[k] != chunk2[k]){
+                corrupted++;
+            }
+            u++;
+        }
+    }
+    if(corrupted != 0){
+        printf("Found %d corrupted data between the two bitmap.\n", corrupted);
+        int v = 0;
+        for(v=0; v<corrupted;v++){
+            printf("The inode %d has two different values.\n", list[v]);
+        }
+    }else{
+        puts("No difference between bitmaps found.");
+    }
+    return corrupted;
+}
+
+/*===========================================================================*
  *				reverse_bits		     		*
  *===========================================================================*/
 unsigned int reverse_bits(num)
@@ -335,7 +370,7 @@ const char * device;
   unsigned int received = strtol(size_inode,&p_end,10);
   N_IMAP = received;
   printf("N_IMAP is %d\n", N_IMAP);
-  bitchunk_t *corrupted_map = alloc_bitmap(N_IMAP);
+  bitchunk_t *inode_map = alloc_bitmap(N_IMAP);
   for (int i = 0; i < N_IMAP; i++){
     int k;
     for (k = 0; k <= chunk_size -1 ; k++) {
@@ -347,11 +382,10 @@ const char * device;
       printf("update is %u \n", update);
       sleep(1);
     }
-    corrupted_map[i]=update;
+    inode_map[i]=update;
   }
-  dumpbitmap(corrupted_map, BLK_IMAP , N_IMAP);
+  dumpbitmap(inode_map, BLK_IMAP , N_IMAP);
   fclose(file);
-  free(corrupted_map);
   file = fopen("bitmap_zone.txt","r");
   i = 0;
   fseek(file, 0, SEEK_END);
@@ -367,7 +401,7 @@ const char * device;
   received = strtol(size_zone,&p_end_2,10);
   N_ZMAP = received;
   printf("N_ZMAP is %d\n", N_ZMAP);
-  corrupted_map = alloc_bitmap(N_ZMAP);
+  bitchunk_t * corrupted_map = alloc_bitmap(N_ZMAP);
   for (int i = 0; i < N_ZMAP; i++){
     int k;
     for (k = 0; k <= chunk_size -1 ; k++) {
@@ -413,8 +447,14 @@ const char * device;
     }
     recovered_map[i]=update;
   }
-  dumpbitmap(recovered_map, BLK_IMAP, N_IMAP);
+  if(!compare_bitmaps(recovered_map, inode_map, )){
+    dumpbitmap(recovered_map, BLK_IMAP, N_IMAP);
+    puts("INODE DAMAGE FIXED");
+  }else{
+    puts("NO INODE DAMAGE TO FIX");
+  }
   free(recovered_map);
+  free(inode_map);
   fclose(file);
   close(file_descriptor);
 }
