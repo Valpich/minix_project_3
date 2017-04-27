@@ -33,19 +33,6 @@ int print_entry(const char *filepath, const struct stat *info,
 {
     /* const char *const filename = filepath + pathinfo->base; */
     const double bytes = (double)info->st_size; /* Not exact if large! */
-    struct tm mtime;
-
-    DIR *mydir;
-    struct dirent *myfile;
-    struct stat mystat;
-
-    char buf[512];
-    mydir = opendir(filepath);
-
-    sprintf(buf, "%s/%s", filepath, myfile->d_name);
-    stat(buf, &mystat);
-
-    int inode = mystat.st_ino;
 
         if (typeflag == FTW_SL) {
         char   *target;
@@ -82,10 +69,10 @@ int print_entry(const char *filepath, const struct stat *info,
       printf(" %s (dangling symlink)\n", filepath);
   else
   if (typeflag == FTW_F)
-      printf("Inode: %d %s", inode, filepath);
+      printf("Inode: %d %s", stat.st_ino, filepath);
   else
   if (typeflag == FTW_D || typeflag == FTW_DP)
-      printf("Inode: %d %s", inode, filepath);
+      printf("Inode: %d %s", stat.st_ino, filepath);
   else
   if (typeflag == FTW_DNR)
       printf(" %s/ (unreadable)\n", filepath);
