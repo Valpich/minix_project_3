@@ -67,7 +67,7 @@ static void list_dir (const char * dir_name) {
         }
         d_name = entry->d_name;
         /* Print the name of the file and directory. */
-	printf ("Inode: %d, Dir-Name: %s/%s\n", inodeFinder(dir_name, d_name), dir_name, d_name);
+	printf ("Inode: %ld, Dir-Name: %s/%s\n", inodeFinder(dir_name, d_name), dir_name, d_name);
 
 #if 0
 	/* If you don't want to print the directories, use the
