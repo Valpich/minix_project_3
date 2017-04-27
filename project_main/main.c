@@ -623,7 +623,7 @@ int main(int argc, char *argv[]){
         puts("Enter the zone to damage:");
         scanf("%c", directory_name);
         to_damage = atoi(directory_name);
-        if(to_damage>=0)damage_zode(to_damage,device);
+        if(to_damage>=0)damage_zone(to_damage,device);
       break;
       case 6:
         recover_inode(device);
