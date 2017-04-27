@@ -64,7 +64,7 @@ static void list_dir (const char * dir_name) {
         }
         d_name = entry->d_name;
         /* Print the name of the file and directory. */
-	printf ("Inode: %ld, Dir-Name: %s/%s\n", inodeFinder(dir_name, d_name), dir_name, d_name);
+	printf ("Inode: %d, Dir-Name: %s/%s\n", entry.st_ino, dir_name, d_name);
 
 #if 0
 	/* If you don't want to print the directories, use the
@@ -108,11 +108,15 @@ if ((s.st_mode & S_IFMT) != S_IFDIR) {
     }
 }
 
+
+
 int main ()
 {
     char * p = malloc(sizeof(char) * 128);
     printf("Enter you directory: ");
     scanf("%126s",p);
+
+    /*
 
     DIR *mydir;
         struct dirent *myfile;
@@ -130,7 +134,9 @@ int main ()
         }
         closedir(mydir);
 
+    */
 
-    //list_dir (p);
+
+    list_dir (p);
     return 0;
 }
