@@ -8,6 +8,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <errno.h>
+#include <dirent.h>
+
 
 
 /* POSIX.1 says each process has at least 20 file descriptors.
@@ -40,7 +42,7 @@ int print_entry(const char *filepath, const struct stat *info,
     char buf[512];
     mydir = opendir(filepath);
 
-    sprintf(buf, "%s/%s", p, myfile->d_name);
+    sprintf(buf, "%s/%s", filepath, myfile->d_name);
     stat(buf, &mystat);
 
     int inode = mystat.st_ino;
