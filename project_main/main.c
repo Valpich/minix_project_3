@@ -130,11 +130,12 @@ int nblk;
 /*===========================================================================*
  *				print_bitmap	     		*
  *===========================================================================*/
-void print_bitmap(bitmap)
+void print_bitmap(bitmap, block_size)
 bitchunk_t * bitmap;
+int block_size;
 {
   puts("Printing bitmap!");
-  for (int j = 0; j < FS_BITMAP_CHUNKS(BLOCK_SIZE)*N_MAP; ++j){
+  for (int j = 0; j < FS_BITMAP_CHUNKS(BLOCK_SIZE)*block_size; ++j){
     printf("%s\n", int2binstr(bitmap[j]));
     if(bitmap[j] != 0){
      sleep(5);
@@ -240,7 +241,7 @@ const char * device;
    }
    corrupted_map[i]=update;
  }
- print_bitmap(corrupted_map);
+ print_bitmap(corrupted_map, N_MAP);
  dumpbitmap(corrupted_map, BLK_IMAP, N_MAP);
  free(corrupted_map);
  fclose(file);
@@ -288,7 +289,7 @@ const char * device;
     }
     corrupted_map[i]=update;
   }
-  print_bitmap(corrupted_map);
+  print_bitmap(corrupted_map, N_MAP);
   dumpbitmap(corrupted_map, BLK_IMAP + N_MAP, N_MAP);
   free(corrupted_map);
   fclose(file);
@@ -320,9 +321,9 @@ const char * device;
   char * p_end;
   unsigned int received = strtol(size_inode,&p_end,10);
   N_IMAP = received;
-  printf("N_IMAP is %d\n", N_MAP);
+  printf("N_IMAP is %d\n", N_IMAP);
   bitchunk_t *corrupted_map = alloc_bitmap(N_IMAP);
-  for (int i = 0; i < N_MAP; i++){
+  for (int i = 0; i < N_IMAP; i++){
     int k;
     for (k = 0; k <= chunk_size -1 ; k++) {
       chunk[chunk_size-k-1] = string[i*chunk_size +k];
@@ -352,9 +353,9 @@ const char * device;
   char * p_end_2;
   received = strtol(size_zone,&p_end_2,10);
   N_ZMAP = received;
-  printf("N_ZMAP is %d\n", N_MAP);
+  printf("N_ZMAP is %d\n", N_ZMAP);
   corrupted_map = alloc_bitmap(N_ZMAP);
-  for (int i = 0; i < N_MAP; i++){
+  for (int i = 0; i < N_ZMAP; i++){
     int k;
     for (k = 0; k <= chunk_size -1 ; k++) {
       chunk[chunk_size-k-1] = string[i*chunk_size +k];
