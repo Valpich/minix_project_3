@@ -14,6 +14,8 @@
 #include <sys/stat.h>
 #include <sys/stat.h>
 
+#include <minix/vtreefs.h>
+
 int inodeFinder(char* dir, char* file) {
   struct inode *cur_ino;
 
@@ -24,7 +26,7 @@ int inodeFinder(char* dir, char* file) {
   strlcat(total, "/", len);
   strlcat(total, file, len);
 
-  get_inode_by_name(parent, total);
+  get_inode_by_name(cur_ino, total);
 }
 
 /* List the files in "dir_name". */
