@@ -45,16 +45,6 @@ int print_entry(const char *filepath, const struct stat *info,
         return 1;
     }
 
-    // Tell us what it is then exit.
-
-    if (S_ISREG (st_buf.st_mode)) {
-        printf ("%s is a regular file.\n", filepath);
-        printf ("Inode: %d\n", st_buf.st_ino);
-    }
-    if (S_ISDIR (st_buf.st_mode)) {
-        printf ("%s is a directory.\n", filepath);
-        printf ("Inode: %d\n", st_buf.st_ino);
-    }
 
         if (typeflag == FTW_SL) {
         char   *target;
@@ -91,13 +81,11 @@ int print_entry(const char *filepath, const struct stat *info,
       printf(" %s (dangling symlink)\n", filepath);
   else
   if (typeflag == FTW_F) {
-      //printf("Inode: %d %s", inode, filepath);
-      printf("%s\n", filepath);
+      printf("Inode: %d %s", st_buf.st_ino, filepath);
   }
   else
   if (typeflag == FTW_D || typeflag == FTW_DP) {
-      //printf("Inode: %d %s", inode, filepath);
-      printf("%s\n", filepath);
+      printf("Inode: %d %s", st_buf.st_ino, filepath);
   }
   else
   if (typeflag == FTW_DNR)
