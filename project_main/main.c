@@ -1,5 +1,4 @@
 #include "../servers/mfs/fs.h"
-#include "../servers/mfs/inode.h"
 #include <sys/types.h>
 #include <ctype.h>
 #include <errno.h>
@@ -8,7 +7,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-
+#include "../servers/mfs/proto.h"
 #include <stdio.h>
 
 #include "repair.h"
