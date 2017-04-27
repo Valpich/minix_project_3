@@ -769,6 +769,7 @@ int fs_zone_bitmap_walker()
     return 0;
 }
 
+
 /*===========================================================================*
  *              fs_recovery                 *
  *===========================================================================*/
@@ -801,6 +802,13 @@ int fs_recovery(void){
     compare_bitmaps(zmap_disk, imap_disk, nblk, list);
     print_bitmap(zmap_disk);
     print_bitmap(imap_disk);
+    register struct inode *rip;
+    for(int i = 0; i< (sb->s_ninodes);i++){
+        if ((rip = get_inode(dev, inodes[i])) == NULL){
+        }else{
+            printf("inode %d found\n",i);
+        }
+    }
     sleep(5);
     int * inode_bitmap_as_int_array = calloc(FS_BITMAP_CHUNKS(BLK_SIZE)*N_IMAP*chunk_size +1, sizeof(int));
     inode_bitmap_as_int_array[FS_BITMAP_CHUNKS(BLK_SIZE)*N_IMAP*chunk_size] = 0;
