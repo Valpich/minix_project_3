@@ -40,7 +40,7 @@ int print_entry(const char *filepath, const struct stat *info,
 
     char buf[512];
     mydir = opendir(filepath);
-    myfile = readdir(mydir))
+    myfile = readdir(mydir);
     sprintf(buf, "%s/%s", filepath, myfile->d_name);
     stat(buf, &mystat);
     //printf("%zu",mystat.st_size);
