@@ -128,9 +128,9 @@ int nblk;
 }
 
 /*===========================================================================*
- *				print_bitmap	     		*
+ *				print_bitmap_2	     		*
  *===========================================================================*/
-void print_bitmap(bitmap, block_size)
+void print_bitmap_2(bitmap, block_size)
 bitchunk_t * bitmap;
 int block_size;
 {
@@ -241,7 +241,7 @@ const char * device;
    }
    corrupted_map[i]=update;
  }
- print_bitmap(corrupted_map, N_MAP);
+ print_bitmap_2(corrupted_map, N_MAP);
  dumpbitmap(corrupted_map, BLK_IMAP, N_MAP);
  free(corrupted_map);
  fclose(file);
@@ -289,7 +289,7 @@ const char * device;
     }
     corrupted_map[i]=update;
   }
-  print_bitmap(corrupted_map, N_MAP);
+  print_bitmap_2(corrupted_map, N_MAP);
   dumpbitmap(corrupted_map, BLK_IMAP + N_MAP, N_MAP);
   free(corrupted_map);
   fclose(file);
