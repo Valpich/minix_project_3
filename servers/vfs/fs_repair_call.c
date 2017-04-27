@@ -229,7 +229,7 @@ int do_damage(){
             int N_MAP = m.RES_NBYTES;
             my_itoa(N_MAP,str);
             int size = N_MAP*chunk_size*BLOCK_SIZE/sizeof(bitchunk_t);
-            int * bitmap = calloc(size,1)];
+            int * bitmap = calloc(size,1);
             printf("size is  %d .\n",size);
             printf("src is  %p .\n",src);
             if(sys_datacopy(m.m_source, (vir_bytes) src, SELF, (vir_bytes) bitmap, size)==OK){
