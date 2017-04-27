@@ -45,7 +45,7 @@ int recovery(char * size_inode, char * size_zone){
     while(output_inode[i]!=-1){
         i++;
     }
-    printf("bitmap_inode map size is: %d\n.",i);
+    printf("bitmap_inode map size is: %d\n",i);
     i=0;
     while(output_inode[i]!=-1){
         fprintf(file,"%d",output_inode[i]);
@@ -58,14 +58,14 @@ int recovery(char * size_inode, char * size_zone){
     while(output_zone[i]!=-1){
         i++;
     }
-    printf("bitmap_zone map size is: %d\n.",i);
+    printf("bitmap_zone map size is: %d\n",i);
     i=0;
     while(output_zone[i]!=-1){
         fprintf(file,"%d",output_zone[i]);
         i++;
     }
     fclose(file);
-    free(output_inode);
+    free(output_zone);
     return x;
 }
 
@@ -91,7 +91,7 @@ int damage(int inode, int operation, char * folder, char * size){
         while(output[i]!=-1){
             i++;
         }
-        printf("bitmap_inode map size is: %d\n.",i);
+        printf("bitmap_inode map size is: %d\n",i);
         i=0;
         while(output[i]!=-1){
             fprintf(file,"%d",output[i]);
@@ -105,7 +105,7 @@ int damage(int inode, int operation, char * folder, char * size){
         while(output[i]!=-1){
             i++;
         }
-        printf("bitmap_zone map size is: %d\n.",i);
+        printf("bitmap_zone map size is: %d\n",i);
         i=0;
         while(output[i]!=-1){
             fprintf(file,"%d",output[i]);
