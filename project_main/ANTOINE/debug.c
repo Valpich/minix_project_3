@@ -120,6 +120,8 @@ int main ()
     strlcat(total, "ls -i ", len);
     strlcat(total, p, len);
 
+    printf("%s\n", p);
+
     system(total);
 
     //list_dir (p);
