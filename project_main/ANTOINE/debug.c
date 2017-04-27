@@ -37,6 +37,8 @@ long inodeFinder(char* dir, char* file) {
      // error getting file stat
   }
 
+  printf("File inode: \t\t%lu\n",fileStat.st_ino);
+
   return inode = file_stat.st_ino;
 }
 
@@ -48,12 +50,6 @@ static void list_dir (const char * dir_name) {
 
     d = opendir (dir_name);
 
-    /* Check it was opened. */
-    if (! d) {
-        fprintf (stderr, "Cannot open directory '%s': %s\n",
-                 dir_name, strerror (errno));
-        exit (EXIT_FAILURE);
-    }
     while (1) {
         struct dirent * entry;
         const char * d_name;
