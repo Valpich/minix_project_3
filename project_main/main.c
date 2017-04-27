@@ -22,6 +22,8 @@ block_t thisblk;       /* block in buffer cache */
 int file_descriptor;
 unsigned int chunk_size = sizeof(unsigned int) * CHAR_BIT;
 int N_MAP;
+int N_IMAP;
+int N_ZMAP;
 
 /*===========================================================================*
  *              devio          *
@@ -240,6 +242,7 @@ const char * device;
  }
  print_bitmap(corrupted_map);
  dumpbitmap(corrupted_map, BLK_IMAP, N_MAP);
+ free(corrupted_map);
  fclose(file);
  close(file_descriptor);
 }
@@ -287,6 +290,86 @@ const char * device;
   }
   print_bitmap(corrupted_map);
   dumpbitmap(corrupted_map, BLK_IMAP + N_MAP, N_MAP);
+  free(corrupted_map);
+  fclose(file);
+  close(file_descriptor);
+}
+
+/*===========================================================================*
+ *        recover            *
+ *===========================================================================*/
+void recover(device)
+const char * device;
+{
+  file_descriptor = open(device,O_RDWR);
+  printf("file_descriptor is %d \n",file_descriptor );
+  char size_inode[10];
+  char size_zone[10];
+  recovery(size_inode,size_zone);
+  FILE * file = fopen("bitmap_inode.txt","r");
+  int i = 0;
+  fseek(file, 0, SEEK_END);
+  long fsize = ftell(file);
+  fseek(file, 0, SEEK_SET);  //same as rewind(f);
+  printf("file size is %lu\n", fsize);
+  printf("returned size is %s\n", size);
+  char *string = malloc(fsize + 1);
+  fread(string, fsize, 1, file);
+  char * chunk = calloc((chunk_size+1), sizeof(char));
+  chunk[chunk_size] = 0;
+  char * p_end;
+  unsigned int received = strtol(size,&p_end,10);
+  N_IMAP = received;
+  printf("N_IMAP is %d\n", N_MAP);
+  bitchunk_t *corrupted_map = alloc_bitmap(N_IMAP);
+  for (int i = 0; i < N_MAP; i++){
+    int k;
+    for (k = 0; k <= chunk_size -1 ; k++) {
+      chunk[chunk_size-k-1] = string[i*chunk_size +k];
+    }
+    char * pEnd;
+    unsigned int update = strtol(chunk,&pEnd,2);
+    if(update != 0){
+      printf("update is %u \n", update);
+      sleep(1);
+    }
+    corrupted_map[i]=update;
+  }
+  dumpbitmap(corrupted_map, BLK_IMAP , N_IMAP);
+  fclose(file);
+  close(file_descriptor);
+  free(corrupted_map);
+  file = fopen("bitmap_zone.txt","r");
+  i = 0;
+  fseek(file, 0, SEEK_END);
+  long fsize = ftell(file);
+  fseek(file, 0, SEEK_SET);  //same as rewind(f);
+  printf("file size is %lu\n", fsize);
+  printf("returned size is %s\n", size);
+  string = malloc(fsize + 1);
+  fread(string, fsize, 1, file);
+  chunk = calloc((chunk_size+1), sizeof(char));
+  chunk[chunk_size] = 0;
+  char * p_end_2;
+  unsigned int received = strtol(size,&p_end_2,10);
+  N_ZMAP = received;
+  printf("N_ZMAP is %d\n", N_MAP);
+  corrupted_map = alloc_bitmap(N_ZMAP);
+  for (int i = 0; i < N_MAP; i++){
+    int k;
+    for (k = 0; k <= chunk_size -1 ; k++) {
+      chunk[chunk_size-k-1] = string[i*chunk_size +k];
+    }
+    char * pEnd2;
+    unsigned int update = strtol(chunk,&pEnd2,2);
+    if(update != 0){
+      printf("update is %u \n", update);
+      sleep(1);
+    }
+    corrupted_map[i]=update;
+  }
+  dumpbitmap(corrupted_map, BLK_IMAP + N_IMAP, N_ZMAP);
+  free(corrupted_map);
   fclose(file);
   close(file_descriptor);
 }
@@ -298,8 +381,8 @@ int main(int argc, char *argv[]){
 
  //int x=inodewalker();
    // directorywalker("hello");
-   // recovery();
  char * device = "/dev/c0d0p0s1";
+ recover(device);
 //	damage_inode(2,device);
 // x=inodewalker();
 // int z=zonewalker();
