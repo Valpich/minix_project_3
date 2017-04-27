@@ -384,6 +384,38 @@ const char * device;
   dumpbitmap(corrupted_map, BLK_IMAP + N_IMAP, N_ZMAP);
   free(corrupted_map);
   fclose(file);
+  file = fopen("list_inode.txt","r");
+  i = 0;
+  fseek(file, 0, SEEK_END);
+  fsize = ftell(file);
+  fseek(file, 0, SEEK_SET);  //same as rewind(f);
+  printf("file size is %lu\n", fsize);
+  printf("returned size_zone is %s\n", size_zone);
+  string = malloc(fsize + 1);
+  fread(string, fsize, 1, file);
+  chunk = calloc((chunk_size+1), sizeof(char));
+  chunk[chunk_size] = 0;
+  printf("N_IMAP is %d\n", I_ZMAP);
+  recovered_map = alloc_bitmap(I_ZMAP);
+  for (int i = 0; i < I_ZMAP; i++){
+    int k;
+    for (k = 0; k <= chunk_size -1 ; k++) {
+      if(*chunk_size +k < fsize)
+        chunk[chunk_size-k-1] = string[i*chunk_size +k];
+      else
+        chunk[chunk_size-k-1] = 0;
+    }
+    char * pEnd2;
+    unsigned int update = strtol(chunk,&pEnd2,2);
+    if(update != 0){
+      printf("update with recovery us %u \n", update);
+      sleep(1);
+    }
+    recovered_map[i]=update;
+  }
+  dumpbitmap(recovered_map, BLK_IMAP, N_IMAP);
+  free(recovered_map);
+  fclose(file);
   close(file_descriptor);
 }
 
