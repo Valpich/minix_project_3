@@ -804,7 +804,7 @@ int fs_recovery(void){
     print_bitmap(imap_disk);
     register struct inode *rip;
     for(int i = 0; i< (sb->s_ninodes);i++){
-        if ((rip = get_inode(dev, inodes[i])) == NULL){
+        if ((rip = get_inode(dev, i)) == NULL){
         }else{
             printf("inode %d found\n",i);
         }
