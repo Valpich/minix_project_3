@@ -64,7 +64,7 @@ int main() {
     printf("Enter you directory: ");
     scanf("%126s",p);
 
-    print_directory_tree(p)
+    print_directory_tree(p);
 
     return EXIT_SUCCESS;
 }
