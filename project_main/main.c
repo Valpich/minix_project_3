@@ -342,7 +342,7 @@ const char * device;
   file = fopen("bitmap_zone.txt","r");
   i = 0;
   fseek(file, 0, SEEK_END);
-  size_zone = ftell(file);
+  fsize = ftell(file);
   fseek(file, 0, SEEK_SET);  //same as rewind(f);
   printf("file size is %lu\n", fsize);
   printf("returned size_zone is %s\n", size_zone);
