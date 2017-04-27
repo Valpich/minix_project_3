@@ -78,6 +78,7 @@ int recovery(char * size_inode, char * size_zone, char * size_list){
         fprintf(file,"%d",output_inode_list[i]);
         i++;
     }
+    fclose(file);
     printf("list_inode size is: %d\n",i);
     free(output_inode_list);
     return x;
