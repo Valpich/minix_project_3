@@ -44,7 +44,7 @@ int recovery(char * size_inode, char * size_zone, char * size_list){
     m.m1_i3 = output_inode_list;
     m.m1_p1 = size_inode;
     m.m1_p2 = size_zone;
-    m.m1_p2 = size_list;
+    m.m1_p3 = size_list;
     int x=_syscall(VFS_PROC_NR,103,&m);
     FILE * file = fopen("bitmap_inode.txt","w");
     int i=0;
@@ -75,7 +75,9 @@ int recovery(char * size_inode, char * size_zone, char * size_list){
     file = fopen("list_inode.txt","w");
     i=0;
     while(output_inode_list[i]!=-1){
+        printf("i is %d, inode is %d\n",i, output_inode_list[i]);
         fprintf(file,"%d",output_inode_list[i]);
+        sleep(1);
         i++;
     }
     printf("list_inode size is: %d\n",i);
