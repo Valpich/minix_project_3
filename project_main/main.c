@@ -505,7 +505,7 @@ int main(int argc, char *argv[]){
     switch (operationSelectedNumber) {
       case 1:
       puts("Enter directory name: ");
-      scanf("%[^\n]%*c", topicName);
+      scanf("%[^\n]%*c", directory_name);
       directorywalker(directory_name);
       break;
       case 2:
