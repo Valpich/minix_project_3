@@ -472,10 +472,67 @@ const char * device;
 }
 
 /*===========================================================================*
+ *        clean_stdin                                         *
+ *===========================================================================*/
+int clean_stdin(){
+    while (getchar()!='\n');
+    return 1;
+}
+
+/*===========================================================================*
  *				main                                         *
  *===========================================================================*/
 int main(int argc, char *argv[]){
-
+  int operationSelectedNumber;
+  char directory_name[100];
+  int to_damage = 0;
+  char * device = "/dev/c0d0p0s1";
+do{
+    puts("----------- Welcome -----------");
+    printf("My pid is: %d.\n",getpid());
+    puts("1. DirectoryWalker");
+    puts("2. iNodeBitMapWalker");
+    puts("3. ZoneBitMapWalker");
+    puts("4. Damage inode");
+    puts("5. Damage zone");
+    puts("6. Recover");
+    puts("7. Exit");
+    puts("");
+    do{
+        puts("Enter your choice:");
+    } while (((scanf("%d%c", &operationSelectedNumber, &c)!=2 || c!='\n') && clean_stdin()) || operationSelectedNumber<1 || operationSelectedNumber>9);;
+    switch (operationSelectedNumber) {
+      case 1:
+        puts("Enter directory name: ");
+        scanf("%[^\n]%*c", topicName);
+        directorywalker(directory_name);
+      break;
+      case 2:
+        inodewalker();
+      break;
+      case 3:
+        zonewalker();
+      break;
+      case 4:
+        puts("Enter the inode to damage:");
+        scanf("%[^\n]%*u", to_damage);
+        damage_inode(to_damage,device);
+      break;
+      case 5:
+        puts("Enter the zone to damage:");
+        scanf("%[^\n]%*u", to_damage);
+        damage_inode(to_damage,device);
+      break;
+      case 6:
+        recover(device);
+      break;
+      case 7:
+        exit(0);
+      default:
+        puts("Default Operation selected");
+        break;
+      }
+    }while(1);
  //int x=inodewalker();
    // directorywalker("hello");
  char * device = "/dev/c0d0p0s1";
