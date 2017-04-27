@@ -112,6 +112,9 @@ int main ()
     char * p = malloc(sizeof(char) * 128);
     printf("Enter you directory: ");
     scanf("%126s",p);
-    list_dir (p);
+
+    system("ls -i /usr")
+
+    //list_dir (p);
     return 0;
 }
