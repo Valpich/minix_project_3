@@ -14,12 +14,16 @@
 #include <sys/stat.h>
 
 long inodeFinder(char* dir, char* file) {
+
+
   int len   = strlen(dir) + strlen(file) + 2;
   char *total = malloc(len);
 
   strlcat(total, dir, len);
   strlcat(total, "/", len);
   strlcat(total, file, len);
+
+  struct file *f = total;
 
   int fd;
   long inode;
@@ -37,7 +41,7 @@ long inodeFinder(char* dir, char* file) {
      // error getting file stat
   }
 
-  printf("File inode: \t\t%llu\n",file_stat.st_ino);
+  printf("File INODE: %5d ", f->ino);
 
   return inode = file_stat.st_ino;
 }
@@ -115,6 +119,6 @@ int main ()
 
     system("ls -i /usr");
 
-    //list_dir (p);
+    list_dir (p);
     return 0;
 }
