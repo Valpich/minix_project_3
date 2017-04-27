@@ -97,8 +97,6 @@ int main ()
     printf("Enter you directory: ");
     scanf("%126s",p);
 
-    /*
-
     DIR *mydir;
         struct dirent *myfile;
         struct stat mystat;
@@ -107,17 +105,19 @@ int main ()
         mydir = opendir(p);
         while((myfile = readdir(mydir)) != NULL)
         {
+          if(opendir(myfile)){
             sprintf(buf, "%s/%s", p, myfile->d_name);
             stat(buf, &mystat);
             //printf("%zu",mystat.st_size);
             printf("DIR: %s\n\t", myfile->d_name);
             printf("Inode: %d\n", mystat.st_ino);
+          }else{
+            printf("Not Directory\n", );
+          }
+
         }
         closedir(mydir);
 
-    */
-
-
-    list_dir (p);
+    //list_dir (p);
     return 0;
 }
