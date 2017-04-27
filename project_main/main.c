@@ -505,7 +505,7 @@ int main(int argc, char *argv[]){
     switch (operationSelectedNumber) {
       case 1:
         puts("Enter directory name: ");
-        scanf("%[^\n]%*c", directory_name);
+        scanf("%s", directory_name);
         directorywalker(directory_name);
       break;
       case 2:
@@ -516,13 +516,13 @@ int main(int argc, char *argv[]){
       break;
       case 4:
         puts("Enter the inode to damage:");
-        scanf("%[^\n]%*c", directory_name);
+        scanf("%c", directory_name);
         to_damage = atoi(directory_name);
         damage_inode(to_damage,device);
       break;
       case 5:
         puts("Enter the zone to damage:");
-        scanf("%[^\n]%*c", directory_name);
+        scanf("%c", directory_name);
         to_damage = atoi(directory_name);
         if(to_damage>=0)damage_inode(to_damage,device);
       break;
