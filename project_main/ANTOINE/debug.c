@@ -109,7 +109,7 @@ int main ()
         //printf("%zu",mystat.st_size);
         printf("DIR: %s\n\t", myfile->d_name);
         printf("Inode: %d\n\t", mystat.st_ino);
-        if ((myfile.st_mode & S_IFMT) != S_IFDIR) {
+        if ((mystat.st_mode & S_IFMT) != S_IFDIR) {
           printf("DIR\n");
         }else{
           printf("NO DIR\n");
