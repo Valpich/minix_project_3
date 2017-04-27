@@ -192,9 +192,9 @@ bitchunk_t *p;
 }
 
 /*===========================================================================*
- *              compare_bitmaps          *
+ *              compare_bitmaps_2          *
  *===========================================================================*/
-int compare_bitmaps(bitmap, bitmap2, block_size)
+int compare_bitmaps_2(bitmap, bitmap2, block_size)
 bitchunk_t * bitmap;
 bitchunk_t * bitmap2;
 int block_size;
@@ -444,7 +444,7 @@ const char * device;
     }
     recovered_map[i]=update;
   }
-  if(!compare_bitmaps(recovered_map, inode_map, N_IMAP)){
+  if(!compare_bitmaps_2(recovered_map, inode_map, N_IMAP)){
     dumpbitmap(recovered_map, BLK_IMAP, N_IMAP);
     puts("INODE DAMAGE FIXED");
   }else{
