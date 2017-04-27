@@ -516,12 +516,12 @@ int main(int argc, char *argv[]){
       break;
       case 4:
       puts("Enter the inode to damage:");
-      scanf("%[^\n]%*u", to_damage);
+      scanf("%[^\n]%*u", &to_damage);
       damage_inode(to_damage,device);
       break;
       case 5:
       puts("Enter the zone to damage:");
-      scanf("%[^\n]%*u", to_damage);
+      scanf("%[^\n]%*u", &to_damage);
       damage_inode(to_damage,device);
       break;
       case 6:
