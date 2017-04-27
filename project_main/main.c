@@ -479,6 +479,7 @@ int main(int argc, char *argv[]){
  //list_inodes(device);
   damage_inode(2,device);
  recover(device);
+  recover(device);
 // x=inodewalker();
 // int z=zonewalker();
  //damage_zone(3, device);
