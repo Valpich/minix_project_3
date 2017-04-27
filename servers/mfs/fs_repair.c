@@ -800,23 +800,25 @@ int fs_recovery(void){
     int nblk = N_ZMAP > N_IMAP ? N_IMAP : N_ZMAP;
     compare_bitmaps(zmap_disk, imap_disk, nblk, list);
     register struct inode *rip;
-    int temp = 1;
+    int temp = 0;
     int max = 1024*1024*32;
     int * output_inode = calloc(max,sizeof(int));
     int iterate = 0;
     for(iterate = 0; iterate<max ; iterate++){
         output_inode[iterate] = -1;
     }
-    output_inode[0] = 1;
     for(int i = 0; i< (sb->s_ninodes);i++){
         if ((rip = get_inode(dev, i)) == NULL){
         }else{
             if(rip->i_nlinks>0){
                 output_inode[temp] = 1;
-                temp++;
+            } else{
+                output_inode[temp] = 0;
             }
+            temp++;
         }
     }
+    output_inode[0] = 1;
     printf("List is:\n");
     for(int sd = 0 ;sd < temp; sd++){
         printf("sd is %d value is %d\n", sd,output_inode[sd] );
