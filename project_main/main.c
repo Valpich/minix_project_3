@@ -447,8 +447,10 @@ const char * device;
   if(compare_bitmaps_2(recovered_map, inode_map, N_IMAP) != 0){
     dumpbitmap(recovered_map, BLK_IMAP, N_IMAP);
     puts("INODE DAMAGE FIXED");
+    sleep(5);
   }else{
     puts("NO INODE DAMAGE TO FIX");
+    sleep(5);
   }
   free(recovered_map);
   free(inode_map);

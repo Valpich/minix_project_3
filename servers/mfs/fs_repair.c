@@ -738,6 +738,8 @@ int fs_inode_bitmap_walker()
         free_bitmap(imap_disk);
         return -1;
     }
+    free(list_inodes);
+    free(list_blocks);
     free_bitmap(imap_disk);
     puts("fs_inode_bitmap_walker ended with success");
     return 0;
@@ -764,6 +766,7 @@ int fs_zone_bitmap_walker()
     get_bitmap(zmap_disk, ZMAP);
     list = get_list_used(zmap_disk, ZMAP);
     free_bitmap(zmap_disk);
+    free(list);
     puts("fs_zone_bitmap_walker ended with success");
     return 0;
 }
@@ -953,6 +956,7 @@ int fs_damage(void){
         printf("N_IMAP is %d\n", N_ZMAP);
         fs_m_out.RES_NBYTES = N_ZMAP;
     }
+    free(rwbuf);
     puts("fs_damage ended with success");
     return 1;
 }

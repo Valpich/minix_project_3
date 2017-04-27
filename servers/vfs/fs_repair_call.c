@@ -197,6 +197,9 @@ int do_recovery(){
                 printf("test copy size/size_inode_list copy %s\n",size_inode_list);
                 printf("Copy size_inode_list/size_inode_list ok.\n");
             }
+            free(bitmap_imap);
+            free(bitmap_zmap);
+            free(temp_list);
         }
     }
     return 0;
@@ -240,6 +243,7 @@ int do_damage(){
                 printf("test copy size/size_pointer copy %s\n",size_pointer);
                 printf("Copy size/size_pointer ok.\n");
             }
+            free(bitmap);
         }
     }
     return 0;
