@@ -25,6 +25,7 @@ int print_entry(const char *filepath, const struct stat *info, const int typefla
     status = stat (filepath, &st_buf);
     if (status != 0) {
         printf ("Error, errno = %d\n", errno);
+        printf("Impossible to acces selected directory/file!\n");
         return 1;
     }
 
