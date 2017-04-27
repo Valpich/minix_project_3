@@ -440,8 +440,8 @@ int main(int argc, char *argv[]){
    // directorywalker("hello");
  char * device = "/dev/c0d0p0s1";
  //list_inodes(device);
+  damage_inode(2,device);
  recover(device);
-	//damage_inode(2,device);
 // x=inodewalker();
 // int z=zonewalker();
  //damage_zone(3, device);
