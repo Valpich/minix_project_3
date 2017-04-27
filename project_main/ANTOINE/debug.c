@@ -10,6 +10,7 @@
 #include <errno.h>
 #include <dirent.h>
 
+#include <fcntl.h>
 
 
 /* POSIX.1 says each process has at least 20 file descriptors.
