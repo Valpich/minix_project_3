@@ -504,33 +504,35 @@ int main(int argc, char *argv[]){
     } while (((scanf("%d%c", &operationSelectedNumber, &c)!=2 || c!='\n') && clean_stdin()) || operationSelectedNumber<1 || operationSelectedNumber>9);;
     switch (operationSelectedNumber) {
       case 1:
-      puts("Enter directory name: ");
-      scanf("%[^\n]%*c", directory_name);
-      directorywalker(directory_name);
+        puts("Enter directory name: ");
+        scanf("%[^\n]%*c", directory_name);
+        directorywalker(directory_name);
       break;
       case 2:
-      inodewalker();
+        inodewalker();
       break;
       case 3:
-      zonewalker();
+        zonewalker();
       break;
       case 4:
-      puts("Enter the inode to damage:");
-      scanf("%[^\n]%*d", &to_damage);
-      damage_inode(to_damage,device);
+        puts("Enter the inode to damage:");
+        scanf("%[^\n]%*c", directory_name);
+        to_damage = atoi(directory_name);
+        damage_inode(to_damage,device);
       break;
       case 5:
-      puts("Enter the zone to damage:");
-      scanf("%[^\n]%*d", &to_damage);
-      damage_inode(to_damage,device);
+        puts("Enter the zone to damage:");
+        scanf("%[^\n]%*c", directory_name);
+        to_damage = atoi(directory_name);
+        if(to_damage>=0)damage_inode(to_damage,device);
       break;
       case 6:
-      recover(device);
+        recover(device);
       break;
       case 7:
-      exit(0);
+        exit(0);
       default:
-      puts("Default Operation selected");
+        puts("Default Operation selected");
       break;
     }
   }while(1);
