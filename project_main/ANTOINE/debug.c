@@ -31,7 +31,7 @@ int inodeFinder(char* dir, char* file) {
 
   struct stat file_stat;
   int ret;
-  ret = fstatfs(fd, &file_stat);
+  ret = fstat(fd, &file_stat);
   if (ret < 0) {
      // error getting file stat
   }
