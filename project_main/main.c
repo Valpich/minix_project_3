@@ -7,10 +7,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include <a.out.h>
-#include <stdio.h>
-#include <minix/fslib.h>
-#include <errno.h>
 #include <minix/config.h>
 #include <minix/const.h>
 #include <minix/type.h>
@@ -22,7 +18,9 @@
 #include <minix/fslib.h>
 #include <stdio.h>
 #include <sys/stat.h>
+#include <a.out.h>
 #include <dirent.h>
+
 #include "repair.h"
 
 #define btoa64(b)   (mul64u(b, BLOCK_SIZE))
