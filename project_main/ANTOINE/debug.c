@@ -98,22 +98,25 @@ int main ()
     scanf("%126s",p);
 
     DIR *mydir;
-        struct dirent *myfile;
-        struct stat mystat;
+    struct dirent *myfile;
+    struct stat mystat;
 
-        char buf[512];
-        mydir = opendir(p);
-        while((myfile = readdir(mydir)) != NULL)
-        {
-            sprintf(buf, "%s/%s", p, myfile->d_name);
-            stat(buf, &mystat);
-            //printf("%zu",mystat.st_size);
-            printf("DIR: %s\n\t", myfile->d_name);
-            printf("Inode: %d\n\t", mystat.st_ino);
-            printf("%d ", myfile->d_type);
-
+    char buf[512];
+    mydir = opendir(p);
+    while((myfile = readdir(mydir)) != NULL) {
+        sprintf(buf, "%s/%s", p, myfile->d_name);
+        stat(buf, &mystat);
+        //printf("%zu",mystat.st_size);
+        printf("DIR: %s\n\t", myfile->d_name);
+        printf("Inode: %d\n\t", mystat.st_ino);
+        if ((myfile.st_mode & S_IFMT) != S_IFDIR) {
+          printf("DIR\n");
+        }else{
+          printf("NO DIR\n");
         }
-        closedir(mydir);
+
+    }
+    closedir(mydir);
 
     //list_dir (p);
     return 0;
