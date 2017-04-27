@@ -411,7 +411,7 @@ int dir;
   if (dir == READING && bno == thisblk) return;
   thisblk = bno;
 
-#if 
+#if 0
 printf("%s at block %5d\n", dir == READING ? "reading " : "writing", bno);
 #endif
 
