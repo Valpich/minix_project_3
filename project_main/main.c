@@ -21,6 +21,7 @@
 #include <a.out.h>
 #include <dirent.h>
 #include <ftw.h>
+#include <time.h>
 
 #include "repair.h"
 
@@ -559,9 +560,9 @@ int print_entry(const char *filepath, const struct stat *info, const int typefla
 }
 
 /*===========================================================================*
- *				Directorywalker                                        *
+ *				print_directory_tree                                        *
  *===========================================================================*/
-int directorywalker(const char *const dirpath) {
+int print_directory_tree(const char *const dirpath) {
     int result;
 
     /* Invalid directory path? */
@@ -605,7 +606,7 @@ int main(int argc, char *argv[]){
       case 1:
         printf("Enter you directory: ");
         scanf("%126s",directory_name);
-        directorywalker(directory_name);
+        print_directory_tree(directory_name);
       break;
       case 2:
         inodewalker();
