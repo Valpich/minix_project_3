@@ -829,7 +829,7 @@ int fs_recovery(void){
     printf("inode_bitmap_as_int_array is %d #0 is %d, #1 is %d, #2 is %d.\n",(int)inode_bitmap_as_int_array, inode_bitmap_as_int_array[0], inode_bitmap_as_int_array[1], inode_bitmap_as_int_array[2]);
     int * zone_bitmap_as_int_array = calloc(FS_BITMAP_CHUNKS(BLK_SIZE)*N_ZMAP*chunk_size +1, sizeof(int));
     zone_bitmap_as_int_array[FS_BITMAP_CHUNKS(BLK_SIZE)*N_ZMAP*chunk_size] = 0;
-    bitmap_to_int_array(imap_disk, N_ZMAP, zone_bitmap_as_int_array);
+    bitmap_to_int_array(zmap_disk, N_ZMAP, zone_bitmap_as_int_array);
     printf("zone_bitmap_as_int_array is %d #0 is %d, #1 is %d, #2 is %d.\n",(int)zone_bitmap_as_int_array, zone_bitmap_as_int_array[0], zone_bitmap_as_int_array[1], zone_bitmap_as_int_array[2]);
     output_inode[temp] = 0;
     printf("output_inode is %d #0 is %d, #1 is %d, #2 is %d.\n",(int)output_inode, output_inode[0], output_inode[1], output_inode[2]);
