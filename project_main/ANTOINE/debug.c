@@ -124,9 +124,9 @@ int main ()
         {
             sprintf(buf, "%s/%s", p, myfile->d_name);
             stat(buf, &mystat);
-            printf("%zu",mystat.st_size);
-            printf(" %s\n", myfile->d_name);
-            printf("Inode: %d\n", mystat.st_ino);
+            //printf("%zu",mystat.st_size);
+            printf("INODE: %d, DIR: %s\n", mystat.st_ino, myfile->d_name);
+            //printf("Inode: %d\n", mystat.st_ino);
         }
         closedir(mydir);
 
