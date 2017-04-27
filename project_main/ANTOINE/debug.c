@@ -79,11 +79,11 @@ int print_entry(const char *filepath, const struct stat *info,
       printf(" %s (dangling symlink)\n", filepath);
   else
   if (typeflag == FTW_F){
-  //printf("Inode: %llu ", st_buf.st_ino);
+  printf("Inode: %llu ", st_buf.st_ino);
   printf("%s\n", filepath);
 }else
   if (typeflag == FTW_D || typeflag == FTW_DP) {
-  //printf("Inode: %llu ", st_buf.st_ino);
+  printf("Inode: %llu ", st_buf.st_ino);
   printf("%s\n", filepath);
 }else
   if (typeflag == FTW_DNR)
