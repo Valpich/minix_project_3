@@ -15,6 +15,7 @@
 #include <sys/stat.h>
 
 int inodeFinder(char* dir, char* file) {
+  struct inode *cur_ino;
 
   int len   = strlen(dir) + strlen(file) + 2;
   char *total = malloc(len);
@@ -23,25 +24,7 @@ int inodeFinder(char* dir, char* file) {
   strlcat(total, "/", len);
   strlcat(total, file, len);
 
-  int inode;
-  int fd;
-
-  fd = open(total, O_RDONLY);
-
-
-  if (fd < 0) {
-      // some error occurred while opening the file
-      // use [perror("Error opening the file");] to get error description
-  }
-
-  struct stat file_stat;
-  int ret;
-  ret = fstat (fd, &file_stat);
-  if (ret < 0) {
-     // error getting file stat
-  }
-
-  return inode = file_stat.st_ino;
+  get_inode_by_name(parent, total);
 }
 
 /* List the files in "dir_name". */
