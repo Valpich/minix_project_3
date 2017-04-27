@@ -395,12 +395,12 @@ const char * device;
   fread(string, fsize, 1, file);
   chunk = calloc((chunk_size+1), sizeof(char));
   chunk[chunk_size] = 0;
-  printf("N_IMAP is %d\n", I_ZMAP);
-  recovered_map = alloc_bitmap(I_ZMAP);
-  for (int i = 0; i < I_ZMAP; i++){
+  printf("N_IMAP is %d\n", N_IMAP);
+  bitchunk_t * recovered_map = alloc_bitmap(I_ZMAP);
+  for (int i = 0; i < N_IMAP; i++){
     int k;
     for (k = 0; k <= chunk_size -1 ; k++) {
-      if(*chunk_size +k < fsize)
+      if(i*chunk_size +k < fsize)
         chunk[chunk_size-k-1] = string[i*chunk_size +k];
       else
         chunk[chunk_size-k-1] = 0;
