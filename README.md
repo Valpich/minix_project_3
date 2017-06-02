@@ -1,4 +1,4 @@
-# project_3
+# minix_project_3
 
 CS 551 Project 3: File System Recovery
 
@@ -32,3 +32,7 @@ Part of the superblock is damaged.
 The inode of a file is damaged.
 
 A block (or blocks) allocated to a file is damaged
+
+Objectifs:
+
+Développer un logiciel d'analyse, de réparation et de testeur de dommage pour maintenir l'Intégrité du système de fichiers sur Minix.
